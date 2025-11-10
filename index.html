@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cup 2026 - ESG 永續承諾驗證競賽</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- i18next for internationalization -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            background: white;
+            padding: 0.3rem;
+            border-radius: 8px;
+        }
+
+        .logo-placeholder {
+            height: 50px;
+            width: 50px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .task-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .task-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+        }
+
+        .task-card h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .task-card h4 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+        }
+
+        .task-card ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .task-card li {
+            margin: 0.5rem 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .team-member h4 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .team-member .role {
+            color: #764ba2;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .affiliation {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #667eea;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .lang-switch {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .cards,
+            .task-container,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-placeholder">🎓</div>
+                <!-- <img src="ntpu-logo.png" alt="國立臺北大學"> -->
+                <span data-i18n="nav.title">AI Cup 2026</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-i18n="nav.home">首頁</a></li>
+                <li><a href="#about" data-i18n="nav.about">競賽簡介</a></li>
+                <li><a href="#tasks" data-i18n="nav.tasks">任務說明</a></li>
+                <li><a href="#dataset" data-i18n="nav.dataset">數據集</a></li>
+                <li><a href="#evaluation" data-i18n="nav.evaluation">評估方式</a></li>
+                <li><a href="#timeline" data-i18n="nav.timeline">時程表</a></li>
+                <li><a href="#team" data-i18n="nav.team">團隊</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">聯絡我們</a></li>
+            </ul>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-zh" onclick="changeLanguage('zh')">中文</button>
+                <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 data-i18n="hero.title">🌍 ESG 永續承諾驗證競賽</h1>
+            <p data-i18n="hero.subtitle">運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度</p>
+            <a href="#about" class="cta-button" data-i18n="hero.cta">了解更多</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 data-i18n="about.title">競賽簡介</h2>
+            <p class="section-intro" data-i18n="about.intro">
+                在全球 ESG（環境、社會與治理）浪潮下，企業永續報告的真實性與可信度日益重要。本競賽旨在透過大型語言模型（LLM）技術，建立自動化的永續承諾驗證系統。
+            </p>
+
+            <div class="highlight-box">
+                <strong data-i18n="about.goalLabel">競賽全名：</strong><span data-i18n="about.goalContent">VeriPromiseESG 2026 - ESG 永續承諾驗證競賽</span><br><br>
+                <strong data-i18n="about.objectiveLabel">競賽目標：</strong><span data-i18n="about.objectiveContent">開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過四大核心任務（承諾識別、證據支持、清晰度評估、時機預測）完整評估 ESG 報告的真實性與可信度。</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <div class="stat-label" data-i18n="about.stat1">競賽子任務</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4,000</span>
+                    <div class="stat-label" data-i18n="about.stat2">標註數據量</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50</span>
+                    <div class="stat-label" data-i18n="about.stat3">台灣龍頭企業</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15</span>
+                    <div class="stat-label" data-i18n="about.stat4">產業領域</div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 data-i18n="about.card1.title">實務應用</h3>
+                    <p data-i18n="about.card1.desc">解決企業「漂綠」(Greenwashing) 問題，提升 ESG 報告可信度，協助投資者與利害關係人做出更明智的決策。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 data-i18n="about.card2.title">技術挑戰</h3>
+                    <p data-i18n="about.card2.desc">結合自然語言處理、大型語言模型與多任務學習，完成承諾識別、證據連結、清晰度評估與時機預測四大挑戰任務。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌏</div>
+                    <h3 data-i18n="about.card3.title">國際合作</h3>
+                    <p data-i18n="about.card3.desc">由台日頂尖學術機構聯合主辦，同時作為 NTCIR-19 International Track 項目，提供高品質多語言數據集，促進全球 ESG AI 研究發展。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section id="tasks" style="background: white;">
+        <div class="container">
+            <h2 data-i18n="tasks.title">競賽任務</h2>
+            <p class="section-intro" data-i18n="tasks.intro">
+                本競賽包含四個核心子任務，從承諾識別、證據評估、清晰度分析到時機預測，完整涵蓋 ESG 報告驗證流程
+            </p>
+
+            <div class="task-container">
+                <div class="task-card">
+                    <h3 data-i18n="tasks.task1.title">📌 子任務一：承諾語句識別</h3>
+                    <p><strong data-i18n="tasks.task1.goalLabel">任務目標：</strong><span data-i18n="tasks.task1.goal">判斷給定句子是否表達企業對未來行動的明確承諾</span></p>
+                    
+                    <h4 data-i18n="tasks.task1.outputLabel">輸出類別</h4>
+                    <ul>
+                        <li><strong data-i18n="tasks.task1.output1Label">是 (Yes)：</strong><span data-i18n="tasks.task1.output1">包含明確承諾的陳述</span></li>
+                        <li><strong data-i18n="tasks.task1.output2Label">否 (No)：</strong><span data-i18n="tasks.task1.output2">不包含承諾的一般性陳述</span></li>
+                    </ul>
+
+                    <h4 data-i18n="tasks.task1.metricLabel">評估指標</h4>
+                    <p data-i18n="tasks.task1.metric">F1-Score（精確率與召回率的調和平均）</p>
+
+                    <h4 data-i18n="tasks.task1.exampleLabel">範例</h4>
+                    <div class="highlight-box">
+                        <strong data-i18n="tasks.task1.example1Label">✅ 承諾：</strong><span data-i18n="tasks.task1.example1">"我們承諾在 2030 年前達成碳中和目標"</span><br>
+                        <strong data-i18n="tasks.task1.example2Label">❌ 非承諾：</strong><span data-i18n="tasks.task1.example2">"我們重視環境保護的重要性"</span>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3 data-i18n="tasks.task2.title">🔗 子任務二：支持證據連結</h3>
+                    <p><strong data-i18n="tasks.task2.goalLabel">任務目標：</strong><span data-i18n="tasks.task2.goal">判斷已識別的承諾語句是否附有具體執行計畫或支持佐證</span></p>
+                    
+                    <h4 data-i18n="tasks.task2.outputLabel">輸出類別</h4>
+                    <ul>
+                        <li><strong data-i18n="tasks.task2.output1Label">是 (Yes)：</strong><span data-i18n="tasks.task2.output1">承諾有具體證據支持</span></li>
+                        <li><strong data-i18n="tasks.task2.output2Label">否 (No)：</strong><span data-i18n="tasks.task2.output2">承諾缺乏具體佐證</span></li>
+                    </ul>
+
+                    <h4 data-i18n="tasks.task2.metricLabel">評估指標</h4>
+                    <p data-i18n="tasks.task2.metric">F1-Score（語意關聯性判斷能力）</p>
+
+                    <h4 data-i18n="tasks.task2.exampleLabel">範例</h4>
+                    <div class="highlight-box">
+                        <strong data-i18n="tasks.task2.promiseLabel">承諾：</strong><span data-i18n="tasks.task2.promise">"推動低碳價值鏈轉型，持續強化供應商節電、減碳、省水及減廢輔導"</span><br>
+                        <strong data-i18n="tasks.task2.evidenceLabel">證據：</strong><span data-i18n="tasks.task2.evidence">"要求訂定中長期減量目標並提出具體行動" → </span><strong style="color: #667eea;" data-i18n="tasks.task2.result">有證據支持</strong>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3 data-i18n="tasks.task3.title">💡 子任務三：清晰度分類</h3>
+                    <p><strong data-i18n="tasks.task3.goalLabel">任務目標：</strong><span data-i18n="tasks.task3.goal">評估承諾語句是否語意明確、無模糊字眼，辨識潛在「漂綠」風險</span></p>
+                    
+                    <h4 data-i18n="tasks.task3.outputLabel">輸出類別</h4>
+                    <ul>
+                        <li><strong data-i18n="tasks.task3.output1Label">清楚 (Clear)：</strong><span data-i18n="tasks.task3.output1">語意明確、可驗證</span></li>
+                        <li><strong data-i18n="tasks.task3.output2Label">不清楚 (Not Clear)：</strong><span data-i18n="tasks.task3.output2">語意模糊、難以量化</span></li>
+                        <li><strong data-i18n="tasks.task3.output3Label">誤導 (Misleading)：</strong><span data-i18n="tasks.task3.output3">可能有誤導性表述</span></li>
+                    </ul>
+
+                    <h4 data-i18n="tasks.task3.metricLabel">評估指標</h4>
+                    <p data-i18n="tasks.task3.metric">Macro-F1（三分類平均表現）</p>
+
+                    <h4 data-i18n="tasks.task3.valueLabel">實務價值</h4>
+                    <p data-i18n="tasks.task3.value">協助識別企業「漂綠」行為，提升 ESG 報告可信度</p>
+                </div>
+
+                <div class="task-card">
+                    <h3 data-i18n="tasks.task4.title">⏰ 子任務四：預期驗證時機推論</h3>
+                    <p><strong data-i18n="tasks.task4.goalLabel">任務目標：</strong><span data-i18n="tasks.task4.goal">根據語句推論承諾的預期完成時間，協助建立追蹤機制</span></p>
+                    
+                    <h4 data-i18n="tasks.task4.outputLabel">輸出類別</h4>
+                    <ul>
+                        <li><strong data-i18n="tasks.task4.output1Label">已實行 (Already)：</strong><span data-i18n="tasks.task4.output1">承諾已實現（當期可驗證）</span></li>
+                        <li><strong data-i18n="tasks.task4.output2Label">2年內 (Within 2 years)：</strong><span data-i18n="tasks.task4.output2">短期目標</span></li>
+                        <li><strong data-i18n="tasks.task4.output3Label">2-5年 (Between 2 and 5 years)：</strong><span data-i18n="tasks.task4.output3">中期目標</span></li>
+                        <li><strong data-i18n="tasks.task4.output4Label">5年以上 (More than 5 years)：</strong><span data-i18n="tasks.task4.output4">長期目標</span></li>
+                    </ul>
+
+                    <h4 data-i18n="tasks.task4.metricLabel">評估指標</h4>
+                    <p data-i18n="tasks.task4.metric">Macro-F1（四分類時間推論能力）</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 3rem;" data-i18n="tasks.relevanceTitle">🎯 任務關聯性與實務價值</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 data-i18n="tasks.job1.title">ESG 資料分析師</h3>
+                    <p><strong data-i18n="tasks.job1.skillLabel">對應技能：</strong><span data-i18n="tasks.job1.skill">子任務一</span><br>
+                    <span data-i18n="tasks.job1.desc">關鍵資訊抽取、文本分類、永續報告書編撰</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="tasks.job2.title">永續投資分析師</h3>
+                    <p><strong data-i18n="tasks.job2.skillLabel">對應技能：</strong><span data-i18n="tasks.job2.skill">子任務二</span><br>
+                    <span data-i18n="tasks.job2.desc">語意關聯性判斷、邏輯推理、盡職調查</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="tasks.job3.title">金融監管審查員</h3>
+                    <p><strong data-i18n="tasks.job3.skillLabel">對應技能：</strong><span data-i18n="tasks.job3.skill">子任務三</span><br>
+                    <span data-i18n="tasks.job3.desc">漂綠風險識別、語意品質評估、法遵審核</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="tasks.job4.title">企業永續專員</h3>
+                    <p><strong data-i18n="tasks.job4.skillLabel">對應技能：</strong><span data-i18n="tasks.job4.skill">子任務四</span><br>
+                    <span data-i18n="tasks.job4.desc">時間資訊抽取、目標管理與追蹤、專案規劃</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dataset Section -->
+    <section id="dataset">
+        <div class="container">
+            <h2 data-i18n="dataset.title">數據集介紹</h2>
+            <p class="section-intro" data-i18n="dataset.intro">
+                VeriPromiseESG4K - 全球首個針對繁體中文設計的永續承諾驗證標註數據集，來自台灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書
+            </p>
+
+            <h3 data-i18n="dataset.featuresTitle">📊 數據集特色</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 data-i18n="dataset.feature1.title">台灣龍頭企業</h3>
+                    <p data-i18n="dataset.feature1.desc">來自台灣 50 指數（0050）成分股，涵蓋台灣前 50 大上市公司的真實永續報告書。</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="dataset.feature2.title">跨產業多元性</h3>
+                    <p data-i18n="dataset.feature2.desc">橫跨 15 個不同產業領域，包含科技、金融、製造、能源等，提供豐富的產業視角。</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="dataset.feature3.title">高品質標註</h3>
+                    <p data-i18n="dataset.feature3.desc">由國立臺北大學團隊與臺北市立大學團隊合作執行，經過多階段品質控制，使用 Krippendorff's Alpha 確保標註一致性。</p>
+                </div>
+            </div>
+
+            <h3 data-i18n="dataset.scaleTitle">📈 數據規模</h3>
+            <div class="highlight-box">
+                <strong data-i18n="dataset.nameLabel">數據集名稱：</strong><span data-i18n="dataset.name">VeriPromiseESG4K（全球首個繁體中文永續承諾驗證數據集）</span><br>
+                <strong data-i18n="dataset.sizeLabel">總數據量：</strong><span data-i18n="dataset.size">4,000 筆高品質標註數據</span><br>
+                <strong data-i18n="dataset.sourceLabel">資料來源：</strong><span data-i18n="dataset.source">台灣 50 指數（0050）成分股，涵蓋前 50 大上市公司</span><br>
+                <strong data-i18n="dataset.industryLabel">產業涵蓋：</strong><span data-i18n="dataset.industry">橫跨 15 個產業領域（科技、金融、製造、能源等）</span><br>
+                <strong data-i18n="dataset.annotationLabel">標註維度：</strong><span data-i18n="dataset.annotation">四個子任務（承諾識別、證據支持、清晰度評估、驗證時機）</span><br>
+                <strong data-i18n="dataset.splitLabel">數據分割：</strong><span data-i18n="dataset.split">訓練集 + 測試集（Public & Private）</span>
+            </div>
+
+            <h3 data-i18n="dataset.processTitle">🔍 標註流程</h3>
+            <div class="task-container">
+                <div class="task-card">
+                    <h3 data-i18n="dataset.phase1.title">第一階段：初步標註</h3>
+                    <ul>
+                        <li data-i18n="dataset.phase1.item1">專業標註團隊進行初步標記</li>
+                        <li data-i18n="dataset.phase1.item2">建立標註規範與指引</li>
+                        <li data-i18n="dataset.phase1.item3">進行標註者訓練</li>
+                    </ul>
+                </div>
+                <div class="task-card">
+                    <h3 data-i18n="dataset.phase2.title">第二階段：交叉驗證</h3>
+                    <ul>
+                        <li data-i18n="dataset.phase2.item1">多位標註者獨立標註</li>
+                        <li data-i18n="dataset.phase2.item2">計算標註者間一致性</li>
+                        <li data-i18n="dataset.phase2.item3">解決標註歧異</li>
+                    </ul>
+                </div>
+                <div class="task-card">
+                    <h3 data-i18n="dataset.phase3.title">第三階段：專家審核</h3>
+                    <ul>
+                        <li data-i18n="dataset.phase3.item1">領域專家最終審核</li>
+                        <li data-i18n="dataset.phase3.item2">品質控制與修正</li>
+                        <li data-i18n="dataset.phase3.item3">數據集發布</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation" style="background: white;">
+        <div class="container">
+            <h2 data-i18n="evaluation.title">評估方式</h2>
+            <p class="section-intro" data-i18n="evaluation.intro">
+                採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現
+            </p>
+
+            <h3 data-i18n="evaluation.metricsTitle">📊 各子任務評估指標</h3>
+            <div class="task-container">
+                <div class="task-card" style="border-left-color: #667eea;">
+                    <h3 data-i18n="evaluation.task1.title">子任務一：承諾識別</h3>
+                    <h4 data-i18n="evaluation.task1.metricLabel">評估指標</h4>
+                    <ul>
+                        <li><strong data-i18n="evaluation.task1.metric1Label">F1-Score：</strong><span data-i18n="evaluation.task1.metric1">精確率與召回率的調和平均</span></li>
+                        <li data-i18n="evaluation.task1.desc">衡量模型識別 ESG 承諾語句的能力</li>
+                    </ul>
+                </div>
+
+                <div class="task-card" style="border-left-color: #667eea;">
+                    <h3 data-i18n="evaluation.task2.title">子任務二：證據支持判斷</h3>
+                    <h4 data-i18n="evaluation.task2.metricLabel">評估指標</h4>
+                    <ul>
+                        <li><strong data-i18n="evaluation.task2.metric1Label">F1-Score：</strong><span data-i18n="evaluation.task2.metric1">判斷承諾是否具備充分支持證據</span></li>
+                        <li data-i18n="evaluation.task2.desc">核心實務能力評估</li>
+                    </ul>
+                </div>
+
+                <div class="task-card" style="border-left-color: #764ba2;">
+                    <h3 data-i18n="evaluation.task3.title">子任務三：清晰度評估</h3>
+                    <h4 data-i18n="evaluation.task3.metricLabel">評估指標</h4>
+                    <ul>
+                        <li><strong data-i18n="evaluation.task3.metric1Label">Macro-F1：</strong><span data-i18n="evaluation.task3.metric1">三分類（清楚/不清楚/誤導）平均表現</span></li>
+                        <li data-i18n="evaluation.task3.desc">最具挑戰性任務，辨識漂綠風險能力</li>
+                    </ul>
+                </div>
+
+                <div class="task-card" style="border-left-color: #667eea;">
+                    <h3 data-i18n="evaluation.task4.title">子任務四：驗證時機預測</h3>
+                    <h4 data-i18n="evaluation.task4.metricLabel">評估指標</h4>
+                    <ul>
+                        <li><strong data-i18n="evaluation.task4.metric1Label">Macro-F1：</strong><span data-i18n="evaluation.task4.metric1">四分類時間推論能力</span></li>
+                        <li data-i18n="evaluation.task4.desc">評估模型對承諾時間軸的理解</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-i18n="evaluation.awardsTitle">🏅 獎項設置</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 data-i18n="evaluation.award1.title">🥇 第一名</h3>
+                    <p><strong data-i18n="evaluation.award1.prizeLabel">獎金：</strong><span data-i18n="evaluation.award1.prize">NT$ 100,000</span><br>
+                    <strong data-i18n="evaluation.award1.certLabel">獎狀：</strong><span data-i18n="evaluation.award1.cert">教育部頒發</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="evaluation.award2.title">🥈 第二名</h3>
+                    <p><strong data-i18n="evaluation.award2.prizeLabel">獎金：</strong><span data-i18n="evaluation.award2.prize">NT$ 60,000</span><br>
+                    <strong data-i18n="evaluation.award2.certLabel">獎狀：</strong><span data-i18n="evaluation.award2.cert">教育部頒發</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="evaluation.award3.title">🥉 第三名</h3>
+                    <p><strong data-i18n="evaluation.award3.prizeLabel">獎金：</strong><span data-i18n="evaluation.award3.prize">NT$ 30,000</span><br>
+                    <strong data-i18n="evaluation.award3.certLabel">獎狀：</strong><span data-i18n="evaluation.award3.cert">教育部頒發</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="evaluation.award4.title">🎖️ 優選獎</h3>
+                    <p><strong data-i18n="evaluation.award4.slotsLabel">名額：</strong><span data-i18n="evaluation.award4.slots">12 隊</span><br>
+                    <strong data-i18n="evaluation.award4.certLabel">獎狀：</strong><span data-i18n="evaluation.award4.cert">教育部頒發</span></p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <strong data-i18n="evaluation.rulesLabel">📌 排名規則：</strong><br>
+                <span data-i18n="evaluation.rule1">• 最終排名以 Private Dataset 測試結果為準</span><br>
+                <span data-i18n="evaluation.rule2">• Public Dataset 僅供競賽期間參考使用</span><br>
+                <span data-i18n="evaluation.rule3">• 前 25% 且超過 Baseline 的隊伍可獲得計畫辦公室電子獎狀</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <h2 data-i18n="timeline.title">競賽時程</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item1.date">2025 年 11 月 - 2026 年 1 月</div>
+                    <strong data-i18n="timeline.item1.title">資料蒐集與標註</strong>
+                    <p data-i18n="timeline.item1.desc">蒐集台灣企業 ESG 報告，進行專業標註與品質控制</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item2.date">2026 年 2 月 - 3 月</div>
+                    <strong data-i18n="timeline.item2.title">競賽宣傳與報名</strong>
+                    <p data-i18n="timeline.item2.desc">公布競賽細節、數據集與評估方式，開放隊伍報名</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item3.date">2026 年 4 月 - 5 月</div>
+                    <strong data-i18n="timeline.item3.title">訓練數據集釋出與開發階段</strong>
+                    <p data-i18n="timeline.item3.desc">提供 4,000 筆訓練數據集，參賽者開發與優化模型</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item4.date">2026 年 6 月中旬</div>
+                    <strong data-i18n="timeline.item4.title">測試數據集釋出與提交</strong>
+                    <p data-i18n="timeline.item4.desc">6/18 開放測試集下載，6/20 23:59:59 提交截止（每日限 3 次）</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item5.date">2026 年 7 月</div>
+                    <strong data-i18n="timeline.item5.title">結果評估與審查</strong>
+                    <p data-i18n="timeline.item5.desc">評審團隊審核提交結果、技術報告與程式碼</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="timeline.item6.date">2026 年 8 月</div>
+                    <strong data-i18n="timeline.item6.title">成績公布與頒獎典禮</strong>
+                    <p data-i18n="timeline.item6.desc">公布得獎名單，舉辦頒獎典禮與技術分享會</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" style="background: white;">
+        <div class="container">
+            <h2 data-i18n="team.title">主辦團隊</h2>
+            <p class="section-intro" data-i18n="team.intro">
+                由台日頂尖學術機構與業界專家共同主辦
+            </p>
+
+            <h3 data-i18n="team.piTitle">🎓 計畫主持人</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4 data-i18n="team.pi.name">戴敏育 教授</h4>
+                    <div class="role" data-i18n="team.pi.role">計畫主持人</div>
+                    <div class="affiliation" data-i18n="team.pi.affiliation">國立臺北大學<br>資訊管理研究所</div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;" data-i18n="team.pi.desc">
+                        專精於人工智慧、生成式AI、永續綠色金融科技。現任金融科技暨綠色金融研究中心主任。
+                    </p>
+                </div>
+            </div>
+
+            <h3 data-i18n="team.copiTitle">👥 協同主持人</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4 data-i18n="team.copi1.name">陳重吉 博士</h4>
+                    <div class="role" data-i18n="team.copi1.role">協同主持人</div>
+                    <div class="affiliation" data-i18n="team.copi1.affiliation">日本產業技術綜合研究所<br>人工智慧研究中心</div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;" data-i18n="team.copi1.desc">
+                        ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。
+                    </p>
+                </div>
+                <div class="team-member">
+                    <h4 data-i18n="team.copi2.name">Yohei Seki 教授</h4>
+                    <div class="role" data-i18n="team.copi2.role">協同主持人</div>
+                    <div class="affiliation" data-i18n="team.copi2.affiliation">日本筑波大學<br>圖書館情報媒體科學系</div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;" data-i18n="team.copi2.desc">
+                        專精於自然語言處理與資訊檢索，曾組織 NTCIR 多語言觀點分析任務。
+                    </p>
+                </div>
+            </div>
+
+            <h3 data-i18n="team.orgTitle">🏢 主辦單位</h3>
+            <div class="cards">
+                <div class="card">
+                    <h3 data-i18n="team.org1.name">國立臺北大學</h3>
+                    <p data-i18n="team.org1.dept">資訊管理研究所<br>金融科技暨綠色金融研究中心</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="team.org2.name">日本產業技術綜合研究所</h3>
+                    <p data-i18n="team.org2.dept">人工智慧研究中心</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="team.org3.name">日本筑波大學</h3>
+                    <p data-i18n="team.org3.dept">圖書館情報媒體科學系</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 data-i18n="contact.title">聯絡我們</h2>
+            <p class="section-intro" data-i18n="contact.intro">
+                如有任何問題，歡迎隨時與我們聯繫
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3 data-i18n="contact.email.title">電子郵件</h3>
+                    <p><a href="mailto:myday@gm.ntpu.edu.tw">myday@gm.ntpu.edu.tw</a></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3 data-i18n="contact.website.title">官方網站</h3>
+                    <p><a href="https://www.ntpu.edu.tw" target="_blank" data-i18n="contact.website.link">國立臺北大學</a></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3 data-i18n="contact.code.title">Sample Code</h3>
+                    <p><a href="https://drive.google.com/drive/folders/15uSyOz8LWONJL1mnbvGSEAVBUCkLLMyT" target="_blank">Google Drive</a></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3 data-i18n="contact.platform.title">競賽平台</h3>
+                    <p><a href="https://go.aicup.tw/" target="_blank" data-i18n="contact.platform.link">AI CUP 報名系統</a></p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <strong data-i18n="contact.importantLabel">📢 重要提醒：</strong><br>
+                <span data-i18n="contact.note1">• 請於 AI CUP 報名系統 (https://go.aicup.tw/) 完成報名登錄</span><br>
+                <span data-i18n="contact.note2">• 參賽隊伍 1-5 人，報名後不可更換成員</span><br>
+                <span data-i18n="contact.note3">• 測試集提交期間：2026/6/18 11:00 - 2026/6/20 23:59:59（每日限 3 次）</span><br>
+                <span data-i18n="contact.note4">• 需繳交技術報告、實作程式碼與執行環境說明</span><br>
+                <span data-i18n="contact.note5">• 前 15 名全學生隊伍可獲教育部獎狀</span><br>
+                <span data-i18n="contact.note6">• 可使用外部資料與預訓練模型，但須在報告中詳細說明</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2025 AI Cup - ESG 永續承諾驗證競賽</p>
+            <p data-i18n="footer.organizer">主辦單位：國立臺北大學資訊管理研究所</p>
+            <p style="margin-top: 1rem;">
+                <a href="#home" data-i18n="footer.backToTop">返回頂部</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Comprehensive i18next translations
+        const translations = {
+            zh: {
+                translation: {
+                    nav: {
+                        title: "AI Cup 2026",
+                        home: "首頁",
+                        about: "競賽簡介",
+                        tasks: "任務說明",
+                        dataset: "數據集",
+                        evaluation: "評估方式",
+                        timeline: "時程表",
+                        team: "團隊",
+                        contact: "聯絡我們"
+                    },
+                    hero: {
+                        title: "🌍 ESG 永續承諾驗證競賽",
+                        subtitle: "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
+                        cta: "了解更多"
+                    },
+                    about: {
+                        title: "競賽簡介",
+                        intro: "在全球 ESG（環境、社會與治理）浪潮下，企業永續報告的真實性與可信度日益重要。本競賽旨在透過大型語言模型（LLM）技術，建立自動化的永續承諾驗證系統。",
+                        goalLabel: "競賽全名：",
+                        goalContent: "VeriPromiseESG 2026 - ESG 永續承諾驗證競賽",
+                        objectiveLabel: "競賽目標：",
+                        objectiveContent: "開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過四大核心任務（承諾識別、證據支持、清晰度評估、時機預測）完整評估 ESG 報告的真實性與可信度。",
+                        stat1: "競賽子任務",
+                        stat2: "標註數據量",
+                        stat3: "台灣龍頭企業",
+                        stat4: "產業領域",
+                        card1: {
+                            title: "實務應用",
+                            desc: "解決企業「漂綠」(Greenwashing) 問題，提升 ESG 報告可信度，協助投資者與利害關係人做出更明智的決策。"
+                        },
+                        card2: {
+                            title: "技術挑戰",
+                            desc: "結合自然語言處理、大型語言模型與多任務學習，完成承諾識別、證據連結、清晰度評估與時機預測四大挑戰任務。"
+                        },
+                        card3: {
+                            title: "國際合作",
+                            desc: "由台日頂尖學術機構聯合主辦，同時作為 NTCIR-19 International Track 項目，提供高品質多語言數據集，促進全球 ESG AI 研究發展。"
+                        }
+                    },
+                    tasks: {
+                        title: "競賽任務",
+                        intro: "本競賽包含四個核心子任務，從承諾識別、證據評估、清晰度分析到時機預測，完整涵蓋 ESG 報告驗證流程",
+                        task1: {
+                            title: "📌 子任務一：承諾語句識別",
+                            goalLabel: "任務目標：",
+                            goal: "判斷給定句子是否表達企業對未來行動的明確承諾",
+                            outputLabel: "輸出類別",
+                            output1Label: "是 (Yes)：",
+                            output1: "包含明確承諾的陳述",
+                            output2Label: "否 (No)：",
+                            output2: "不包含承諾的一般性陳述",
+                            metricLabel: "評估指標",
+                            metric: "F1-Score（精確率與召回率的調和平均）",
+                            exampleLabel: "範例",
+                            example1Label: "✅ 承諾：",
+                            example1: "我們承諾在 2030 年前達成碳中和目標",
+                            example2Label: "❌ 非承諾：",
+                            example2: "我們重視環境保護的重要性"
+                        },
+                        task2: {
+                            title: "🔗 子任務二：支持證據連結",
+                            goalLabel: "任務目標：",
+                            goal: "判斷已識別的承諾語句是否附有具體執行計畫或支持佐證",
+                            outputLabel: "輸出類別",
+                            output1Label: "是 (Yes)：",
+                            output1: "承諾有具體證據支持",
+                            output2Label: "否 (No)：",
+                            output2: "承諾缺乏具體佐證",
+                            metricLabel: "評估指標",
+                            metric: "F1-Score（語意關聯性判斷能力）",
+                            exampleLabel: "範例",
+                            promiseLabel: "承諾：",
+                            promise: "推動低碳價值鏈轉型，持續強化供應商節電、減碳、省水及減廢輔導",
+                            evidenceLabel: "證據：",
+                            evidence: "要求訂定中長期減量目標並提出具體行動 → ",
+                            result: "有證據支持"
+                        },
+                        task3: {
+                            title: "💡 子任務三：清晰度分類",
+                            goalLabel: "任務目標：",
+                            goal: "評估承諾語句是否語意明確、無模糊字眼，辨識潛在「漂綠」風險",
+                            outputLabel: "輸出類別",
+                            output1Label: "清楚 (Clear)：",
+                            output1: "語意明確、可驗證",
+                            output2Label: "不清楚 (Not Clear)：",
+                            output2: "語意模糊、難以量化",
+                            output3Label: "誤導 (Misleading)：",
+                            output3: "可能有誤導性表述",
+                            metricLabel: "評估指標",
+                            metric: "Macro-F1（三分類平均表現）",
+                            valueLabel: "實務價值",
+                            value: "協助識別企業「漂綠」行為，提升 ESG 報告可信度"
+                        },
+                        task4: {
+                            title: "⏰ 子任務四：預期驗證時機推論",
+                            goalLabel: "任務目標：",
+                            goal: "根據語句推論承諾的預期完成時間，協助建立追蹤機制",
+                            outputLabel: "輸出類別",
+                            output1Label: "已實行 (Already)：",
+                            output1: "承諾已實現（當期可驗證）",
+                            output2Label: "2年內 (Within 2 years)：",
+                            output2: "短期目標",
+                            output3Label: "2-5年 (Between 2 and 5 years)：",
+                            output3: "中期目標",
+                            output4Label: "5年以上 (More than 5 years)：",
+                            output4: "長期目標",
+                            metricLabel: "評估指標",
+                            metric: "Macro-F1（四分類時間推論能力）"
+                        },
+                        relevanceTitle: "🎯 任務關聯性與實務價值",
+                        job1: {
+                            title: "ESG 資料分析師",
+                            skillLabel: "對應技能：",
+                            skill: "子任務一",
+                            desc: "關鍵資訊抽取、文本分類、永續報告書編撰"
+                        },
+                        job2: {
+                            title: "永續投資分析師",
+                            skillLabel: "對應技能：",
+                            skill: "子任務二",
+                            desc: "語意關聯性判斷、邏輯推理、盡職調查"
+                        },
+                        job3: {
+                            title: "金融監管審查員",
+                            skillLabel: "對應技能：",
+                            skill: "子任務三",
+                            desc: "漂綠風險識別、語意品質評估、法遵審核"
+                        },
+                        job4: {
+                            title: "企業永續專員",
+                            skillLabel: "對應技能：",
+                            skill: "子任務四",
+                            desc: "時間資訊抽取、目標管理與追蹤、專案規劃"
+                        }
+                    },
+                    dataset: {
+                        title: "數據集介紹",
+                        intro: "VeriPromiseESG4K - 全球首個針對繁體中文設計的永續承諾驗證標註數據集，來自台灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
+                        featuresTitle: "📊 數據集特色",
+                        feature1: {
+                            title: "台灣龍頭企業",
+                            desc: "來自台灣 50 指數（0050）成分股，涵蓋台灣前 50 大上市公司的真實永續報告書。"
+                        },
+                        feature2: {
+                            title: "跨產業多元性",
+                            desc: "橫跨 15 個不同產業領域，包含科技、金融、製造、能源等，提供豐富的產業視角。"
+                        },
+                        feature3: {
+                            title: "高品質標註",
+                            desc: "由國立臺北大學團隊與臺北市立大學團隊合作執行，經過多階段品質控制，使用 Krippendorff's Alpha 確保標註一致性。"
+                        },
+                        scaleTitle: "📈 數據規模",
+                        nameLabel: "數據集名稱：",
+                        name: "VeriPromiseESG4K（全球首個繁體中文永續承諾驗證數據集）",
+                        sizeLabel: "總數據量：",
+                        size: "4,000 筆高品質標註數據",
+                        sourceLabel: "資料來源：",
+                        source: "台灣 50 指數（0050）成分股，涵蓋前 50 大上市公司",
+                        industryLabel: "產業涵蓋：",
+                        industry: "橫跨 15 個產業領域（科技、金融、製造、能源等）",
+                        annotationLabel: "標註維度：",
+                        annotation: "四個子任務（承諾識別、證據支持、清晰度評估、驗證時機）",
+                        splitLabel: "數據分割：",
+                        split: "訓練集 + 測試集（Public & Private）",
+                        processTitle: "🔍 標註流程",
+                        phase1: {
+                            title: "第一階段：初步標註",
+                            item1: "專業標註團隊進行初步標記",
+                            item2: "建立標註規範與指引",
+                            item3: "進行標註者訓練"
+                        },
+                        phase2: {
+                            title: "第二階段：交叉驗證",
+                            item1: "多位標註者獨立標註",
+                            item2: "計算標註者間一致性",
+                            item3: "解決標註歧異"
+                        },
+                        phase3: {
+                            title: "第三階段：專家審核",
+                            item1: "領域專家最終審核",
+                            item2: "品質控制與修正",
+                            item3: "數據集發布"
+                        }
+                    },
+                    evaluation: {
+                        title: "評估方式",
+                        intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
+                        metricsTitle: "📊 各子任務評估指標",
+                        task1: {
+                            title: "子任務一：承諾識別",
+                            metricLabel: "評估指標",
+                            metric1Label: "F1-Score：",
+                            metric1: "精確率與召回率的調和平均",
+                            desc: "衡量模型識別 ESG 承諾語句的能力"
+                        },
+                        task2: {
+                            title: "子任務二：證據支持判斷",
+                            metricLabel: "評估指標",
+                            metric1Label: "F1-Score：",
+                            metric1: "判斷承諾是否具備充分支持證據",
+                            desc: "核心實務能力評估"
+                        },
+                        task3: {
+                            title: "子任務三：清晰度評估",
+                            metricLabel: "評估指標",
+                            metric1Label: "Macro-F1：",
+                            metric1: "三分類（清楚/不清楚/誤導）平均表現",
+                            desc: "最具挑戰性任務，辨識漂綠風險能力"
+                        },
+                        task4: {
+                            title: "子任務四：驗證時機預測",
+                            metricLabel: "評估指標",
+                            metric1Label: "Macro-F1：",
+                            metric1: "四分類時間推論能力",
+                            desc: "評估模型對承諾時間軸的理解"
+                        },
+                        awardsTitle: "🏅 獎項設置",
+                        award1: {
+                            title: "🥇 第一名",
+                            prizeLabel: "獎金：",
+                            prize: "NT$ 100,000",
+                            certLabel: "獎狀：",
+                            cert: "教育部頒發"
+                        },
+                        award2: {
+                            title: "🥈 第二名",
+                            prizeLabel: "獎金：",
+                            prize: "NT$ 60,000",
+                            certLabel: "獎狀：",
+                            cert: "教育部頒發"
+                        },
+                        award3: {
+                            title: "🥉 第三名",
+                            prizeLabel: "獎金：",
+                            prize: "NT$ 30,000",
+                            certLabel: "獎狀：",
+                            cert: "教育部頒發"
+                        },
+                        award4: {
+                            title: "🎖️ 優選獎",
+                            slotsLabel: "名額：",
+                            slots: "12 隊",
+                            certLabel: "獎狀：",
+                            cert: "教育部頒發"
+                        },
+                        rulesLabel: "📌 排名規則：",
+                        rule1: "• 最終排名以 Private Dataset 測試結果為準",
+                        rule2: "• Public Dataset 僅供競賽期間參考使用",
+                        rule3: "• 前 25% 且超過 Baseline 的隊伍可獲得計畫辦公室電子獎狀"
+                    },
+                    timeline: {
+                        title: "競賽時程",
+                        item1: {
+                            date: "2025 年 11 月 - 2026 年 1 月",
+                            title: "資料蒐集與標註",
+                            desc: "蒐集台灣企業 ESG 報告，進行專業標註與品質控制"
+                        },
+                        item2: {
+                            date: "2026 年 2 月 - 3 月",
+                            title: "競賽宣傳與報名",
+                            desc: "公布競賽細節、數據集與評估方式，開放隊伍報名"
+                        },
+                        item3: {
+                            date: "2026 年 4 月 - 5 月",
+                            title: "訓練數據集釋出與開發階段",
+                            desc: "提供 4,000 筆訓練數據集，參賽者開發與優化模型"
+                        },
+                        item4: {
+                            date: "2026 年 6 月中旬",
+                            title: "測試數據集釋出與提交",
+                            desc: "6/18 開放測試集下載，6/20 23:59:59 提交截止（每日限 3 次）"
+                        },
+                        item5: {
+                            date: "2026 年 7 月",
+                            title: "結果評估與審查",
+                            desc: "評審團隊審核提交結果、技術報告與程式碼"
+                        },
+                        item6: {
+                            date: "2026 年 8 月",
+                            title: "成績公布與頒獎典禮",
+                            desc: "公布得獎名單，舉辦頒獎典禮與技術分享會"
+                        }
+                    },
+                    team: {
+                        title: "主辦團隊",
+                        intro: "由台日頂尖學術機構與業界專家共同主辦",
+                        piTitle: "🎓 計畫主持人",
+                        pi: {
+                            name: "戴敏育 教授",
+                            role: "計畫主持人",
+                            affiliation: "國立臺北大學<br>資訊管理研究所",
+                            desc: "專精於人工智慧、生成式AI、永續綠色金融科技。現任金融科技暨綠色金融研究中心主任。"
+                        },
+                        copiTitle: "👥 協同主持人",
+                        copi1: {
+                            name: "陳重吉 博士",
+                            role: "協同主持人",
+                            affiliation: "日本產業技術綜合研究所<br>人工智慧研究中心",
+                            desc: "ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。"
+                        },
+                        copi2: {
+                            name: "Yohei Seki 教授",
+                            role: "協同主持人",
+                            affiliation: "日本筑波大學<br>圖書館情報媒體科學系",
+                            desc: "專精於自然語言處理與資訊檢索，曾組織 NTCIR 多語言觀點分析任務。"
+                        },
+                        orgTitle: "🏢 主辦單位",
+                        org1: {
+                            name: "國立臺北大學",
+                            dept: "資訊管理研究所<br>金融科技暨綠色金融研究中心"
+                        },
+                        org2: {
+                            name: "日本產業技術綜合研究所",
+                            dept: "人工智慧研究中心"
+                        },
+                        org3: {
+                            name: "日本筑波大學",
+                            dept: "圖書館情報媒體科學系"
+                        }
+                    },
+                    contact: {
+                        title: "聯絡我們",
+                        intro: "如有任何問題，歡迎隨時與我們聯繫",
+                        email: {
+                            title: "電子郵件"
+                        },
+                        website: {
+                            title: "官方網站",
+                            link: "國立臺北大學"
+                        },
+                        code: {
+                            title: "Sample Code"
+                        },
+                        platform: {
+                            title: "競賽平台",
+                            link: "AI CUP 報名系統"
+                        },
+                        importantLabel: "📢 重要提醒：",
+                        note1: "• 請於 AI CUP 報名系統 (https://go.aicup.tw/) 完成報名登錄",
+                        note2: "• 參賽隊伍 1-5 人，報名後不可更換成員",
+                        note3: "• 測試集提交期間：2026/6/18 11:00 - 2026/6/20 23:59:59（每日限 3 次）",
+                        note4: "• 需繳交技術報告、實作程式碼與執行環境說明",
+                        note5: "• 前 15 名全學生隊伍可獲教育部獎狀",
+                        note6: "• 可使用外部資料與預訓練模型，但須在報告中詳細說明"
+                    },
+                    footer: {
+                        copyright: "© 2025 AI Cup - ESG 永續承諾驗證競賽",
+                        organizer: "主辦單位：國立臺北大學資訊管理研究所",
+                        backToTop: "返回頂部"
+                    }
+                }
+            },
+            en: {
+                translation: {
+                    nav: {
+                        title: "AI Cup 2026",
+                        home: "Home",
+                        about: "About",
+                        tasks: "Tasks",
+                        dataset: "Dataset",
+                        evaluation: "Evaluation",
+                        timeline: "Timeline",
+                        team: "Team",
+                        contact: "Contact"
+                    },
+                    hero: {
+                        title: "🌍 ESG Promise Verification Competition",
+                        subtitle: "Leverage AI to verify corporate sustainability commitments and enhance ESG report transparency and credibility",
+                        cta: "Learn More"
+                    },
+                    about: {
+                        title: "Competition Overview",
+                        intro: "In the era of global ESG (Environmental, Social, and Governance) focus, the authenticity and credibility of corporate sustainability reports are increasingly important. This competition aims to establish an automated sustainability commitment verification system using Large Language Model (LLM) technology.",
+                        goalLabel: "Full Name:",
+                        goalContent: "VeriPromiseESG 2026 - ESG Promise Verification Competition",
+                        objectiveLabel: "Objective:",
+                        objectiveContent: "Develop an AI system capable of automatically identifying, analyzing, and verifying corporate sustainability commitments through four core tasks (promise recognition, evidence support, clarity assessment, and timeline prediction) to comprehensively evaluate the authenticity and credibility of ESG reports.",
+                        stat1: "Competition Tasks",
+                        stat2: "Annotated Data",
+                        stat3: "Leading Companies",
+                        stat4: "Industry Sectors",
+                        card1: {
+                            title: "Practical Application",
+                            desc: "Address corporate 'Greenwashing' issues, enhance ESG report credibility, and help investors and stakeholders make more informed decisions."
+                        },
+                        card2: {
+                            title: "Technical Challenge",
+                            desc: "Combine natural language processing, large language models, and multi-task learning to complete four challenge tasks: promise recognition, evidence linkage, clarity assessment, and timeline prediction."
+                        },
+                        card3: {
+                            title: "International Collaboration",
+                            desc: "Co-hosted by top academic institutions from Taiwan and Japan, featured as an NTCIR-19 International Track project, providing high-quality multilingual datasets to promote global ESG AI research."
+                        }
+                    },
+                    tasks: {
+                        title: "Competition Tasks",
+                        intro: "This competition comprises four core subtasks, covering the complete ESG report verification process from promise recognition to evidence assessment, clarity analysis, and timeline prediction",
+                        task1: {
+                            title: "📌 Subtask 1: Promise Recognition",
+                            goalLabel: "Objective:",
+                            goal: "Determine whether a given sentence expresses a clear corporate commitment to future actions",
+                            outputLabel: "Output Categories",
+                            output1Label: "Yes:",
+                            output1: "Statements containing explicit commitments",
+                            output2Label: "No:",
+                            output2: "General statements without commitments",
+                            metricLabel: "Evaluation Metric",
+                            metric: "F1-Score (harmonic mean of precision and recall)",
+                            exampleLabel: "Examples",
+                            example1Label: "✅ Promise:",
+                            example1: '"We commit to achieving carbon neutrality by 2030"',
+                            example2Label: "❌ Non-Promise:",
+                            example2: '"We value the importance of environmental protection"'
+                        },
+                        task2: {
+                            title: "🔗 Subtask 2: Evidence Support Linkage",
+                            goalLabel: "Objective:",
+                            goal: "Determine whether identified promise statements are accompanied by specific action plans or supporting evidence",
+                            outputLabel: "Output Categories",
+                            output1Label: "Yes:",
+                            output1: "Promise has concrete evidence support",
+                            output2Label: "No:",
+                            output2: "Promise lacks specific evidence",
+                            metricLabel: "Evaluation Metric",
+                            metric: "F1-Score (semantic association judgment capability)",
+                            exampleLabel: "Example",
+                            promiseLabel: "Promise:",
+                            promise: '"Promote low-carbon value chain transformation, continuously strengthen supplier energy-saving, carbon reduction, water conservation, and waste reduction guidance"',
+                            evidenceLabel: "Evidence:",
+                            evidence: '"Require setting medium and long-term reduction targets and proposing specific actions" → ',
+                            result: "Evidence Supported"
+                        },
+                        task3: {
+                            title: "💡 Subtask 3: Clarity Classification",
+                            goalLabel: "Objective:",
+                            goal: "Assess whether promise statements are semantically clear without ambiguous language, identifying potential 'greenwashing' risks",
+                            outputLabel: "Output Categories",
+                            output1Label: "Clear:",
+                            output1: "Semantically explicit and verifiable",
+                            output2Label: "Not Clear:",
+                            output2: "Semantically ambiguous and difficult to quantify",
+                            output3Label: "Misleading:",
+                            output3: "Potentially misleading statements",
+                            metricLabel: "Evaluation Metric",
+                            metric: "Macro-F1 (average performance across three categories)",
+                            valueLabel: "Practical Value",
+                            value: "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility"
+                        },
+                        task4: {
+                            title: "⏰ Subtask 4: Timeline Prediction",
+                            goalLabel: "Objective:",
+                            goal: "Infer the expected completion time of commitments based on statements to establish tracking mechanisms",
+                            outputLabel: "Output Categories",
+                            output1Label: "Already:",
+                            output1: "Commitment already fulfilled (verifiable in current period)",
+                            output2Label: "Within 2 years:",
+                            output2: "Short-term target",
+                            output3Label: "Between 2 and 5 years:",
+                            output3: "Medium-term target",
+                            output4Label: "More than 5 years:",
+                            output4: "Long-term target",
+                            metricLabel: "Evaluation Metric",
+                            metric: "Macro-F1 (four-category time inference capability)"
+                        },
+                        relevanceTitle: "🎯 Task Relevance and Practical Value",
+                        job1: {
+                            title: "ESG Data Analyst",
+                            skillLabel: "Corresponding Skills:",
+                            skill: "Subtask 1",
+                            desc: "Key information extraction, text classification, sustainability report writing"
+                        },
+                        job2: {
+                            title: "Sustainable Investment Analyst",
+                            skillLabel: "Corresponding Skills:",
+                            skill: "Subtask 2",
+                            desc: "Semantic association judgment, logical reasoning, due diligence"
+                        },
+                        job3: {
+                            title: "Financial Regulatory Examiner",
+                            skillLabel: "Corresponding Skills:",
+                            skill: "Subtask 3",
+                            desc: "Greenwashing risk identification, semantic quality assessment, compliance audit"
+                        },
+                        job4: {
+                            title: "Corporate Sustainability Specialist",
+                            skillLabel: "Corresponding Skills:",
+                            skill: "Subtask 4",
+                            desc: "Time information extraction, goal management and tracking, project planning"
+                        }
+                    },
+                    dataset: {
+                        title: "Dataset Introduction",
+                        intro: "VeriPromiseESG4K - The world's first Traditional Chinese-designed sustainability commitment verification annotated dataset, sourced from Taiwan 50 Index constituents, spanning 15 industries' authentic ESG reports",
+                        featuresTitle: "📊 Dataset Features",
+                        feature1: {
+                            title: "Taiwan's Leading Companies",
+                            desc: "Real sustainability reports from Taiwan 50 Index (0050) constituent stocks, covering Taiwan's top 50 listed companies."
+                        },
+                        feature2: {
+                            title: "Cross-Industry Diversity",
+                            desc: "Spanning 15 different industry sectors including technology, finance, manufacturing, energy, etc., providing rich industry perspectives."
+                        },
+                        feature3: {
+                            title: "High-Quality Annotation",
+                            desc: "Executed in collaboration between National Taipei University and University of Taipei teams, with multi-stage quality control and Krippendorff's Alpha ensuring annotation consistency."
+                        },
+                        scaleTitle: "📈 Dataset Scale",
+                        nameLabel: "Dataset Name:",
+                        name: "VeriPromiseESG4K (World's First Traditional Chinese Sustainability Commitment Verification Dataset)",
+                        sizeLabel: "Total Data Volume:",
+                        size: "4,000 high-quality annotated data points",
+                        sourceLabel: "Data Source:",
+                        source: "Taiwan 50 Index (0050) constituent stocks, covering top 50 listed companies",
+                        industryLabel: "Industry Coverage:",
+                        industry: "Spanning 15 industry sectors (technology, finance, manufacturing, energy, etc.)",
+                        annotationLabel: "Annotation Dimensions:",
+                        annotation: "Four subtasks (promise recognition, evidence support, clarity assessment, timeline verification)",
+                        splitLabel: "Data Split:",
+                        split: "Training set + Test set (Public & Private)",
+                        processTitle: "🔍 Annotation Process",
+                        phase1: {
+                            title: "Phase 1: Initial Annotation",
+                            item1: "Professional annotation team performs initial marking",
+                            item2: "Establish annotation standards and guidelines",
+                            item3: "Conduct annotator training"
+                        },
+                        phase2: {
+                            title: "Phase 2: Cross-Validation",
+                            item1: "Multiple annotators independently annotate",
+                            item2: "Calculate inter-annotator consistency",
+                            item3: "Resolve annotation discrepancies"
+                        },
+                        phase3: {
+                            title: "Phase 3: Expert Review",
+                            item1: "Domain experts conduct final review",
+                            item2: "Quality control and corrections",
+                            item3: "Dataset release"
+                        }
+                    },
+                    evaluation: {
+                        title: "Evaluation Methods",
+                        intro: "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks",
+                        metricsTitle: "📊 Evaluation Metrics for Each Subtask",
+                        task1: {
+                            title: "Subtask 1: Promise Recognition",
+                            metricLabel: "Evaluation Metrics",
+                            metric1Label: "F1-Score:",
+                            metric1: "Harmonic mean of precision and recall",
+                            desc: "Measures the model's ability to identify ESG promise statements"
+                        },
+                        task2: {
+                            title: "Subtask 2: Evidence Support Judgment",
+                            metricLabel: "Evaluation Metrics",
+                            metric1Label: "F1-Score:",
+                            metric1: "Determines whether promises have sufficient supporting evidence",
+                            desc: "Core practical capability assessment"
+                        },
+                        task3: {
+                            title: "Subtask 3: Clarity Assessment",
+                            metricLabel: "Evaluation Metrics",
+                            metric1Label: "Macro-F1:",
+                            metric1: "Three-category (clear/unclear/misleading) average performance",
+                            desc: "Most challenging task, identifying greenwashing risk capability"
+                        },
+                        task4: {
+                            title: "Subtask 4: Timeline Prediction",
+                            metricLabel: "Evaluation Metrics",
+                            metric1Label: "Macro-F1:",
+                            metric1: "Four-category time inference capability",
+                            desc: "Assesses model understanding of commitment timelines"
+                        },
+                        awardsTitle: "🏅 Award Structure",
+                        award1: {
+                            title: "🥇 First Place",
+                            prizeLabel: "Prize:",
+                            prize: "NT$ 100,000",
+                            certLabel: "Certificate:",
+                            cert: "Issued by Ministry of Education"
+                        },
+                        award2: {
+                            title: "🥈 Second Place",
+                            prizeLabel: "Prize:",
+                            prize: "NT$ 60,000",
+                            certLabel: "Certificate:",
+                            cert: "Issued by Ministry of Education"
+                        },
+                        award3: {
+                            title: "🥉 Third Place",
+                            prizeLabel: "Prize:",
+                            prize: "NT$ 30,000",
+                            certLabel: "Certificate:",
+                            cert: "Issued by Ministry of Education"
+                        },
+                        award4: {
+                            title: "🎖️ Merit Awards",
+                            slotsLabel: "Slots:",
+                            slots: "12 teams",
+                            certLabel: "Certificate:",
+                            cert: "Issued by Ministry of Education"
+                        },
+                        rulesLabel: "📌 Ranking Rules:",
+                        rule1: "• Final ranking based on Private Dataset test results",
+                        rule2: "• Public Dataset for reference during competition only",
+                        rule3: "• Top 25% teams exceeding Baseline receive Program Office digital certificates"
+                    },
+                    timeline: {
+                        title: "Competition Schedule",
+                        item1: {
+                            date: "November 2025 - January 2026",
+                            title: "Data Collection and Annotation",
+                            desc: "Collect Taiwan corporate ESG reports, conduct professional annotation and quality control"
+                        },
+                        item2: {
+                            date: "February - March 2026",
+                            title: "Competition Promotion and Registration",
+                            desc: "Announce competition details, dataset, and evaluation methods; open team registration"
+                        },
+                        item3: {
+                            date: "April - May 2026",
+                            title: "Training Dataset Release and Development Phase",
+                            desc: "Provide 4,000 training data points; participants develop and optimize models"
+                        },
+                        item4: {
+                            date: "Mid-June 2026",
+                            title: "Test Dataset Release and Submission",
+                            desc: "Test set available 6/18; submission deadline 6/20 23:59:59 (3 submissions per day)"
+                        },
+                        item5: {
+                            date: "July 2026",
+                            title: "Result Evaluation and Review",
+                            desc: "Jury reviews submitted results, technical reports, and code"
+                        },
+                        item6: {
+                            date: "August 2026",
+                            title: "Results Announcement and Award Ceremony",
+                            desc: "Announce winners, hold award ceremony and technical sharing session"
+                        }
+                    },
+                    team: {
+                        title: "Organizing Team",
+                        intro: "Co-hosted by top academic institutions from Taiwan and Japan with industry experts",
+                        piTitle: "🎓 Principal Investigator",
+                        pi: {
+                            name: "Prof. Min-Yuh Day",
+                            role: "Principal Investigator",
+                            affiliation: "National Taipei University<br>Graduate Institute of Information Management",
+                            desc: "Specialized in artificial intelligence, generative AI, and sustainable green fintech. Currently Director of Fintech and Green Finance Research Center."
+                        },
+                        copiTitle: "👥 Co-Principal Investigators",
+                        copi1: {
+                            name: "Dr. Chung-Chi Chen",
+                            role: "Co-Principal Investigator",
+                            affiliation: "National Institute of Advanced Industrial Science and Technology (AIST)<br>Artificial Intelligence Research Center",
+                            desc: "Founder of ACL SIG-FinTech, specialized in financial opinion mining and natural language processing."
+                        },
+                        copi2: {
+                            name: "Prof. Yohei Seki",
+                            role: "Co-Principal Investigator",
+                            affiliation: "University of Tsukuba<br>Faculty of Library, Information and Media Science",
+                            desc: "Specialized in natural language processing and information retrieval, organized NTCIR multilingual opinion analysis tasks."
+                        },
+                        orgTitle: "🏢 Organizing Institutions",
+                        org1: {
+                            name: "National Taipei University",
+                            dept: "Graduate Institute of Information Management<br>Fintech and Green Finance Research Center"
+                        },
+                        org2: {
+                            name: "National Institute of Advanced Industrial Science and Technology (AIST)",
+                            dept: "Artificial Intelligence Research Center"
+                        },
+                        org3: {
+                            name: "University of Tsukuba",
+                            dept: "Faculty of Library, Information and Media Science"
+                        }
+                    },
+                    contact: {
+                        title: "Contact Us",
+                        intro: "Feel free to reach out with any questions",
+                        email: {
+                            title: "Email"
+                        },
+                        website: {
+                            title: "Official Website",
+                            link: "National Taipei University"
+                        },
+                        code: {
+                            title: "Sample Code"
+                        },
+                        platform: {
+                            title: "Competition Platform",
+                            link: "AI CUP Registration System"
+                        },
+                        importantLabel: "📢 Important Reminders:",
+                        note1: "• Register via AI CUP Registration System (https://go.aicup.tw/)",
+                        note2: "• Teams consist of 1-5 members; no changes after registration",
+                        note3: "• Test set submission period: 6/18/2026 11:00 - 6/20/2026 23:59:59 (3 submissions per day)",
+                        note4: "• Submit technical report, implementation code, and environment documentation",
+                        note5: "• Top 15 all-student teams receive Ministry of Education certificates",
+                        note6: "• External data and pre-trained models allowed; detailed disclosure required in report"
+                    },
+                    footer: {
+                        copyright: "© 2025 AI Cup - ESG Promise Verification Competition",
+                        organizer: "Organizer: National Taipei University Graduate Institute of Information Management",
+                        backToTop: "Back to Top"
+                    }
+                }
+            }
+        };
+
+        // Initialize i18next
+        i18next.init({
+            lng: 'en',
+            fallbackLng: 'zh',
+            resources: translations
+        }, function(err, t) {
+            updateContent();
+        });
+
+        // Update content based on current language
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = i18next.t(key);
+                if (translation) {
+                    // Handle HTML content (for <br> tags)
+                    if (translation.includes('<br>')) {
+                        element.innerHTML = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            });
+        }
+
+        // Change language function
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, (err, t) => {
+                updateContent();
+                // Update button states
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.getElementById(`btn-${lang}`).classList.add('active');
+            });
+        }
+
+        // Original JavaScript code
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.style.opacity = '0.8';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.opacity = '1';
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .task-card, .timeline-item, .team-member').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
