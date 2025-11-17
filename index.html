@@ -295,6 +295,31 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
+        .team-photo {
+            width: 200px;
+            height: 240px;
+            border-radius: 10px;
+            margin: 0 auto 1rem;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-photo-placeholder {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+
         .team-member h4 {
             color: #667eea;
             font-size: 1.3rem;
@@ -311,6 +336,37 @@
             color: #666;
             font-size: 0.9rem;
         }
+
+        .team-member .project {
+            color: #555;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .team-member .github-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .team-member .github-link:hover {
+            text-decoration: underline;
+        }
+
+        .lead-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
 
         .stats {
             display: grid;
@@ -822,6 +878,9 @@
             <h3 data-i18n="team.piTitle">🎓 計畫主持人</h3>
             <div class="team-grid">
                 <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/myday_photo.jpg" alt="戴敏育 教授">
+                    </div>
                     <h4 data-i18n="team.pi.name">戴敏育 教授</h4>
                     <div class="role" data-i18n="team.pi.role">計畫主持人</div>
                     <div class="affiliation" data-i18n="team.pi.affiliation">國立臺北大學<br>資訊管理研究所</div>
@@ -834,14 +893,20 @@
             <h3 data-i18n="team.copiTitle">👥 協同主持人</h3>
             <div class="team-grid">
                 <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img\Dr. Chung-Chi Chen.png" alt="Hsin-Ting LU">
+                    </div>
                     <h4 data-i18n="team.copi1.name">陳重吉 博士</h4>
                     <div class="role" data-i18n="team.copi1.role">協同主持人</div>
                     <div class="affiliation" data-i18n="team.copi1.affiliation">日本產業技術綜合研究所<br>人工智慧研究中心</div>
                     <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;" data-i18n="team.copi1.desc">
-                        ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。
+                        ACL SIG-FinTech 創始人,專精於金融意見挖掘與自然語言處理。
                     </p>
                 </div>
                 <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img\Yohei Seki.png" alt="Hsin-Ting LU">
+                    </div>
                     <h4 data-i18n="team.copi2.name">Yohei Seki 教授</h4>
                     <div class="role" data-i18n="team.copi2.role">協同主持人</div>
                     <div class="affiliation" data-i18n="team.copi2.affiliation">日本筑波大學<br>圖書館情報媒體科學系</div>
@@ -851,19 +916,67 @@
                 </div>
             </div>
 
-            <h3 data-i18n="team.orgTitle">🏢 主辦單位</h3>
+            <h3 data-i18n="team.raTitle">👨‍💼 兼任研究助理</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/bob_photo.png" alt="Hsin-Ting LU">
+                    </div>
+                    <h4 data-i18n="team.ra1.name">Hsin-Ting LU</h4>
+                    <div class="role" data-i18n="team.ra1.role">研究助理</div>
+                    <a href="https://luboblu.github.io/" target="_blank" class="github-link" data-i18n="team.ra1.link">🔗 個人網站</a>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/andy_photo.png" alt="Wen-Ze Chen">
+                    </div>
+                    <h4 data-i18n="team.ra2.name">Wen-Ze Chen</h4>
+                    <div class="role" data-i18n="team.ra2.role">研究助理</div>
+                    <a href="https://cwz-bot.github.io/chenwenze.github.io/" target="_blank" class="github-link" data-i18n="team.ra2.link">🔗 個人網站</a>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/Wesley_Photo.png" alt="Wei-Chun Huang">
+                    </div>
+                    <h4 data-i18n="team.ra3.name">Wei-Chun Huang</h4>
+                    <div class="role" data-i18n="team.ra3.role">研究助理</div>
+                    <a href="https://wesley7745.github.io/" target="_blank" class="github-link" data-i18n="team.ra3.link">🔗 個人網站</a>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/Yuhan_new.png" alt="Yu-Han Huang">
+                    </div>
+                    <h4 data-i18n="team.ra4.name">Yu-Han Huang</h4>
+                    <div class="role" data-i18n="team.ra4.role">研究助理</div>
+                    <a href="https://yuhanhuang.github.io/" target="_blank" class="github-link" data-i18n="team.ra4.link">🔗 個人網站</a>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/jeremy_photo.png" alt="Jun-Yu Wu">
+                    </div>
+                    <h4 data-i18n="team.ra5.name">Jun-Yu Wu</h4>
+                    <div class="role" data-i18n="team.ra5.role">研究助理</div>
+                    <a href="https://jun-yu-wu.github.io" target="_blank" class="github-link" data-i18n="team.ra5.link">🔗 個人網站</a>
+                </div>
+            </div>
+
+            <h3 data-i18n="team.orgTitle">🏢 合作機構</h3>
             <div class="cards">
                 <div class="card">
                     <h3 data-i18n="team.org1.name">國立臺北大學</h3>
                     <p data-i18n="team.org1.dept">資訊管理研究所<br>金融科技暨綠色金融研究中心</p>
                 </div>
                 <div class="card">
-                    <h3 data-i18n="team.org2.name">日本產業技術綜合研究所</h3>
-                    <p data-i18n="team.org2.dept">人工智慧研究中心</p>
+                    <h3 data-i18n="team.org2.name">臺北市立大學</h3>
+                    <p data-i18n="team.org2.dept">資訊科學系</p>
                 </div>
                 <div class="card">
-                    <h3 data-i18n="team.org3.name">日本筑波大學</h3>
-                    <p data-i18n="team.org3.dept">圖書館情報媒體科學系</p>
+                    <h3 data-i18n="team.org3.name">日本產業技術綜合研究所</h3>
+                    <p data-i18n="team.org3.dept">人工智慧研究中心</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="team.org4.name">日本筑波大學</h3>
+                    <p data-i18n="team.org4.dept">圖書館情報媒體科學系</p>
                 </div>
             </div>
         </div>
@@ -881,7 +994,7 @@
                 <div class="card">
                     <div class="card-icon">📧</div>
                     <h3 data-i18n="contact.email.title">電子郵件</h3>
-                    <p><a href="mailto:myday@gm.ntpu.edu.tw">myday@gm.ntpu.edu.tw</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#1974607d7860597e7437776d696c377c7d6c376d6e"><span class="__cf_email__" data-cfemail="9ef3e7faffe7def9f3b0f0eaeeebb0fbfaebb0eae9">[email&#160;protected]</span></a></p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🌐</div>
@@ -923,7 +1036,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Comprehensive i18next translations
         const translations = {
             zh: {
@@ -1235,16 +1348,51 @@
                             affiliation: "日本筑波大學<br>圖書館情報媒體科學系",
                             desc: "專精於自然語言處理與資訊檢索，曾組織 NTCIR 多語言觀點分析任務。"
                         },
-                        orgTitle: "🏢 主辦單位",
+                        raTitle: "👨‍💼 兼任研究助理",
+                        ra1: {
+                            name: "Hsin-Ting LU",
+                            role: "研究助理",
+                            project: "Validating ESG Commitments with RAG-Enhanced Large Language Models: Toward Transparent and Reliable Sustainability Disclosure",
+                            link: "🔗 個人網站"
+                        },
+                        ra2: {
+                            name: "Wen-Ze Chen",
+                            role: "研究助理",
+                            project: "Development of a Deep Learning for Dental Implant Detection in Panoramic Radiographs",
+                            link: "🔗 個人網站"
+                        },
+                        ra3: {
+                            name: "Wei-Chun Huang",
+                            role: "研究助理",
+                            project: "AI Cup-ESG Promise Verification Competition",
+                            link: "🔗 個人網站"
+                        },
+                        ra4: {
+                            name: "Yu-Han Huang",
+                            role: "研究助理",
+                            project: "AI Cup-ESG Promise Verification Competition",
+                            link: "🔗 個人網站"
+                        },
+                        ra5: {
+                            name: "Jun-Yu Wu",
+                            role: "研究助理",
+                            project: "Generative AI in ESG Reporting",
+                            link: "🔗 個人網站"
+                        },
+                        orgTitle: "🏢 合作機構",
                         org1: {
                             name: "國立臺北大學",
                             dept: "資訊管理研究所<br>金融科技暨綠色金融研究中心"
                         },
                         org2: {
+                            name: "臺北市立大學",
+                            dept: "資訊科學系"
+                        },
+                        org3: {
                             name: "日本產業技術綜合研究所",
                             dept: "人工智慧研究中心"
                         },
-                        org3: {
+                        org4: {
                             name: "日本筑波大學",
                             dept: "圖書館情報媒體科學系"
                         }
@@ -1590,16 +1738,51 @@
                             affiliation: "University of Tsukuba<br>Faculty of Library, Information and Media Science",
                             desc: "Specialized in natural language processing and information retrieval, organized NTCIR multilingual opinion analysis tasks."
                         },
-                        orgTitle: "🏢 Organizing Institutions",
+                        raTitle: "👨‍💼 Research Assistants",
+                        ra1: {
+                            name: "Hsin-Ting LU",
+                            role: "Researcher",
+                            project: "Validating ESG Commitments with RAG-Enhanced Large Language Models: Toward Transparent and Reliable Sustainability Disclosure",
+                            link: "🔗 Website"
+                        },
+                        ra2: {
+                            name: "Wen-Ze Chen",
+                            role: "Researcher",
+                            project: "Development of a Deep Learning for Dental Implant Detection in Panoramic Radiographs",
+                            link: "🔗 Website"
+                        },
+                        ra3: {
+                            name: "Wei-Chun Huang",
+                            role: "Researcher",
+                            project: "AI Cup-ESG Promise Verification Competition",
+                            link: "🔗 Website"
+                        },
+                        ra4: {
+                            name: "Yu-Han Huang",
+                            role: "Researcher",
+                            project: "AI Cup-ESG Promise Verification Competition",
+                            link: "🔗 Website"
+                        },
+                        ra5: {
+                            name: "Jun-Yu Wu",
+                            role: "Researcher",
+                            project: "Generative AI in ESG Reporting",
+                            link: "🔗 Website"
+                        },
+                        orgTitle: "🏢 Partner Institutions",
                         org1: {
                             name: "National Taipei University",
                             dept: "Graduate Institute of Information Management<br>Fintech and Green Finance Research Center"
                         },
                         org2: {
+                            name: "University of Taipei",
+                            dept: "Department of Computer Science"
+                        },
+                        org3: {
                             name: "National Institute of Advanced Industrial Science and Technology (AIST)",
                             dept: "Artificial Intelligence Research Center"
                         },
-                        org3: {
+                        org4: {
                             name: "University of Tsukuba",
                             dept: "Faculty of Library, Information and Media Science"
                         }
@@ -1641,7 +1824,7 @@
         // Initialize i18next
         i18next.init({
             lng: 'en',
-            fallbackLng: 'zh',
+            fallbackLng: 'en',
             resources: translations
         }, function(err, t) {
             updateContent();
@@ -1652,7 +1835,7 @@
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 const translation = i18next.t(key);
-                if (translation) {
+                if (translation && translation !== key) {
                     // Handle HTML content (for <br> tags)
                     if (translation.includes('<br>')) {
                         element.innerHTML = translation;
@@ -1728,10 +1911,8 @@
             });
         }, observerOptions);
 
+
         document.querySelectorAll('.card, .task-card, .timeline-item, .team-member').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
     </script>
