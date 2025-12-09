@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
-      AI Cup 2026 - VeriPromise ESG 永續承諾驗證競賽 | ESG Verification
+      AI Cup 2026 - VeriPromise ESG | 永續承諾驗證競賽 | ESG Verification
     </title>
     <meta
       name="description"
-      content="VeriPromise ESG 2026 是全球首個繁體中文 ESG 承諾驗證 AI 競賽。提供 4,000 筆高品質標註數據，邀請全球好手運用 NLP 技術解決企業漂綠問題。主辦單位：國立臺北大學。"
+      content="VeriPromise ESG 2026 是全球首個繁體中文 ESG 承諾驗證 AI 競賽。由國立臺北大學主辦，提供 4,000 筆高品質標註數據，邀請全球好手運用 NLP 技術解決企業漂綠問題。"
     />
     <meta
       name="keywords"
-      content="AI Cup 2026, VeriPromise ESG, ESG Verification, 永續承諾驗證, NLP競賽, 人工智慧競賽, 漂綠偵測, Greenwashing Detection, 國立臺北大學"
+      content="AI Cup 2026, VeriPromise ESG, ESG Verification, 永續承諾驗證, NLP競賽, 人工智慧競賽, 漂綠偵測, Greenwashing Detection, 國立臺北大學, Min-Yuh Day, 戴敏育"
     />
     <meta name="author" content="VeriPromise ESG Team, NTPU" />
     <meta name="robots" content="index, follow" />
@@ -45,8 +45,8 @@
         "@graph": [
           {
             "@type": "Event",
-            "name": "AI Cup 2026 - VeriPromise ESG",
-            "description": "ESG 永續承諾驗證競賽，運用 AI 技術解決企業漂綠問題。",
+            "name": "AI Cup 2026 - VeriPromise ESG 永續承諾驗證競賽",
+            "description": "全球首個繁體中文 ESG 承諾驗證 AI 競賽，由國立臺北大學與日本 AIST 共同主辦。提供 4,000 筆標註數據，挑戰 NLP 漂綠偵測任務。",
             "startDate": "2025-11-01",
             "endDate": "2026-08-31",
             "eventStatus": "https://schema.org/EventScheduled",
@@ -55,17 +55,46 @@
               "@type": "VirtualLocation",
               "url": "https://veripromiseesg.github.io/"
             },
-            "organizer": {
-              "@type": "Organization",
-              "name": "國立臺北大學資訊管理研究所",
-              "url": "https://www.ntpu.edu.tw"
+            "image": [
+              "https://veripromiseesg.github.io/img/ntpu-logo.png"
+            ],
+            "organizer": [
+              {
+                "@type": "Organization",
+                "name": "國立臺北大學資訊管理研究所 (NTPU)",
+                "url": "https://www.ntpu.edu.tw",
+                "sameAs": "https://zh.wikipedia.org/zh-tw/%E5%9C%8B%E7%AB%8B%E8%87%BA%E5%8C%97%E5%A4%A7%E5%AD%B8"
+              },
+              {
+                "@type": "Person",
+                "name": "戴敏育 (Min-Yuh Day)",
+                "jobTitle": "教授 / 計畫主持人",
+                "affiliation": {
+                  "@type": "Organization",
+                  "name": "國立臺北大學"
+                },
+                "url": "https://web.ntpu.edu.tw/~myday/"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "url": "https://go.aicup.tw/",
+              "price": "0",
+              "priceCurrency": "TWD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2026-02-01"
             }
           },
           {
-            "@type": "WebSite",
-            "name": "VeriPromise ESG - AI Cup 2026",
-            "url": "https://veripromiseesg.github.io/",
-            "description": "2026 全球永續承諾驗證競賽官方網站"
+            "@type": "Dataset",
+            "name": "VeriPromiseESG4K",
+            "description": "包含 4,000 筆來自台灣 50 指數成分股的繁體中文 ESG 標註數據，用於訓練 AI 識別企業永續承諾。",
+            "url": "https://veripromiseesg.github.io/#dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "creator": {
+              "@type": "Organization",
+              "name": "VeriPromise ESG Team"
+            }
           },
           {
             "@type": "FAQPage",
@@ -75,7 +104,7 @@
                 "name": "VeriPromise ESG 競賽的目標是什麼？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，解決企業漂綠 (Greenwashing) 問題。"
+                  "text": "開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，解決企業漂綠 (Greenwashing) 問題，提升 ESG 報告可信度。"
                 }
               },
               {
@@ -83,7 +112,7 @@
                 "name": "競賽提供什麼數據集？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股的繁體中文標註數據。"
+                  "text": "提供 VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股的真實 ESG 報告標註數據。"
                 }
               },
               {
@@ -91,7 +120,7 @@
                 "name": "如何報名參加 AI Cup 2026？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "請前往 AI CUP 報名系統 (https://go.aicup.tw/) 進行報名，隊伍人數限制為 1-5 人。"
+                  "text": "請於 2026 年 2 月起前往 AI CUP 報名系統 (https://go.aicup.tw/) 進行報名，隊伍人數限制為 1-5 人。"
                 }
               }
             ]
@@ -156,17 +185,6 @@
         background: white;
         padding: 0.3rem;
         border-radius: 8px;
-      }
-
-      .logo-placeholder {
-        height: 50px;
-        width: 50px;
-        background: white;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
       }
 
       .nav-links {
@@ -452,6 +470,18 @@
         margin: 1rem 0 0.5rem;
       }
 
+      /* Authority Links Style */
+      .team-member h4 a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px dashed #667eea;
+        transition: all 0.3s;
+      }
+      .team-member h4 a:hover {
+        color: #764ba2;
+        border-bottom: 1px solid #764ba2;
+      }
+
       .team-member .role {
         color: #764ba2;
         font-weight: 500;
@@ -556,6 +586,32 @@
         color: white;
         font-size: 1.5rem;
         cursor: pointer;
+      }
+
+      /* FAQ Styles for AI Overview */
+      .faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+      }
+      .faq-item:hover {
+        transform: translateY(-3px);
+      }
+      .faq-item h3 {
+        font-size: 1.2rem;
+        margin: 0 0 0.5rem 0;
+        color: #667eea;
+      }
+      .faq-item p {
+        margin: 0;
+        color: #666;
       }
 
       /* Example Section Styles */
@@ -768,6 +824,7 @@
           </li>
           <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
           <li><a href="#team" data-i18n="nav.team">Team</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
           <li><a href="#examples" data-i18n="nav.examples">Examples</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -812,18 +869,14 @@
         </p>
 
         <div class="highlight-box">
-          <strong data-i18n="about.goalLabel">Full Name:</strong
-          ><span data-i18n="about.goalContent"
-            >VeriPromise ESG 2026 - ESG Promise Verification Competition</span
-          ><br /><br />
-          <strong data-i18n="about.objectiveLabel">Objective:</strong
-          ><span data-i18n="about.objectiveContent"
-            >Develop an AI system capable of automatically identifying,
+          <strong data-i18n="about.goalLabel">Full Name:</strong>
+          <span data-i18n="about.goalContent">VeriPromise ESG 2026 - ESG Promise Verification Competition</span><br /><br />
+          <strong data-i18n="about.objectiveLabel">Objective:</strong>
+          <span data-i18n="about.objectiveContent">Develop an AI system capable of automatically identifying,
             analyzing, and verifying corporate sustainability commitments
             through four core tasks (promise recognition, evidence support,
             clarity assessment, and timeline prediction) to comprehensively
-            evaluate the authenticity and credibility of ESG reports.</span
-          >
+            evaluate the authenticity and credibility of ESG reports.</span>
         </div>
 
         <div class="stats">
@@ -900,26 +953,20 @@
               📌 Subtask 1: Promise Recognition
             </h3>
             <p>
-              <strong data-i18n="tasks.task1.goalLabel">Objective:</strong
-              ><span data-i18n="tasks.task1.goal"
-                >Determine whether a given sentence expresses a clear corporate
-                commitment to future actions</span
-              >
+              <strong data-i18n="tasks.task1.goalLabel">Objective:</strong>
+              <span data-i18n="tasks.task1.goal">Determine whether a given sentence expresses a clear corporate
+                commitment to future actions</span>
             </p>
 
             <h4 data-i18n="tasks.task1.outputLabel">Output Categories</h4>
             <ul>
               <li>
-                <strong data-i18n="tasks.task1.output1Label">Yes:</strong
-                ><span data-i18n="tasks.task1.output1"
-                  >Statements containing explicit commitments</span
-                >
+                <strong data-i18n="tasks.task1.output1Label">Yes:</strong>
+                <span data-i18n="tasks.task1.output1">Statements containing explicit commitments</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task1.output2Label">No:</strong
-                ><span data-i18n="tasks.task1.output2"
-                  >General statements without commitments</span
-                >
+                <strong data-i18n="tasks.task1.output2Label">No:</strong>
+                <span data-i18n="tasks.task1.output2">General statements without commitments</span>
               </li>
             </ul>
 
@@ -930,15 +977,10 @@
 
             <h4 data-i18n="tasks.task1.exampleLabel">Examples</h4>
             <div class="highlight-box">
-              <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong
-              ><span data-i18n="tasks.task1.example1"
-                >"We commit to achieving carbon neutrality by 2030"</span
-              ><br />
-              <strong data-i18n="tasks.task1.example2Label"
-                >❌ Non-Promise:</strong
-              ><span data-i18n="tasks.task1.example2"
-                >"We value the importance of environmental protection"</span
-              >
+              <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong>
+              <span data-i18n="tasks.task1.example1">"We commit to achieving carbon neutrality by 2030"</span><br />
+              <strong data-i18n="tasks.task1.example2Label">❌ Non-Promise:</strong>
+              <span data-i18n="tasks.task1.example2">"We value the importance of environmental protection"</span>
             </div>
           </div>
 
@@ -947,26 +989,20 @@
               🔗 Subtask 2: Evidence Support Linkage
             </h3>
             <p>
-              <strong data-i18n="tasks.task2.goalLabel">Objective:</strong
-              ><span data-i18n="tasks.task2.goal"
-                >Determine whether identified promise statements are accompanied
-                by specific action plans or supporting evidence</span
-              >
+              <strong data-i18n="tasks.task2.goalLabel">Objective:</strong>
+              <span data-i18n="tasks.task2.goal">Determine whether identified promise statements are accompanied
+                by specific action plans or supporting evidence</span>
             </p>
 
             <h4 data-i18n="tasks.task2.outputLabel">Output Categories</h4>
             <ul>
               <li>
-                <strong data-i18n="tasks.task2.output1Label">Yes:</strong
-                ><span data-i18n="tasks.task2.output1"
-                  >Promise has concrete evidence support</span
-                >
+                <strong data-i18n="tasks.task2.output1Label">Yes:</strong>
+                <span data-i18n="tasks.task2.output1">Promise has concrete evidence support</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task2.output2Label">No:</strong
-                ><span data-i18n="tasks.task2.output2"
-                  >Promise lacks specific evidence</span
-                >
+                <strong data-i18n="tasks.task2.output2Label">No:</strong>
+                <span data-i18n="tasks.task2.output2">Promise lacks specific evidence</span>
               </li>
             </ul>
 
@@ -977,19 +1013,13 @@
 
             <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
             <div class="highlight-box">
-              <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong
-              ><span data-i18n="tasks.task2.promise"
-                >"Promote low-carbon value chain transformation, continuously
+              <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong>
+              <span data-i18n="tasks.task2.promise">"Promote low-carbon value chain transformation, continuously
                 strengthen supplier energy-saving, carbon reduction, water
-                conservation, and waste reduction guidance"</span
-              ><br />
-              <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong
-              ><span data-i18n="tasks.task2.evidence"
-                >"Require setting medium and long-term reduction targets and
-                proposing specific actions" → </span
-              ><strong style="color: #667eea" data-i18n="tasks.task2.result"
-                >Evidence Supported</strong
-              >
+                conservation, and waste reduction guidance"</span><br />
+              <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong>
+              <span data-i18n="tasks.task2.evidence">"Require setting medium and long-term reduction targets and
+                proposing specific actions" → </span><strong style="color: #667eea" data-i18n="tasks.task2.result">Evidence Supported</strong>
             </div>
           </div>
 
@@ -998,33 +1028,25 @@
               💡 Subtask 3: Clarity Classification
             </h3>
             <p>
-              <strong data-i18n="tasks.task3.goalLabel">Objective:</strong
-              ><span data-i18n="tasks.task3.goal"
-                >Assess whether promise statements are semantically clear
+              <strong data-i18n="tasks.task3.goalLabel">Objective:</strong>
+              <span data-i18n="tasks.task3.goal">Assess whether promise statements are semantically clear
                 without ambiguous language, identifying potential 'greenwashing'
-                risks</span
-              >
+                risks</span>
             </p>
 
             <h4 data-i18n="tasks.task3.outputLabel">Output Categories</h4>
             <ul>
               <li>
-                <strong data-i18n="tasks.task3.output1Label">Clear:</strong
-                ><span data-i18n="tasks.task3.output1"
-                  >Semantically explicit and verifiable</span
-                >
+                <strong data-i18n="tasks.task3.output1Label">Clear:</strong>
+                <span data-i18n="tasks.task3.output1">Semantically explicit and verifiable</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task3.output2Label">Not Clear:</strong
-                ><span data-i18n="tasks.task3.output2"
-                  >Semantically ambiguous and difficult to quantify</span
-                >
+                <strong data-i18n="tasks.task3.output2Label">Not Clear:</strong>
+                <span data-i18n="tasks.task3.output2">Semantically ambiguous and difficult to quantify</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task3.output3Label">Misleading:</strong
-                ><span data-i18n="tasks.task3.output3"
-                  >Potentially misleading statements</span
-                >
+                <strong data-i18n="tasks.task3.output3Label">Misleading:</strong>
+                <span data-i18n="tasks.task3.output3">Potentially misleading statements</span>
               </li>
             </ul>
 
@@ -1045,36 +1067,29 @@
               ⏰ Subtask 4: Timeline Prediction
             </h3>
             <p>
-              <strong data-i18n="tasks.task4.goalLabel">Objective:</strong
-              ><span data-i18n="tasks.task4.goal"
-                >Infer the expected completion time of commitments based on
-                statements to establish tracking mechanisms</span
-              >
+              <strong data-i18n="tasks.task4.goalLabel">Objective:</strong>
+              <span data-i18n="tasks.task4.goal">Infer the expected completion time of commitments based on
+                statements to establish tracking mechanisms</span>
             </p>
 
             <h4 data-i18n="tasks.task4.outputLabel">Output Categories</h4>
             <ul>
               <li>
-                <strong data-i18n="tasks.task4.output1Label">Already:</strong
-                ><span data-i18n="tasks.task4.output1"
-                  >Commitment already fulfilled (verifiable in current
-                  period)</span
-                >
+                <strong data-i18n="tasks.task4.output1Label">Already:</strong>
+                <span data-i18n="tasks.task4.output1">Commitment already fulfilled (verifiable in current
+                  period)</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output2Label"
-                  >Within 2 years:</strong
-                ><span data-i18n="tasks.task4.output2">Short-term target</span>
+                <strong data-i18n="tasks.task4.output2Label">Within 2 years:</strong>
+                <span data-i18n="tasks.task4.output2">Short-term target</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output3Label"
-                  >Between 2 and 5 years:</strong
-                ><span data-i18n="tasks.task4.output3">Medium-term target</span>
+                <strong data-i18n="tasks.task4.output3Label">Between 2 and 5 years:</strong>
+                <span data-i18n="tasks.task4.output3">Medium-term target</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output4Label"
-                  >More than 5 years:</strong
-                ><span data-i18n="tasks.task4.output4">Long-term target</span>
+                <strong data-i18n="tasks.task4.output4Label">More than 5 years:</strong>
+                <span data-i18n="tasks.task4.output4">Long-term target</span>
               </li>
             </ul>
 
@@ -1095,37 +1110,28 @@
           <div class="card">
             <h3 data-i18n="tasks.job1.title">ESG Data Analyst</h3>
             <p>
-              <strong data-i18n="tasks.job1.skillLabel"
-                >Corresponding Skills:</strong
-              ><span data-i18n="tasks.job1.skill">Subtask 1</span><br />
-              <span data-i18n="tasks.job1.desc"
-                >Key information extraction, text classification, sustainability
-                report writing</span
-              >
+              <strong data-i18n="tasks.job1.skillLabel">Corresponding Skills:</strong>
+              <span data-i18n="tasks.job1.skill">Subtask 1</span><br />
+              <span data-i18n="tasks.job1.desc">Key information extraction, text classification, sustainability
+                report writing</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="tasks.job2.title">Sustainable Investment Analyst</h3>
             <p>
-              <strong data-i18n="tasks.job2.skillLabel"
-                >Corresponding Skills:</strong
-              ><span data-i18n="tasks.job2.skill">Subtask 2</span><br />
-              <span data-i18n="tasks.job2.desc"
-                >Semantic association judgment, logical reasoning, due
-                diligence</span
-              >
+              <strong data-i18n="tasks.job2.skillLabel">Corresponding Skills:</strong>
+              <span data-i18n="tasks.job2.skill">Subtask 2</span><br />
+              <span data-i18n="tasks.job2.desc">Semantic association judgment, logical reasoning, due
+                diligence</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="tasks.job3.title">Financial Regulatory Examiner</h3>
             <p>
-              <strong data-i18n="tasks.job3.skillLabel"
-                >Corresponding Skills:</strong
-              ><span data-i18n="tasks.job3.skill">Subtask 3</span><br />
-              <span data-i18n="tasks.job3.desc"
-                >Greenwashing risk identification, semantic quality assessment,
-                compliance audit</span
-              >
+              <strong data-i18n="tasks.job3.skillLabel">Corresponding Skills:</strong>
+              <span data-i18n="tasks.job3.skill">Subtask 3</span><br />
+              <span data-i18n="tasks.job3.desc">Greenwashing risk identification, semantic quality assessment,
+                compliance audit</span>
             </p>
           </div>
           <div class="card">
@@ -1133,13 +1139,10 @@
               Corporate Sustainability Specialist
             </h3>
             <p>
-              <strong data-i18n="tasks.job4.skillLabel"
-                >Corresponding Skills:</strong
-              ><span data-i18n="tasks.job4.skill">Subtask 4</span><br />
-              <span data-i18n="tasks.job4.desc"
-                >Time information extraction, goal management and tracking,
-                project planning</span
-              >
+              <strong data-i18n="tasks.job4.skillLabel">Corresponding Skills:</strong>
+              <span data-i18n="tasks.job4.skill">Subtask 4</span><br />
+              <span data-i18n="tasks.job4.desc">Time information extraction, goal management and tracking,
+                project planning</span>
             </p>
           </div>
         </div>
@@ -1187,35 +1190,22 @@
 
         <h3 data-i18n="dataset.scaleTitle">📈 Dataset Scale</h3>
         <div class="highlight-box">
-          <strong data-i18n="dataset.nameLabel">Dataset Name:</strong
-          ><span data-i18n="dataset.name"
-            >VeriPromiseESG4K (World's First Traditional Chinese Sustainability
-            Commitment Verification Dataset)</span
-          ><br />
-          <strong data-i18n="dataset.sizeLabel">Total Data Volume:</strong
-          ><span data-i18n="dataset.size"
-            >4,000 high-quality annotated data points</span
-          ><br />
-          <strong data-i18n="dataset.sourceLabel">Data Source:</strong
-          ><span data-i18n="dataset.source"
-            >Taiwan 50 Index (0050) constituent stocks, covering top 50 listed
-            companies</span
-          ><br />
-          <strong data-i18n="dataset.industryLabel">Industry Coverage:</strong
-          ><span data-i18n="dataset.industry"
-            >Spanning 15 industry sectors (technology, finance, manufacturing,
-            energy, etc.)</span
-          ><br />
-          <strong data-i18n="dataset.annotationLabel"
-            >Annotation Dimensions:</strong
-          ><span data-i18n="dataset.annotation"
-            >Four subtasks (promise recognition, evidence support, clarity
-            assessment, timeline verification)</span
-          ><br />
-          <strong data-i18n="dataset.splitLabel">Data Split:</strong
-          ><span data-i18n="dataset.split"
-            >Training set + Test set (Public & Private)</span
-          >
+          <strong data-i18n="dataset.nameLabel">Dataset Name:</strong>
+          <span data-i18n="dataset.name">VeriPromiseESG4K (World's First Traditional Chinese Sustainability
+            Commitment Verification Dataset)</span><br />
+          <strong data-i18n="dataset.sizeLabel">Total Data Volume:</strong>
+          <span data-i18n="dataset.size">4,000 high-quality annotated data points</span><br />
+          <strong data-i18n="dataset.sourceLabel">Data Source:</strong>
+          <span data-i18n="dataset.source">Taiwan 50 Index (0050) constituent stocks, covering top 50 listed
+            companies</span><br />
+          <strong data-i18n="dataset.industryLabel">Industry Coverage:</strong>
+          <span data-i18n="dataset.industry">Spanning 15 industry sectors (technology, finance, manufacturing,
+            energy, etc.)</span><br />
+          <strong data-i18n="dataset.annotationLabel">Annotation Dimensions:</strong>
+          <span data-i18n="dataset.annotation">Four subtasks (promise recognition, evidence support, clarity
+            assessment, timeline verification)</span><br />
+          <strong data-i18n="dataset.splitLabel">Data Split:</strong>
+          <span data-i18n="dataset.split">Training set + Test set (Public & Private)</span>
         </div>
 
         <h3 data-i18n="dataset.processTitle">🔍 Annotation Process</h3>
@@ -1285,11 +1275,8 @@
             <h4 data-i18n="evaluation.task1.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task1.metric1Label"
-                  >F1-Score:</strong
-                ><span data-i18n="evaluation.task1.metric1"
-                  >Harmonic mean of precision and recall</span
-                >
+                <strong data-i18n="evaluation.task1.metric1Label">F1-Score:</strong>
+                <span data-i18n="evaluation.task1.metric1">Harmonic mean of precision and recall</span>
               </li>
               <li data-i18n="evaluation.task1.desc">
                 Measures the model's ability to identify ESG promise statements
@@ -1304,12 +1291,9 @@
             <h4 data-i18n="evaluation.task2.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task2.metric1Label"
-                  >F1-Score:</strong
-                ><span data-i18n="evaluation.task2.metric1"
-                  >Determines whether promises have sufficient supporting
-                  evidence</span
-                >
+                <strong data-i18n="evaluation.task2.metric1Label">F1-Score:</strong>
+                <span data-i18n="evaluation.task2.metric1">Determines whether promises have sufficient supporting
+                  evidence</span>
               </li>
               <li data-i18n="evaluation.task2.desc">
                 Core practical capability assessment
@@ -1324,12 +1308,9 @@
             <h4 data-i18n="evaluation.task3.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task3.metric1Label"
-                  >Macro-F1:</strong
-                ><span data-i18n="evaluation.task3.metric1"
-                  >Three-category (clear/unclear/misleading) average
-                  performance</span
-                >
+                <strong data-i18n="evaluation.task3.metric1Label">Macro-F1:</strong>
+                <span data-i18n="evaluation.task3.metric1">Three-category (clear/unclear/misleading) average
+                  performance</span>
               </li>
               <li data-i18n="evaluation.task3.desc">
                 Most challenging task, identifying greenwashing risk capability
@@ -1344,11 +1325,8 @@
             <h4 data-i18n="evaluation.task4.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task4.metric1Label"
-                  >Macro-F1:</strong
-                ><span data-i18n="evaluation.task4.metric1"
-                  >Four-category time inference capability</span
-                >
+                <strong data-i18n="evaluation.task4.metric1Label">Macro-F1:</strong>
+                <span data-i18n="evaluation.task4.metric1">Four-category time inference capability</span>
               </li>
               <li data-i18n="evaluation.task4.desc">
                 Assesses model understanding of commitment timelines
@@ -1362,67 +1340,47 @@
           <div class="card">
             <h3 data-i18n="evaluation.award1.title">🥇 First Place</h3>
             <p>
-              <strong data-i18n="evaluation.award1.prizeLabel">Prize:</strong
-              ><span data-i18n="evaluation.award1.prize">NT$ 100,000</span
-              ><br />
-              <strong data-i18n="evaluation.award1.certLabel"
-                >Certificate:</strong
-              ><span data-i18n="evaluation.award1.cert"
-                >Issued by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award1.prizeLabel">Prize:</strong>
+              <span data-i18n="evaluation.award1.prize">NT$ 100,000</span><br />
+              <strong data-i18n="evaluation.award1.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award1.cert">Issued by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="evaluation.award2.title">🥈 Second Place</h3>
             <p>
-              <strong data-i18n="evaluation.award2.prizeLabel">Prize:</strong
-              ><span data-i18n="evaluation.award2.prize">NT$ 60,000</span><br />
-              <strong data-i18n="evaluation.award2.certLabel"
-                >Certificate:</strong
-              ><span data-i18n="evaluation.award2.cert"
-                >Issued by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award2.prizeLabel">Prize:</strong>
+              <span data-i18n="evaluation.award2.prize">NT$ 60,000</span><br />
+              <strong data-i18n="evaluation.award2.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award2.cert">Issued by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="evaluation.award3.title">🥉 Third Place</h3>
             <p>
-              <strong data-i18n="evaluation.award3.prizeLabel">Prize:</strong
-              ><span data-i18n="evaluation.award3.prize">NT$ 30,000</span><br />
-              <strong data-i18n="evaluation.award3.certLabel"
-                >Certificate:</strong
-              ><span data-i18n="evaluation.award3.cert"
-                >Issued by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award3.prizeLabel">Prize:</strong>
+              <span data-i18n="evaluation.award3.prize">NT$ 30,000</span><br />
+              <strong data-i18n="evaluation.award3.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award3.cert">Issued by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="evaluation.award4.title">🎖️ Merit Awards</h3>
             <p>
-              <strong data-i18n="evaluation.award4.slotsLabel">Slots:</strong
-              ><span data-i18n="evaluation.award4.slots">12 teams</span><br />
-              <strong data-i18n="evaluation.award4.certLabel"
-                >Certificate:</strong
-              ><span data-i18n="evaluation.award4.cert"
-                >Issued by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award4.slotsLabel">Slots:</strong>
+              <span data-i18n="evaluation.award4.slots">12 teams</span><br />
+              <strong data-i18n="evaluation.award4.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award4.cert">Issued by Ministry of Education</span>
             </p>
           </div>
         </div>
 
         <div class="highlight-box" style="margin-top: 2rem">
-          <strong data-i18n="evaluation.rulesLabel">📌 Ranking Rules:</strong
-          ><br />
-          <span data-i18n="evaluation.rule1"
-            >• Final ranking based on Private Dataset test results</span
-          ><br />
-          <span data-i18n="evaluation.rule2"
-            >• Public Dataset for reference during competition only</span
-          ><br />
-          <span data-i18n="evaluation.rule3"
-            >• Top 25% teams exceeding Baseline receive Program Office digital
-            certificates</span
-          >
+          <strong data-i18n="evaluation.rulesLabel">📌 Ranking Rules:</strong><br />
+          <span data-i18n="evaluation.rule1">• Final ranking based on Private Dataset test results</span><br />
+          <span data-i18n="evaluation.rule2">• Public Dataset for reference during competition only</span><br />
+          <span data-i18n="evaluation.rule3">• Top 25% teams exceeding Baseline receive Program Office digital
+            certificates</span>
         </div>
       </div>
     </section>
@@ -1435,9 +1393,7 @@
             <div class="timeline-date" data-i18n="timeline.item1.date">
               November 2025 - January 2026
             </div>
-            <strong data-i18n="timeline.item1.title"
-              >Data Collection and Annotation</strong
-            >
+            <strong data-i18n="timeline.item1.title">Data Collection and Annotation</strong>
             <p data-i18n="timeline.item1.desc">
               Collect Taiwan corporate ESG reports, conduct professional
               annotation and quality control
@@ -1447,9 +1403,7 @@
             <div class="timeline-date" data-i18n="timeline.item2.date">
               February - March 2026
             </div>
-            <strong data-i18n="timeline.item2.title"
-              >Competition Promotion and Registration</strong
-            >
+            <strong data-i18n="timeline.item2.title">Competition Promotion and Registration</strong>
             <p data-i18n="timeline.item2.desc">
               Announce competition details, dataset, and evaluation methods;
               open team registration
@@ -1459,9 +1413,7 @@
             <div class="timeline-date" data-i18n="timeline.item3.date">
               April - May 2026
             </div>
-            <strong data-i18n="timeline.item3.title"
-              >Training Dataset Release and Development Phase</strong
-            >
+            <strong data-i18n="timeline.item3.title">Training Dataset Release and Development Phase</strong>
             <p data-i18n="timeline.item3.desc">
               Provide 4,000 training data points; participants develop and
               optimize models
@@ -1471,9 +1423,7 @@
             <div class="timeline-date" data-i18n="timeline.item4.date">
               Mid-June 2026
             </div>
-            <strong data-i18n="timeline.item4.title"
-              >Test Dataset Release and Submission</strong
-            >
+            <strong data-i18n="timeline.item4.title">Test Dataset Release and Submission</strong>
             <p data-i18n="timeline.item4.desc">
               Test set available 6/18; submission deadline 6/20 23:59:59 (3
               submissions per day)
@@ -1483,9 +1433,7 @@
             <div class="timeline-date" data-i18n="timeline.item5.date">
               July 2026
             </div>
-            <strong data-i18n="timeline.item5.title"
-              >Result Evaluation and Review</strong
-            >
+            <strong data-i18n="timeline.item5.title">Result Evaluation and Review</strong>
             <p data-i18n="timeline.item5.desc">
               Jury reviews submitted results, technical reports, and code
             </p>
@@ -1494,9 +1442,7 @@
             <div class="timeline-date" data-i18n="timeline.item6.date">
               August 2026
             </div>
-            <strong data-i18n="timeline.item6.title"
-              >Results Announcement and Award Ceremony</strong
-            >
+            <strong data-i18n="timeline.item6.title">Results Announcement and Award Ceremony</strong>
             <p data-i18n="timeline.item6.desc">
               Announce winners, hold award ceremony and technical sharing
               session
@@ -1520,7 +1466,9 @@
             <div class="team-photo">
               <img src="img/myday_photo.jpg" alt="Prof. Min-Yuh Day" />
             </div>
-            <h4 data-i18n="team.pi.name">Prof. Min-Yuh Day</h4>
+            <h4 data-i18n="team.pi.name">
+                <a href="https://web.ntpu.edu.tw/~myday/" target="_blank">Prof. Min-Yuh Day 🔗</a>
+            </h4>
             <div class="role" data-i18n="team.pi.role">
               Principal Investigator
             </div>
@@ -1687,6 +1635,26 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 data-i18n="faq.title">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q1">What is VeriPromise ESG?</h3>
+                    <p data-i18n="faq.a1">VeriPromise ESG is an AI competition focused on verifying corporate sustainability commitments using NLP technology.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q2">Who can participate?</h3>
+                    <p data-i18n="faq.a2">The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q3">What is the dataset?</h3>
+                    <p data-i18n="faq.a3">The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="examples">
@@ -2182,6 +2150,7 @@
               team: "團隊",
               examples: "範例",
               contact: "聯絡我們",
+              faq: "常見問題",
             },
             hero: {
               subtitle_top: "VeriPromise ESG 2026",
@@ -2367,7 +2336,8 @@
             },
             evaluation: {
               title: "評估方式",
-              intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
+              intro:
+                "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
               metricsTitle: "📊 各子任務評估指標",
               task1: {
                 title: "子任務一：承諾識別",
@@ -2469,7 +2439,7 @@
               intro: "由台日頂尖學術機構與業界專家共同主辦",
               piTitle: "🎓 計畫主持人",
               pi: {
-                name: "戴敏育 教授",
+                name: "戴敏育 教授 🔗",
                 role: "計畫主持人",
                 affiliation: "國立臺北大學<br>資訊管理研究所",
                 desc: "專精於人工智慧、生成式AI、永續綠色金融科技。現任金融科技暨綠色金融研究中心主任。",
@@ -2478,7 +2448,8 @@
               copi1: {
                 name: "陳重吉 博士",
                 role: "協同主持人",
-                affiliation: "日本產業技術綜合研究所<br>人工智慧研究中心",
+                affiliation:
+                  "日本產業技術綜合研究所<br>人工智慧研究中心",
                 desc: "ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。",
               },
               copi2: {
@@ -2562,6 +2533,15 @@
               note5: "• 前 15 名全學生隊伍可獲教育部獎狀",
               note6: "• 可使用外部資料與預訓練模型，但須在報告中詳細說明",
             },
+            faq: {
+                title: "常見問題",
+                q1: "VeriPromise ESG 競賽的目標是什麼？",
+                a1: "本競賽專注於利用人工智慧技術，自動識別與驗證企業永續報告中的承諾，解決漂綠問題並提升報告可信度。",
+                q2: "誰可以參加？",
+                a2: "競賽對所有學生、學術研究人員以及產業界人士開放。每隊成員可為 1 到 5 人。",
+                q3: "競賽提供什麼數據集？",
+                a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
+            },
             footer: {
               copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
               organizer: "主辦單位：國立臺北大學資訊管理研究所",
@@ -2583,6 +2563,7 @@
               team: "Team",
               examples: "Examples",
               contact: "Contact",
+              faq: "FAQ",
             },
             hero: {
               subtitle_top: "VeriPromise ESG 2026",
@@ -2984,6 +2965,15 @@
               note6:
                 "• External data and pre-trained models allowed; detailed disclosure required in report",
             },
+            faq: {
+                title: "FAQ",
+                q1: "What is VeriPromise ESG?",
+                a1: "VeriPromise ESG is an AI competition focused on verifying corporate sustainability commitments using NLP technology.",
+                q2: "Who can participate?",
+                a2: "The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.",
+                q3: "What is the dataset?",
+                a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports."
+            },
             footer: {
               copyright:
                 "© 2025-2026 AI Cup - ESG Promise Verification Competition",
@@ -3032,7 +3022,9 @@
           document.querySelectorAll(".lang-btn").forEach((btn) => {
             btn.classList.remove("active");
           });
-          document.getElementById(`btn-${lang}`).classList.add("active");
+          document
+            .getElementById(`btn-${lang}`)
+            .classList.add("active");
         });
       }
 
@@ -3092,7 +3084,7 @@
       }, observerOptions);
 
       document
-        .querySelectorAll(".card, .task-card, .timeline-item, .team-member")
+        .querySelectorAll(".card, .task-card, .timeline-item, .team-member, .faq-item")
         .forEach((el) => {
           observer.observe(el);
         });
