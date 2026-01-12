@@ -2198,6 +2198,19 @@
               >
             </p>
           </div>
+                  <div class="card">
+          <h3 data-i18n="resources.item_mlpromise.title">ML-Promise: A Multilingual Dataset for Corporate Promise Verification</h3>
+          <p data-i18n="resources.item_mlpromise.desc">
+            EMNLP 2025 paper on multilingual promise verification dataset
+          </p>
+          <p style="margin-top: 1rem">
+            <a
+              href="https://aclanthology.org/2025.emnlp-main.1028/"
+              target="_blank"
+              >Read Paper →</a
+            >
+          </p>
+        </div>
         </div>
       </div>
     </section>
@@ -2377,7 +2390,7 @@
             dataset: {
               title: "數據集介紹",
               intro:
-                "VeriPromiseESG4K - 全球首個針對繁體中文設計的永續承諾驗證標註數據集，來自台灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
+                "VeriPromiseESG4K - 全球首個針對大規模繁體中文設計的永續承諾驗證標註數據集，來自台灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
               featuresTitle: "數據集特色",
               feature1: {
                 title: "台灣龍頭企業",
@@ -2540,12 +2553,12 @@
                 link: "個人網站",
               },
               copiTitle: "協同主持人",
+                            // 在 translations -> zh -> translation -> team -> copi1 中
               copi1: {
                 name: "陳重吉 博士",
                 role: "協同主持人",
-                /* 修改 4: 順序調換 */
-                affiliation:
-                  "人工智慧研究中心<br>日本產業技術綜合研究所",
+                // 修改下方這行 (保留第一行，修改最後一行)
+                affiliation: "人工智慧研究中心<br>產業技術綜合研究所 (AIST) 研究員",
                 desc: "ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。",
                 link: "個人網站",
               },
@@ -2642,27 +2655,33 @@
                 a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
             },
             resources: {
-              title: "相關資源",
-              intro: "重要競賽與研究論文連結",
-              item1: {
-                desc: "SemEval 2025 承諾驗證共享任務",
+                title: "相關資源",
+                intro: "重要競賽與研究論文連結",
+                // [新增] EMNLP 2025 Paper
+                item_mlpromise: {
+                  title: "ML-Promise: 多語言企業承諾驗證數據集",
+                  desc: "EMNLP 2025 關於多語言承諾驗證的最新論文"
+                },
+                // 原有項目
+                item1: {
+                  desc: "SemEval 2025 承諾驗證共享任務"
+                },
+                item2: {
+                  title: "多語言 ESG 議題識別",
+                  desc: "FNP@IJCAI-2023 ESG 議題識別論文"
+                },
+                item3: {
+                  title: "多語言 ESG 影響類型識別",
+                  desc: "FNP@IJCAI-2023 ESG 影響類型分類論文"
+                },
+                item4: {
+                  title: "多語言 ESG 影響期限推論",
+                  desc: "FNP@EMNLP-2024 ESG 影響期限預測論文"
+                },
+                item5: {
+                  desc: "NTCIR-19 法規合規任務"
+                }
               },
-              item2: {
-                title: "多語言 ESG 議題識別",
-                desc: "FNP@IJCAI-2023 ESG 議題識別論文",
-              },
-              item3: {
-                title: "多語言 ESG 影響類型識別",
-                desc: "FNP@IJCAI-2023 ESG 影響類型分類論文",
-              },
-              item4: {
-                title: "多語言 ESG 影響期限推論",
-                desc: "FNP@EMNLP-2024 ESG 影響期限預測論文",
-              },
-              item5: {
-                desc: "NTCIR-19 法規合規任務",
-              },
-            },
             footer: {
               copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
               organizer: "主辦單位：國立臺北大學資訊管理研究所",
@@ -2827,7 +2846,7 @@
             dataset: {
               title: "Dataset Introduction",
               intro:
-                "VeriPromiseESG4K - The world's first Traditional Chinese-designed sustainability commitment verification annotated dataset, sourced from Taiwan 50 Index constituents, spanning 15 industries' authentic ESG reports",
+                "VeriPromiseESG4K - The world's first Large Scale Traditional Chinese-designed sustainability commitment verification annotated dataset, sourced from Taiwan 50 Index constituents, spanning 15 industries' authentic ESG reports",
               featuresTitle: "Dataset Features",
               feature1: {
                 title: "Taiwan's Leading Companies",
@@ -2997,12 +3016,12 @@
                 link: "Website",
               },
               copiTitle: "Co-Principal Investigators",
+              // 在 translations -> en -> translation -> team -> copi1 中
               copi1: {
                 name: "Dr. Chung-Chi Chen",
                 role: "Co-Principal Investigator",
-                /* 修改 4: 順序調換 */
-                affiliation:
-                  "Artificial Intelligence Research Center<br>National Institute of Advanced Industrial Science and Technology (AIST)",
+                // 修改下方這行 (更新為完整的職稱與單位)
+                affiliation: "Researcher, Artificial Intelligence Research Center,<br>National Institute of Advanced Industrial Science and Technology (AIST), Japan",
                 desc: "Founder of ACL SIG-FinTech, specialized in financial opinion mining and natural language processing.",
                 link: "Website",
               },
@@ -3104,27 +3123,33 @@
                 q3: "What is the dataset?",
                 a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports."
             },
-            resources: {
+              resources: {
               title: "Related Resources",
               intro: "Important links to related competitions and research papers",
+              // [New] EMNLP 2025 Paper
+              item_mlpromise: {
+                title: "ML-Promise: A Multilingual Dataset for Corporate Promise Verification",
+                desc: "EMNLP 2025 paper on multilingual promise verification dataset"
+              },
+              // Existing Items
               item1: {
-                desc: "SemEval 2025 shared task on promise verification",
+                desc: "SemEval 2025 shared task on promise verification"
               },
               item2: {
                 title: "Multi-Lingual ESG Issue Identification",
-                desc: "FNP@IJCAI-2023 paper on ESG issue identification",
+                desc: "FNP@IJCAI-2023 paper on ESG issue identification"
               },
               item3: {
                 title: "Multi-Lingual ESG Impact Type Identification",
-                desc: "FNP@IJCAI-2023 paper on ESG impact type classification",
+                desc: "FNP@IJCAI-2023 paper on ESG impact type classification"
               },
               item4: {
                 title: "Multi-Lingual ESG Impact Duration Inference",
-                desc: "FNP@EMNLP-2024 paper on ESG impact duration prediction",
+                desc: "FNP@EMNLP-2024 paper on ESG impact duration prediction"
               },
               item5: {
-                desc: "NTCIR-19 Regulatory Compliance task",
-              },
+                desc: "NTCIR-19 Regulatory Compliance task"
+              }
             },
             footer: {
               copyright:
