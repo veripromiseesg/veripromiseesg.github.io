@@ -1,0 +1,717 @@
+/* ===================================
+   VeriPromise ESG 2026 - Main Styles
+   =================================== */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
+
+/* ===================================
+   Navigation Styles
+   =================================== */
+nav {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  background: white;
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.3rem;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  padding: 0.5rem 0.8rem;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  min-width: 90px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 0.35rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.lang-btn:hover {
+  background: white;
+  color: #667eea;
+}
+
+.lang-btn.active {
+  background: white;
+  color: #667eea;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero .subtitle-top {
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.95;
+}
+
+.cta-button {
+  background: white;
+  color: #667eea;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   Container & Sections
+   =================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #764ba2;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* ===================================
+   Cards & Grid Layouts
+   =================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ===================================
+   Task Cards
+   =================================== */
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.task-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #667eea;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.task-card h3 {
+  margin-top: 0;
+  color: #667eea;
+}
+
+.task-card h4 {
+  color: #764ba2;
+  margin-top: 1.5rem;
+}
+
+.task-card ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.task-card li {
+  margin: 0.5rem 0;
+}
+
+/* ===================================
+   Timeline
+   =================================== */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.timeline-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-left: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 2rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #667eea;
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   Team Section
+   =================================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-member {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.team-photo {
+  width: 200px;
+  height: 240px;
+  border-radius: 10px;
+  margin: 0 auto 1rem;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-photo-placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.team-member h4 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.team-member h4 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #667eea;
+  transition: all 0.3s;
+}
+
+.team-member h4 a:hover {
+  color: #764ba2;
+  border-bottom: 1px solid #764ba2;
+}
+
+.team-member .role {
+  color: #764ba2;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.team-member .affiliation {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.team-member .project {
+  color: #555;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.team-member .github-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.team-member .github-link:hover {
+  text-decoration: underline;
+}
+
+.lead-badge {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* ===================================
+   Statistics
+   =================================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+  display: block;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ===================================
+   FAQ Section
+   =================================== */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #667eea;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #666;
+}
+
+/* ===================================
+   Examples Section
+   =================================== */
+.example-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.example-scroll {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+}
+
+.example-item {
+  background: white;
+  border-left: 4px solid #667eea;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.example-item:last-child {
+  margin-bottom: 0;
+}
+
+.example-field {
+  margin: 0.8rem 0;
+  line-height: 1.8;
+}
+
+.example-label {
+  font-weight: 600;
+  color: #667eea;
+  display: inline-block;
+  min-width: 180px;
+}
+
+.example-value {
+  color: #333;
+}
+
+.example-data {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.esg-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.esg-e {
+  background: #d4edda;
+  color: #155724;
+}
+
+.esg-s {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.esg-g {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-yes {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-no {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+footer {
+  background: #2d3748;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===================================
+   Utility Classes
+   =================================== */
+.highlight-box {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-left: 4px solid #667eea;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.highlight-box strong {
+  color: #667eea;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Large screens (1200px+) */
+@media (min-width: 1200px) {
+  .nav-links {
+    gap: 1.8rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens (769px - 1199px) */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+  .hero .subtitle-top {
+    font-size: 1.8rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    min-width: auto;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #667eea;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .lang-switch {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .cards,
+  .task-container,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .example-label {
+    min-width: auto;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+}
