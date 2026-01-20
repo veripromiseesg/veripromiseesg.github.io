@@ -240,14 +240,32 @@ section h3 {
   margin-bottom: 1rem;
 }
 
+/* 2-column cards layout for specific sections */
+.cards-2col {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+@media (max-width: 768px) {
+  .cards-2col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===================================
+   Task Cards
+   =================================== */
+
 /* ===================================
    Task Cards
    =================================== */
 .task-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .task-card {
@@ -523,6 +541,9 @@ section h3 {
 .example-field {
   margin: 0.8rem 0;
   line-height: 1.8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .example-label {
@@ -530,19 +551,20 @@ section h3 {
   color: #667eea;
   display: inline-block;
   min-width: 180px;
+  flex-shrink: 0;
 }
 
 .example-value {
   color: #333;
+  flex: 1;
 }
-
 .example-data {
   background: #f0f0f0;
   padding: 1rem;
   border-radius: 5px;
-  margin-top: 0.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  flex: 1;
 }
 
 .esg-badge {
@@ -700,7 +722,6 @@ footer a:hover {
   }
 
   .cards,
-  .task-container,
   .team-grid {
     grid-template-columns: 1fr;
   }
