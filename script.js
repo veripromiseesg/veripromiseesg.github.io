@@ -550,7 +550,6 @@ const translations = {
         copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
         organizer1: "主辦單位：國立臺北大學 資訊管理研究所、",
         organizer2: "國立臺北大學 金融科技暨綠色金融研究中心",
-        backToTop: "返回頂部",
       },
     },
   },
@@ -1117,7 +1116,6 @@ const translations = {
         organizer1:
           "Organizer: Graduate Institute of Information Management, NTPU",
         organizer2: "The Fintech and Green Finance Center (FGFC), NTPU",
-        backToTop: "Back to Top",
       },
     },
   },
@@ -1405,4 +1403,77 @@ backToTopBtn.addEventListener("click", () => {
         top: 0,
         behavior: "smooth" // 平滑捲動回頂部
     });
+});
+
+/* ===================================
+   Generate Collage Leaf Dividers
+   =================================== */
+
+function generateLeafDividers() {
+    const dividers = document.querySelectorAll('.collage-divider');
+    
+    // 顏色順序：綠*3, 橘*3, 紅*3
+    const colorSequence = [
+        'green', 'green', 'green',
+        'orange', 'orange', 'orange',
+        'red', 'red', 'red'
+    ];
+
+    const leafBaseWidth = 40;
+    const overlap = 5;
+
+    dividers.forEach((divider, index) => {
+        divider.innerHTML = '';
+
+        const colorName = colorSequence[index % colorSequence.length];
+        const imageSrc = `img/leaves/leaf_${colorName}.png`;
+
+        const containerWidth = divider.offsetWidth;
+        const step = leafBaseWidth - overlap;
+        const numLeaves = Math.ceil(containerWidth / step) + 4; 
+
+        const rowStartOffset = -40 + (Math.random() * 20);
+
+        for (let i = 0; i < numLeaves; i++) {
+            const img = document.createElement('img');
+            
+            img.src = imageSrc;
+            img.className = 'collage-leaf';
+            img.alt = 'decorative leaf';
+
+            const leftPos = (i * step) + rowStartOffset;
+            
+            const randomAngle = 10 + Math.floor(Math.random() * 40); 
+            
+            // 顏色大小調整邏輯
+            let scaleMultiplier = 1;
+            if (colorName === 'red') {
+                scaleMultiplier = 1.15; // 紅色：稍微比標準大一點 (原 1.3 -> 1.15)
+            } else if (colorName === 'orange') {
+                scaleMultiplier = 0.85; // 橘色：縮小一點 (原 1.0 -> 0.85)
+            }
+            // 綠色維持預設 1.0
+            
+            // 基礎隨機大小 (0.9 ~ 1.2) * 顏色倍率
+            const randomScale = (0.9 + Math.random() * 0.3) * scaleMultiplier;
+
+            const randomZ = Math.floor(Math.random() * 10);
+
+            img.style.left = `${leftPos}px`;
+            img.style.transform = `rotate(${randomAngle}deg) scale(${randomScale})`;
+            img.style.zIndex = randomZ;
+
+            divider.appendChild(img);
+        }
+    });
+}
+
+// 確保頁面載入後執行生成葉子的動作
+window.addEventListener('load', generateLeafDividers);
+
+// 當視窗大小改變時，重新計算葉子數量
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(generateLeafDividers, 200);
 });

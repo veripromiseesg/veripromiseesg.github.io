@@ -9,11 +9,20 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f8f9fa;
+  
+  /* 強制隱藏水平溢出，解決頁面偏移與切邊問題 */
+  overflow-x: hidden; 
+  
+  /* 確保寬度鎖定為視窗寬度，不讓內容撐開 */
+  width: 100%; 
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===================================
@@ -26,6 +35,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .nav-container {
@@ -34,8 +44,27 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 3rem; 
   gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.3rem;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0.5rem; 
+}
+
+/* 手機版維持原樣或微調 */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem; 
+  }
 }
 
 .logo {
@@ -56,16 +85,6 @@ nav {
   background: white;
   padding: 0.25rem;
   border-radius: 8px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.3rem;
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 2rem;
 }
 
 .nav-links a {
@@ -183,14 +202,6 @@ nav {
 
 section {
   padding: 5rem 0;
-}
-
-/* White background sections */
-#tasks,
-#evaluation,
-#team,
-#resources {
-  background: white;
 }
 
 section h2 {
@@ -757,7 +768,7 @@ footer a:hover {
     gap: 1rem;
     max-width: 100%;
   }
-
+  
   .nav-links.active {
     display: flex;
   }
@@ -1002,4 +1013,121 @@ footer a:hover {
         width: 50px;
         height: 50px;
     }
+}
+
+/* ===================================
+   Background Patterns for Content Sections
+   =================================== */
+
+/* 通用背景樣式 */
+#about, #tasks, #dataset, #evaluation, #timeline, #team, #faq, #examples, #contact, #resources {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* 內容層級 */
+.section-header, .container, .timeline, .contact-container {
+    position: relative;
+    z-index: 5;
+}
+
+/* 1. 方格紙背景 (白色底) */
+.bg-grid-pattern {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(90deg, rgba(102, 126, 234, 0.2) 1px, transparent 1px),
+        linear-gradient(rgba(102, 126, 234, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* 2. 點陣背景 (淺藍灰底) */
+.bg-dot-pattern {
+    background-color: #f4f7fe; 
+    background-image: radial-gradient(rgba(102, 126, 234, 0.3) 2px, transparent 2px);
+    background-size: 30px 30px;
+}
+
+/* --- 裝飾元素 (Decorations) --- */
+
+/* About 右上角的黃光暈 */
+#about::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 235, 59, 0.15);
+    border-radius: 50%;
+    z-index: 2;
+    filter: blur(20px);
+}
+
+#dataset::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 50%;
+    z-index: 2;
+    filter: blur(30px);
+}
+
+/* Timeline 的線條顏色 */
+.timeline::after {
+    background: #dce4ff;
+}
+
+/* ===================================
+   Image-based Collage Leaf Divider
+   =================================== */
+
+.collage-divider {
+    position: relative;
+    width: 100%;
+    height: 100px; 
+    margin-top: -50px; 
+    margin-bottom: -50px; 
+    
+    z-index: 20; 
+    pointer-events: none;
+    overflow: hidden; 
+}
+
+/* Hero 區塊專用設定 */
+#hero-divider {
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100px;
+    z-index: 20; 
+    transform: none;
+}
+
+/* 葉子定位 */
+.collage-leaf {
+    position: absolute;
+    bottom: 15px; 
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    transform-origin: center bottom;
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 220px;
+    height: auto;
+    background: white;    /* 白色背景 */
+    padding: 8px;          /* 內距留白 */
+    border-radius: 8px;     /* 圓角 */
+    opacity: 1.0;           /* 不透明 */
 }

@@ -147,11 +147,6 @@
     <nav>
       <div class="nav-container">
         <div class="logo">
-          <img
-            src="img/ntpu-logo.png"
-            alt="National Taipei University"
-            loading="lazy"
-          />
           <span data-i18n="nav.title">AI Cup 2026</span>
         </div>
         <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
@@ -220,13 +215,7 @@
           <img src="img/bush.png" class="decoration bush-left" alt="Decorative bush">
           <img src="img/bush.png" class="decoration bush-right" alt="Decorative bush">
       </div>
-
-      <div class="wave-divider">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
-          </svg>
-      </div>
-  </section>
+    </section>
 
     <section id="about">
       <div class="container">
@@ -306,7 +295,10 @@
       </div>
     </section>
 
-    <section id="tasks">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="tasks" class="bg-dot-pattern">
       <div class="container">
         <h2 data-i18n="tasks.title">Competition Tasks</h2>
         <p class="section-intro" data-i18n="tasks.intro">
@@ -325,7 +317,6 @@
               <span data-i18n="tasks.task1.goal">Determine whether a given sentence expresses a clear corporate
                 commitment to future actions</span>
             </p>
-
             <h4 data-i18n="tasks.task1.outputLabel">Output Categories</h4>
             <ul>
               <li>
@@ -337,12 +328,10 @@
                 <span data-i18n="tasks.task1.output2">General statements without commitments</span>
               </li>
             </ul>
-
             <h4 data-i18n="tasks.task1.metricLabel">Evaluation Metric</h4>
             <p data-i18n="tasks.task1.metric">
               F1-Score (harmonic mean of precision and recall)
             </p>
-
             <h4 data-i18n="tasks.task1.exampleLabel">Examples</h4>
             <div class="highlight-box">
               <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong>
@@ -361,7 +350,6 @@
               <span data-i18n="tasks.task2.goal">Determine whether identified promise statements are accompanied
                 by specific action plans or supporting evidence</span>
             </p>
-
             <h4 data-i18n="tasks.task2.outputLabel">Output Categories</h4>
             <ul>
               <li>
@@ -373,12 +361,10 @@
                 <span data-i18n="tasks.task2.output2">Promise lacks specific evidence</span>
               </li>
             </ul>
-
             <h4 data-i18n="tasks.task2.metricLabel">Evaluation Metric</h4>
             <p data-i18n="tasks.task2.metric">
               F1-Score (semantic association judgment capability)
             </p>
-
             <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
             <div class="highlight-box">
               <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong>
@@ -391,7 +377,7 @@
             </div>
           </div>
 
-          <div class="task-card">
+          <div class="task-card task-card--purple">
             <h3 data-i18n="tasks.task3.title">
               💡 Subtask 3: Clarity Classification
             </h3>
@@ -401,7 +387,6 @@
                 without ambiguous language, identifying potential 'greenwashing'
                 risks</span>
             </p>
-
             <h4 data-i18n="tasks.task3.outputLabel">Output Categories</h4>
             <ul>
               <li>
@@ -417,12 +402,10 @@
                 <span data-i18n="tasks.task3.output3">Potentially misleading statements</span>
               </li>
             </ul>
-
             <h4 data-i18n="tasks.task3.metricLabel">Evaluation Metric</h4>
             <p data-i18n="tasks.task3.metric">
               Macro-F1 (average performance across three categories)
             </p>
-
             <h4 data-i18n="tasks.task3.valueLabel">Practical Value</h4>
             <p data-i18n="tasks.task3.value">
               Help identify corporate 'greenwashing' behavior and enhance ESG
@@ -439,7 +422,6 @@
               <span data-i18n="tasks.task4.goal">Infer the expected completion time of commitments based on
                 statements to establish tracking mechanisms</span>
             </p>
-
             <h4 data-i18n="tasks.task4.outputLabel">Output Categories</h4>
             <ul>
               <li>
@@ -460,7 +442,6 @@
                 <span data-i18n="tasks.task4.output4">Long-term target</span>
               </li>
             </ul>
-
             <h4 data-i18n="tasks.task4.metricLabel">Evaluation Metric</h4>
             <p data-i18n="tasks.task4.metric">
               Macro-F1 (four-category time inference capability)
@@ -514,7 +495,10 @@
       </div>
     </section>
 
-    <section id="dataset">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="dataset" class="bg-grid-pattern">
       <div class="container">
         <h2 data-i18n="dataset.title">Dataset Introduction</h2>
         <p class="section-intro" data-i18n="dataset.intro">
@@ -621,7 +605,10 @@
       </div>
     </section>
 
-    <section id="evaluation">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="evaluation" class="bg-dot-pattern">
       <div class="container">
         <h2 data-i18n="evaluation.title">Evaluation Methods</h2>
         <p class="section-intro" data-i18n="evaluation.intro">
@@ -774,7 +761,10 @@
       </div>
     </section>
 
-    <section id="timeline">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="timeline" class="bg-grid-pattern">
       <div class="container">
         <h2 data-i18n="timeline.title">Competition Schedule</h2>
         <div class="timeline">
@@ -872,7 +862,10 @@
       </div>
     </section>
 
-    <section id="team">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+    
+    <section id="team" class="bg-dot-pattern">
       <div class="container">
         <h2 data-i18n="team.title">Organizing Team</h2>
         <p class="section-intro" data-i18n="team.intro">
@@ -1067,7 +1060,10 @@
       </div>
     </section>
 
-    <section id="faq">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="faq" class="bg-grid-pattern">
         <div class="container">
             <h2 data-i18n="faq.title">FAQ</h2>
             <div class="faq-list">
@@ -1087,7 +1083,10 @@
         </div>
     </section>
 
-    <section id="examples">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="examples" class="bg-dot-pattern">
       <div class="container">
         <h2 data-i18n="examples.title">標註範例說明</h2>
         <p class="section-intro" data-i18n="examples.intro">
@@ -1096,7 +1095,6 @@
 
         <div class="example-container">
           <div class="example-scroll">
-            <!-- E 類範例 1 -->
             <div class="example-item">
               <div class="example-field">
                 <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
@@ -1134,7 +1132,6 @@
               </div>
             </div>
 
-            <!-- E 類範例 2 -->
             <div class="example-item">
               <div class="example-field">
                 <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
@@ -1172,7 +1169,6 @@
               </div>
             </div>
 
-            <!-- E 類範例 3 -->
             <div class="example-item">
               <div class="example-field">
                 <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
@@ -1210,7 +1206,6 @@
               </div>
             </div>
 
-            <!-- E 類範例 4 -->
             <div class="example-item">
               <div class="example-field">
                 <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
@@ -1248,239 +1243,15 @@
               </div>
             </div>
 
-            <!-- S 類範例 1 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-s">S</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.s1.type">有承諾 - 有證據</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.s1.content">
-                  我們將持續推動零職災文化，完善承攬商納管與教育訓練機制，並加強現場稽核頻率，以降低高風險作業事故率。為此，我們正調整標準作業流程並提高稽核覆蓋率。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.notClear">不清晰 (Not Clear)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.between2and5">2-5年 (between_2_and_5_years)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.s1.note">明確表達企業將持續推動零職災文化，屬於清楚的行動承諾；相關行動未提供量化指標、明確頻率或制度細節，證據支撐力道有限。</span>
-              </div>
             </div>
-
-            <!-- S 類範例 2 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-s">S</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.s2.type">有承諾 - 無證據</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.s2.content">
-                  制定企業內部衝突礦產管理聲明，承諾遵守 RBA 不使用衝突礦產政策。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.already">已執行 (already)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.s2.note">有制度性承諾與明確人權框架。</span>
-              </div>
-            </div>
-
-            <!-- S 類範例 3 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-s">S</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.s3.type">無承諾</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.s3.content">
-                  推出金來寶小額終身壽險，提供高齡者基本保險保障與終身壽險服務。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.s3.note">僅是產品描述，未包含未來承諾語句。</span>
-              </div>
-            </div>
-
-            <!-- G 類範例 1 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-g">G</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.g1.type">有承諾 - 有證據</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.g1.content">
-                  我們將設立由三位獨立董事組成的永續委員會，每季檢視重大風險議題與對應計畫，並在年度股東會前完成報告揭露與外部查驗。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.clear">清晰 (Clear)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.between2and5">2-5年 (between_2_and_5_years)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.g1.note">明確表達企業將設立永續委員會，並規劃其運作方式，屬於具體且可執行的治理承諾；清楚說明組織架構、執行頻率及查驗機制。</span>
-              </div>
-            </div>
-
-            <!-- G 類範例 2 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-g">G</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.g2.type">有承諾 - 有證據</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.g2.content">
-                  未來改選董事時將提高女性董事席次，以增進董事會性別多元化。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.notClear">不清晰 (Not Clear)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.within2">2年內 (within_2_years)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.g2.note">有明確方向，但缺乏具體目標與追蹤機制。</span>
-              </div>
-            </div>
-
-            <!-- G 類範例 3 -->
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-g">G</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.g3.type">無承諾</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.g3.content">
-                  2024 年研發人員數達 446 人，完成研發專案 17 件，智慧財產權累計 202 件。
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.g3.note">營運成果描述，非治理承諾。</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="contact" class="bg-grid-pattern">
       <div class="container">
         <h2 data-i18n="contact.title">Contact Us</h2>
         <p class="section-intro" data-i18n="contact.intro">
@@ -1559,7 +1330,10 @@
       </div>
     </section>
 
-    <section id="resources">
+    <!-- 分隔線 -->
+    <div class="collage-divider"></div>
+
+    <section id="resources" class="bg-dot-pattern">
       <div class="container">
         <h2 data-i18n="resources.title">Related Resources</h2>
         <p class="section-intro" data-i18n="resources.intro">
@@ -1660,9 +1434,7 @@
         <p data-i18n="footer.organizer2">
           The Fintech and Green Finance Center (FGFC), NTPU
         </p>
-        <p>
-          <a href="#home" data-i18n="footer.backToTop">Back to Top</a>
-        </p>
+        <img src="img/ntpu-logo.png" alt="NTPU Logo" class="footer-logo">
       </div>
     </footer>
 
