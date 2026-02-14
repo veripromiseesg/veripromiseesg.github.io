@@ -611,7 +611,7 @@ const translations = {
         intro:
           "This competition comprises four core subtasks, covering the complete ESG report verification process from promise recognition to evidence assessment, clarity analysis, and timeline prediction",
         task1: {
-          title: "Subtask 1: Promise Recognition",
+          title: "Subtask 1: Commitment Classification",
           goalLabel: "Objective:",
           goal: "Determine whether a given sentence expresses a clear corporate commitment to future actions",
           outputLabel: "Output Categories",
@@ -629,7 +629,7 @@ const translations = {
             '"We value the importance of environmental protection"',
         },
         task2: {
-          title: "Subtask 2: Evidence Support Linkage",
+          title: "🔗 Subtask 2: Evidence Identification",
           goalLabel: "Objective:",
           goal: "Determine whether identified promise statements are accompanied by specific action plans or supporting evidence",
           outputLabel: "Output Categories",
@@ -649,7 +649,7 @@ const translations = {
           result: "Evidence Supported",
         },
         task3: {
-          title: "Subtask 3: Clarity Classification",
+          title: "💡 Subtask 3: Clarity Classification",
           goalLabel: "Objective:",
           goal: "Assess whether promise statements are semantically clear without ambiguous language, identifying potential 'greenwashing' risks",
           outputLabel: "Output Categories",
@@ -667,7 +667,7 @@ const translations = {
             "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility",
         },
         task4: {
-          title: "Subtask 4: Timeline Prediction",
+          title: "⏰ Subtask 4: Timeline Classification",
           goalLabel: "Objective:",
           goal: "Infer the expected completion time of commitments based on statements to establish tracking mechanisms",
           outputLabel: "Output Categories",
@@ -768,14 +768,14 @@ const translations = {
           "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks",
         metricsTitle: "Evaluation Metrics for Each Subtask",
         task1: {
-          title: "Subtask 1: Promise Recognition",
+          title: "Subtask 1: Commitment Classification",
           metricLabel: "Evaluation Metrics",
           metric1Label: "F1-Score:",
           metric1: "Harmonic mean of precision and recall",
           desc: "Measures the model's ability to identify ESG promise statements",
         },
         task2: {
-          title: "Subtask 2: Evidence Support Judgment",
+          title: "Subtask 2: Evidence Identification",
           metricLabel: "Evaluation Metrics",
           metric1Label: "F1-Score:",
           metric1:
@@ -783,7 +783,7 @@ const translations = {
           desc: "Core practical capability assessment",
         },
         task3: {
-          title: "Subtask 3: Clarity Assessment",
+          title: "Subtask 3: Clarity Classification",
           metricLabel: "Evaluation Metrics",
           metric1Label: "Macro-F1:",
           metric1:
@@ -791,7 +791,7 @@ const translations = {
           desc: "Most challenging task, identifying greenwashing risk capability",
         },
         task4: {
-          title: "Subtask 4: Timeline Prediction",
+          title: "Subtask 4: Timeline Classification",
           metricLabel: "Evaluation Metrics",
           metric1Label: "Macro-F1:",
           metric1: "Four-category time inference capability",

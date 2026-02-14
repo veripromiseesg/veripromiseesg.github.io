@@ -50,8 +50,9 @@ nav {
 }
 
 .logo img {
-  height: 40px;
-  width: auto;
+  width: 130px;
+  max-width: 100%;
+  height: auto;
   background: white;
   padding: 0.25rem;
   border-radius: 8px;
@@ -184,6 +185,14 @@ section {
   padding: 5rem 0;
 }
 
+/* White background sections */
+#tasks,
+#evaluation,
+#team,
+#resources {
+  background: white;
+}
+
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -240,6 +249,11 @@ section h3 {
   margin-bottom: 1rem;
 }
 
+/* Resource card links */
+.card-link {
+  margin-top: 1rem;
+}
+
 /* 2-column cards layout for specific sections */
 .cards-2col {
   grid-template-columns: repeat(2, 1fr) !important;
@@ -250,10 +264,6 @@ section h3 {
     grid-template-columns: 1fr !important;
   }
 }
-
-/* ===================================
-   Task Cards
-   =================================== */
 
 /* ===================================
    Task Cards
@@ -277,6 +287,11 @@ section h3 {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s, transform 0.6s;
+}
+
+/* Purple accent variant for task cards */
+.task-card--purple {
+  border-left-color: #764ba2;
 }
 
 .task-card h3 {
@@ -431,6 +446,13 @@ section h3 {
   text-decoration: underline;
 }
 
+/* Team member description paragraph */
+.team-member-desc {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
 .lead-badge {
   display: inline-block;
   background: #667eea;
@@ -558,6 +580,7 @@ section h3 {
   color: #333;
   flex: 1;
 }
+
 .example-data {
   background: #f0f0f0;
   padding: 1rem;
@@ -611,6 +634,10 @@ footer {
   text-align: center;
 }
 
+footer p {
+  margin-bottom: 0.5rem;
+}
+
 footer a {
   color: #667eea;
   text-decoration: none;
@@ -632,6 +659,30 @@ footer a:hover {
 }
 
 .highlight-box strong {
+  color: #667eea;
+}
+
+/* Highlight box margin top variants */
+.highlight-box--mt1 {
+  margin-top: 1rem;
+}
+
+.highlight-box--mt2 {
+  margin-top: 2rem;
+}
+
+.highlight-box--mt3 {
+  margin-top: 3rem;
+}
+
+/* Centered section h3 for relevance/practical-value titles */
+.relevance-title {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Primary brand color for inline text */
+.text-primary {
   color: #667eea;
 }
 
@@ -691,6 +742,7 @@ footer a:hover {
 
   .logo img {
     height: 40px;
+    width: auto;
   }
 
   .nav-links {
