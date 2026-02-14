@@ -11,7 +11,6 @@ const translations = {
     translation: {
       nav: {
         title: "AI Cup 2026",
-        home: "首頁",
         about: "競賽簡介",
         tasks: "任務說明",
         dataset: "數據集",
@@ -24,11 +23,10 @@ const translations = {
         resources: "相關資源",
       },
       hero: {
-        subtitle_top: "VeriPromiseESG 2026",
-        title: " ESG 永續承諾驗證競賽",
-        subtitle:
-          "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
-        cta: "了解更多",
+        block1: "VeriPromise ESG 2026",
+        block2: "ESG 永續承諾驗證競賽",
+        block3: "",
+        description: "運用 AI 技術驗證企業永續承諾，<br>推動 ESG 報告透明化與可信度",
       },
       about: {
         title: "競賽簡介",
@@ -41,7 +39,7 @@ const translations = {
           "開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過四大核心任務（承諾識別、證據支持、清晰度評估、時機預測）完整評估 ESG 報告的真實性與可信度。",
         stat1: "競賽子任務",
         stat2: "標註數據量",
-        stat3: "台灣龍頭企業",
+        stat3: "臺灣龍頭企業",
         stat4: "產業領域",
         card1: {
           title: "實務應用",
@@ -53,7 +51,7 @@ const translations = {
         },
         card3: {
           title: "國際合作",
-          desc: "由台日頂尖學術機構聯合主辦，同時作為 NTCIR-19 International Track 項目，提供高品質多語言數據集，促進全球 ESG AI 研究發展。",
+          desc: "由臺日頂尖學術機構聯合主辦，同時作為 NTCIR-19 International Track 項目，提供高品質多語言數據集，促進全球 ESG AI 研究發展。",
         },
       },
       tasks: {
@@ -157,11 +155,11 @@ const translations = {
       dataset: {
         title: "數據集介紹",
         intro:
-          "VeriPromiseESG4K - 全球首個針對大規模繁體中文設計的永續承諾驗證標註數據集，來自台灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
+          "VeriPromiseESG4K - 全球首個針對大規模繁體中文設計的永續承諾驗證標註數據集，來自臺灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
         featuresTitle: "數據集特色",
         feature1: {
-          title: "台灣龍頭企業",
-          desc: "來自台灣 50 指數（0050）成分股，涵蓋台灣前 50 大上市公司的真實永續報告書。",
+          title: "臺灣龍頭企業",
+          desc: "來自臺灣 50 指數（0050）成分股，涵蓋臺灣前 50 大上市公司的真實永續報告書。",
         },
         feature2: {
           title: "跨產業多元性",
@@ -177,7 +175,7 @@ const translations = {
         sizeLabel: "總數據量：",
         size: "4,000 筆高品質標註數據",
         sourceLabel: "資料來源：",
-        source: "台灣 50 指數（0050）成分股，涵蓋前 50 大上市公司",
+        source: "臺灣 50 指數（0050）成分股，涵蓋前 50 大上市公司",
         industryLabel: "產業涵蓋：",
         industry: "橫跨 15 個產業領域（科技、金融、製造、能源等）",
         annotationLabel: "標註維度：",
@@ -346,7 +344,7 @@ const translations = {
       },
       team: {
         title: "主辦團隊",
-        intro: "由台日頂尖學術機構與業界專家共同主辦",
+        intro: "由臺日頂尖學術機構與業界專家共同主辦",
         piTitle: "計畫主持人",
         pi: {
           name: "戴敏育 教授 ",
@@ -500,7 +498,7 @@ const translations = {
           title: "Sample Code",
         },
         platform: {
-          title: "競賽平台",
+          title: "競賽平臺",
           link: "AI CUP 報名系統",
         },
         importantLabel: "重要提醒：",
@@ -520,7 +518,7 @@ const translations = {
         q2: "誰可以參加？",
         a2: "競賽對所有學生、學術研究人員以及產業界人士開放。每隊成員可為 1 到 5 人。",
         q3: "競賽提供什麼數據集？",
-        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
+        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自臺灣 50 指數成分股企業的真實 ESG 報告標註數據。"
       },
       resources: {
         title: "相關資源",
@@ -550,8 +548,8 @@ const translations = {
       },
       footer: {
         copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
-        organizer: "主辦單位：國立臺北大學資訊管理研究所",
-        lab: "智慧金融創新科技實驗室 (IFIT Lab), NTPU",
+        organizer1: "主辦單位：國立臺北大學 資訊管理研究所、",
+        organizer2: "國立臺北大學 金融科技暨綠色金融研究中心",
         backToTop: "返回頂部",
       },
     },
@@ -560,7 +558,6 @@ const translations = {
     translation: {
       nav: {
         title: "AI Cup 2026",
-        home: "Home",
         about: "About",
         tasks: "Tasks",
         dataset: "Dataset",
@@ -573,11 +570,10 @@ const translations = {
         resources: "Resources",
       },
       hero: {
-        subtitle_top: "VeriPromiseESG 2026",
-        title: "ESG Promise Verification Competition",
-        subtitle:
-          "Leverage AI technology to verify corporate sustainability commitments and enhance ESG report transparency and credibility",
-        cta: "Learn More",
+        block1: "VeriPromise ESG 2026",
+        block2: "ESG Promise Verification",
+        block3: "Competition",
+        description: "Leverage AI technology to verify corporate sustainability commitments<br>and enhance ESG report transparency and credibility",
       },
       about: {
         title: "Competition Overview",
@@ -1118,9 +1114,9 @@ const translations = {
       footer: {
         copyright:
           "© 2025-2026 AI Cup - ESG Promise Verification Competition",
-        organizer:
-          "Organizer: National Taipei University Graduate Institute of Information Management",
-        lab: "Intelligent Financial Innovation Technology Lab (IFIT Lab), NTPU",
+        organizer1:
+          "Organizer: Graduate Institute of Information Management, NTPU",
+        organizer2: "The Fintech and Green Finance Center (FGFC), NTPU",
         backToTop: "Back to Top",
       },
     },
@@ -1150,13 +1146,20 @@ function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
     const translation = i18next.t(key);
-    if (translation && translation !== key) {
-      // Handle HTML content (for <br> tags)
+
+    // 檢查翻譯是否存在且不為空
+    if (translation && translation.trim() !== "") {
+      // 有內容 -> 顯示元素
+      element.style.display = ""; 
+      
       if (translation.includes("<br>")) {
         element.innerHTML = translation;
       } else {
         element.textContent = translation;
       }
+    } else {
+      // 沒內容 (空字串) -> 隱藏中文版 block3 元素 (display: none)
+      element.style.display = "none";
     }
   });
 }
@@ -1249,3 +1252,157 @@ document
   .forEach((el) => {
     observer.observe(el);
   });
+
+/* ===================================
+   Parallax Animation (GSAP)
+   =================================== */
+
+// 註冊 ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// 簡單的視差效果
+gsap.utils.toArray(".layer").forEach(layer => {
+    const speed = layer.getAttribute("data-speed");
+    
+    gsap.to(layer, {
+        y: (i, target) => ScrollTrigger.maxScroll(window) * speed * 0.2,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".hero-parallax",
+            start: "top top",
+            end: "bottom top",
+            scrub: 0, // 平滑滾動
+            // markers: true // 開發時可以打開這個看觸發點
+        }
+    });
+});
+
+// 下方區塊的 Reveal 動畫
+gsap.utils.toArray("section:not(#home) .container").forEach(section => {
+    gsap.from(section, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: "top 80%", // 當區塊頂部到達視窗 80% 處觸發
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
+/* ===================================
+   Random Clouds Generator (Balanced Version)
+   =================================== */
+
+function initClouds() {
+    const container = document.getElementById('cloud-container');
+    if (!container) return; 
+
+    // 清空容器，避免重複執行時雲朵越來越多
+    container.innerHTML = '';
+
+    const totalImages = 12; // 圖片總數 (cloud1.png ~ cloud12.png)
+    const cloudsToShow = 5; // 雲的總數
+
+    // 計算每個區塊的寬度 (例如 5 朵雲，每個區塊就是 20%)
+    const sectionWidth = 100 / cloudsToShow;
+
+    for (let i = 0; i < cloudsToShow; i++) {
+        // 1. 隨機選一張圖
+        const randomId = Math.floor(Math.random() * totalImages) + 1;
+        
+        // 2. 建立 img 元素
+        const img = document.createElement('img');
+        img.src = `img/clouds/cloud${randomId}.png`;
+        img.className = 'floating-cloud';
+        img.alt = 'Decorative cloud';
+        
+        // 3. 分區位置邏輯
+        // 基礎位置 (Base) 是該區塊的起始點 (例如 0, 20, 40...)
+        // 隨機偏移 (Offset) 是在該區塊內的隨機位置
+        const sectionBase = i * sectionWidth;
+        const randomOffset = Math.floor(Math.random() * (sectionWidth - 5)); 
+        const finalLeft = sectionBase + randomOffset - 5; 
+        
+        // 垂直位置隨機 (-5% 到 60%)
+        const randomTop = Math.floor(Math.random() * 65) - 5; 
+        
+        // 4. 隨機大小 (0.6 ~ 1.4 倍)
+        const baseWidth = 150;
+        const randomScale = 0.6 + Math.random() * 0.8; 
+        const finalWidth = Math.floor(baseWidth * randomScale);
+        
+        // 5. 隨機動畫參數
+        const randomDuration = 25 + Math.random() * 20;
+        const randomDelay = Math.random() * -20; 
+        
+        // 套用樣式
+        img.style.top = `${randomTop}%`;
+        img.style.left = `${finalLeft}%`;
+        img.style.width = `${finalWidth}px`;
+        img.style.animationDuration = `${randomDuration}s`;
+        img.style.animationDelay = `${randomDelay}s`;
+        
+        // 將雲朵加入容器
+        container.appendChild(img);
+    }
+}
+
+// 確保頁面載入後執行
+window.addEventListener('load', initClouds);
+
+/* ===================================
+   Title Drop Animation (Falling Blocks)
+   =================================== */
+
+window.addEventListener('load', () => {
+    // 1. 建立時間軸
+    const tl = gsap.timeline();
+
+    // 2. 方塊下墜 (這是第一個動作)
+    tl.from(".title-box", {
+        y: -600,       // 掉落起點
+        opacity: 0,
+        duration: 1.2, // 掉落時間
+        stagger: 0.2,  // 掉落間隔
+        ease: "bounce.out", // 彈跳效果
+        clearProps: "transform" // 確保動畫結束後
+    });
+
+    // 3. 簡介文字浮現
+    tl.from(".hero-desc-box", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+    }, "-=0.2"); // 稍微重疊時間
+});
+
+/* ===================================
+   Back to Top Button Logic
+   =================================== */
+
+const backToTopBtn = document.getElementById("backToTopBtn");
+const heroSection = document.getElementById("home");
+
+// 監聽捲動事件
+window.addEventListener("scroll", () => {
+    // 取得 Hero Section 的高度
+    const heroHeight = heroSection.offsetHeight;
+    
+    // 如果捲動超過 Hero Section 的高度 (代表 Hero 已經滾出畫面)
+    if (window.scrollY > heroHeight - 100) { 
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+});
+
+// 監聽點擊事件
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // 平滑捲動回頂部
+    });
+});

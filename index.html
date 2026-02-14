@@ -88,7 +88,7 @@
           {
             "@type": "Dataset",
             "name": "VeriPromiseESG4K",
-            "description": "包含 4,000 筆來自台灣 50 指數成分股的繁體中文 ESG 標註數據，用於訓練 AI 識別企業永續承諾。",
+            "description": "包含 4,000 筆來自臺灣 50 指數成分股的繁體中文 ESG 標註數據，用於訓練 AI 識別企業永續承諾。",
             "url": "https://veripromiseesg.github.io/#dataset",
             "license": "https://creativecommons.org/licenses/by/4.0/",
             "creator": {
@@ -112,7 +112,7 @@
                 "name": "競賽提供什麼數據集？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "提供 VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股的真實 ESG 報告標註數據。"
+                  "text": "提供 VeriPromiseESG4K 數據集，包含 4,000 筆來自臺灣 50 指數成分股的真實 ESG 報告標註數據。"
                 }
               },
               {
@@ -138,6 +138,10 @@
 
     <!-- External CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   </head>
   <body>
     <nav>
@@ -152,7 +156,6 @@
         </div>
         <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
           <li><a href="#tasks" data-i18n="nav.tasks">Tasks</a></li>
           <li><a href="#dataset" data-i18n="nav.dataset">Dataset</a></li>
@@ -181,19 +184,49 @@
       </div>
     </nav>
 
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="subtitle-top" data-i18n="hero.subtitle_top">
-          VeriPromise ESG 2026
-        </div>
-        <h1 data-i18n="hero.title">ESG Promise Verification Competition</h1>
-        <p data-i18n="hero.subtitle">
-          Leverage AI technology to verify corporate sustainability commitments
-          and enhance ESG report transparency and credibility
-        </p>
-        <a href="#about" class="cta-button" data-i18n="hero.cta">Learn More</a>
+    <section class="hero-parallax" id="home">
+      <div class="layer layer-bg" id="cloud-container" data-speed="0.2">
       </div>
-    </section>
+
+      <div class="layer layer-mid" data-speed="0.5">
+        <div class="container hero-content">
+          <!-- 橫幅不太好看，先註解了TK
+          <div class="hero-banner-container">
+              <img src="img/banner.jpg" alt="VeriPromise ESG 2026 Competition Banner" class="hero-banner-img">
+          </div>
+          !-->
+          
+          <div class="title-group">
+            <div class="title-box" data-i18n="hero.block1">VeriPromise ESG 2026</div>
+            <div class="title-box" data-i18n="hero.block2">ESG Promise Verification</div>
+            <div class="title-box" data-i18n="hero.block3">Competition</div>
+          </div>
+
+          <div class="hero-desc-box" data-i18n="hero.description">
+              運用 AI 技術驗證企業永續承諾<br>
+              推動 ESG 報告透明化與可信度
+          </div>
+        </div>
+      </div>
+
+      <button id="backToTopBtn" title="Back to Top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19V5"></path>
+              <path d="M5 12l7-7 7 7"></path>
+          </svg>
+      </button>
+
+      <div class="layer layer-front" data-speed="0.8">
+          <img src="img/bush.png" class="decoration bush-left" alt="Decorative bush">
+          <img src="img/bush.png" class="decoration bush-right" alt="Decorative bush">
+      </div>
+
+      <div class="wave-divider">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+          </svg>
+      </div>
+  </section>
 
     <section id="about">
       <div class="container">
@@ -1621,12 +1654,11 @@
         <p data-i18n="footer.copyright">
           &copy; 2025-2026 AI Cup - ESG Promise Verification Competition
         </p>
-        <p data-i18n="footer.organizer">
-          Organizer: National Taipei University Graduate Institute of
-          Information Management
+        <p data-i18n="footer.organizer1">
+          Organizer: Graduate Institute of Information Management, NTPU
         </p>
-        <p data-i18n="footer.lab">
-          Intelligent Financial Innovation Technology Lab (IFIT Lab), NTPU
+        <p data-i18n="footer.organizer2">
+          The Fintech and Green Finance Center (FGFC), NTPU
         </p>
         <p>
           <a href="#home" data-i18n="footer.backToTop">Back to Top</a>

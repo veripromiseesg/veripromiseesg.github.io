@@ -788,3 +788,218 @@ footer a:hover {
     margin-bottom: 0.3rem;
   }
 }
+
+/* === Parallax Hero Section === */
+
+.hero-parallax {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    padding-top: 60px;
+}
+
+.hero-parallax .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hero-parallax .layer-mid {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5; /* 確保在雲和草之上 */
+}
+
+.hero-content {
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-5%); 
+}
+
+/* --- 1. 主視覺 Banner（因為效果還不太好，先註解TK） --- */
+/*
+.hero-banner-container {
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    animation: float-vertical 6s ease-in-out infinite;
+}
+
+.hero-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    border: 4px solid #fff;                   白框 
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);  硬邊陰影
+    transform: rotate(-2deg);
+}
+*/
+
+/* --- 2. 方塊標題樣式 --- */
+.title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* 方塊之間的距離 */
+    margin-bottom: 2rem;
+}
+
+.title-box {
+    background: white;
+    color: #333;
+    padding: 10px 25px;
+    font-weight: 900; /* 極粗體 */
+    font-size: 2.5rem; /* 字體加大 */
+    line-height: 1.2;
+    border: 3px solid #333; /* 黑框 */
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.8); /* 漫畫感的黑色硬陰影 */
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* 讓方塊稍微錯落旋轉，製造活潑感 */
+.title-box:nth-child(1) { transform: rotate(-3deg); font-size: 1.5rem; color: #667eea; } /* 副標題 */
+.title-box:nth-child(2) { transform: rotate(2deg) translateX(-20px); z-index: 2; }
+.title-box:nth-child(3) { transform: rotate(-1.5deg) translateX(10px); z-index: 1; }
+
+.hero-desc-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    border: 2px solid #333;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* --- 3. 草叢 --- */
+.bush-left, .bush-right {
+    position: absolute;
+    bottom: -30px; /* 往上提一點 */
+    width: auto; 
+    height: 350px; /* 大小 */
+    filter: blur(0px); /* 去掉模糊，改成清晰的插圖風 */
+    z-index: 6; /* 確保蓋住波浪線 */
+}
+
+.bush-left {
+    left: -80px; 
+    transform: scaleX(1);
+}
+
+.bush-right {
+    right: -80px; 
+    transform: scaleX(-1);
+}
+
+/* --- 4. 動畫區 --- */
+
+/* 雲朵樣式 */
+.floating-cloud {
+    position: absolute;
+    width: 150px; 
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: float-horizontal 20s ease-in-out infinite alternate; 
+}
+
+/* 左右飄動 */
+@keyframes float-horizontal {
+    0% { transform: translateX(-100px); } /* 往左 100px */
+    100% { transform: translateX(100px); } /* 往右 100px */
+}
+
+/* 上下浮動 */
+@keyframes float-vertical {
+    0% { transform: rotate(-2deg) translateY(0px); }
+    50% { transform: rotate(-2deg) translateY(-15px); }
+    100% { transform: rotate(-2deg) translateY(0px); }
+}
+
+/* 按鈕樣式 */
+.cta-button {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 4px 4px 0px #333; /* 硬邊陰影 */
+    border: 2px solid #333;
+    transition: all 0.2s;
+}
+.cta-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #333;
+}
+
+/* ===================================
+   Back to Top Button (Sticker Style)
+   =================================== */
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff; /* 白色背景 */
+    color: #333; /* 黑色箭頭 */
+    border: 3px solid #333; /* 黑框 */
+    border-radius: 50%; /* 圓形 */
+    box-shadow: 4px 4px 0px rgba(0,0,0,1); /* 硬黑陰影 */
+    cursor: pointer;
+    z-index: 1000; /* 確保在最上層 */
+    
+    /* 預設隱藏 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 彈性過渡 */
+    
+    /* 讓箭頭置中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 顯示狀態 */
+#backToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover 效果：按下去的感覺 */
+#backToTopBtn:hover {
+    transform: translateY(-5px); /* 稍微浮起 */
+    box-shadow: 6px 6px 0px rgba(0,0,0,1);
+    background-color: #fffae6; /* 稍微變黃一點點 */
+}
+
+#backToTopBtn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px rgba(0,0,0,1);
+}
+
+/* 手機版調整 */
+@media (max-width: 768px) {
+    #backToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
