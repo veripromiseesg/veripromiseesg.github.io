@@ -9,16 +9,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+/* 1. 針對 html 設定滾動行為 */
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* 2. body 基本樣式 */
+body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f8f9fa;
   
-  /* 強制隱藏水平溢出，解決頁面偏移與切邊問題 */
-  overflow-x: hidden; 
-  
-  /* 確保寬度鎖定為視窗寬度，不讓內容撐開 */
+  /* 確保寬度 */
   width: 100%; 
   max-width: 100%;
   margin: 0;
@@ -30,108 +34,107 @@ html, body {
    =================================== */
 nav {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 0.6rem 0;
+  height: 60px;
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
 }
 
 .nav-container {
-  max-width: 1600px;
+  max-width: 100%;
+  height: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 3rem; 
-  gap: 1rem;
+  position: relative; /* 定位基準 */
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.3rem;
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 0.5rem; 
-}
-
-/* 手機版維持原樣或微調 */
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 1rem; 
-  }
-}
-
+/* --- 1. Logo --- */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1.1rem;
+  position: absolute;
+  left: 2rem;       
+  top: 50%;
+  transform: translateY(-50%); 
+  
+  font-size: 1.4rem;
   font-weight: 700;
   color: white;
-  min-width: 150px;
-  flex-shrink: 0;
+  white-space: nowrap;
+  z-index: 20;
 }
 
-.logo img {
-  width: 130px;
-  max-width: 100%;
-  height: auto;
+/* --- 2. 語言按鈕 --- */
+.lang-switch {
+  position: absolute;
+  right: 2rem;      
+  top: 50%;
+  transform: translateY(-50%); 
+  
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+/* 補回遺失的按鈕樣式 */
+.lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.lang-btn:hover, .lang-btn.active {
   background: white;
-  padding: 0.25rem;
-  border-radius: 8px;
+  color: #667eea;
+  border-color: white;
+}
+
+/* --- 3. 導覽連結 --- */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 釘在螢幕正中央 */
+  display: grid;
+  /* 按鈕間距客製化 */
+  grid-template-columns: 70px 70px 80px 95px 85px 60px 50px 160px 80px 95px;
+  
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.3s;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   white-space: nowrap;
-  padding: 0.5rem 0.8rem;
+  transition: opacity 0.3s;
+  display: block;
+  padding: 5px 0;
 }
 
 .nav-links a:hover {
   opacity: 0.8;
 }
 
-.lang-switch {
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-  min-width: 90px;
-  justify-content: flex-end;
-  flex-shrink: 0;
-}
-
-.lang-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
-  padding: 0.35rem 0.7rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.85rem;
-  transition: all 0.3s;
-}
-
-.lang-btn:hover {
-  background: white;
-  color: #667eea;
-}
-
-.lang-btn.active {
-  background: white;
-  color: #667eea;
-}
-
+/* --- 4. 手機版漢堡選單 (預設隱藏) --- */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -139,6 +142,70 @@ nav {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1002;
+}
+
+/* --- 響應式調整 --- */
+
+/* 筆電版 (1300px 以下) */
+@media (max-width: 1300px) {
+  .nav-links {
+    /* 極限壓縮寬度 */
+    grid-template-columns: 65px 65px 75px 90px 80px 55px 45px 150px 75px 90px;
+  }
+  .logo { left: 1.5rem; font-size: 1.2rem; }
+  .lang-switch { right: 1.5rem; }
+}
+
+/* 平板/手機版 (950px 以下)：轉為漢堡選單 */
+@media (max-width: 950px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  /* 流動排版 */
+  .logo { position: static; transform: none; }
+  .lang-switch { position: static; transform: none; margin-left: auto; margin-right: 10px; }
+  
+  /* 手機版顯示漢堡按鈕 */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* 下拉選單樣式 */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: none; /* 取消置中 */
+    
+    background: #667eea;
+    display: none; 
+    grid-template-columns: none; 
+    flex-direction: column;
+    
+    padding: 1rem 0;
+    height: auto;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
 }
 
 /* ===================================
@@ -367,6 +434,20 @@ nav {
 
 section {
   padding: 5rem 0;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home {
+    scroll-margin-top: 0;
+}
+
+/* 特別縮減 About 區塊的上下內距 */
+section#about {
+    padding: 2rem 0 3rem;
+    /* About 也要繼承這些設定 */
 }
 
 /* 特別縮減 About 區塊的上下內距，讓它能塞進一頁電腦螢幕 */

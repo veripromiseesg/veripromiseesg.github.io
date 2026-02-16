@@ -10,13 +10,13 @@ const translations = {
   zh: {
     translation: {
       nav: {
-        title: "AI Cup 2026",
+        title: "AI CUP 2026",
         about: "競賽簡介",
         tasks: "任務說明",
         dataset: "數據集",
         evaluation: "評估方式",
-        timeline: "時程表",
-        team: "團隊",
+        timeline: "競賽時程",
+        team: "籌備團隊",
         examples: "標註範例",
         contact: "聯絡我們",
         faq: "常見問題",
@@ -548,7 +548,7 @@ const translations = {
         }
       },
       footer: {
-        copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
+        copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
         organizer1: "主辦單位：國立臺北大學 資訊管理研究所、",
         organizer2: "國立臺北大學 金融科技暨綠色金融研究中心",
       },
@@ -557,7 +557,7 @@ const translations = {
   en: {
     translation: {
       nav: {
-        title: "AI Cup 2026",
+        title: "AI CUP 2026",
         about: "About",
         tasks: "Tasks",
         dataset: "Dataset",
@@ -1114,7 +1114,7 @@ const translations = {
       },
       footer: {
         copyright:
-          "© 2025-2026 AI Cup - ESG Promise Verification Competition",
+          "© 2025-2026 AI CUP - ESG Promise Verification Competition",
         organizer1:
           "Organizer: Graduate Institute of Information Management, NTPU",
         organizer2: "The Fintech and Green Finance Center (FGFC), NTPU",
@@ -1513,4 +1513,65 @@ ScrollTrigger.create({
         });
       });
     }
+});
+
+/* ===================================
+   GSAP Smart Scroll Snap (絲滑吸附效果)
+   =================================== */
+
+function setupScrollSnap() {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    // 取得所有 section 和 footer
+    const snapElements = gsap.utils.toArray("section, footer");
+    const nav = document.querySelector('nav');
+    
+    ScrollTrigger.create({
+        // 使用整個頁面作為觸發器
+        trigger: document.body,
+        start: "top top",
+        end: "bottom bottom",
+        
+        snap: {
+            snapTo: (progress, self) => {
+                // 1. 取得當前頁面總可捲動高度
+                const maxScroll = ScrollTrigger.maxScroll(window);
+                const currentScroll = progress * maxScroll;
+                
+                // 動態取得導覽列高度 (確保適應響應式變化)
+                const navHeight = nav ? nav.offsetHeight : 0;
+                
+                // 2. 計算每個區塊的「理想停止點」
+                const snapPositions = snapElements.map(el => {
+                    // offsetTop: 區塊距離頁面頂端的距離
+                    // navHeight: 扣掉導覽列高度，讓標題露出來
+                    // 20: 額外多留一點呼吸空間
+                    let offset = el.offsetTop - navHeight - 20;
+                    
+                    // 避免第一個區塊 (Hero) 算出負數
+                    if (offset < 0) offset = 0;
+                    return offset;
+                });
+
+                // 3. 找出離目前捲動位置「最近」的那個區塊
+                const closestPos = snapPositions.reduce((prev, curr) => {
+                    return (Math.abs(curr - currentScroll) < Math.abs(prev - currentScroll) ? curr : prev);
+                });
+
+                // 4. 轉換回 GSAP 需要的百分比 (0~1)
+                return closestPos / maxScroll;
+            },
+            
+            // 速度與流暢度
+            duration: { min: 0.8, max: 1.5 }, // 慢一點，營造高級感
+            delay: 0.2,         // 手指放開後停頓 0.2 秒才開始滑，避免過度敏感
+            ease: "power2.inOut" // 平滑曲線
+        }
+    });
+}
+
+// 確保頁面完全載入（包含圖片）後才執行，以免高度計算錯誤
+window.addEventListener('load', () => {
+    // 強制重新計算 ScrollTrigger
+    ScrollTrigger.refresh();
+    setTimeout(setupScrollSnap, 200);
 });
