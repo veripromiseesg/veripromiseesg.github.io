@@ -12,7 +12,7 @@
 /* 1. 針對 html 設定滾動行為 */
 html {
   overflow-x: hidden;
-  height: 100%;
+  scroll-behavior: smooth;
 }
 
 /* 2. body 基本樣式 */
