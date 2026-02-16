@@ -1138,6 +1138,11 @@ i18next.init(
   }
 );
 
+// 初始化後，檢查當前語言是否為中文，若是則加上 class
+if (i18next.language === 'zh' || i18next.language.startsWith('zh')) {
+    document.getElementById('navLinks').classList.add('zh-mode');
+}
+
 // ===================================
 // 更新頁面內容
 // ===================================
@@ -1171,11 +1176,20 @@ function updateContent() {
 function changeLanguage(lang) {
   i18next.changeLanguage(lang, (err, t) => {
     updateContent();
-    // Update button states
+    
+    // 更新按鈕狀態
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.remove("active");
     });
     document.getElementById(`btn-${lang}`).classList.add("active");
+
+    // 切換導覽列的 Grid 模式
+    const navLinks = document.getElementById('navLinks');
+    if (lang === 'zh') {
+      navLinks.classList.add('zh-mode');
+    } else {
+      navLinks.classList.remove('zh-mode');
+    }
   });
 }
 
@@ -1518,60 +1532,75 @@ ScrollTrigger.create({
 /* ===================================
    GSAP Smart Scroll Snap (絲滑吸附效果)
    =================================== */
-
 function setupScrollSnap() {
+    // 1. 檢查外掛是否載入
+    if (typeof ScrollTrigger === "undefined" || typeof ScrollToPlugin === "undefined") {
+        console.error("GSAP 外掛未正確載入！請檢查 index.html 的 script 標籤順序。");
+        return;
+    }
+
+    // 2. 註冊外掛
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    // 取得所有 section 和 footer
-    const snapElements = gsap.utils.toArray("section, footer");
+
+    // 取得導覽列高度
     const nav = document.querySelector('nav');
     
+    // 3. 建立吸附動畫
     ScrollTrigger.create({
-        // 使用整個頁面作為觸發器
-        trigger: document.body,
-        start: "top top",
-        end: "bottom bottom",
+        // 不指定 trigger，預設監聽整個視窗的捲動
+        start: 0, 
+        end: "max", 
         
         snap: {
             snapTo: (progress, self) => {
-                // 1. 取得當前頁面總可捲動高度
+                // 重新抓取所有區塊（確保是最新的）
+                const sections = gsap.utils.toArray("section");
+                const footer = document.querySelector("footer");
+                const snapElements = [...sections, footer];
+
+                // 計算當前捲動的總像素距離
                 const maxScroll = ScrollTrigger.maxScroll(window);
                 const currentScroll = progress * maxScroll;
+                const navHeight = nav ? nav.offsetHeight : 60; // 預設 60 作為保險
                 
-                // 動態取得導覽列高度 (確保適應響應式變化)
-                const navHeight = nav ? nav.offsetHeight : 0;
-                
-                // 2. 計算每個區塊的「理想停止點」
+                // 計算每個區塊的「理想停止點」
                 const snapPositions = snapElements.map(el => {
-                    // offsetTop: 區塊距離頁面頂端的距離
-                    // navHeight: 扣掉導覽列高度，讓標題露出來
-                    // 20: 額外多留一點呼吸空間
+                    if (!el) return 0;
+                    
+                    // 計算目標位置：元素頂部 - 導覽列高度 - 緩衝(20px)
                     let offset = el.offsetTop - navHeight - 20;
                     
-                    // 避免第一個區塊 (Hero) 算出負數
-                    if (offset < 0) offset = 0;
+                    // 第一個區塊 (Hero) 永遠吸附到 0
+                    if (el.id === 'home' || offset < 0) offset = 0;
+                    
                     return offset;
                 });
 
-                // 3. 找出離目前捲動位置「最近」的那個區塊
+                // 找出離目前位置「最近」的那個點
                 const closestPos = snapPositions.reduce((prev, curr) => {
                     return (Math.abs(curr - currentScroll) < Math.abs(prev - currentScroll) ? curr : prev);
                 });
 
-                // 4. 轉換回 GSAP 需要的百分比 (0~1)
+                // 回傳百分比給 GSAP 執行吸附
                 return closestPos / maxScroll;
             },
             
-            // 速度與流暢度
-            duration: { min: 0.8, max: 1.5 }, // 慢一點，營造高級感
-            delay: 0.2,         // 手指放開後停頓 0.2 秒才開始滑，避免過度敏感
-            ease: "power2.inOut" // 平滑曲線
+            // 吸附動畫設定
+            duration: { min: 0.6, max: 1.2 }, // 稍微調快一點點，避免感覺沒反應
+            delay: 0.1,         // 手指放開後 0.1 秒就開始吸
+            ease: "power2.out", // 使用較自然的減速曲線
+            inertia: false      // 關閉慣性模擬，強制執行吸附
         }
     });
+    
+    console.log("GSAP Scroll Snap 已啟動"); // 如果成功，您會在 Console 看到這行
 }
 
-// 確保頁面完全載入（包含圖片）後才執行，以免高度計算錯誤
+// 確保頁面載入後執行
 window.addEventListener('load', () => {
-    // 強制重新計算 ScrollTrigger
-    ScrollTrigger.refresh();
-    setTimeout(setupScrollSnap, 200);
+    // 稍微延遲以確保版面高度正確
+    setTimeout(() => {
+        ScrollTrigger.refresh(); // 強制更新座標
+        setupScrollSnap();
+    }, 200);
 });

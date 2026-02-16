@@ -41,6 +41,7 @@ nav {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0; 
 }
 
 .nav-container {
@@ -100,38 +101,75 @@ nav {
 .nav-links {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); /* 釘在螢幕正中央 */
+  top: 0;         /* 貼齊頂部 */
+  height: 100%;   /* 高度撐滿 */
+  transform: translateX(-50%);  /* 水平置中 */
   display: grid;
-  /* 按鈕間距客製化 */
+  /* 各按鈕寬度 ↓ */
   grid-template-columns: 70px 70px 80px 95px 85px 60px 50px 160px 80px 95px;
-  
-  align-items: center;
+  align-items: center;          /* 垂直置中 */
   margin: 0;
   padding: 0;
   list-style: none;
+  transition: all 0.3s ease;    /* 讓格子變換時有動畫 */
+}
+
+/* 中文版專用 Grid (Chinese Mode) */
+.nav-links.zh-mode {
+  grid-template-columns: 85px 85px 75px 85px 85px 85px 85px 85px 85px 85px;
 }
 
 .nav-links li {
   width: 100%; 
+  height: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: 600;
+  font-size: 0.9rem;
   white-space: nowrap;
-  transition: opacity 0.3s;
-  display: block;
-  padding: 5px 0;
+  
+  /* 滿版矩形 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;      /* 填滿格子寬度 */
+  height: 100%;     /* 填滿格子高度 (60px) */
+  padding: 0;       /* 移除 padding，靠 flex 置中 */
+  border-radius: 0; /* 移除圓角 */
+  border-bottom: 5px solid transparent; /* 預設透明邊框 */
+  border-top: 5px solid transparent; 
+  transition: all 0.2s ease-out;        /* 動畫過渡 */
 }
 
+/* --- Hover 動畫 --- */
 .nav-links a:hover {
-  opacity: 0.8;
+  background: white;          /* 全白背景 */
+  color: #667eea;             /* 紫色文字 */
+  opacity: 1;
+  transform: translateY(-1px);  /* 超微幅上浮 */
+  border-bottom: 5px solid #764ba2; /* 深紫色加粗底線 */
+  /* 稍微移除上方邊框的空間，保持文字位置穩定 */
+  border-top-color: transparent;
+  /* 陰影稍微淡一點，比較像貼在上面的 Tab */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Active 點擊反饋 --- */
+.nav-links a:active {
+  /* 按下去時往下壓，並稍微縮小 */
+  transform: translateY(1px) scale(0.98);
+  /* 底線變細，模擬被壓扁 */
+  border-bottom-width: 2px;
+  /* 背景稍微變灰一點點，增加按壓回饋 */
+  background: #f8f9fa;
+  box-shadow: none;
+  transition: all 0.05s;
 }
 
 /* --- 4. 手機版漢堡選單 (預設隱藏) --- */
