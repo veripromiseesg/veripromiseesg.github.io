@@ -30,6 +30,7 @@ const translations = {
       },
       about: {
         title: "競賽簡介",
+        highlightsTitle: "競賽亮點",
         intro:
           "在全球 ESG（環境、社會與治理）浪潮下，企業永續報告的真實性與可信度日益重要。本競賽旨在透過 AI 技術建立自動化的永續承諾驗證系統。",
         goalLabel: "競賽全名：",
@@ -42,15 +43,15 @@ const translations = {
         stat3: "臺灣龍頭企業",
         stat4: "產業領域",
         card1: {
-          title: "實務應用",
+          title: "實務應用：",
           desc: "解決企業「漂綠」(Greenwashing) 問題，提升 ESG 報告可信度，協助投資者與利害關係人做出更明智的決策。",
         },
         card2: {
-          title: "技術挑戰",
+          title: "技術挑戰：",
           desc: "結合自然語言處理、大型語言模型與多任務學習，完成承諾識別、證據連結、清晰度評估與時機預測四大挑戰任務。",
         },
         card3: {
-          title: "國際合作",
+          title: "國際合作：",
           desc: "由臺日頂尖學術機構聯合主辦，同時作為 NTCIR-19 International Track 項目，提供高品質多語言數據集，促進全球 ESG AI 研究發展。",
         },
       },
@@ -576,6 +577,7 @@ const translations = {
       },
       about: {
         title: "Competition Overview",
+        highlightsTitle: "Competition Highlights",
         intro:
           "In the era of global ESG (Environmental, Social, and Governance) focus, the authenticity and credibility of corporate sustainability reports are increasingly important. This competition aims to establish an automated sustainability commitment verification system using AI technology.",
         goalLabel: "Full Name:",
@@ -589,15 +591,15 @@ const translations = {
         stat3: "Leading Companies",
         stat4: "Industry Sectors",
         card1: {
-          title: "Practical Application",
+          title: "Practical Application: ",
           desc: "Address corporate 'Greenwashing' issues, enhance ESG report credibility, and help investors and stakeholders make more informed decisions.",
         },
         card2: {
-          title: "Technical Challenge",
+          title: "Technical Challenge: ",
           desc: "Combine natural language processing, large language models, and multi-task learning to complete four challenge tasks: promise recognition, evidence linkage, clarity assessment, and timeline prediction.",
         },
         card3: {
-          title: "International Collaboration",
+          title: "International Collaboration: ",
           desc: "Co-hosted by top academic institutions from Taiwan and Japan, featured as an NTCIR-19 International Track project, providing high-quality multilingual datasets to promote global ESG AI research.",
         },
       },
@@ -1233,7 +1235,7 @@ window.addEventListener("scroll", () => {
 
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px",
+  rootMargin: "0px 0px -20px 0px", 
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -1283,7 +1285,7 @@ gsap.utils.toArray("section:not(#home) .container").forEach(section => {
         duration: 1,
         scrollTrigger: {
             trigger: section,
-            start: "top 80%", // 當區塊頂部到達視窗 80% 處觸發
+            start: "top 90%", 
             toggleActions: "play none none reverse"
         }
     });
@@ -1476,4 +1478,39 @@ let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(generateLeafDividers, 200);
+});
+
+/* ===================================
+   Number Counter Animation (About Section)
+   =================================== */
+
+// 使用 ScrollTrigger 觸發動畫
+gsap.registerPlugin(ScrollTrigger);
+
+// 選擇所有計數器
+const counters = document.querySelectorAll('.counter');
+
+// 建立動畫
+ScrollTrigger.create({
+    trigger: "#about", // 當滑動到 about 區塊時觸發
+    start: "top 75%",  // 視窗 75% 處開始
+    once: true,        // 只執行一次
+    onEnter: () => {
+      counters.forEach(counter => {
+          // 取得目標數字 (例如 4000)
+          const target = +counter.getAttribute('data-target');
+          
+          // 建立一個代理物件來跑數值
+          const countObj = { val: 1 }; // 從 1 開始
+
+          gsap.to(countObj, {
+            val: target,
+            duration: 2, 
+            ease: "linear",
+            onUpdate: () => {
+              counter.innerText = Math.ceil(countObj.val).toLocaleString();
+            }
+        });
+      });
+    }
 });
