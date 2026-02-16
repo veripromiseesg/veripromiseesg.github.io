@@ -573,49 +573,206 @@ section h3 {
 /* ===================================
    Task Cards
    =================================== */
-.task-container {
+.task-grid {
+  display: grid;
+  /* 電腦版四列並排 */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.task-card-simple {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%; /* 確保高度一致 */
+  position: relative;
+  overflow: hidden;
 }
 
-.task-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #667eea;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s, transform 0.6s;
+/* 懸停效果：上浮 + 陰影加深 */
+.task-card-simple:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
 }
 
-/* Purple accent variant for task cards */
-.task-card--purple {
-  border-left-color: #764ba2;
+/* 頂部裝飾線 (類似附圖的彩色感，這裡用品牌色) */
+.task-card-simple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  opacity: 0.8;
 }
 
-.task-card h3 {
-  margin-top: 0;
+/* 第三張卡片特別色 (對應原本的 purple 樣式) */
+.task-card-purple::before {
+  background: linear-gradient(90deg, #764ba2, #a18cd1);
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.task-card-simple h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* 灰色箭頭 */
+.card-arrow {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: transform 0.3s, color 0.3s;
+  line-height: 1;
+}
+
+.task-card-simple:hover .card-arrow {
   color: #667eea;
+  transform: translateX(5px);
 }
 
-.task-card h4 {
+.task-goal {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 限制行數，避免卡片太長 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* RWD: 平板變雙欄 */
+@media (max-width: 1100px) {
+  .task-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* RWD: 手機變單欄 */
+@media (max-width: 600px) {
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================
+   Modal (Popups) Styles
+   =================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 半透明黑底 */
+  backdrop-filter: blur(4px);     /* 背景模糊效果 */
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh; /* 避免超過視窗高度 */
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 2.5rem 2.5rem;
+  overflow-y: auto; /* 內容過長可捲動 */
+}
+
+/* Modal 內文字樣式微調 */
+.modal-body h3 {
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem; /* 避免被叉叉擋住 */
+}
+
+.modal-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.modal-body h4 {
   color: #764ba2;
   margin-top: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
-.task-card ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
+.modal-body ul {
+  padding-left: 1.2rem;
+  color: #444;
 }
 
-.task-card li {
-  margin: 0.5rem 0;
+.modal-body li {
+  margin-bottom: 0.5rem;
 }
 
 /* ===================================

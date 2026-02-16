@@ -1528,3 +1528,48 @@ ScrollTrigger.create({
       });
     }
 });
+
+/* ===================================
+   Modal Logic (Task Details)
+   =================================== */
+
+// 開啟 Modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // 禁止背景捲動
+    }
+}
+
+// 關閉所有 Modal
+function closeAllModals() {
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = ''; // 恢復背景捲動
+}
+
+// 事件監聽：點擊關閉按鈕
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // 避免冒泡
+        closeAllModals();
+    });
+});
+
+// 事件監聽：點擊背景關閉
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeAllModals();
+        }
+    });
+});
+
+// 事件監聽：按 ESC 鍵關閉
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeAllModals();
+    }
+});

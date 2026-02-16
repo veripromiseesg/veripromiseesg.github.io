@@ -283,193 +283,167 @@
           assessment, clarity analysis, and timeline prediction
         </p>
 
-        <div class="task-container">
-          <div class="task-card">
-            <h3 data-i18n="tasks.task1.title">
-              Subtask 1: Commitment Classification
-            </h3>
-            <p>
-              <strong data-i18n="tasks.task1.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task1.goal">Determine whether a given sentence expresses a clear corporate
-                commitment to future actions</span>
-            </p>
-            <h4 data-i18n="tasks.task1.outputLabel">Output Categories</h4>
-            <ul>
-              <li>
-                <strong data-i18n="tasks.task1.output1Label">Yes:</strong>
-                <span data-i18n="tasks.task1.output1">Statements containing explicit commitments</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task1.output2Label">No:</strong>
-                <span data-i18n="tasks.task1.output2">General statements without commitments</span>
-              </li>
-            </ul>
-            <h4 data-i18n="tasks.task1.metricLabel">Evaluation Metric</h4>
-            <p data-i18n="tasks.task1.metric">
-              F1-Score (harmonic mean of precision and recall)
-            </p>
-            <h4 data-i18n="tasks.task1.exampleLabel">Examples</h4>
-            <div class="highlight-box">
-              <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong>
-              <span data-i18n="tasks.task1.example1">"We commit to achieving carbon neutrality by 2030"</span><br />
-              <strong data-i18n="tasks.task1.example2Label">❌ Non-Promise:</strong>
-              <span data-i18n="tasks.task1.example2">"We value the importance of environmental protection"</span>
+        <div class="task-grid">
+          <div class="task-card-simple" onclick="openModal('modal-task1')">
+            <div class="task-card-header">
+              <h3 data-i18n="tasks.task1.title">Subtask 1</h3>
+              <span class="card-arrow">→</span>
             </div>
+            <p class="task-goal" data-i18n="tasks.task1.goal">
+              Determine whether a given sentence expresses a clear corporate commitment...
+            </p>
           </div>
 
-          <div class="task-card">
-            <h3 data-i18n="tasks.task2.title">
-              🔗 Subtask 2: Evidence Identification
-            </h3>
-            <p>
-              <strong data-i18n="tasks.task2.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task2.goal">Determine whether identified promise statements are accompanied
-                by specific action plans or supporting evidence</span>
-            </p>
-            <h4 data-i18n="tasks.task2.outputLabel">Output Categories</h4>
-            <ul>
-              <li>
-                <strong data-i18n="tasks.task2.output1Label">Yes:</strong>
-                <span data-i18n="tasks.task2.output1">Promise has concrete evidence support</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task2.output2Label">No:</strong>
-                <span data-i18n="tasks.task2.output2">Promise lacks specific evidence</span>
-              </li>
-            </ul>
-            <h4 data-i18n="tasks.task2.metricLabel">Evaluation Metric</h4>
-            <p data-i18n="tasks.task2.metric">
-              F1-Score (semantic association judgment capability)
-            </p>
-            <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
-            <div class="highlight-box">
-              <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong>
-              <span data-i18n="tasks.task2.promise">"Promote low-carbon value chain transformation, continuously
-                strengthen supplier energy-saving, carbon reduction, water
-                conservation, and waste reduction guidance"</span><br />
-              <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong>
-              <span data-i18n="tasks.task2.evidence">"Require setting medium and long-term reduction targets and
-                proposing specific actions" → </span><strong class="text-primary" data-i18n="tasks.task2.result">Evidence Supported</strong>
+          <div class="task-card-simple" onclick="openModal('modal-task2')">
+            <div class="task-card-header">
+              <h3 data-i18n="tasks.task2.title">Subtask 2</h3>
+              <span class="card-arrow">→</span>
             </div>
-          </div>
-
-          <div class="task-card task-card--purple">
-            <h3 data-i18n="tasks.task3.title">
-              💡 Subtask 3: Clarity Classification
-            </h3>
-            <p>
-              <strong data-i18n="tasks.task3.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task3.goal">Assess whether promise statements are semantically clear
-                without ambiguous language, identifying potential 'greenwashing'
-                risks</span>
-            </p>
-            <h4 data-i18n="tasks.task3.outputLabel">Output Categories</h4>
-            <ul>
-              <li>
-                <strong data-i18n="tasks.task3.output1Label">Clear:</strong>
-                <span data-i18n="tasks.task3.output1">Semantically explicit and verifiable</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task3.output2Label">Not Clear:</strong>
-                <span data-i18n="tasks.task3.output2">Semantically ambiguous and difficult to quantify</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task3.output3Label">Misleading:</strong>
-                <span data-i18n="tasks.task3.output3">Potentially misleading statements</span>
-              </li>
-            </ul>
-            <h4 data-i18n="tasks.task3.metricLabel">Evaluation Metric</h4>
-            <p data-i18n="tasks.task3.metric">
-              Macro-F1 (average performance across three categories)
-            </p>
-            <h4 data-i18n="tasks.task3.valueLabel">Practical Value</h4>
-            <p data-i18n="tasks.task3.value">
-              Help identify corporate 'greenwashing' behavior and enhance ESG
-              report credibility
+            <p class="task-goal" data-i18n="tasks.task2.goal">
+              Determine whether identified promise statements are accompanied...
             </p>
           </div>
 
-          <div class="task-card">
-            <h3 data-i18n="tasks.task4.title">
-              ⏰ Subtask 4: Timeline Classification
-            </h3>
-            <p>
-              <strong data-i18n="tasks.task4.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task4.goal">Infer the expected completion time of commitments based on
-                statements to establish tracking mechanisms</span>
+          <div class="task-card-simple task-card-purple" onclick="openModal('modal-task3')">
+            <div class="task-card-header">
+              <h3 data-i18n="tasks.task3.title">Subtask 3</h3>
+              <span class="card-arrow">→</span>
+            </div>
+            <p class="task-goal" data-i18n="tasks.task3.goal">
+              Assess whether promise statements are semantically clear...
             </p>
-            <h4 data-i18n="tasks.task4.outputLabel">Output Categories</h4>
-            <ul>
-              <li>
-                <strong data-i18n="tasks.task4.output1Label">Already:</strong>
-                <span data-i18n="tasks.task4.output1">Commitment already fulfilled (verifiable in current
-                  period)</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task4.output2Label">Within 2 years:</strong>
-                <span data-i18n="tasks.task4.output2">Short-term target</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task4.output3Label">Between 2 and 5 years:</strong>
-                <span data-i18n="tasks.task4.output3">Medium-term target</span>
-              </li>
-              <li>
-                <strong data-i18n="tasks.task4.output4Label">More than 5 years:</strong>
-                <span data-i18n="tasks.task4.output4">Long-term target</span>
-              </li>
-            </ul>
-            <h4 data-i18n="tasks.task4.metricLabel">Evaluation Metric</h4>
-            <p data-i18n="tasks.task4.metric">
-              Macro-F1 (four-category time inference capability)
+          </div>
+
+          <div class="task-card-simple" onclick="openModal('modal-task4')">
+            <div class="task-card-header">
+              <h3 data-i18n="tasks.task4.title">Subtask 4</h3>
+              <span class="card-arrow">→</span>
+            </div>
+            <p class="task-goal" data-i18n="tasks.task4.goal">
+              Infer the expected completion time of commitments...
             </p>
           </div>
         </div>
 
-        <h3 class="relevance-title" data-i18n="tasks.relevanceTitle">
-           Task Relevance and Practical Value
-        </h3>
-        <div class="cards cards-2col">
-          <div class="card">
-            <h3 data-i18n="tasks.job1.title">ESG Data Analyst</h3>
-            <p>
-              <strong data-i18n="tasks.job1.skillLabel">Corresponding Skills:</strong>
-              <span data-i18n="tasks.job1.skill">Subtask 1</span><br />
-              <span data-i18n="tasks.job1.desc">Key information extraction, text classification, sustainability
-                report writing</span>
-            </p>
+        </div>
+    </section>
+
+    <div id="modal-task1" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <h3 data-i18n="tasks.task1.title">Subtask 1: Commitment Classification</h3>
+          <p class="modal-subtitle" data-i18n="tasks.task1.goal">Determine whether a given sentence expresses...</p>
+          
+          <h4 data-i18n="tasks.task1.outputLabel">Output Categories</h4>
+          <ul>
+            <li><strong data-i18n="tasks.task1.output1Label">Yes:</strong> <span data-i18n="tasks.task1.output1">...</span></li>
+            <li><strong data-i18n="tasks.task1.output2Label">No:</strong> <span data-i18n="tasks.task1.output2">...</span></li>
+          </ul>
+          
+          <h4 data-i18n="tasks.task1.metricLabel">Evaluation Metric</h4>
+          <p data-i18n="tasks.task1.metric">F1-Score</p>
+          
+          <h4 data-i18n="tasks.task1.exampleLabel">Examples</h4>
+          <div class="highlight-box">
+            <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong> <span data-i18n="tasks.task1.example1">...</span><br />
+            <strong data-i18n="tasks.task1.example2Label">❌ Non-Promise:</strong> <span data-i18n="tasks.task1.example2">...</span>
           </div>
-          <div class="card">
-            <h3 data-i18n="tasks.job2.title">Sustainable Investment Analyst</h3>
-            <p>
-              <strong data-i18n="tasks.job2.skillLabel">Corresponding Skills:</strong>
-              <span data-i18n="tasks.job2.skill">Subtask 2</span><br />
-              <span data-i18n="tasks.job2.desc">Semantic association judgment, logical reasoning, due
-                diligence</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="tasks.job3.title">Financial Regulatory Examiner</h3>
-            <p>
-              <strong data-i18n="tasks.job3.skillLabel">Corresponding Skills:</strong>
-              <span data-i18n="tasks.job3.skill">Subtask 3</span><br />
-              <span data-i18n="tasks.job3.desc">Greenwashing risk identification, semantic quality assessment,
-                compliance audit</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="tasks.job4.title">
-              Corporate Sustainability Specialist
-            </h3>
-            <p>
-              <strong data-i18n="tasks.job4.skillLabel">Corresponding Skills:</strong>
-              <span data-i18n="tasks.job4.skill">Subtask 4</span><br />
-              <span data-i18n="tasks.job4.desc">Time information extraction, goal management and tracking,
-                project planning</span>
-            </p>
+
+          <h4 data-i18n="tasks.relevanceTitle">Task Relevance</h4>
+          <div class="highlight-box highlight-box--mt1" style="border-left-color: #764ba2; background: rgba(118, 75, 162, 0.05);">
+            <strong data-i18n="tasks.job1.title">ESG Data Analyst</strong><br/>
+            <span style="font-size: 0.9rem; color: #666;" data-i18n="tasks.job1.desc">Key information extraction...</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div id="modal-task2" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <h3 data-i18n="tasks.task2.title">Subtask 2: Evidence Identification</h3>
+          <p class="modal-subtitle" data-i18n="tasks.task2.goal">Determine whether identified promise statements...</p>
+          
+          <h4 data-i18n="tasks.task2.outputLabel">Output Categories</h4>
+          <ul>
+            <li><strong data-i18n="tasks.task2.output1Label">Yes:</strong> <span data-i18n="tasks.task2.output1">...</span></li>
+            <li><strong data-i18n="tasks.task2.output2Label">No:</strong> <span data-i18n="tasks.task2.output2">...</span></li>
+          </ul>
+          
+          <h4 data-i18n="tasks.task2.metricLabel">Evaluation Metric</h4>
+          <p data-i18n="tasks.task2.metric">F1-Score</p>
+          
+          <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
+          <div class="highlight-box">
+            <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong> <span data-i18n="tasks.task2.promise">...</span><br />
+            <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong> <span data-i18n="tasks.task2.evidence">...</span> <strong class="text-primary" data-i18n="tasks.task2.result">Evidence Supported</strong>
+          </div>
+
+          <h4 data-i18n="tasks.relevanceTitle">Task Relevance</h4>
+          <div class="highlight-box highlight-box--mt1" style="border-left-color: #764ba2; background: rgba(118, 75, 162, 0.05);">
+            <strong data-i18n="tasks.job2.title">Sustainable Investment Analyst</strong><br/>
+            <span style="font-size: 0.9rem; color: #666;" data-i18n="tasks.job2.desc">Semantic association judgment...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-task3" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <h3 data-i18n="tasks.task3.title">Subtask 3: Clarity Classification</h3>
+          <p class="modal-subtitle" data-i18n="tasks.task3.goal">Assess whether promise statements are...</p>
+          
+          <h4 data-i18n="tasks.task3.outputLabel">Output Categories</h4>
+          <ul>
+            <li><strong data-i18n="tasks.task3.output1Label">Clear:</strong> <span data-i18n="tasks.task3.output1">...</span></li>
+            <li><strong data-i18n="tasks.task3.output2Label">Not Clear:</strong> <span data-i18n="tasks.task3.output2">...</span></li>
+            <li><strong data-i18n="tasks.task3.output3Label">Misleading:</strong> <span data-i18n="tasks.task3.output3">...</span></li>
+          </ul>
+          
+          <h4 data-i18n="tasks.task3.metricLabel">Evaluation Metric</h4>
+          <p data-i18n="tasks.task3.metric">Macro-F1</p>
+          
+          <h4 data-i18n="tasks.relevanceTitle">Practical Value & Relevance</h4>
+          <p style="margin-bottom: 1rem; font-size: 0.95rem; color:#555;" data-i18n="tasks.task3.value">Help identify corporate 'greenwashing'...</p>
+          
+          <div class="highlight-box highlight-box--mt1" style="border-left-color: #764ba2; background: rgba(118, 75, 162, 0.05);">
+            <strong data-i18n="tasks.job3.title">Financial Regulatory Examiner</strong><br/>
+            <span style="font-size: 0.9rem; color: #666;" data-i18n="tasks.job3.desc">Greenwashing risk identification...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-task4" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <h3 data-i18n="tasks.task4.title">Subtask 4: Timeline Classification</h3>
+          <p class="modal-subtitle" data-i18n="tasks.task4.goal">Infer the expected completion time...</p>
+          
+          <h4 data-i18n="tasks.task4.outputLabel">Output Categories</h4>
+          <ul>
+            <li><strong data-i18n="tasks.task4.output1Label">Already:</strong> <span data-i18n="tasks.task4.output1">...</span></li>
+            <li><strong data-i18n="tasks.task4.output2Label">Within 2 years:</strong> <span data-i18n="tasks.task4.output2">...</span></li>
+            <li><strong data-i18n="tasks.task4.output3Label">Between 2-5 years:</strong> <span data-i18n="tasks.task4.output3">...</span></li>
+            <li><strong data-i18n="tasks.task4.output4Label">More than 5 years:</strong> <span data-i18n="tasks.task4.output4">...</span></li>
+          </ul>
+          
+          <h4 data-i18n="tasks.task4.metricLabel">Evaluation Metric</h4>
+          <p data-i18n="tasks.task4.metric">Macro-F1</p>
+
+          <h4 data-i18n="tasks.relevanceTitle">Task Relevance</h4>
+          <div class="highlight-box highlight-box--mt1" style="border-left-color: #764ba2; background: rgba(118, 75, 162, 0.05);">
+            <strong data-i18n="tasks.job4.title">Corporate Sustainability Specialist</strong><br/>
+            <span style="font-size: 0.9rem; color: #666;" data-i18n="tasks.job4.desc">Time information extraction...</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 分隔線 -->
     <div class="collage-divider"></div>
