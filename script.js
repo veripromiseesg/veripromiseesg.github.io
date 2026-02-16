@@ -10,7 +10,7 @@ const translations = {
   zh: {
     translation: {
       nav: {
-        title: "AI Cup 2026",
+        title: "AI CUP 2026",
         home: "首頁",
         about: "競賽簡介",
         tasks: "任務說明",
@@ -549,7 +549,7 @@ const translations = {
         }
       },
       footer: {
-        copyright: "© 2025-2026 AI Cup - ESG 永續承諾驗證競賽",
+        copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
         organizer: "主辦單位：國立臺北大學資訊管理研究所",
         lab: "智慧金融創新科技實驗室 (IFIT Lab), NTPU",
         backToTop: "返回頂部",
@@ -559,7 +559,7 @@ const translations = {
   en: {
     translation: {
       nav: {
-        title: "AI Cup 2026",
+        title: "AI CUP 2026",
         home: "Home",
         about: "About",
         tasks: "Tasks",
@@ -1117,7 +1117,7 @@ const translations = {
       },
       footer: {
         copyright:
-          "© 2025-2026 AI Cup - ESG Promise Verification Competition",
+          "© 2025-2026 AI CUP - ESG Promise Verification Competition",
         organizer:
           "Organizer: National Taipei University Graduate Institute of Information Management",
         lab: "Intelligent Financial Innovation Technology Lab (IFIT Lab), NTPU",
