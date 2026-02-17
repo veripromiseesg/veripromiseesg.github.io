@@ -220,9 +220,6 @@
             <p class="section-intro text-left-md" data-i18n="about.intro">
               In the era of global ESG focus...
             </p>
-            <p class="section-intro text-left-md" data-i18n="about.objectiveContent">
-              Develop an AI system capable of automatically identifying...
-            </p>
         </div>
 
         <div class="about-layout">
@@ -274,56 +271,71 @@
 
     <section id="tasks" class="bg-dot-pattern">
       <div class="container">
-        <h2 data-i18n="tasks.title">Competition Tasks</h2>
-        <p class="section-intro" data-i18n="tasks.intro">
-          This competition comprises four core subtasks, covering the complete
-          ESG report verification process from promise recognition to evidence
-          assessment, clarity analysis, and timeline prediction
-        </p>
-
-        <div class="task-grid">
-          <div class="task-card-simple" onclick="openModal('modal-task1')">
-            <div class="task-card-header">
-              <h3 data-i18n="tasks.task1.title">Subtask 1</h3>
-              <span class="card-arrow">→</span>
-            </div>
-            <p class="task-goal" data-i18n="tasks.task1.goal">
-              Determine whether a given sentence expresses a clear corporate commitment...
+        
+        <div class="tasks-layout">
+          
+          <div class="tasks-content">
+            <h2 data-i18n="tasks.title">Competition Tasks</h2>
+            <p class="section-intro" data-i18n="tasks.intro">
+              This competition comprises four core subtasks...
             </p>
           </div>
 
-          <div class="task-card-simple" onclick="openModal('modal-task2')">
-            <div class="task-card-header">
-              <h3 data-i18n="tasks.task2.title">Subtask 2</h3>
-              <span class="card-arrow">→</span>
+          <div class="task-grid">
+            
+            <div class="task-card-simple" onclick="openModal('modal-task1')">
+              <div class="task-card-header-row">
+                <div class="task-icon">❓</div>
+                <div class="task-title-group">
+                  <h3 data-i18n="tasks.task1.title">Commitment Classification</h3>
+                  <span class="card-arrow">→</span>
+                </div>
+              </div>
+              <p class="task-goal" data-i18n="tasks.task1.goal">
+                Determine whether a given sentence expresses a clear corporate commitment...
+              </p>
             </div>
-            <p class="task-goal" data-i18n="tasks.task2.goal">
-              Determine whether identified promise statements are accompanied...
-            </p>
-          </div>
 
-          <div class="task-card-simple task-card-purple" onclick="openModal('modal-task3')">
-            <div class="task-card-header">
-              <h3 data-i18n="tasks.task3.title">Subtask 3</h3>
-              <span class="card-arrow">→</span>
+            <div class="task-card-simple" onclick="openModal('modal-task2')">
+              <div class="task-card-header-row">
+                <div class="task-icon">🔗</div>
+                <div class="task-title-group">
+                  <h3 data-i18n="tasks.task2.title">Evidence Identification</h3>
+                  <span class="card-arrow">→</span>
+                </div>
+              </div>
+              <p class="task-goal" data-i18n="tasks.task2.goal">
+                Determine whether identified promise statements are accompanied...
+              </p>
             </div>
-            <p class="task-goal" data-i18n="tasks.task3.goal">
-              Assess whether promise statements are semantically clear...
-            </p>
-          </div>
 
-          <div class="task-card-simple" onclick="openModal('modal-task4')">
-            <div class="task-card-header">
-              <h3 data-i18n="tasks.task4.title">Subtask 4</h3>
-              <span class="card-arrow">→</span>
+            <div class="task-card-simple task-card-purple" onclick="openModal('modal-task3')">
+              <div class="task-card-header-row">
+                <div class="task-icon">💡</div>
+                <div class="task-title-group">
+                  <h3 data-i18n="tasks.task3.title">Clarity Classification</h3>
+                  <span class="card-arrow">→</span>
+                </div>
+              </div>
+              <p class="task-goal" data-i18n="tasks.task3.goal">
+                Assess whether promise statements are semantically clear...
+              </p>
             </div>
-            <p class="task-goal" data-i18n="tasks.task4.goal">
-              Infer the expected completion time of commitments...
-            </p>
-          </div>
-        </div>
 
-        </div>
+            <div class="task-card-simple" onclick="openModal('modal-task4')">
+              <div class="task-card-header-row">
+                <div class="task-icon">⏰</div>
+                <div class="task-title-group">
+                  <h3 data-i18n="tasks.task4.title">Timeline Classification</h3>
+                  <span class="card-arrow">→</span>
+                </div>
+              </div>
+              <p class="task-goal" data-i18n="tasks.task4.goal">
+                Infer the expected completion time of commitments...
+              </p>
+            </div>
+
+          </div> </div> </div>
     </section>
 
     <div id="modal-task1" class="modal-overlay">
@@ -376,7 +388,7 @@
           <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
           <div class="highlight-box">
             <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong> <span data-i18n="tasks.task2.promise">...</span><br />
-            <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong> <span data-i18n="tasks.task2.evidence">...</span> <strong class="text-primary" data-i18n="tasks.task2.result">Evidence Supported</strong>
+            <strong data-i18n="tasks.task2.evidenceLabel">Evidence Supported:</strong> <span data-i18n="tasks.task2.evidence">...</span>
           </div>
 
           <h4 data-i18n="tasks.relevanceTitle">Task Relevance</h4>
@@ -447,18 +459,20 @@
     <div class="collage-divider"></div>
 
     <section id="dataset" class="bg-grid-pattern">
-      <div class="container">
-        <h2 data-i18n="dataset.title">Dataset Introduction</h2>
-        <p class="section-intro" data-i18n="dataset.intro">
-          VeriPromiseESG4K - The world's first Traditional Chinese-designed
-          sustainability commitment verification annotated dataset.
-        </p>
+    <div class="container">
+      <h2 data-i18n="dataset.title">Dataset Introduction</h2>
+      <p class="section-intro" data-i18n="dataset.intro">
+        VeriPromiseESG4K - The world's first...
+      </p>
 
-        <h3 data-i18n="dataset.featuresTitle">📊 Dataset Features</h3>
+    <div class="dataset-layout">
+      
+      <div class="dataset-features">
+        <h3 data-i18n="dataset.featuresTitle" style="display:block; font-size:1.5rem; margin-top:0;">Dataset Features</h3>
         <div class="cards">
           <div class="card">
             <h3 data-i18n="dataset.feature1.title">Taiwan's Leading Companies</h3>
-            <p data-i18n="dataset.feature1.desc">Real sustainability reports from Taiwan 50 Index (0050)...</p>
+            <p data-i18n="dataset.feature1.desc">Real sustainability reports from Taiwan 50 Index...</p>
           </div>
           <div class="card">
             <h3 data-i18n="dataset.feature2.title">Cross-Industry Diversity</h3>
@@ -466,34 +480,21 @@
           </div>
           <div class="card">
             <h3 data-i18n="dataset.feature3.title">High-Quality Annotation</h3>
-            <p data-i18n="dataset.feature3.desc">Executed with multi-stage quality control...</p>
+            <p data-i18n="dataset.feature3.desc">Executed in collaboration between National Taipei University...</p>
           </div>
         </div>
+      </div>
 
-        <h3 data-i18n="dataset.scaleTitle">📈 Dataset Scale</h3>
-        <div class="highlight-box">
-           <strong data-i18n="dataset.nameLabel">Dataset Name:</strong>
-           <span data-i18n="dataset.name">VeriPromiseESG4K...</span><br />
-           <strong data-i18n="dataset.sizeLabel">Total Data Volume:</strong>
-           <span data-i18n="dataset.size">4,000 high-quality annotated data points</span><br />
-           <strong data-i18n="dataset.sourceLabel">Data Source:</strong>
-           <span data-i18n="dataset.source">Taiwan 50 Index (0050)...</span><br />
-           <strong data-i18n="dataset.industryLabel">Industry Coverage:</strong>
-           <span data-i18n="dataset.industry">Spanning 15 industry sectors...</span><br />
-           <strong data-i18n="dataset.annotationLabel">Annotation Dimensions:</strong>
-           <span data-i18n="dataset.annotation">Four subtasks...</span><br />
-           <strong data-i18n="dataset.splitLabel">Data Split:</strong>
-           <span data-i18n="dataset.split">Training set + Test set...</span>
-        </div>
-
-        <h3 data-i18n="dataset.processTitle">🔍 Annotation Process</h3>
+      <div class="dataset-process">
+        <h3 data-i18n="dataset.processTitle" style="display:block; font-size:1.5rem; margin:1rem 0;">Annotation Process</h3>
         <div class="process-grid">
-          <div class="task-card-simple"> <div class="task-card-header">
+          <div class="task-card-simple">
+            <div class="task-card-header">
                <h3 data-i18n="dataset.phase1.title">Phase 1: Initial Annotation</h3>
             </div>
             <ul>
-              <li data-i18n="dataset.phase1.item1">Professional annotation team performs initial marking</li>
-              <li data-i18n="dataset.phase1.item2">Establish annotation standards and guidelines</li>
+              <li data-i18n="dataset.phase1.item1">Professional annotation team...</li>
+              <li data-i18n="dataset.phase1.item2">Establish annotation standards...</li>
               <li data-i18n="dataset.phase1.item3">Conduct annotator training</li>
             </ul>
           </div>
@@ -502,9 +503,9 @@
                <h3 data-i18n="dataset.phase2.title">Phase 2: Cross-Validation</h3>
             </div>
             <ul>
-              <li data-i18n="dataset.phase2.item1">Multiple annotators independently annotate</li>
-              <li data-i18n="dataset.phase2.item2">Calculate inter-annotator consistency</li>
-              <li data-i18n="dataset.phase2.item3">Resolve annotation discrepancies</li>
+              <li data-i18n="dataset.phase2.item1">Multiple annotators...</li>
+              <li data-i18n="dataset.phase2.item2">Calculate consistency...</li>
+              <li data-i18n="dataset.phase2.item3">Resolve discrepancies</li>
             </ul>
           </div>
           <div class="task-card-simple">
@@ -512,62 +513,14 @@
                <h3 data-i18n="dataset.phase3.title">Phase 3: Expert Review</h3>
             </div>
             <ul>
-              <li data-i18n="dataset.phase3.item1">Domain experts conduct final review</li>
-              <li data-i18n="dataset.phase3.item2">Quality control and corrections</li>
+              <li data-i18n="dataset.phase3.item1">Domain experts review</li>
+              <li data-i18n="dataset.phase3.item2">Quality control</li>
               <li data-i18n="dataset.phase3.item3">Dataset release</li>
             </ul>
           </div>
         </div>
-
-        <h2 data-i18n="examples.title" style="margin-top: 4rem; text-align:center;">Annotation Examples</h2>
-        <p class="section-intro" data-i18n="examples.intro">
-          Below are annotation examples for E, S, G categories...
-        </p>
-
-        <div class="example-container">
-          <div class="example-scroll">
-            <div class="example-item">
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
-                <span class="esg-badge esg-e">E</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
-                <span class="example-value" data-i18n="examples.e1.type">有承諾 - 有證據</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
-                <div class="example-data" data-i18n="examples.e1.content">
-                  承諾遵循國際人權公約與基本勞動人權原則...
-                </div>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
-                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
-                <span class="example-value" data-i18n="examples.clear">清晰 (Clear)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
-                <span class="example-value" data-i18n="examples.already">已執行 (already)</span>
-              </div>
-              <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
-                <span class="example-value" data-i18n="examples.e1.note">有制度性承諾與明確人權框架。</span>
-              </div>
-            </div>
-            <div class="example-item">
-               <div class="example-field"><span class="example-label">...</span><span class="example-value">...</span></div>
-             </div>
-             </div>
-        </div>
       </div>
+    </div></div>
     </section>
 
     <!-- 分隔線 -->

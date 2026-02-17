@@ -296,9 +296,12 @@ nav {
    About Section
    =================================== */
 
-#about .container {       /* Competition Overview 區域文字位置 */
+/* 三個區塊共用寬版容器設定 */
+#about .container,
+#tasks .container,
+#dataset .container {
     max-width: 1600px;
-    padding: 0 5rem;      /* 左緣邊邊 */
+    padding: 0 5rem; /* 左緣邊邊對齊 */
 }
 
 .about-layout {
@@ -415,6 +418,21 @@ nav {
 
 /* --- 手機版響應式調整 --- */
 @media (max-width: 900px) {
+
+    /* 手機版還原內距，避免左右留白太多導致內容變很窄 */
+    #about .container,
+    #tasks .container,
+    #dataset .container {
+        padding: 0 2rem;
+    }
+
+    /* 手機版標題還原置中 */
+    #tasks h2,
+    #dataset h2 {
+        justify-content: center;
+        text-align: center;
+    }
+
     .about-layout {
         grid-template-columns: 1fr; /* 手機版恢復單欄 */
         gap: 2rem;
@@ -467,11 +485,13 @@ nav {
 }
 
 section {
-  padding: 5rem 0;
-  min-height: 100vh; 
+  /* 強制每個區塊至少跟螢幕一樣高，且內容垂直置中 */
+  min-height: 100vh;
+  padding: 4rem 0; /* 稍微縮小上下內距，爭取空間 */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 #home {
@@ -490,29 +510,118 @@ section#about {
 }
 
 section h2 {
-  font-size: 2.5rem;
+font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #667eea;
   text-align: center;
+  /* 【隱形框框】預留 1.3 倍行高，確保單行標題不會跳動 */
+  line-height: 1.3;
+  min-height: 1.3em; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: #555;
+  /* 【隱形框框】限制最多顯示 3 行，並預留高度 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 4.8rem; /* 1.6 line-height * 3 lines */
+  line-height: 1.6;
 }
 
 section h3 {
   font-size: 1.8rem;
-  margin: 2rem 0 1rem;
+  margin: 1.5rem 0 1rem;
   color: #764ba2;
+  /* 【隱形框框】 */
+  min-height: 1.3em;
+  line-height: 1.3;
+  white-space: nowrap; /* 強制不換行 (如果標題不長) */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#about .section-intro {
-    text-align: left;
+/* 三個區塊的前言都靠左且全寬 */
+#about .section-intro,
+#tasks .section-intro,
+#dataset .section-intro {
+    text-align: center;
     max-width: 100%;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    line-height: 2;
 }
 
 .about-full-intro {
     margin-bottom: 1.2rem; /* 與下方亮點的距離 */
     padding-left: 0;       /* 左側縮排 */
     max-width: 100%;       /* 寬度 */
+}
+
+/* ===================================
+   Card Structure Standardization
+   =================================== */
+
+.cards, .task-grid, .team-grid {
+  /* 確保所有卡片等高 */
+  align-items: stretch;
+}
+
+.card, .task-card-simple, .team-member {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* 確保 padding 一致 */
+  padding: 1.5rem; 
+}
+
+/* 卡片標題固定高度 */
+.card h3, .task-card-simple h3, .team-member h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  
+  /* 【隱形框框】預留 2 行的高度，避免英文標題換行導致高度改變 */
+  min-height: 3rem; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  font-size: 1.25rem; /* 稍微縮小字體以容納更多字 */
+}
+
+/* 卡片內文固定高度 */
+.card p, .task-goal, .team-member-desc {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  
+  /* 【隱形框框】限制顯示 4 行，多餘的截斷 */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 6.4rem; /* 1.6 * 4 */
+}
+
+/* 針對 Team 成員的特殊調整 */
+.team-member-desc {
+  height: 4.8rem; /* 3 行 */
+  -webkit-line-clamp: 3;
+}
+.team-member .affiliation {
+    height: 3rem; /* 2 行 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* ===================================
@@ -567,20 +676,59 @@ section h3 {
 }
 
 /* ===================================
+   Tasks Section Layout
+   =================================== */
+
+.tasks-layout {
+  display: grid;
+  grid-template-columns: 35% 60%; /* 左側文字窄一點，右側卡片寬一點 */
+  gap: 4rem;
+  align-items: center; /* 垂直置中 */
+  height: 100%;
+}
+
+/* 左側文字區 */
+.tasks-content {
+  text-align: center; 
+  padding-right: 1rem;
+}
+
+/* 確保左側標題置中 */
+.tasks-content h2 {
+  justify-content: center; /* Flex置中 */
+  text-align: center;      /* 文字置中 */
+}
+
+/* 確保左側文字區的段落置中且不被切掉 */
+.tasks-content .section-intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  
+  /* 解除高度與行數限制，避免文字被切掉 */
+  height: auto;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+
+/* ===================================
    Task Cards
    =================================== */
+
 .task-grid {
   display: grid;
-  /* 電腦版四列並排 */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 0; 
+  margin-bottom: 0;
 }
 
 .task-card-simple {
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0,0,0,0.05);
@@ -588,85 +736,133 @@ section h3 {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
-  height: 100%; /* 確保高度一致 */
   position: relative;
   overflow: hidden;
+  height: 100%;
+  min-height: 280px;
 }
 
-/* 懸停效果：上浮 + 陰影加深 */
+/* Hover 懸停效果 */
 .task-card-simple:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
   border-color: #667eea;
 }
 
-/* 頂部裝飾線 (類似附圖的彩色感，這裡用品牌色) */
-.task-card-simple::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  opacity: 0.8;
+/* Active 點擊效果 */
+.task-card-simple:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  transition: all 0.1s;
 }
 
-/* 第三張卡片特別色 (對應原本的 purple 樣式) */
-.task-card-purple::before {
-  background: linear-gradient(90deg, #764ba2, #a18cd1);
-}
-
-.task-card-header {
+/* 卡片頂部區域 (Emoji + 標題) */
+.task-card-header-row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Emoji 圖示樣式 */
+.task-icon {
+  font-size: 3rem;
+  line-height: 1;
+  flex-shrink: 0; 
+  margin-top: 0;
+}
+
+/* 標題群組 */
+.task-title-group {
+  flex-grow: 1;
 }
 
 .task-card-simple h3 {
-  font-size: 1.4rem;
+font-size: 1.4rem;
   color: #333;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.2;     /* 行高 */
   font-weight: 700;
+  
+  display: block; 
+  width: auto;
+  max-width: none;      /* 寬度限制 */
+  word-spacing: 9999px; /* 設超大字距，強迫換行 */
+  white-space: normal;
 }
 
-/* 灰色箭頭 */
+/* 中文版樣式覆蓋 (總共一行) */
+body[data-lang="zh"] .task-card-simple h3 {
+  word-spacing: normal; /* 恢復正常間距 */
+  white-space: nowrap;  /* 強制不換行 */
+  line-height: 1.3;
+}
+
+/* 箭頭樣式 */
 .card-arrow {
+  position: absolute;
+  top: 2.5rem;    /* 對齊 padding */
+  right: 2.5rem;  /* 對齊 padding */
+  
   font-size: 1.5rem;
   color: #ccc;
   transition: transform 0.3s, color 0.3s;
   line-height: 1;
 }
 
+/* 箭頭 Hover 動畫 */
 .task-card-simple:hover .card-arrow {
   color: #667eea;
   transform: translateX(5px);
 }
 
+/* 卡片內文描述 */
 .task-goal {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  width: 100%; 
+  
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* 限制行數，避免卡片太長 */
+  -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;
   overflow: hidden;
+  height: auto;
 }
 
-/* RWD: 平板變雙欄 */
+/* --- 響應式調整 --- */
+
 @media (max-width: 1100px) {
-  .task-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .tasks-layout {
+    grid-template-columns: 1fr; /* 平板/手機轉為單欄 */
+    gap: 3rem;
+  }
+  
+  .tasks-content {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .tasks-content h2 {
+    justify-content: center;
   }
 }
 
-/* RWD: 手機變單欄 */
 @media (max-width: 600px) {
   .task-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 手機版卡片變單欄 */
+  }
+  
+  .task-card-simple {
+    min-height: auto;
+    padding: 2rem;
+  }
+  
+  .card-arrow {
+    top: 2rem;
+    right: 2rem;
   }
 }
 
@@ -774,25 +970,128 @@ section h3 {
 /* ===================================
    Dataset
    =================================== */
-/* 標註流程 */
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 三等份 */
-  gap: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+/* 讓內容垂直置中 */
+#dataset .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
-/* 手機與平板響應式 */
-@media (max-width: 900px) {
-  .process-grid {
-    grid-template-columns: 1fr; /* 變單欄 */
-  }
+/* 只隱藏直接屬於 dataset-layout 的標題，不要誤殺卡片裡的標題 */
+#dataset > .container > h3 {
+    display: none; 
+}
+
+/* 佈局網格 */
+.dataset-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 左右兩欄 */
+    grid-template-rows: auto auto;  /* 上下兩列 */
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* 1. 特色區#about .container, */
+.dataset-features {
+    grid-column: 1 / 3; 
+    grid-row: 1 / 2;
+}
+
+.dataset-features > h3 {
+    display: block !important;
+}
+
+.dataset-features .cards {
+    margin-top: 0;
+    /* 電腦版三張卡片並排 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
+
+.dataset-features .card {
+    padding: 1.5rem; 
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    height: 100%;
+}
+
+.dataset-features .card h3 {
+    display: -webkit-box !important; /* 配合 line-clamp */
+    min-height: 3rem; 
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+.dataset-features .card p {
+    height: auto; /* 取消強制高度，讓內容自然呈現，或保留截斷 */
+    min-height: 6.4rem;
+    -webkit-line-clamp: 5; /* 稍微放寬行數 */
+}
+
+/* 2. 規模區 */
+.dataset-scale {
+    display: none; 
+}
+
+/* 3. 流程區 (下方全寬) */
+.dataset-process {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.dataset-process .process-grid {
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 1rem;
+}
+
+.dataset-process .task-card-simple {
+    padding: 1.2rem;
+}
+
+.dataset-process h3 {
+    font-size: 1.2rem;
+    min-height: auto;
+    display: block !important; /* 確保顯示 */
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.dataset-process ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* 手機版響應式：恢復垂直堆疊 */
+@media (max-width: 1024px) {
+    .dataset-layout {
+        display: flex;
+        flex-direction: column;
+    }
+    .dataset-features .cards {
+        grid-template-columns: 1fr; /* 手機變單欄 */
+    }
+    #dataset {
+        height: auto;
+        min-height: auto;
+    }
 }
 
 /* ===================================
    Timeline
    =================================== */
+#timeline {
+  height: auto; /* 允許自動長高 */
+  min-height: 150vh; /* 預設佔 1.5 到 2 頁 */
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .timeline {
   position: relative;
   max-width: 800px;

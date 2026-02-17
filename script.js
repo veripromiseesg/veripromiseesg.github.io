@@ -35,9 +35,6 @@ const translations = {
           "在全球 ESG（環境、社會與治理）浪潮下，企業永續報告的真實性與可信度日益重要。本競賽旨在透過 AI 技術建立自動化的永續承諾驗證系統。",
         goalLabel: "競賽全名：",
         goalContent: "VeriPromise ESG 2026 - ESG 永續承諾驗證競賽",
-        objectiveLabel: "競賽目標：",
-        objectiveContent:
-          "開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過四大核心任務（承諾識別、證據支持、清晰度評估、時機預測）完整評估 ESG 報告的真實性與可信度。",
         stat1: "競賽子任務",
         stat2: "標註數據量",
         stat3: "臺灣龍頭企業",
@@ -58,11 +55,11 @@ const translations = {
       tasks: {
         title: "競賽任務",
         intro:
-          "本競賽包含四個核心子任務，從承諾識別、證據評估、清晰度分析到時機預測，完整涵蓋 ESG 報告驗證流程",
+          "參賽者需要開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過以下四大核心任務完整評估 ESG 報告的真實性與可信度。",
         task1: {
-          title: " 子任務一：承諾語句識別",
+          title: " 承諾語句識別",
           goalLabel: "任務目標：",
-          goal: "判斷給定句子是否表達企業對未來行動的明確承諾",
+          goal: "判斷給定句子是否表達企業對未來行動的明確承諾。",
           outputLabel: "輸出類別",
           output1Label: "是 (Yes)：",
           output1: "包含明確承諾的陳述",
@@ -77,9 +74,9 @@ const translations = {
           example2: "我們重視環境保護的重要性",
         },
         task2: {
-          title: "🔗 子任務二：支持證據連結",
+          title: "支持證據連結",
           goalLabel: "任務目標：",
-          goal: "判斷已識別的承諾語句是否附有具體執行計畫或支持佐證",
+          goal: "判斷已識別的承諾語句是否附有具體執行計畫或支持佐證。",
           outputLabel: "輸出類別",
           output1Label: "是 (Yes)：",
           output1: "承諾有具體證據支持",
@@ -91,14 +88,13 @@ const translations = {
           promiseLabel: "承諾：",
           promise:
             "推動低碳價值鏈轉型，持續強化供應商節電、減碳、省水及減廢輔導",
-          evidenceLabel: "證據：",
-          evidence: "要求訂定中長期減量目標並提出具體行動 → ",
-          result: "有證據支持",
+          evidenceLabel: "證據（支持承諾之內容）：",
+          evidence: "要求訂定中長期減量目標並提出具體行動",
         },
         task3: {
-          title: "子任務三：清晰度分類",
+          title: "清晰度分類",
           goalLabel: "任務目標：",
-          goal: "評估承諾語句是否語意明確、無模糊字眼，辨識潛在「漂綠」風險",
+          goal: "評估承諾語句是否語意明確、無模糊字眼，辨識潛在「漂綠」風險。",
           outputLabel: "輸出類別",
           output1Label: "清楚 (Clear)：",
           output1: "語意明確、可驗證",
@@ -112,9 +108,9 @@ const translations = {
           value: "協助識別企業「漂綠」行為，提升 ESG 報告可信度",
         },
         task4: {
-          title: "子任務四：預期驗證時機推論",
+          title: "預期驗證時機推論",
           goalLabel: "任務目標：",
-          goal: "根據語句推論承諾的預期完成時間，協助建立追蹤機制",
+          goal: "根據語句推論承諾的預期完成時間，協助建立追蹤機制。",
           outputLabel: "輸出類別",
           output1Label: "已實行 (Already)：",
           output1: "承諾已實現（當期可驗證）",
@@ -170,20 +166,6 @@ const translations = {
           title: "高品質標註",
           desc: "由國立臺北大學團隊與臺北市立大學團隊合作執行，經過多階段品質控制，使用 Krippendorff's Alpha 確保標註一致性。",
         },
-        scaleTitle: "數據規模",
-        nameLabel: "數據集名稱：",
-        name: "VeriPromiseESG4K（全球首個大規模繁體中文永續承諾驗證數據集）",
-        sizeLabel: "總數據量：",
-        size: "4,000 筆高品質標註數據",
-        sourceLabel: "資料來源：",
-        source: "臺灣 50 指數（0050）成分股，涵蓋前 50 大上市公司",
-        industryLabel: "產業涵蓋：",
-        industry: "橫跨 15 個產業領域（科技、金融、製造、能源等）",
-        annotationLabel: "標註維度：",
-        annotation:
-          "四個子任務（承諾識別、證據支持、清晰度評估、驗證時機）",
-        splitLabel: "數據分割：",
-        split: "訓練集 + 測試集（Public & Private）",
         processTitle: "標註流程",
         phase1: {
           title: "第一階段：初步標註",
@@ -606,9 +588,9 @@ const translations = {
       tasks: {
         title: "Competition Tasks",
         intro:
-          "This competition comprises four core subtasks, covering the complete ESG report verification process from promise recognition to evidence assessment, clarity analysis, and timeline prediction",
+          "The contestants in this competition are required to develop an AI system capable of automatically identifying, analyzing, and verifying corporate sustainability commitments through four core subtasks: promise recognition, evidence identification, clarity assessment, and timeline prediction.",
         task1: {
-          title: "Subtask 1: Commitment Classification",
+          title: "Commitment Classification",
           goalLabel: "Objective:",
           goal: "Determine whether a given sentence expresses a clear corporate commitment to future actions",
           outputLabel: "Output Categories",
@@ -626,7 +608,7 @@ const translations = {
             '"We value the importance of environmental protection"',
         },
         task2: {
-          title: "🔗 Subtask 2: Evidence Identification",
+          title: "Evidence Identification",
           goalLabel: "Objective:",
           goal: "Determine whether identified promise statements are accompanied by specific action plans or supporting evidence",
           outputLabel: "Output Categories",
@@ -642,11 +624,10 @@ const translations = {
             '"Promote low-carbon value chain transformation, continuously strengthen supplier energy-saving, carbon reduction, water conservation, and waste reduction guidance"',
           evidenceLabel: "Evidence:",
           evidence:
-            '"Require setting medium and long-term reduction targets and proposing specific actions" → ',
-          result: "Evidence Supported",
+            '"Require setting medium and long-term reduction targets and proposing specific actions"',
         },
         task3: {
-          title: "💡 Subtask 3: Clarity Classification",
+          title: "Clarity Classification",
           goalLabel: "Objective:",
           goal: "Assess whether promise statements are semantically clear without ambiguous language, identifying potential 'greenwashing' risks",
           outputLabel: "Output Categories",
@@ -664,7 +645,7 @@ const translations = {
             "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility",
         },
         task4: {
-          title: "⏰ Subtask 4: Timeline Classification",
+          title: "Timeline Classification",
           goalLabel: "Objective:",
           goal: "Infer the expected completion time of commitments based on statements to establish tracking mechanisms",
           outputLabel: "Output Categories",
@@ -723,22 +704,6 @@ const translations = {
           title: "High-Quality Annotation",
           desc: "Executed in collaboration between National Taipei University and University of Taipei teams, with multi-stage quality control and Krippendorff's Alpha ensuring annotation consistency.",
         },
-        scaleTitle: "Dataset Scale",
-        nameLabel: "Dataset Name:",
-        name: "VeriPromiseESG4K (World's First Large Scale Traditional Chinese Sustainability Commitment Verification Dataset)",
-        sizeLabel: "Total Data Volume:",
-        size: "4,000 high-quality annotated data points",
-        sourceLabel: "Data Source:",
-        source:
-          "Taiwan 50 Index (0050) constituent stocks, covering top 50 listed companies",
-        industryLabel: "Industry Coverage:",
-        industry:
-          "Spanning 15 industry sectors (technology, finance, manufacturing, energy, etc.)",
-        annotationLabel: "Annotation Dimensions:",
-        annotation:
-          "Four subtasks (promise recognition, evidence support, clarity assessment, timeline verification)",
-        splitLabel: "Data Split:",
-        split: "Training set + Test set (Public & Private)",
         processTitle: "Annotation Process",
         phase1: {
           title: "Phase 1: Initial Annotation",
@@ -1138,9 +1103,15 @@ i18next.init(
   }
 );
 
-// 初始化後，檢查當前語言是否為中文，若是則加上 class
-if (i18next.language === 'zh' || i18next.language.startsWith('zh')) {
-    document.getElementById('navLinks').classList.add('zh-mode');
+// 初始化後，立刻設定 body 的 data-lang 屬性
+if (i18next.language) {
+    let currentLang = i18next.language.startsWith('zh') ? 'zh' : 'en';
+    document.body.setAttribute('data-lang', currentLang);
+    
+    // 原本的 navLinks 邏輯保留
+    if (currentLang === 'zh') {
+        document.getElementById('navLinks').classList.add('zh-mode');
+    }
 }
 
 // ===================================
@@ -1176,6 +1147,9 @@ function updateContent() {
 function changeLanguage(lang) {
   i18next.changeLanguage(lang, (err, t) => {
     updateContent();
+
+    // 設定 body 語言屬性
+    document.body.setAttribute('data-lang', lang);
     
     // 更新按鈕狀態
     document.querySelectorAll(".lang-btn").forEach((btn) => {
