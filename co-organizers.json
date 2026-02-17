@@ -60,5 +60,13 @@
         "我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。"
     ],
     "link": "https://ttussc.org/"
+  },
+  {
+    "id": 7,
+    "name_ch": "中原大學 開源軟體開發社",
+    "name_en": "",
+    "logo": "/img/co-organizer/中原大學 開源軟體開發社.ai",
+    "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持 的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    "link": "https://www.instagram.com/gdg.on.campus_cycu"
   }
 ]
