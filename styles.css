@@ -523,7 +523,7 @@ font-size: 2.5rem;
 }
 
 .section-intro {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 2.5rem;
   text-align: center;
   color: #555;
@@ -970,12 +970,21 @@ body[data-lang="zh"] .task-card-simple h3 {
 /* ===================================
    Dataset
    =================================== */
-/* 讓內容垂直置中 */
 #dataset .container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
+    justify-content: flex-start;  /* 靠上對齊 */
+    padding-top: 0rem;            /* 上方內距 */
+    padding-bottom: 0;
+    min-height: 70vh; 
+}
+
+/* 前言 */
+#dataset .section-intro {
+    height: auto;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    margin-bottom: 1rem; /* 縮小與下方標題的距離 */
 }
 
 /* 只隱藏直接屬於 dataset-layout 的標題，不要誤殺卡片裡的標題 */
@@ -985,51 +994,86 @@ body[data-lang="zh"] .task-card-simple h3 {
 
 /* 佈局網格 */
 .dataset-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 左右兩欄 */
-    grid-template-rows: auto auto;  /* 上下兩列 */
-    gap: 1.5rem;
     width: 100%;
-    margin-top: 1rem;
+    display: block;
 }
 
-/* 1. 特色區#about .container, */
-.dataset-features {
-    grid-column: 1 / 3; 
-    grid-row: 1 / 2;
+/* Flowchart 容器 */
+.flowchart-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.dataset-features > h3 {
-    display: block !important;
+/* 底圖 */
+.flowchart-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 0;         
 }
 
-.dataset-features .cards {
-    margin-top: 0;
-    /* 電腦版三張卡片並排 */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem;
-}
-
-.dataset-features .card {
-    padding: 1.5rem; 
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+/* 文字群組 */
+.flow-group {
+    position: absolute;
+    top: 0;
     height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10; 
 }
 
-.dataset-features .card h3 {
-    display: -webkit-box !important; /* 配合 line-clamp */
-    min-height: 3rem; 
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    margin-top: 0;
+/* 三個階段的水平位置 (根據三箭頭圖片調整 % 數) */
+.group-1 { left: 16.66%; transform: translateX(-50%); } /* 第一個箭頭中心 */
+.group-2 { left: 50%;    transform: translateX(-50%); } /* 第二個箭頭中心 */
+.group-3 { left: 83.33%; transform: translateX(-50%); } /* 第三個箭頭中心 */
+
+/* 強制覆蓋 HTML inline style 的 h3 間距 */
+.dataset-process h3 {
+    margin-top: 1.5rem !important;      /* 跟上方的距離 */
+    margin-bottom: 4.5rem !important;   /* 跟下面流程圖的距離 */
 }
 
-.dataset-features .card p {
-    height: auto; /* 取消強制高度，讓內容自然呈現，或保留截斷 */
-    min-height: 6.4rem;
-    -webkit-line-clamp: 5; /* 稍微放寬行數 */
+/* 1. 箭頭上方的 Phase 標題 */
+.flow-phase {
+    position: absolute;
+    top: -45%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    white-space: nowrap;
+}
+
+/* 2. 箭頭內部的 Step Name */
+.flow-stepname {
+    position: absolute;
+    top: 25%; 
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 3. 箭頭下方的說明列表 */
+.flow-list {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-width: 280px;
+    padding-left: 20px;
+    text-align: left;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.flow-list li {
+    margin-bottom: 0.5rem;
 }
 
 /* 2. 規模區 */
@@ -1067,18 +1111,414 @@ body[data-lang="zh"] .task-card-simple h3 {
     font-size: 0.9rem;
 }
 
-/* 手機版響應式：恢復垂直堆疊 */
+/* --- 桌面/手機 切換邏輯 --- */
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
 @media (max-width: 1024px) {
-    .dataset-layout {
-        display: flex;
-        flex-direction: column;
+    .desktop-only { display: none; }
+    .mobile-only { 
+        display: grid; 
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-    .dataset-features .cards {
-        grid-template-columns: 1fr; /* 手機變單欄 */
+}
+
+/* ===================================
+   Examples Section
+   =================================== */
+.example-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.example-scroll {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+}
+
+.example-item {
+  background: white;
+  border-left: 4px solid #667eea;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.example-item:last-child {
+  margin-bottom: 0;
+}
+
+.example-field {
+  margin: 0.8rem 0;
+  line-height: 1.8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.example-label {
+  font-weight: 600;
+  color: #667eea;
+  display: inline-block;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.example-value {
+  color: #333;
+  flex: 1;
+}
+
+.example-data {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.esg-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.esg-e {
+  background: #d4edda;
+  color: #155724;
+}
+
+.esg-s {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.esg-g {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-yes {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-no {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ===================================
+   Evaluation Section
+   =================================== */
+#evaluation .container {
+    max-width: 1600px;
+    padding: 0 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* --- 評分權重圖表專用樣式 --- */
+.chart-card {
+  max-width: 1300px;    /* 加寬卡片以容納三欄 */
+  margin: 0 auto 3rem;
+  padding: 3rem 2rem;
+  overflow: visible;
+}
+
+/* 4. 佈局容器：左文字 - 圖表 - 右文字 */
+.chart-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 平均分配空間 */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* 圖表容器 (中間) */
+.chart-container {
+  position: relative;
+  height: 350px;      /* 設定高度 */
+  width: 350px;       /* 設定寬度 */
+  flex-shrink: 0;     /* 防止被擠壓 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 文字欄位 (左右兩側) */
+.chart-text-col {
+  flex: 1; /* 佔用剩餘空間 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 3rem; /* 上下兩個任務的間距 */
+}
+
+.chart-text-col.left, .chart-text-col.right {
+    text-align: left;   /* 文字統一靠左 */
+}
+
+/* 單個任務說明區塊 */
+.task-item {
+  padding: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+}
+
+.task-header {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.task-meta {
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: block; /* 讓 Task 1 (20%) 獨佔一行 */
+    margin-bottom: 0.2rem;
+}
+
+.task-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+}
+
+.task-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.task-metric {
+  font-size: 0.9rem;
+  color: #888;
+  background: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* 任務顏色定義 */
+.color-task1 .task-meta { color: #90cdf4; }
+.color-task2 .task-meta { color: #667eea; }
+.color-task3 .task-meta { color: #764ba2; }
+.color-task4 .task-meta { color: #d6bcfa; }
+
+/* RWD: 手機版堆疊 */
+@media (max-width: 1100px) {
+  .chart-layout {
+    flex-direction: column; /* 轉為垂直排列 */
+  }
+  .chart-container {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  .chart-text-col.left { order: 2; width: 100%; gap: 2rem; }
+  .chart-text-col.right { order: 3; width: 100%; gap: 2rem; margin-top: 2rem; }
+}
+
+/* ===================================
+   Cute Award Tables
+   =================================== */
+
+/* 容器佈局調整 */
+.awards-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;   /* 左右紙張寬度比 */
+    gap: 3rem; 
+    margin-top: 3rem;         /* 三張紙與上方標題距離 */
+    align-items: stretch; 
+}
+
+/* 右側垂直堆疊容器 */
+.awards-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;  /* 上下兩張紙的間距 */
+}
+
+/* 模擬紙張效果 (通用) */
+.award-paper {
+    background: #fff;
+    padding: 1.7rem 1.5rem 1.5rem;  /* 內距 */
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 
+                0 0 0 1px rgba(0,0,0,0.02);
+    position: relative;
+    transition: transform 0.3s;
+    /* 確保內容佈局 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 頂部紙膠帶裝飾 (Tape) */
+.tape-strip {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 35px;
+    background-color: rgba(102, 126, 234, 0.7); /* 藍色半透明 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0.8;
+    /* 讓膠帶邊緣有點不規則 */
+    mask-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='100%' height='100%' fill='white'/></svg>"); 
+    /* 簡單的 CSS 模擬膠帶撕痕 */
+    clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0% 98%);
+}
+
+.tape-purple {
+    background-color: rgba(118, 75, 162, 0.7); /* 紫色膠帶 */
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.tape-yellow {
+    background-color: rgba(246, 173, 85, 0.8); /* 黃橘色 */
+    transform: translateX(-50%) rotate(1deg);
+}
+
+/* 紙張標題 */
+.award-paper h4 {
+    text-align: center;
+    color: #555;
+    font-size: 1.3rem;    /* 字體微縮 */
+    margin-top: 0;
+    margin-bottom: 1rem;  /* 標題分隔線以下留白高度 */
+    font-weight: 700;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 12px;
+}
+
+/* --- 學生組表格 --- */
+.award-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.award-table th {
+    background: #f4f7fe;
+    color: #667eea;
+    font-weight: 1000;
+    /* 表頭內距 */
+    padding: 8px 10px; 
+    text-align: left;
+    border-bottom: 2px solid #667eea;
+}
+
+.award-table td {
+    /* 儲存格內距 */
+    padding: 15px 10px; 
+    border-bottom: 1px solid #eee;
+    color: #444;
+    vertical-align: middle;
+    line-height: 1.3; /* 行高 */
+}
+
+/* 第一欄 (獎項) */
+.col-award {
+    width: 35%; /* 欄位寬度 */
+    white-space: nowrap;
+}
+
+.col-quota {
+    width: 10%;
+    white-space: nowrap;
+}
+
+/* --- 社會組內容 --- */
+.social-prize-content {
+    text-align: center;
+    padding: 0.5rem 0; /* 縮小內距 */
+}
+
+.prize-highlight {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem; /* 縮小距離 */
+    display: block;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.prize-detail {
+    background: #f8f9fa;
+    padding: 0.8rem; /* 縮小內距 */
+    border-radius: 8px;
+    color: #667eea;
+    font-weight: 600;
+    border: 1px dashed #667eea;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* --- 補充資訊列表 --- */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-list li::before {
+    content: "•";
+    color: #f6ad55; /* 配合黃色膠帶 */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* 左邊紙張 */
+.student-paper { 
+    transform: rotate(-1deg); 
+    height: 100%; 
+}
+
+/* 右邊上下兩張紙 */
+.social-paper { transform: rotate(1.5deg); }
+.info-paper { transform: rotate(-1deg); background-color: #fffdf5; }
+
+/* 手機版響應式 */
+@media (max-width: 900px) {
+    #evaluation .container {
+        padding: 0 2rem;
     }
-    #dataset {
-        height: auto;
-        min-height: auto;
+    .awards-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .award-paper {
+        padding: 1.5rem;
     }
 }
 
@@ -1127,6 +1567,38 @@ body[data-lang="zh"] .task-card-simple h3 {
   color: #667eea;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   FAQ Section
+   =================================== */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #667eea;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #666;
 }
 
 /* ===================================
@@ -1271,134 +1743,6 @@ body[data-lang="zh"] .task-card-simple h3 {
   margin-top: 0.5rem;
 }
 
-/* ===================================
-   FAQ Section
-   =================================== */
-.faq-list {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
-}
-
-.faq-item:hover {
-  transform: translateY(-3px);
-}
-
-.faq-item h3 {
-  font-size: 1.2rem;
-  margin: 0 0 0.5rem 0;
-  color: #667eea;
-}
-
-.faq-item p {
-  margin: 0;
-  color: #666;
-}
-
-/* ===================================
-   Examples Section
-   =================================== */
-.example-container {
-  background: white;
-  border-radius: 15px;
-  padding: 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.example-scroll {
-  max-height: 600px;
-  overflow-y: auto;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  background: #f8f9fa;
-}
-
-.example-item {
-  background: white;
-  border-left: 4px solid #667eea;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.example-item:last-child {
-  margin-bottom: 0;
-}
-
-.example-field {
-  margin: 0.8rem 0;
-  line-height: 1.8;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.example-label {
-  font-weight: 600;
-  color: #667eea;
-  display: inline-block;
-  min-width: 180px;
-  flex-shrink: 0;
-}
-
-.example-value {
-  color: #333;
-  flex: 1;
-}
-
-.example-data {
-  background: #f0f0f0;
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  flex: 1;
-}
-
-.esg-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-left: 0.5rem;
-}
-
-.esg-e {
-  background: #d4edda;
-  color: #155724;
-}
-
-.esg-s {
-  background: #cce5ff;
-  color: #004085;
-}
-
-.esg-g {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.status-yes {
-  color: #28a745;
-  font-weight: 600;
-}
-
-.status-no {
-  color: #dc3545;
-  font-weight: 600;
-}
 
 /* ===================================
    Footer

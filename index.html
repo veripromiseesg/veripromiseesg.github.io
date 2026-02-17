@@ -135,10 +135,11 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- External CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
@@ -467,60 +468,58 @@
 
     <div class="dataset-layout">
       
-      <div class="dataset-features">
-        <h3 data-i18n="dataset.featuresTitle" style="display:block; font-size:1.5rem; margin-top:0;">Dataset Features</h3>
-        <div class="cards">
-          <div class="card">
-            <h3 data-i18n="dataset.feature1.title">Taiwan's Leading Companies</h3>
-            <p data-i18n="dataset.feature1.desc">Real sustainability reports from Taiwan 50 Index...</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="dataset.feature2.title">Cross-Industry Diversity</h3>
-            <p data-i18n="dataset.feature2.desc">Spanning 15 different industry sectors...</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="dataset.feature3.title">High-Quality Annotation</h3>
-            <p data-i18n="dataset.feature3.desc">Executed in collaboration between National Taipei University...</p>
-          </div>
+      <div class="dataset-process desktop-only">
+        <h3 data-i18n="dataset.processTitle" style="display:block; font-size:2rem; margin: 0 0 3rem 0; text-align: center;">Annotation Process</h3>
+        
+        <div class="flowchart-container">
+            <img src="img/flowchart.png" alt="Annotation Process Flow" class="flowchart-bg">
+            
+            <div class="flow-group group-1">
+                <div class="flow-phase" data-i18n="dataset.phase1.title">Phase 1</div>
+                <div class="flow-stepname" data-i18n="dataset.phase1.stepName">Initial Annotation</div>
+                <ul class="flow-list">
+                    <li data-i18n="dataset.phase1.item1">Professional annotation team...</li>
+                    <li data-i18n="dataset.phase1.item2">Establish annotation standards...</li>
+                    <li data-i18n="dataset.phase1.item3">Conduct annotator training</li>
+                </ul>
+            </div>
+
+            <div class="flow-group group-2">
+                <div class="flow-phase" data-i18n="dataset.phase2.title">Phase 2</div>
+                <div class="flow-stepname" data-i18n="dataset.phase2.stepName">Cross-Validation</div>
+                <ul class="flow-list">
+                    <li data-i18n="dataset.phase2.item1">Multiple annotators...</li>
+                    <li data-i18n="dataset.phase2.item2">Calculate consistency...</li>
+                    <li data-i18n="dataset.phase2.item3">Resolve discrepancies</li>
+                </ul>
+            </div>
+
+            <div class="flow-group group-3">
+                <div class="flow-phase" data-i18n="dataset.phase3.title">Phase 3</div>
+                <div class="flow-stepname" data-i18n="dataset.phase3.stepName">Expert Review</div>
+                <ul class="flow-list">
+                    <li data-i18n="dataset.phase3.item1">Expert review...</li>
+                    <li data-i18n="dataset.phase3.item2">Quality control...</li>
+                    <li data-i18n="dataset.phase3.item3">Release...</li>
+                </ul>
+            </div>
         </div>
       </div>
 
-      <div class="dataset-process">
-        <h3 data-i18n="dataset.processTitle" style="display:block; font-size:1.5rem; margin:1rem 0;">Annotation Process</h3>
-        <div class="process-grid">
+      <div class="process-grid mobile-only">
           <div class="task-card-simple">
-            <div class="task-card-header">
-               <h3 data-i18n="dataset.phase1.title">Phase 1: Initial Annotation</h3>
-            </div>
+            <h3 data-i18n="dataset.phase1.title">Phase 1</h3>
+            <h4 data-i18n="dataset.phase1.stepName">Initial Annotation</h4>
             <ul>
-              <li data-i18n="dataset.phase1.item1">Professional annotation team...</li>
-              <li data-i18n="dataset.phase1.item2">Establish annotation standards...</li>
-              <li data-i18n="dataset.phase1.item3">Conduct annotator training</li>
+              <li data-i18n="dataset.phase1.item1">...</li>
+              <li data-i18n="dataset.phase1.item2">...</li>
+              <li data-i18n="dataset.phase1.item3">...</li>
             </ul>
           </div>
-          <div class="task-card-simple">
-            <div class="task-card-header">
-               <h3 data-i18n="dataset.phase2.title">Phase 2: Cross-Validation</h3>
-            </div>
-            <ul>
-              <li data-i18n="dataset.phase2.item1">Multiple annotators...</li>
-              <li data-i18n="dataset.phase2.item2">Calculate consistency...</li>
-              <li data-i18n="dataset.phase2.item3">Resolve discrepancies</li>
-            </ul>
-          </div>
-          <div class="task-card-simple">
-            <div class="task-card-header">
-               <h3 data-i18n="dataset.phase3.title">Phase 3: Expert Review</h3>
-            </div>
-            <ul>
-              <li data-i18n="dataset.phase3.item1">Domain experts review</li>
-              <li data-i18n="dataset.phase3.item2">Quality control</li>
-              <li data-i18n="dataset.phase3.item3">Dataset release</li>
-            </ul>
-          </div>
+          <div class="task-card-simple">...</div>
+          <div class="task-card-simple">...</div>
         </div>
       </div>
-    </div></div>
     </section>
 
     <!-- 分隔線 -->
@@ -533,150 +532,135 @@
           Adopt a multi-task comprehensive scoring mechanism to fully assess
           model performance across four subtasks
         </p>
+        
+        <div class="card chart-card">
+          <h3 data-i18n="evaluation.chartTitle" style="text-align: center; margin-bottom: 2rem;">Task Weighting Distribution</h3>
+          
+          <div class="chart-layout">
+            
+            <div class="chart-text-col left">
+              <div class="task-item">
+                <span class="task-header color-task1">
+                    <span class="task-meta" data-i18n="evaluation.chartTooltip.task1.meta">Task 1 (20%)</span>
+                    <span class="task-name" data-i18n="evaluation.chartTooltip.task1.name">Commitment Classification</span>
+                </span>
+                <span class="task-desc" data-i18n="evaluation.chartTooltip.task1.desc">...</span>
+                <span class="task-metric" data-i18n="evaluation.chartTooltip.task1.metric">...</span>
+              </div>
+              
+              <div class="task-item">
+                <span class="task-header color-task3">
+                    <span class="task-meta" data-i18n="evaluation.chartTooltip.task3.meta">Task 3 (35%)</span>
+                    <span class="task-name" data-i18n="evaluation.chartTooltip.task3.name">Clarity Classification</span>
+                </span>
+                <span class="task-desc" data-i18n="evaluation.chartTooltip.task3.desc">...</span>
+                <span class="task-metric" data-i18n="evaluation.chartTooltip.task3.metric">...</span>
+              </div>
+            </div>
 
-        <h3 data-i18n="evaluation.metricsTitle">
-          📊 Evaluation Metrics for Each Subtask
-        </h3>
-        <div class="task-container">
-          <div class="task-card">
-            <h3 data-i18n="evaluation.task1.title">
-              Subtask 1: Commitment Classification
-            </h3>
-            <h4 data-i18n="evaluation.task1.metricLabel">Evaluation Metrics</h4>
-            <ul>
-              <li>
-                <strong data-i18n="evaluation.task1.metric1Label">F1-Score:</strong>
-                <span data-i18n="evaluation.task1.metric1">Harmonic mean of precision and recall</span>
-              </li>
-              <li data-i18n="evaluation.task1.desc">
-                Measures the model's ability to identify ESG promise statements
-              </li>
-            </ul>
-          </div>
+            <div class="chart-container">
+              <canvas id="evaluationChart"></canvas>
+            </div>
 
-          <div class="task-card">
-            <h3 data-i18n="evaluation.task2.title">
-              Subtask 2: Evidence Identification
-            </h3>
-            <h4 data-i18n="evaluation.task2.metricLabel">Evaluation Metrics</h4>
-            <ul>
-              <li>
-                <strong data-i18n="evaluation.task2.metric1Label">F1-Score:</strong>
-                <span data-i18n="evaluation.task2.metric1">Determines whether promises have sufficient supporting
-                  evidence</span>
-              </li>
-              <li data-i18n="evaluation.task2.desc">
-                Core practical capability assessment
-              </li>
-            </ul>
-          </div>
-
-          <div class="task-card task-card--purple">
-            <h3 data-i18n="evaluation.task3.title">
-              Subtask 3: Clarity Classification
-            </h3>
-            <h4 data-i18n="evaluation.task3.metricLabel">Evaluation Metrics</h4>
-            <ul>
-              <li>
-                <strong data-i18n="evaluation.task3.metric1Label">Macro-F1:</strong>
-                <span data-i18n="evaluation.task3.metric1">Three-category (clear/unclear/misleading) average
-                  performance</span>
-              </li>
-              <li data-i18n="evaluation.task3.desc">
-                Most challenging task, identifying greenwashing risk capability
-              </li>
-            </ul>
-          </div>
-
-          <div class="task-card">
-            <h3 data-i18n="evaluation.task4.title">
-              Subtask 4: Timeline Classification
-            </h3>
-            <h4 data-i18n="evaluation.task4.metricLabel">Evaluation Metrics</h4>
-            <ul>
-              <li>
-                <strong data-i18n="evaluation.task4.metric1Label">Macro-F1:</strong>
-                <span data-i18n="evaluation.task4.metric1">Four-category time inference capability</span>
-              </li>
-              <li data-i18n="evaluation.task4.desc">
-                Assesses model understanding of commitment timelines
-              </li>
-            </ul>
+            <div class="chart-text-col right">
+              <div class="task-item">
+                <span class="task-header color-task2">
+                    <span class="task-meta" data-i18n="evaluation.chartTooltip.task2.meta">Task 2 (30%)</span>
+                    <span class="task-name" data-i18n="evaluation.chartTooltip.task2.name">Evidence Identification</span>
+                </span>
+                <span class="task-desc" data-i18n="evaluation.chartTooltip.task2.desc">...</span>
+                <span class="task-metric" data-i18n="evaluation.chartTooltip.task2.metric">...</span>
+              </div>
+              
+              <div class="task-item">
+                <span class="task-header color-task4">
+                    <span class="task-meta" data-i18n="evaluation.chartTooltip.task4.meta">Task 4 (15%)</span>
+                    <span class="task-name" data-i18n="evaluation.chartTooltip.task4.name">Timeline Classification</span>
+                </span>
+                <span class="task-desc" data-i18n="evaluation.chartTooltip.task4.desc">...</span>
+                <span class="task-metric" data-i18n="evaluation.chartTooltip.task4.metric">...</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <h3 data-i18n="evaluation.awardsTitle">🏅 Award Structure (Student Category)</h3>
-        <div class="cards">
-          <div class="card">
-            <h3 data-i18n="evaluation.award1.title">🥇 First Place</h3>
-            <p>
-              <strong data-i18n="evaluation.award1.slotsLabel">Slots:</strong>
-              <span data-i18n="evaluation.award1.slots">1 team</span><br />
-              <strong data-i18n="evaluation.award1.prizeLabel">Prize:</strong>
-              <span data-i18n="evaluation.award1.prize">NTD 80,000</span><br />
-              <strong data-i18n="evaluation.award1.certLabel">Certificate:</strong>
-              <span data-i18n="evaluation.award1.cert">Paper & Digital Certificate by Ministry of Education</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="evaluation.award2.title">🥈 Second Place</h3>
-            <p>
-              <strong data-i18n="evaluation.award2.slotsLabel">Slots:</strong>
-              <span data-i18n="evaluation.award2.slots">1 team</span><br />
-              <strong data-i18n="evaluation.award2.prizeLabel">Prize:</strong>
-              <span data-i18n="evaluation.award2.prize">NTD 50,000</span><br />
-              <strong data-i18n="evaluation.award2.certLabel">Certificate:</strong>
-              <span data-i18n="evaluation.award2.cert">Paper & Digital Certificate by Ministry of Education</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="evaluation.award3.title">🥉 Third Place</h3>
-            <p>
-              <strong data-i18n="evaluation.award3.slotsLabel">Slots:</strong>
-              <span data-i18n="evaluation.award3.slots">1 team</span><br />
-              <strong data-i18n="evaluation.award3.prizeLabel">Prize:</strong>
-              <span data-i18n="evaluation.award3.prize">NTD 30,000</span><br />
-              <strong data-i18n="evaluation.award3.certLabel">Certificate:</strong>
-              <span data-i18n="evaluation.award3.cert">Paper & Digital Certificate by Ministry of Education</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="evaluation.award4.title">🎖️ Excellence Awards</h3>
-            <p>
-              <strong data-i18n="evaluation.award4.slotsLabel">Slots:</strong>
-              <span data-i18n="evaluation.award4.slots">2 teams</span><br />
-              <strong data-i18n="evaluation.award4.prizeLabel">Prize:</strong>
-              <span data-i18n="evaluation.award4.prize">NTD 10,000</span><br />
-              <strong data-i18n="evaluation.award4.certLabel">Certificate:</strong>
-              <span data-i18n="evaluation.award4.cert">Paper & Digital Certificate by Ministry of Education</span>
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="evaluation.award5.title">🏅 Honorable Mentions</h3>
-            <p>
-              <strong data-i18n="evaluation.award5.slotsLabel">Slots:</strong>
-              <span data-i18n="evaluation.award5.slots">10 teams</span><br />
-              <strong data-i18n="evaluation.award5.prizeLabel">Prize:</strong>
-              <span data-i18n="evaluation.award5.prize">NTD 7,000</span><br />
-              <strong data-i18n="evaluation.award5.certLabel">Certificate:</strong>
-              <span data-i18n="evaluation.award5.cert">Paper & Digital Certificate by Ministry of Education</span>
-            </p>
-          </div>
-        </div>
+        <h3 data-i18n="evaluation.awardsTitle" style="text-align: center; margin-bottom: 2rem;">🏅 Award Structure</h3>
+        
+        <div class="awards-container">
+            
+            <div class="award-paper student-paper">
+                <div class="tape-strip"></div> 
+                <h4 data-i18n="evaluation.studentTitle">Student Division</h4>
+                <div class="table-responsive">
+                    <table class="award-table">
+                        <thead>
+                            <tr>
+                                <th class="col-award" data-i18n="evaluation.tableHead.award">Award</th>
+                                <th class="col-quota" data-i18n="evaluation.tableHead.quota">Quota</th>
+                                <th data-i18n="evaluation.tableHead.prize">Prize & Certificate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="award-student-body">
+                            <tr>
+                                <td><span class="rank-icon">🥇</span> <span data-i18n="evaluation.awards.gold">First Prize</span></td>
+                                <td>1</td>
+                                <td data-i18n="evaluation.prizes_student.gold">NT$80,000 + MOE Certificate</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-icon">🥈</span> <span data-i18n="evaluation.awards.silver">Second Prize</span></td>
+                                <td>1</td>
+                                <td data-i18n="evaluation.prizes_student.silver">NT$50,000 + MOE Certificate</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-icon">🥉</span> <span data-i18n="evaluation.awards.bronze">Third Prize</span></td>
+                                <td>1</td>
+                                <td data-i18n="evaluation.prizes_student.bronze">NT$30,000 + MOE Certificate</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-icon">🎖️</span> <span data-i18n="evaluation.awards.excellence">Excellence</span></td>
+                                <td>2</td>
+                                <td data-i18n="evaluation.prizes_student.excellence">NT$10,000 + MOE Certificate</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank-icon">🏅</span> <span data-i18n="evaluation.awards.mention">Honorable Mention</span></td>
+                                <td>10</td>
+                                <td data-i18n="evaluation.prizes_student.mention">NT$7,000 + MOE Certificate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <div class="highlight-box highlight-box--mt2">
-          <strong data-i18n="evaluation.noteLabel">※ Note:</strong>
-          <span data-i18n="evaluation.note">Industry professionals category receives digital certificates only (no prize money)</span>
-        </div>
+            <div class="awards-right-col">
+                
+                <div class="award-paper social-paper">
+                    <div class="tape-strip tape-purple"></div>
+                    <h4 data-i18n="evaluation.socialTitle">General Public Division</h4>
+                    
+                    <div class="social-prize-content">
+                        <div class="prize-highlight">
+                            <span class="rank-icon">🏆</span>
+                            <span data-i18n="evaluation.prizes_social.social_desc">All award winners...</span>
+                        </div>
+                        <p class="prize-detail" data-i18n="evaluation.prizes_social.social_prize">
+                            Electronic certificate...
+                        </p>
+                    </div>
+                </div>
 
-        <div class="highlight-box highlight-box--mt1">
-          <strong data-i18n="evaluation.rulesLabel">📌 Ranking Rules:</strong><br />
-          <span data-i18n="evaluation.rule1">• Final ranking based on Private Dataset test results</span><br />
-          <span data-i18n="evaluation.rule2">• Public Dataset for reference during competition only</span><br />
-          <span data-i18n="evaluation.rule3">• Top 25% teams exceeding Baseline receive Program Office digital
-            certificates</span>
+                <div class="award-paper info-paper">
+                    <div class="tape-strip tape-yellow"></div>
+                    <h4 data-i18n="evaluation.infoTitle">Additional Information</h4>
+                    
+                    <ul class="info-list">
+                        <li data-i18n="evaluation.note">Industry professionals category...</li>
+                        <li data-i18n="evaluation.rule1">Ranking based on Private Dataset...</li>
+                        <li data-i18n="evaluation.rule2">Public Dataset for reference...</li>
+                        <li data-i18n="evaluation.rule3">Top 25% teams...</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- 分隔線 -->
@@ -936,7 +920,7 @@
         <div class="cards cards-2col">
           <div class="card">
             <h3 data-i18n="contact.email.title">Email</h3>
-            <p><a href="mailto:veripromiseesg2026@gmail.com">veripromiseesg2026@gmail.com</a></p>
+            <p><a href="/cdn-cgi/l/email-protection#156370677c65677a787c667070667227252723557278747c793b767a78"><span class="__cf_email__" data-cfemail="4f392a3d263f3d2022263c2a2a3c287d7f7d790f28222e2623612c2022">[email&#160;protected]</span></a></p>
           </div>
           <div class="card">
             <h3 data-i18n="contact.website.title">Official Website</h3>

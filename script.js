@@ -151,36 +151,25 @@ const translations = {
       },
       dataset: {
         title: "數據集介紹",
-        intro:
-          "VeriPromiseESG4K - 全球首個針對大規模繁體中文設計的永續承諾驗證標註數據集，來自臺灣 50 指數成分股，橫跨 15 個產業的真實 ESG 報告書",
-        featuresTitle: "數據集特色",
-        feature1: {
-          title: "臺灣龍頭企業",
-          desc: "來自臺灣 50 指數（0050）成分股，涵蓋臺灣前 50 大上市公司的真實永續報告書。",
-        },
-        feature2: {
-          title: "跨產業多元性",
-          desc: "橫跨 15 個不同產業領域，包含科技、金融、製造、能源等，提供豐富的產業視角。",
-        },
-        feature3: {
-          title: "高品質標註",
-          desc: "由國立臺北大學團隊與臺北市立大學團隊合作執行，經過多階段品質控制，使用 Krippendorff's Alpha 確保標註一致性。",
-        },
+        intro: "所有參賽隊伍將透過主辦方提供之「VeriPromiseESG4K」語料庫進行開發。這是全球首個針對繁體中文文本，設計的大規模永續承諾驗證標註數據集，其數據來源於臺灣龍頭企業，參考臺灣 50 指數（0050）成分股，共計涵蓋臺灣前 50 大上市公司的真實永續報告書，橫跨 15 個不同產業領域，包含科技、金融、製造、能源等，提供豐富的產業視角。",
         processTitle: "標註流程",
         phase1: {
-          title: "第一階段：初步標註",
+          title: "第一階段",
+          stepName: "初步標註",
           item1: "專業標註團隊進行初步標記",
           item2: "建立標註規範與指引",
           item3: "進行標註者訓練",
         },
         phase2: {
-          title: "第二階段：交叉驗證",
+          title: "第二階段",
+          stepName: "交叉驗證",
           item1: "多位標註者獨立標註",
           item2: "計算標註者間一致性",
           item3: "解決標註歧異",
         },
         phase3: {
-          title: "第三階段：專家審核",
+          title: "第三階段",
+          stepName: "專家審核",
           item1: "領域專家最終審核",
           item2: "品質控制與修正",
           item3: "數據集發布",
@@ -188,89 +177,45 @@ const translations = {
       },
       evaluation: {
         title: "評估方式",
-        intro:
-          "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
-        metricsTitle: "各子任務評估指標",
-        task1: {
-          title: "子任務一：承諾識別",
-          metricLabel: "評估指標",
-          metric1Label: "F1-Score：",
-          metric1: "精確率與召回率的調和平均",
-          desc: "衡量模型識別 ESG 承諾語句的能力",
+        intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
+        chartTitle: "各子任務評分權重分佈",
+        chartTooltip: {
+          task1: { meta: "子任務一 (20%)", name: "承諾語句識別", desc: "識別 ESG 承諾語句的精確度與召回率平衡。", metric: "📊 指標：F1-Score" },
+          task2: { meta: "子任務二 (30%)", name: "支持證據連結", desc: "判斷承諾是否具備充分支持證據的能力。", metric: "📊 指標：F1-Score" },
+          task3: { meta: "子任務三 (35%)", name: "清晰度分類", desc: "評估證據品質的三分類分析能力。", metric: "📊 指標：Macro-F1" },
+          task4: { meta: "子任務四 (15%)", name: "預期驗證時機推論", desc: "評估承諾適當驗證時間點的四分類預測能力。", metric: "📊 指標：Macro-F1" }
         },
-        task2: {
-          title: "子任務二：證據支持判斷",
-          metricLabel: "評估指標",
-          metric1Label: "F1-Score：",
-          metric1: "判斷承諾是否具備充分支持證據",
-          desc: "核心實務能力評估",
+        awardsTitle: "🏅 獎項設置",
+        studentTitle: "學生組",
+        socialTitle: "社會人士組",
+        infoTitle: "補充說明",
+        tableHead: {
+          award: "獎項",
+          quota: "名額",
+          prize: "每名額獎項"
         },
-        task3: {
-          title: "子任務三：清晰度評估",
-          metricLabel: "評估指標",
-          metric1Label: "Macro-F1：",
-          metric1: "三分類（清楚/不清楚/誤導）平均表現",
-          desc: "最具挑戰性任務，辨識漂綠風險能力",
+        awards: {
+          gold: "第一名",
+          silver: "第二名",
+          bronze: "第三名",
+          excellence: "優等",
+          mention: "佳作"
         },
-        task4: {
-          title: "子任務四：驗證時機預測",
-          metricLabel: "評估指標",
-          metric1Label: "Macro-F1：",
-          metric1: "四分類時間推論能力",
-          desc: "評估模型對承諾時間軸的理解",
+        prizes_student: {
+          gold: "新臺幣 8 萬元 + 教育部紙本與電子獎狀",
+          silver: "新臺幣 5 萬元 + 教育部紙本與電子獎狀",
+          bronze: "新臺幣 3 萬元 + 教育部紙本與電子獎狀",
+          excellence: "新臺幣 1 萬元 + 教育部紙本獎狀",
+          mention: "新臺幣 7 千元 + 教育部紙本獎狀"
         },
-        awardsTitle: "🏅 獎項設置（學生組）",
-        award1: {
-          title: "🥇 第一名",
-          slotsLabel: "名額：",
-          slots: "1 名",
-          prizeLabel: "獎金：",
-          prize: "新臺幣 8 萬元",
-          certLabel: "獎狀：",
-          cert: "教育部紙本與電子獎狀",
+        prizes_social: {
+          social_desc: "所有獲獎隊伍（包含第一名至佳作）皆頒發：",
+          social_prize: "教育部人工智慧競賽計畫辦公室電子獎狀乙張",
         },
-        award2: {
-          title: "🥈 第二名",
-          slotsLabel: "名額：",
-          slots: "1 名",
-          prizeLabel: "獎金：",
-          prize: "新臺幣 5 萬元",
-          certLabel: "獎狀：",
-          cert: "教育部紙本與電子獎狀",
-        },
-        award3: {
-          title: "🥉 第三名",
-          slotsLabel: "名額：",
-          slots: "1 名",
-          prizeLabel: "獎金：",
-          prize: "新臺幣 3 萬元",
-          certLabel: "獎狀：",
-          cert: "教育部紙本與電子獎狀",
-        },
-        award4: {
-          title: "🎖️ 優等",
-          slotsLabel: "名額：",
-          slots: "2 名",
-          prizeLabel: "獎金：",
-          prize: "新臺幣 1 萬元",
-          certLabel: "獎狀：",
-          cert: "教育部紙本獎狀",
-        },
-        award5: {
-          title: "🏅 佳作",
-          slotsLabel: "名額：",
-          slots: "10 名",
-          prizeLabel: "獎金：",
-          prize: "新臺幣 7 千元",
-          certLabel: "獎狀：",
-          cert: "教育部紙本獎狀",
-        },
-        noteLabel: "※ 備註：",
-        note: "「社會人士組」無法領取獎金，且獎狀(紙)為電子版本。",
-        rulesLabel: "排名規則：",
-        rule1: "• 最終排名以 Private Dataset 測試結果為準",
-        rule2: "• Public Dataset 僅供競賽期間參考使用",
-        rule3: "• 前 25% 且超過 Baseline 的隊伍可獲得計畫辦公室電子獎狀",
+        note: "社會人士組無法領取獎金，且僅頒發電子獎狀。",
+        rule1: "最終排名以 Private Dataset 測試結果為準",
+        rule2: "Public Dataset 僅供競賽期間參考使用",
+        rule3: "前 25% 且超過 Baseline 的隊伍可獲得計畫辦公室電子獎狀",
       },
       timeline: {
         title: "競賽時程",
@@ -661,6 +606,33 @@ const translations = {
           metricLabel: "Evaluation Metric",
           metric: "Macro-F1 (four-category time inference capability)",
         },
+        chartTitle: "Task Weighting Distribution",
+        chartTooltip: {
+          task1: { 
+              meta: "Task 1 (20%)", 
+              name: "Commitment Classification", 
+              desc: "Balance of precision and recall in identifying ESG promises.", 
+              metric: "📊 Metric: F1-Score" 
+          },
+          task2: { 
+              meta: "Task 2 (30%)", 
+              name: "Evidence Identification", 
+              desc: "Ability to determine if promises have sufficient supporting evidence.", 
+              metric: "📊 Metric: F1-Score" 
+          },
+          task3: { 
+              meta: "Task 3 (35%)", 
+              name: "Clarity Classification", 
+              desc: "Three-category analysis capability for assessing evidence quality.", 
+              metric: "📊 Metric: Macro-F1" 
+          },
+          task4: { 
+              meta: "Task 4 (15%)", 
+              name: "Timeline Classification", 
+              desc: "Four-category prediction capability for appropriate verification timing.", 
+              metric: "📊 Metric: Macro-F1" 
+          }
+        },
         relevanceTitle: "Task Relevance and Practical Value",
         job1: {
           title: "ESG Data Analyst",
@@ -689,36 +661,25 @@ const translations = {
       },
       dataset: {
         title: "Dataset Introduction",
-        intro:
-          "VeriPromiseESG4K - The world's first Large Scale Traditional Chinese-designed sustainability commitment verification annotated dataset, sourced from Taiwan 50 Index constituents, spanning 15 industries' authentic ESG reports",
-        featuresTitle: "Dataset Features",
-        feature1: {
-          title: "Taiwan's Leading Companies",
-          desc: "Real sustainability reports from Taiwan 50 Index (0050) constituent stocks, covering Taiwan's top 50 listed companies.",
-        },
-        feature2: {
-          title: "Cross-Industry Diversity",
-          desc: "Spanning 15 different industry sectors including technology, finance, manufacturing, energy, etc., providing rich industry perspectives.",
-        },
-        feature3: {
-          title: "High-Quality Annotation",
-          desc: "Executed in collaboration between National Taipei University and University of Taipei teams, with multi-stage quality control and Krippendorff's Alpha ensuring annotation consistency.",
-        },
+        intro: "All participating teams will develop their solutions using the “VeriPromiseESG4K Corpora\" provided by the organizer. VeriPromiseESG4K is the world’s first large-scale, Traditional Chinese–designed sustainability commitment verification annotated dataset. The dataset is sourced from Taiwan’s leading enterprises, referencing the constituents of the Taiwan 50 Index (0050). It encompasses authentic sustainability reports from Taiwan’s top 50 listed companies, spanning 15 different industry sectors—including technology, finance, manufacturing, energy, and more—offering rich and diverse industry perspectives.",
         processTitle: "Annotation Process",
         phase1: {
-          title: "Phase 1: Initial Annotation",
+          title: "Phase 1",
+          stepName: "Initial Annotation",
           item1: "Professional annotation team performs initial marking",
           item2: "Establish annotation standards and guidelines",
           item3: "Conduct annotator training",
         },
         phase2: {
-          title: "Phase 2: Cross-Validation",
+          title: "Phase 2",
+          stepName: "Cross-Validation",
           item1: "Multiple annotators independently annotate",
           item2: "Calculate inter-annotator consistency",
           item3: "Resolve annotation discrepancies",
         },
         phase3: {
-          title: "Phase 3: Expert Review",
+          title: "Phase 3",
+          stepName: "Expert Review",
           item1: "Domain experts conduct final review",
           item2: "Quality control and corrections",
           item3: "Dataset release",
@@ -726,92 +687,65 @@ const translations = {
       },
       evaluation: {
         title: "Evaluation Methods",
-        intro:
-          "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks",
-        metricsTitle: "Evaluation Metrics for Each Subtask",
-        task1: {
-          title: "Subtask 1: Commitment Classification",
-          metricLabel: "Evaluation Metrics",
-          metric1Label: "F1-Score:",
-          metric1: "Harmonic mean of precision and recall",
-          desc: "Measures the model's ability to identify ESG promise statements",
+        intro: "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks",
+        chartTitle: "Task Weighting Distribution",
+        chartTooltip: {
+          task1: {
+            meta: "Task 1 (20%)",
+            name: "Commitment Classification",
+            desc: "Balance of precision and recall in identifying ESG promises.",
+            metric: "📊 Metric: F1-Score"
+          },
+          task2: {
+            meta: "Task 2 (30%)",
+            name: "Evidence Identification",
+            desc: "Ability to determine if promises have sufficient supporting evidence.",
+            metric: "📊 Metric: F1-Score"
+          },
+          task3: {
+            meta: "Task 3 (35%)",
+            name: "Clarity Classification",
+            desc: "Three-category analysis capability for assessing evidence quality.",
+            metric: "📊 Metric: Macro-F1"
+          },
+          task4: {
+            meta: "Task 4 (15%)",
+            name: "Timeline Classification",
+            desc: "Four-category prediction capability for appropriate verification timing.",
+            metric: "📊 Metric: Macro-F1"
+          }
         },
-        task2: {
-          title: "Subtask 2: Evidence Identification",
-          metricLabel: "Evaluation Metrics",
-          metric1Label: "F1-Score:",
-          metric1:
-            "Determines whether promises have sufficient supporting evidence",
-          desc: "Core practical capability assessment",
+        awardsTitle: "🏅 Award Structure",
+        studentTitle: "Student Division",
+        socialTitle: "General Public Division",
+        infoTitle: "Additional Information",
+        tableHead: {
+          award: "Award",
+          quota: "Quota",
+          prize: "Prize & Certificate"
         },
-        task3: {
-          title: "Subtask 3: Clarity Classification",
-          metricLabel: "Evaluation Metrics",
-          metric1Label: "Macro-F1:",
-          metric1:
-            "Three-category (clear/unclear/misleading) average performance",
-          desc: "Most challenging task, identifying greenwashing risk capability",
+        awards: {
+          gold: "First Prize",
+          silver: "Second Prize",
+          bronze: "Third Prize",
+          excellence: "Excellence Award",
+          mention: "Honorable Mention"
         },
-        task4: {
-          title: "Subtask 4: Timeline Classification",
-          metricLabel: "Evaluation Metrics",
-          metric1Label: "Macro-F1:",
-          metric1: "Four-category time inference capability",
-          desc: "Assesses model understanding of commitment timelines",
+        prizes_student: {
+          gold: "NT$80,000 + Printed & Electronic Certificate (MOE)",
+          silver: "NT$50,000 + Printed & Electronic Certificate (MOE)",
+          bronze: "NT$30,000 + Printed & Electronic Certificate (MOE)",
+          excellence: "NT$10,000 + Printed Certificate (MOE)",
+          mention: "NT$7,000 + Printed Certificate (MOE)"
         },
-        awardsTitle: "🏅 Award Structure (Student Category)",
-        award1: {
-          title: "🥇 First Place",
-          slotsLabel: "Slots:",
-          slots: "1 team",
-          prizeLabel: "Prize:",
-          prize: "NTD 80,000",
-          certLabel: "Certificate:",
-          cert: "Paper & Digital Certificate by Ministry of Education",
+        prizes_social: {
+          social_desc: "All winning teams (from First Prize to Honorable Mention) will receive:",
+          social_prize: "Electronic certificate issued by the Ministry of Education AI Competition Project Office",
         },
-        award2: {
-          title: "🥈 Second Place",
-          slotsLabel: "Slots:",
-          slots: "1 team",
-          prizeLabel: "Prize:",
-          prize: "NTD 50,000",
-          certLabel: "Certificate:",
-          cert: "Paper & Digital Certificate by Ministry of Education",
-        },
-        award3: {
-          title: "🥉 Third Place",
-          slotsLabel: "Slots:",
-          slots: "1 team",
-          prizeLabel: "Prize:",
-          prize: "NTD 30,000",
-          certLabel: "Certificate:",
-          cert: "Paper & Digital Certificate by Ministry of Education",
-        },
-        award4: {
-          title: "🎖️ Excellence Awards",
-          slotsLabel: "Slots:",
-          slots: "2 teams",
-          prizeLabel: "Prize:",
-          prize: "NTD 10,000",
-          certLabel: "Certificate:",
-          cert: "Paper Certificate by Ministry of Education",
-        },
-        award5: {
-          title: "🏅 Honorable Mentions",
-          slotsLabel: "Slots:",
-          slots: "10 teams",
-          prizeLabel: "Prize:",
-          prize: "NTD 7,000",
-          certLabel: "Certificate:",
-          cert: "Paper Certificate by Ministry of Education",
-        },
-        noteLabel: "※ Note:",
-        note: "Industry professionals category: no prize money; paper certificates are digital only.",
-        rulesLabel: "Ranking Rules:",
-        rule1: "• Final ranking based on Private Dataset test results",
-        rule2: "• Public Dataset for reference during competition only",
-        rule3:
-          "• Top 25% teams exceeding Baseline receive Program Office digital certificates",
+        note: "General Public Division: no prize money; only digital certificates.",
+        rule1: "Final ranking is based on Private Dataset test results.",
+        rule2: "Public Dataset is for reference during the competition only.",
+        rule3: "Top 25% teams exceeding Baseline receive Program Office digital certificates.",
       },
       timeline: {
         title: "Competition Schedule",
@@ -1164,6 +1098,8 @@ function changeLanguage(lang) {
     } else {
       navLinks.classList.remove('zh-mode');
     }
+
+    updateChartLanguage();
   });
 }
 
@@ -1547,3 +1483,125 @@ document.addEventListener('keydown', (e) => {
         closeAllModals();
     }
 });
+
+/* ===================================
+   Evaluation Pie Chart (Chart.js)
+   =================================== */
+
+let evaluationChart = null; 
+
+function initEvaluationChart() {
+    const ctx = document.getElementById('evaluationChart');
+    if (!ctx) return;
+
+    // 設定全域字型與顏色
+    Chart.defaults.font.family = '"Noto Sans TC", sans-serif';
+    Chart.defaults.color = '#666';
+
+    const chartData = getChartData();
+
+    // 確保在建立新圖表前銷毀舊圖表
+    if (evaluationChart) {
+        evaluationChart.destroy();
+    }
+
+    evaluationChart = new Chart(ctx, {
+        type: 'pie',
+        data: chartData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: 10 },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+                duration: 1000,
+                easing: 'easeOutQuart'
+            },
+            plugins: {
+                legend: { display: false }, // 側邊已有文字，此處隱藏
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    titleColor: '#333',
+                    bodyColor: '#666',
+                    borderColor: 'rgba(0,0,0,0.1)',
+                    borderWidth: 1,
+                    padding: 12,
+                    usePointStyle: true,
+                    bodyFont: { size: 14, weight: 'bold' },
+                    callbacks: {
+                        // 【自定義顯示】：顯示完整的任務名稱 + 百分比
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.parsed;
+                            return ` ${label}: ${value}%`;
+                        }
+                    }
+                }
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            }
+        }
+    });
+}
+
+// 取得數據的函式
+function getChartData() {
+    let lang = 'en';
+    if (typeof i18next !== 'undefined' && i18next.language) {
+        lang = i18next.language.startsWith('zh') ? 'zh' : 'en';
+    }
+    
+    // 安全取得翻譯資料，對接您更新後的 chartTooltip 鍵值
+    let taskInfo;
+    try {
+        taskInfo = translations[lang].translation.evaluation.chartTooltip;
+        if (!taskInfo) taskInfo = translations['en'].translation.evaluation.chartTooltip;
+    } catch (e) {
+        taskInfo = translations['en'].translation.evaluation.chartTooltip;
+    }
+
+    // 【關鍵】：從 chartTooltip 中提取各子任務的 "name" 作為圖表標籤
+    const labels = [
+        taskInfo.task1.name, 
+        taskInfo.task2.name, 
+        taskInfo.task3.name, 
+        taskInfo.task4.name
+    ];
+
+    return {
+        labels: labels,
+        datasets: [{
+            data: [20, 30, 35, 15],
+            backgroundColor: [
+                '#90cdf4', // Task 1
+                '#667eea', // Task 2
+                '#764ba2', // Task 3
+                '#d6bcfa'  // Task 4
+            ],
+            borderWidth: 3,
+            borderColor: '#ffffff',
+            hoverOffset: 15 
+        }]
+    };
+}
+
+// 更新圖表語言
+function updateChartLanguage() {
+    if (evaluationChart) {
+        initEvaluationChart();
+    }
+}
+
+// 視窗縮放監聽
+let resizeTimerChart;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimerChart);
+    resizeTimerChart = setTimeout(initEvaluationChart, 300);
+});
+
+// 頁面載入後初始化圖表
+window.addEventListener('load', initEvaluationChart);
