@@ -13,6 +13,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;  /* 改為 proximity 讓滾動更自然 */
 }
 
 /* 2. body 基本樣式 */
@@ -642,6 +643,10 @@ section h3 {
   transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 垂直置中 */
+  min-height: 220px;  /* 確保有足夠高度 */
 }
 
 .card:hover {
@@ -652,6 +657,18 @@ section h3 {
 .card h3 {
   color: #667eea;
   margin-top: 0;
+  margin-bottom: 1.5rem;  /* 增加與下方文字的距離 */
+  display: flex;
+  align-items: center;  /* emoji 與文字垂直對齊 */
+  gap: 0.5rem;
+  line-height: 1.4;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.8;
+  margin-top: 0.5rem;  /* 說明文字往下移 */
 }
 
 .card-icon {
@@ -678,6 +695,12 @@ section h3 {
 /* ===================================
    Tasks Section Layout
    =================================== */
+   
+/* 前言文字往下移 */
+#tasks .section-intro {
+  margin-top: 1.5rem;  /* 增加與大標的距離 */
+  margin-bottom: 3rem;
+}
 
 .tasks-layout {
   display: grid;
@@ -1231,29 +1254,40 @@ body[data-lang="zh"] .task-card-simple h3 {
     padding-bottom: 3rem;
 }
 
+#evaluation .section-intro {
+  margin-bottom: 1.5rem;  /* 減少前言與圓餅圖之間的留白 */
+}
+
 /* --- 評分權重圖表專用樣式 --- */
 .chart-card {
-  max-width: 1300px;    /* 加寬卡片以容納三欄 */
-  margin: 0 auto 3rem;
-  padding: 3rem 2rem;
+  max-width: 1300px;
+  margin: 0.5rem auto 2rem;  /* 減少上邊距，往上移 */
+  padding: 2.5rem 2rem;
   overflow: visible;
+}
+
+.chart-card h3 {
+  font-size: 1.6rem;  /* 放大圖表標題 */
+  font-weight: 700;
+  margin-bottom: 1.5rem;  /* 減少標題下方留白 */
 }
 
 /* 4. 佈局容器：左文字 - 圖表 - 右文字 */
 .chart-layout {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 平均分配空間 */
+  justify-content: space-between;
   gap: 2rem;
   width: 100%;
+  min-height: 300px;  /* 固定最小高度 */
 }
 
-/* 圖表容器 (中間) */
+/* 圖表容器 (中間) - 縮小一點 */
 .chart-container {
   position: relative;
-  height: 350px;      /* 設定高度 */
-  width: 350px;       /* 設定寬度 */
-  flex-shrink: 0;     /* 防止被擠壓 */
+  height: 300px;      /* 從 350px 縮小到 300px */
+  width: 300px;       /* 從 350px 縮小到 300px */
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1261,21 +1295,29 @@ body[data-lang="zh"] .task-card-simple h3 {
 
 /* 文字欄位 (左右兩側) */
 .chart-text-col {
-  flex: 1; /* 佔用剩餘空間 */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  gap: 3rem; /* 上下兩個任務的間距 */
+  gap: 3rem;
+  padding: 0 1.5rem;  /* 左右增加內距，避免貼邊 */
 }
 
-.chart-text-col.left, .chart-text-col.right {
-    text-align: left;   /* 文字統一靠左 */
+.chart-text-col.left {
+    text-align: left;
+    padding-left: 2rem;  /* 左側多一點距離 */
+}
+
+.chart-text-col.right {
+    text-align: left;
+    padding-right: 2rem;  /* 右側多一點距離 */
 }
 
 /* 單個任務說明區塊 */
 .task-item {
   padding: 0.5rem;
   transition: transform 0.3s;
+  min-height: 100px;  /* 固定最小高度，防止語言切換時變動 */
 }
 
 .task-item:hover {
@@ -1290,8 +1332,9 @@ body[data-lang="zh"] .task-card-simple h3 {
 .task-meta {
     font-weight: 900;
     font-size: 1.1rem;
-    display: block; /* 讓 Task 1 (20%) 獨佔一行 */
+    display: block;
     margin-bottom: 0.2rem;
+    line-height: 1.3;  /* 固定行高 */
 }
 
 .task-name {
@@ -1299,22 +1342,32 @@ body[data-lang="zh"] .task-card-simple h3 {
     font-size: 1.2rem;
     color: #333;
     display: block;
+    line-height: 1.4;  /* 固定行高 */
 }
 
+/* 說明文字和指標縮小 */
 .task-desc {
-  font-size: 0.95rem;
+  font-size: 0.88rem;  /* 從 0.95rem 縮小到 0.88rem */
   color: #555;
   line-height: 1.5;
   margin-bottom: 0.5rem;
   display: block;
 }
 
+/* 指標樣式：主要部分有灰底 */
 .task-metric {
-  font-size: 0.9rem;
+  font-size: 0.85rem;  /* 從 0.9rem 縮小到 0.85rem */
   color: #888;
+  display: block;
+  line-height: 1.6;
+  margin-top: 0.3rem;
+}
+
+.task-metric strong {
   background: #f0f2f5;
   padding: 2px 8px;
   border-radius: 4px;
+  display: inline-block;
 }
 
 /* 任務顏色定義 */
@@ -1326,14 +1379,14 @@ body[data-lang="zh"] .task-card-simple h3 {
 /* RWD: 手機版堆疊 */
 @media (max-width: 1100px) {
   .chart-layout {
-    flex-direction: column; /* 轉為垂直排列 */
+    flex-direction: column;
   }
   .chart-container {
     order: 1;
     margin-bottom: 2rem;
   }
-  .chart-text-col.left { order: 2; width: 100%; gap: 2rem; }
-  .chart-text-col.right { order: 3; width: 100%; gap: 2rem; margin-top: 2rem; }
+  .chart-text-col.left { order: 2; width: 100%; gap: 2rem; padding: 0; }
+  .chart-text-col.right { order: 3; width: 100%; gap: 2rem; margin-top: 2rem; padding: 0; }
 }
 
 /* ===================================
@@ -1604,11 +1657,115 @@ body[data-lang="zh"] .task-card-simple h3 {
 /* ===================================
    Team Section
    =================================== */
+
+/* 減少前言下方留白 */
+#contact .section-intro {
+  margin-bottom: 1.5rem;  /* 進一步減少 */
+}
+
+/* 小標置中，減少上下間距 */
+#contact h3 {
+  text-align: center;
+  margin-top: 2rem;  /* 從 3rem 減少到 2rem */
+  margin-bottom: 1.5rem;  /* 從 2rem 減少到 1.5rem */
+}
+
+/* 第一個小標（主持人）間距更小 */
+#contact h3:first-of-type {
+  margin-top: 1rem;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;  /* 從 2rem 減少 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 計畫主持人與協同主持人：3欄並排，置中 */
+.team-grid-leaders {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 研究助理：5欄並排，縮小卡片，移除邊框 */
+.team-grid-ras {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.8rem;  /* 增加間距 */
+  max-width: 1600px;  /* 增加最大寬度 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-grid-ras .team-member {
+  padding: 1.5rem;
+  box-shadow: none;  /* 移除陰影/邊框效果 */
+  background: transparent;  /* 移除背景 */
+  min-width: 200px;  /* 確保最小寬度 */
+}
+
+.team-grid-ras .team-photo {
+  width: 150px;
+  height: 150px;  /* 改為正方形 */
+}
+
+.team-grid-ras h4 {
+  font-size: 1.1rem;
+  white-space: nowrap;  /* 防止名字換行 */
+}
+
+/* 合作機構列表樣式（類似 resources-list） */
+.partner-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.partner-list li {
+  padding: 0.8rem 0 0.8rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 1.4;
+  position: relative;
+}
+
+.partner-list li::before {
+  content: "●";
+  color: #667eea;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+}
+
+.partner-list li:last-child {
+  border-bottom: none;
+}
+
+.partner-list strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+@media (max-width: 1400px) {
+  .team-grid-leaders {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+  .team-grid-ras {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid-leaders,
+  .team-grid-ras {
+    grid-template-columns: 1fr;
+  }
 }
 
 .team-member {
@@ -1624,21 +1781,22 @@ body[data-lang="zh"] .task-card-simple h3 {
 
 .team-photo {
   width: 200px;
-  height: 240px;
-  border-radius: 10px;
+  height: 200px;  /* 改為正方形 */
+  border-radius: 50%;  /* 圓形 */
   margin: 0 auto 1rem;
-  background: #f0f0f0;
+  background: transparent;  /* 移除灰色背景 */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: visible;  /* 改為 visible 避免裁切 */
+  box-shadow: none;  /* 移除陰影 */
 }
 
 .team-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;  /* 改為 contain 避免裁切 */
+  border-radius: 50%;  /* 確保圖片也是圓形 */
 }
 
 .team-photo-placeholder {
@@ -1673,6 +1831,28 @@ body[data-lang="zh"] .task-card-simple h3 {
 .team-member .affiliation {
   color: #666;
   font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: normal;  /* 允許換行 */
+}
+
+/* 多項 title 的列表樣式 */
+.team-member .affiliation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.team-member .affiliation-list li {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.3rem 0;
+}
+
+.team-member .affiliation-list li::before {
+  content: "• ";
+  color: #667eea;
 }
 
 .team-member .project {
@@ -1701,6 +1881,184 @@ body[data-lang="zh"] .task-card-simple h3 {
   color: #666;
 }
 
+/* ===================================
+   Co-organizers Section (協辦單位)
+   =================================== */
+
+.co-organizers-container {
+  margin: 3rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.co-organizers-slider {
+  display: flex;
+  gap: 4rem;
+  animation: slideLogos 40s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+
+.co-organizers-slider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.co-org-logo {
+  height: 100px;
+  width: auto;
+  max-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: block;
+}
+
+.co-org-logo:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+.co-org-logo:active {
+  transform: scale(0.95);
+}
+
+/* 協辦單位 Modal */
+.co-org-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+}
+
+.co-org-modal.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.co-org-modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.co-org-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.co-org-modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.co-org-modal-logo {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.co-org-modal-names {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.co-org-modal-names h3 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.co-org-modal-names h4 {
+  color: #764ba2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.co-org-modal-intro {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.co-org-modal-intro p {
+  margin: 1rem 0;
+}
+
+.co-org-modal-link {
+  text-align: center;
+}
+
+.co-org-modal-link a {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.co-org-modal-link a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
 .lead-badge {
   display: inline-block;
   background: #667eea;
@@ -1710,6 +2068,51 @@ body[data-lang="zh"] .task-card-simple h3 {
   font-size: 0.75rem;
   font-weight: 600;
   margin-left: 0.5rem;
+}
+
+/* ===================================
+   Resources List
+   =================================== */
+.resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.resources-list li {
+  padding: 1rem 0 1rem 2rem;  /* 左側增加間距給圓點 */
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 1.8;
+  position: relative;  /* 為圓點定位 */
+}
+
+.resources-list li::before {
+  content: "●";
+  color: #667eea;  /* 藍色圓點 */
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+
+.resources-list li:last-child {
+  border-bottom: none;
+}
+
+.resources-list strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.resources-list a {
+  color: #764ba2;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
 }
 
 /* ===================================
@@ -1750,7 +2153,7 @@ body[data-lang="zh"] .task-card-simple h3 {
 footer {
   background: #2d3748;
   color: white;
-  padding: 3rem 0;
+  padding: 3rem 0 1.5rem 0;  /* 減少底部 padding */
   text-align: center;
 }
 
@@ -1765,6 +2168,27 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer img {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;  /* 減少圖片下方留白 */
+  max-height: 60px;
+}
+
+.footer-links {
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: #90cdf4;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
 }
 
 /* ===================================
@@ -2133,6 +2557,45 @@ footer a:hover {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    min-height: 100vh;  /* 每個區塊至少佔滿一個畫面 */
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    scroll-snap-align: start;  /* 滾動吸附點 */
+}
+
+/* Hero section 也需要 scroll-snap */
+.hero {
+    scroll-snap-align: start;
+}
+
+/* Timeline 特殊處理：可能需要兩個畫面寬 */
+#timeline {
+    min-height: auto;  /* 允許 timeline 超過一個畫面 */
+}
+
+/* 團隊區塊分成三個子區塊 */
+#contact {
+    min-height: auto;  /* 允許多個子區塊 */
+}
+
+.team-section-block {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    scroll-snap-align: start;
+}
+
+/* 固定容器樣式，防止語言切換時變動 */
+section h2 {
+    min-height: 3rem;  /* 固定標題最小高度 */
+    line-height: 1.3;
+}
+
+section .section-intro {
+    min-height: 2.5rem;  /* 固定簡介最小高度 */
+    line-height: 1.6;
 }
 
 /* 內容層級 */

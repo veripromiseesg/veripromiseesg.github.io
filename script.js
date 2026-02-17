@@ -180,10 +180,30 @@ const translations = {
         intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
         chartTitle: "各子任務評分權重分佈",
         chartTooltip: {
-          task1: { meta: "子任務一 (20%)", name: "承諾語句識別", desc: "識別 ESG 承諾語句的精確度與召回率平衡。", metric: "📊 指標：F1-Score" },
-          task2: { meta: "子任務二 (30%)", name: "支持證據連結", desc: "判斷承諾是否具備充分支持證據的能力。", metric: "📊 指標：F1-Score" },
-          task3: { meta: "子任務三 (35%)", name: "清晰度分類", desc: "評估證據品質的三分類分析能力。", metric: "📊 指標：Macro-F1" },
-          task4: { meta: "子任務四 (15%)", name: "預期驗證時機推論", desc: "評估承諾適當驗證時間點的四分類預測能力。", metric: "📊 指標：Macro-F1" }
+          task1: { 
+            meta: "子任務一 (20%)", 
+            name: "承諾語句識別", 
+            desc: "識別 ESG 承諾語句的精確度與召回率平衡。", 
+            metric: "<strong>📊 指標：F1-Score</strong><br>（即精確率與召回率的調和平均）" 
+          },
+          task2: { 
+            meta: "子任務二 (30%)", 
+            name: "支持證據連結", 
+            desc: "判斷承諾是否具備充分支持證據的能力。", 
+            metric: "<strong>📊 指標：F1-Score</strong><br>（衡量語意關聯性判斷能力）" 
+          },
+          task3: { 
+            meta: "子任務三 (35%)", 
+            name: "清晰度分類", 
+            desc: "評估證據品質的三分類分析能力。", 
+            metric: "<strong>📊 指標：Macro-F1</strong><br>（三分類平均表現）" 
+          },
+          task4: { 
+            meta: "子任務四 (15%)", 
+            name: "預期驗證時機推論", 
+            desc: "評估承諾適當驗證時間點的四分類預測能力。", 
+            metric: "<strong>📊 指標：Macro-F1</strong><br>（四分類時間推論能力）" 
+          }
         },
         awardsTitle: "🏅 獎項設置",
         studentTitle: "學生組",
@@ -277,26 +297,23 @@ const translations = {
         pi: {
           name: "戴敏育 教授 ",
           role: "計畫主持人",
-          affiliation: "資訊管理研究所<br>國立臺北大學",
-          desc: "專精於人工智慧、Agentic AI、永續綠色金融科技。現任金融科技暨綠色金融研究中心主任。",
+          affiliation: "國立臺北大學 資訊管理研究所<br>國立臺北大學 金融科技暨綠色金融研究中心 主任",
           link: "個人網站",
         },
         copiTitle: "協同主持人",
         copi1: {
           name: "陳重吉 博士",
           role: "協同主持人",
-          affiliation: "人工智慧研究中心<br>產業技術綜合研究所 (AIST) 研究員",
-          desc: "ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。",
+          affiliation: "日本產業技術綜合研究所 (AIST) 人工智慧研究中心 研究員",
           link: "個人網站",
         },
         copi2: {
           name: "Yohei Seki 教授",
           role: "協同主持人",
-          affiliation: "圖書館情報媒體科學系<br>日本筑波大學",
-          desc: "專精於自然語言處理與資訊檢索，曾組織 NTCIR 多語言觀點分析任務。",
+          affiliation: "日本筑波大學 圖書館情報媒體科學系 教授",
           link: "個人網站",
         },
-        raTitle: "兼任研究助理",
+        raTitle: "研究助理",
         ra1: {
           name: "Hsin-Ting LU",
           role: "研究助理",
@@ -323,6 +340,7 @@ const translations = {
           link: "個人網站",
         },
         orgTitle: "合作機構",
+        coOrgTitle: "協辦單位",
         org1: {
           name: "國立臺北大學",
           dept: "資訊管理研究所<br>金融科技暨綠色金融研究中心",
@@ -478,6 +496,10 @@ const translations = {
         copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
         organizer1: "主辦單位：國立臺北大學 資訊管理研究所、",
         organizer2: "國立臺北大學 金融科技暨綠色金融研究中心",
+        email: "📧 Email",
+        website: "🌐 北大官網",
+        sampleCode: "💻 範例程式碼",
+        registration: "📝 AI CUP 報名系統",
       },
     },
   },
@@ -694,25 +716,25 @@ const translations = {
             meta: "Task 1 (20%)",
             name: "Commitment Classification",
             desc: "Balance of precision and recall in identifying ESG promises.",
-            metric: "📊 Metric: F1-Score"
+            metric: "<strong>📊 Metric: F1-Score</strong><br>(Harmonic mean of precision and recall)"
           },
           task2: {
             meta: "Task 2 (30%)",
             name: "Evidence Identification",
             desc: "Ability to determine if promises have sufficient supporting evidence.",
-            metric: "📊 Metric: F1-Score"
+            metric: "<strong>📊 Metric: F1-Score</strong><br>(Measuring semantic relevance judgment)"
           },
           task3: {
             meta: "Task 3 (35%)",
             name: "Clarity Classification",
             desc: "Three-category analysis capability for assessing evidence quality.",
-            metric: "📊 Metric: Macro-F1"
+            metric: "<strong>📊 Metric: Macro-F1</strong><br>(Average performance across three categories)"
           },
           task4: {
             meta: "Task 4 (15%)",
             name: "Timeline Classification",
             desc: "Four-category prediction capability for appropriate verification timing.",
-            metric: "📊 Metric: Macro-F1"
+            metric: "<strong>📊 Metric: Macro-F1</strong><br>(Four-category timeline inference ability)"
           }
         },
         awardsTitle: "🏅 Award Structure",
@@ -809,24 +831,21 @@ const translations = {
           name: "Prof. Min-Yuh Day",
           role: "Principal Investigator",
           affiliation:
-            "Graduate Institute of Information Management<br>National Taipei University",
-          desc: "Specialized in artificial intelligence, agentic AI, and sustainable green fintech. Currently Director of Fintech and Green Finance Research Center.",
+            "National Taipei University, Graduate Institute of Information Management<br>National Taipei University, Fintech and Green Finance Research Center, Director",
           link: "Website",
         },
         copiTitle: "Co-Principal Investigators",
         copi1: {
           name: "Dr. Chung-Chi Chen",
           role: "Co-Principal Investigator",
-          affiliation: "Researcher, Artificial Intelligence Research Center,<br>National Institute of Advanced Industrial Science and Technology (AIST), Japan",
-          desc: "Founder of ACL SIG-FinTech, specialized in financial opinion mining and natural language processing.",
+          affiliation: "National Institute of Advanced Industrial Science and Technology (AIST), Artificial Intelligence Research Center, Researcher",
           link: "Website",
         },
         copi2: {
           name: "Prof. Yohei Seki",
           role: "Co-Principal Investigator",
           affiliation:
-            "Institute of Library, Information and Media Science<br>University of Tsukuba",
-          desc: "Specialized in natural language processing and information retrieval, organized NTCIR multilingual opinion analysis tasks.",
+            "University of Tsukuba, Institute of Library, Information and Media Science, Professor",
           link: "Website",
         },
         raTitle: "Research Assistants",
@@ -856,6 +875,7 @@ const translations = {
           link: "Website",
         },
         orgTitle: "Partner Institutions",
+        coOrgTitle: "Co-organizers",
         org1: {
           name: "National Taipei University",
           dept: "Graduate Institute of Information Management<br>Fintech and Green Finance Research Center",
@@ -1017,6 +1037,10 @@ const translations = {
         organizer1:
           "Organizer: Graduate Institute of Information Management, NTPU",
         organizer2: "The Fintech and Green Finance Center (FGFC), NTPU",
+        email: "📧 Email",
+        website: "🌐 NTPU Website",
+        sampleCode: "💻 Sample Code",
+        registration: "📝 AI CUP Registration",
       },
     },
   },
@@ -1531,11 +1555,13 @@ function initEvaluationChart() {
                     usePointStyle: true,
                     bodyFont: { size: 14, weight: 'bold' },
                     callbacks: {
-                        // 【自定義顯示】：顯示完整的任務名稱 + 百分比
+                        // 只顯示權重百分比
+                        title: function() {
+                            return '';  // 不顯示標題
+                        },
                         label: function(context) {
-                            let label = context.label || '';
                             let value = context.parsed;
-                            return ` ${label}: ${value}%`;
+                            return `權重：${value}%`;
                         }
                     }
                 }
@@ -1605,3 +1631,111 @@ window.addEventListener('resize', () => {
 
 // 頁面載入後初始化圖表
 window.addEventListener('load', initEvaluationChart);
+
+/* ===================================
+   Co-organizers (協辦單位) Functionality
+   =================================== */
+
+let coOrganizersData = [];
+
+// 載入協辦單位資料
+async function loadCoOrganizers() {
+    try {
+        const response = await fetch('co-organizers.json');
+        coOrganizersData = await response.json();
+        renderCoOrganizers();
+    } catch (error) {
+        console.error('Error loading co-organizers:', error);
+    }
+}
+
+// 渲染協辦單位 logo
+function renderCoOrganizers() {
+    const slider = document.getElementById('coOrgSlider');
+    if (!slider) return;
+
+    // 創建 logo HTML（處理 .ai 檔案路徑問題，改為 .png）
+    const logosHTML = coOrganizersData.map(org => {
+        // 將 .ai 改為 .png（因為瀏覽器無法直接顯示 .ai 檔案）
+        const logoPath = org.logo.replace('.ai', '.png');
+        return `
+            <img src="${logoPath}" 
+                 alt="${org.name_ch || org.name_en}" 
+                 class="co-org-logo"
+                 onclick="openCoOrgModal(${org.id})"
+                 onerror="console.error('Failed to load:', '${logoPath}')">
+        `;
+    }).join('');
+
+    // 複製 3 次以實現無縫循環
+    slider.innerHTML = logosHTML + logosHTML + logosHTML;
+}
+
+// 開啟協辦單位 modal
+function openCoOrgModal(id) {
+    const org = coOrganizersData.find(o => o.id === id);
+    if (!org) return;
+
+    const modal = document.getElementById('coOrgModal');
+    const modalLogo = document.getElementById('modalLogo');
+    const modalNameCh = document.getElementById('modalNameCh');
+    const modalNameEn = document.getElementById('modalNameEn');
+    const modalIntro = document.getElementById('modalIntro');
+    const modalLinkContainer = document.getElementById('modalLinkContainer');
+
+    // 設置 logo（轉為 .png）
+    modalLogo.src = org.logo.replace('.ai', '.png');
+
+    // 設置名稱（永遠顯示中英文）
+    if (org.name_ch) {
+        modalNameCh.textContent = org.name_ch;
+        modalNameCh.style.display = 'block';
+    } else {
+        modalNameCh.style.display = 'none';
+    }
+
+    if (org.name_en) {
+        modalNameEn.textContent = org.name_en;
+        modalNameEn.style.display = 'block';
+    } else {
+        modalNameEn.style.display = 'none';
+    }
+
+    // 設置簡介
+    if (Array.isArray(org.intro)) {
+        modalIntro.innerHTML = org.intro.map(p => `<p>${p}</p>`).join('');
+    } else if (org.intro) {
+        modalIntro.innerHTML = `<p>${org.intro}</p>`;
+    } else {
+        modalIntro.innerHTML = '';
+    }
+
+    // 設置連結
+    if (org.link) {
+        modalLinkContainer.innerHTML = `<a href="${org.link}" target="_blank">🔗 Visit Website</a>`;
+    } else {
+        modalLinkContainer.innerHTML = '';
+    }
+
+    // 顯示 modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// 關閉協辦單位 modal
+function closeCoOrgModal() {
+    const modal = document.getElementById('coOrgModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// 點擊背景關閉 modal
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('coOrgModal');
+    if (e.target === modal) {
+        closeCoOrgModal();
+    }
+});
+
+// 頁面載入時載入協辦單位資料
+window.addEventListener('load', loadCoOrganizers);

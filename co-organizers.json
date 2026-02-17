@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "name_ch": "Google 學生開發者社群 - 臺北大學",
+    "name_en": "Google Developer Groups (GDG) on Campus NTPU",
+    "logo": "img/co-organizer/GDG on Campus NTPU.ai",
+    "intro": [
+        "我們是 Google 支持的學生開發者社群，也是你踏入科技業的敲門磚～",
+        "本社致力於推廣開源技術、AI 等跨領域創新應用，將創意化為實際成果。",
+        "無論是專案開發、跨校合作活動，還是業師講座、實作工作坊、企業參訪，都精彩可期！"
+    ],
+    "link": "https://www.instagram.com/gdg.ntpu/"
+  },
+  {
+    "id": 2,
+    "name_ch": "Google 學生開發者社群 STUST",
+    "name_en": "GDG on Campus STUST",
+    "logo": "/img/co-organizer/Google 學生開發者社群 STUST.ai",
+    "intro": "",
+    "link": "https://gdsc-stust.web.app"
+  },
+  {
+    "id": 3,
+    "name_ch": "",
+    "name_en": "Google Developer Group on Campus TMU",
+    "logo": "/img/co-organizer/",
+    "intro": "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
+    "link": "https://www.instagram.com/tmu_gdgoncampus/"
+  },
+  {
+    "id": 4,
+    "name_ch": "中興大學資訊科學研習社",
+    "name_en": "GDG on Campus NCHU",
+    "logo": "/img/co-organizer/中興大學資訊科學研習社.ai",
+    "intro": [
+        "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。",
+        "我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。",
+        "我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。"
+    ],
+    "link": ""
+  },
+  {
+    "id": 5,
+    "name_ch": "國立臺北科技大學程式設計研究社",
+    "name_en": "National Taipei University of Technology (NTUT) Programming Club / NPC",
+    "logo": "/img/co-organizer/國立臺北科技大學程式設計研究社.ai",
+    "intro": [
+        "北科程式設計研究社致力於推動校內程式教育與資訊素養培養，提供系統化學習資源與實作機會，協助學生建立扎實的邏輯思考與問題解決能力。",
+        "社團重視互助合作與友善交流氛圍，透過課程、競賽與專題分享，促進對程式設計有興趣之學生彼此交流與成長，強化實務能力與跨領域應用視野。"
+    ],
+    "link": ""
+  },
+  {
+    "id": 6,
+    "name_ch": "大同大學科學開源服務社",
+    "name_en": "TTUSSC",
+    "logo": "/img/co-organizer/大同大學科學開源服務社.ai",
+    "intro": [
+        "本社是一個結合開源、技術型社課與營隊服務活動的社團。",
+        "我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。"
+    ],
+    "link": "https://ttussc.org/"
+  }
+]
