@@ -1254,15 +1254,16 @@ body[data-lang="zh"] .task-card-simple h3 {
     padding-bottom: 3rem;
 }
 
+/* Evaluation Section */
 #evaluation .section-intro {
-  margin-bottom: 1.5rem;  /* 減少前言與圓餅圖之間的留白 */
+  margin-bottom: 0rem;
 }
 
 /* --- 評分權重圖表專用樣式 --- */
 .chart-card {
   max-width: 1300px;
-  margin: 0.5rem auto 2rem;  /* 減少上邊距，往上移 */
-  padding: 2.5rem 2rem;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 2rem;
   overflow: visible;
 }
 
@@ -1279,14 +1280,14 @@ body[data-lang="zh"] .task-card-simple h3 {
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
-  min-height: 300px;  /* 固定最小高度 */
+  min-height: 430px;  /* 固定最小高度 */
 }
 
-/* 圖表容器 (中間) - 縮小一點 */
+/* 圖表容器 (中間) */
 .chart-container {
   position: relative;
-  height: 300px;      /* 從 350px 縮小到 300px */
-  width: 300px;       /* 從 350px 縮小到 300px */
+  height: 300px;
+  width: 300px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -1627,16 +1628,17 @@ body[data-lang="zh"] .task-card-simple h3 {
    =================================== */
 .faq-list {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .faq-item {
   background: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+  border: 3px solid #333;  /* 黑框 */
+  border-radius: 0;  /* 方框 */
+  margin-bottom: 1.2rem;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);  /* Hero 風格陰影 */
+  transition: all 0.2s;
+  overflow: hidden;
 }
 
 .faq-item:hover {
@@ -1652,6 +1654,58 @@ body[data-lang="zh"] .task-card-simple h3 {
 .faq-item p {
   margin: 0;
   color: #666;
+}
+
+.faq-question {
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.faq-icon {
+  font-size: 0.9rem;
+  color: #667eea;
+  transition: transform 0.3s;
+  font-weight: bold;
+}
+
+/* 展開狀態 */
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* 按壓效果 */
+.faq-item:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 1.5rem 1.2rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
 }
 
 /* ===================================
@@ -1723,7 +1777,7 @@ body[data-lang="zh"] .task-card-simple h3 {
   list-style: none;
   padding: 0;
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .partner-list li {
@@ -1736,7 +1790,7 @@ body[data-lang="zh"] .task-card-simple h3 {
 .partner-list li::before {
   content: "●";
   color: #667eea;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: absolute;
   left: 0;
   top: 0.8rem;
@@ -2076,23 +2130,24 @@ body[data-lang="zh"] .task-card-simple h3 {
 .resources-list {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .resources-list li {
   padding: 1rem 0 1rem 2rem;  /* 左側增加間距給圓點 */
   border-bottom: 1px solid #e0e0e0;
-  line-height: 1.8;
+  line-height: 1.4;
+  font-size: 1.05rem;  /* 字體大小 */
   position: relative;  /* 為圓點定位 */
 }
 
 .resources-list li::before {
   content: "●";
-  color: #667eea;  /* 藍色圓點 */
-  font-size: 1.2rem;
+  color: #667eea;   /* 藍色圓點 */
+  font-size: 0.8rem;
   position: absolute;
   left: 0;
-  top: 1rem;
+  top: 1.25rem;
 }
 
 .resources-list li:last-child {
@@ -2564,9 +2619,11 @@ footer img {
     scroll-snap-align: start;  /* 滾動吸附點 */
 }
 
-/* Hero section 也需要 scroll-snap */
+/* 滾動吸附（scroll-snap） */
+
+/* Hero section */
 .hero {
-    scroll-snap-align: start;
+    scroll-snap-align: start;  /* 有 */
 }
 
 /* Timeline 特殊處理：可能需要兩個畫面寬 */
@@ -2574,9 +2631,9 @@ footer img {
     min-height: auto;  /* 允許 timeline 超過一個畫面 */
 }
 
-/* 團隊區塊分成三個子區塊 */
+/* 團隊區塊：分成三個子區塊 */
 #contact {
-    min-height: auto;  /* 允許多個子區塊 */
+    min-height: none;  /* 無 */
 }
 
 .team-section-block {

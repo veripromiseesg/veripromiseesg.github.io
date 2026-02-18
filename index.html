@@ -157,7 +157,7 @@
           <li><a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a></li>
           <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
           <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#team" data-i18n="nav.team">Team</a></li>
           <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
         </ul>
         <div class="lang-switch">
@@ -523,7 +523,6 @@
         </p>
         
         <div class="card chart-card">
-          <h3 data-i18n="evaluation.chartTitle" style="text-align: center; margin-bottom: 2rem;">Task Weighting Distribution</h3>
           
           <div class="chart-layout">
             
@@ -757,35 +756,97 @@
     <div class="collage-divider"></div>
 
     <section id="faq" class="bg-dot-pattern">
-        <div class="container">
-            <h2 data-i18n="faq.title">FAQ</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3 data-i18n="faq.q1">What is VeriPromise ESG?</h3>
-                    <p data-i18n="faq.a1">VeriPromise ESG is an AI competition focused on verifying corporate sustainability commitments using NLP technology.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 data-i18n="faq.q2">Who can participate?</h3>
-                    <p data-i18n="faq.a2">The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 data-i18n="faq.q3">What is the dataset?</h3>
-                    <p data-i18n="faq.a3">The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports.</p>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+          <h2 data-i18n="faq.title">FAQ</h2>
+          
+          <div class="faq-list">
+              <!-- Q1: 誰可以參加？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q1">誰可以參加？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a1">本競賽分為「學生組」與「社會人士組」兩大組別。每個參賽隊伍人數限制 1 至 4 人。</p>
+                  </div>
+              </div>
+              
+              <!-- Q2: 每天可以提交幾次？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q2">每天可以提交幾次？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a2">公開資料集與私有資料集預測結果每日合計提交上限 3 次。</p>
+                  </div>
+              </div>
+              
+              <!-- Q3: 可以使用外部資料集或預訓練模型嗎？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q3">可以使用外部資料集或預訓練模型嗎？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a3">可以。參賽者可使用自行製作的資料、公開可取得之外部資料或預訓練模型（包含大型語言模型）。但若使用額外的開源資料，須於書面報告書中提供相關來源。</p>
+                  </div>
+              </div>
+              
+              <!-- Q4: 報名後可以修改隊伍成員嗎？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q4">報名後可以修改隊伍成員嗎？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a4">不可以。報名截止後，不可再變更隊伍成員名單及人數。比賽期間，隊伍不可合併與分割。</p>
+                  </div>
+              </div>
+              
+              <!-- Q5: 需要繳交哪些檔案？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q5">需要繳交哪些檔案？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a5">需繳交：(1) 書面報告書（Word 與 PDF 格式）、(2) 實作程式碼（GitHub/Google 雲端硬碟連結）、(3) 測試集執行結果（.csv 格式）。</p>
+                  </div>
+              </div>
+              
+              <!-- Q6: 可以手動標註測試資料集嗎？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q6">可以手動標註測試資料集嗎？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a6">不可以。嚴禁對測試資料集進行任何形式的人工標註或修正。所有預測結果必須由程式自動生成，以確保競賽公平性。</p>
+                  </div>
+              </div>
+              
+              <!-- Q7: 最終排名如何決定？ -->
+              <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                      <h3 data-i18n="faq.q7">最終排名如何決定？</h3>
+                      <span class="faq-icon">▼</span>
+                  </div>
+                  <div class="faq-answer">
+                      <p data-i18n="faq.a7">最終成績將以私有資料集測試結果為排名依據，公佈私有版排行榜（Private Leaderboard）名次。公開資料集僅供競賽期間參考使用。</p>
+                  </div>
+              </div>
+          </div>
+      </div>
     </section>
 
     <!-- 分隔線 -->
     <div class="collage-divider"></div>
     
-    <section id="contact" class="bg-grid-pattern">
+    <section id="team" class="bg-grid-pattern">
       <div class="container">
         
         <h2 data-i18n="team.title">Organizing Team</h2>
-        <p class="section-intro" data-i18n="team.intro">
-          Co-hosted by top academic institutions from Taiwan and Japan with industry experts
-        </p>
 
         <h3 data-i18n="team.piTitle">🎓 Principal Investigator & Co-Principal Investigators</h3>
         <div class="team-grid team-grid-leaders">
@@ -962,20 +1023,16 @@
     <footer>
       <div class="container">
         <p data-i18n="footer.copyright">
-          &copy; 2025-2026 AI CUP - ESG Promise Verification Competition
+          &copy; 2026 AI CUP - ESG Promise Verification Competition
         </p>
-        <p data-i18n="footer.organizer1">
-          Organizer: Graduate Institute of Information Management, NTPU
-        </p>
-        <p data-i18n="footer.organizer2">
-          The Fintech and Green Finance Center (FGFC), NTPU
+        <p data-i18n="footer.organizer">
+          Organizer: Graduate Institute of Information Management & The Fintech and Green Finance Center (FGFC), NTPU
         </p>
         
         <div class="footer-links">
-          <a href="mailto:myday@gm.ntpu.edu.tw" data-i18n="footer.email">📧 Email</a> | 
-          <a href="https://www.ntpu.edu.tw" target="_blank" data-i18n="footer.website">🌐 NTPU Website</a> | 
-          <a href="..." target="_blank" data-i18n="footer.sampleCode">💻 Sample Code</a> | 
-          <a href="https://go.aicup.tw/" target="_blank" data-i18n="footer.registration">📝 AI CUP Registration</a>
+          <a href="mailto:myday@gm.ntpu.edu.tw" data-i18n="footer.email">Email</a> | 
+          <a href="..." target="_blank" data-i18n="footer.sampleCode">Sample Code</a> | 
+          <a href="https://go.aicup.tw/" target="_blank" data-i18n="footer.registration">AI CUP Registration System</a>
         </div>
         
         <img src="img/ntpu-logo.png" alt="NTPU Logo" class="footer-logo">

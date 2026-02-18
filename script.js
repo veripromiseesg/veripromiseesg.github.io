@@ -16,10 +16,8 @@ const translations = {
         dataset: "數據集",
         evaluation: "評估方式",
         timeline: "競賽時程",
-        team: "籌備團隊",
-        examples: "標註範例",
-        contact: "聯絡我們",
         faq: "常見問題",
+        team: "籌備團隊",
         resources: "相關資源",
       },
       hero: {
@@ -92,7 +90,7 @@ const translations = {
           evidence: "要求訂定中長期減量目標並提出具體行動",
         },
         task3: {
-          title: "清晰度分類",
+          title: "證據清晰度評估",
           goalLabel: "任務目標：",
           goal: "評估承諾語句是否語意明確、無模糊字眼，辨識潛在「漂綠」風險。",
           outputLabel: "輸出類別",
@@ -177,7 +175,7 @@ const translations = {
       },
       evaluation: {
         title: "評估方式",
-        intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
+        intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現。",
         chartTitle: "各子任務評分權重分佈",
         chartTooltip: {
           task1: { 
@@ -194,7 +192,7 @@ const translations = {
           },
           task3: { 
             meta: "子任務三 (35%)", 
-            name: "清晰度分類", 
+            name: "證據清晰度評估", 
             desc: "評估證據品質的三分類分析能力。", 
             metric: "<strong>📊 指標：Macro-F1</strong><br>（三分類平均表現）" 
           },
@@ -292,19 +290,18 @@ const translations = {
       },
       team: {
         title: "主辦團隊",
-        intro: "由臺日頂尖學術機構與業界專家共同主辦",
         piTitle: "計畫主持人",
         pi: {
           name: "戴敏育 教授 ",
           role: "計畫主持人",
-          affiliation: "國立臺北大學 資訊管理研究所<br>國立臺北大學 金融科技暨綠色金融研究中心 主任",
+          affiliation: "國立臺北大學 資訊管理研究所 教授兼所長、<br>金融科技暨綠色金融研究中心 主任",
           link: "個人網站",
         },
         copiTitle: "協同主持人",
         copi1: {
           name: "陳重吉 博士",
           role: "協同主持人",
-          affiliation: "日本產業技術綜合研究所 (AIST) 人工智慧研究中心 研究員",
+          affiliation: "日本產業技術綜合研究所 (AIST)<br>人工智慧研究中心 研究員",
           link: "個人網站",
         },
         copi2: {
@@ -315,7 +312,7 @@ const translations = {
         },
         raTitle: "研究助理",
         ra1: {
-          name: "Hsin-Ting LU",
+          name: "Hsin-Ting Lu",
           role: "研究助理",
           link: "個人網站",
         },
@@ -343,7 +340,7 @@ const translations = {
         coOrgTitle: "協辦單位",
         org1: {
           name: "國立臺北大學",
-          dept: "資訊管理研究所<br>金融科技暨綠色金融研究中心",
+          dept: "資訊管理研究所、金融科技暨綠色金融研究中心",
         },
         org2: {
           name: "臺北市立大學",
@@ -459,12 +456,21 @@ const translations = {
       },
       faq: {
         title: "常見問題",
-        q1: "VeriPromise ESG 競賽的目標是什麼？",
-        a1: "本競賽專注於利用人工智慧技術，自動識別與驗證企業永續報告中的承諾，解決漂綠問題並提升報告可信度。",
-        q2: "誰可以參加？",
-        a2: "競賽對所有學生、學術研究人員以及產業界人士開放。每隊成員可為 1 到 5 人。",
-        q3: "競賽提供什麼數據集？",
-        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自臺灣 50 指數成分股企業的真實 ESG 報告標註數據。"
+        intro: "競賽相關常見問題。",
+        q1: "誰可以參加？",
+        a1: "本競賽分為「學生組」與「社會人士組」兩大組別。每個參賽隊伍人數限制 1 至 4 人。",
+        q2: "每天可以提交幾次？",
+        a2: "公開資料集與私有資料集預測結果每日合計提交上限 3 次。",
+        q3: "可以使用外部資料集或預訓練模型嗎？",
+        a3: "可以。參賽者可使用自行製作的資料、公開可取得之外部資料或預訓練模型（包含大型語言模型）。但若使用額外的開源資料，須於書面報告書中提供相關來源。",
+        q4: "報名後可以修改隊伍成員嗎？",
+        a4: "不可以。報名截止後，不可再變更隊伍成員名單及人數。比賽期間，隊伍不可合併與分割。",
+        q5: "需要繳交哪些檔案？",
+        a5: "需繳交：(1) 書面報告書（Word 與 PDF 格式）、(2) 實作程式碼（GitHub/Google 雲端硬碟連結）、(3) 測試集執行結果（.csv 格式）。",
+        q6: "可以手動標註測試資料集嗎？",
+        a6: "不可以。嚴禁對測試資料集進行任何形式的人工標註或修正。所有預測結果必須由程式自動生成，以確保競賽公平性。",
+        q7: "最終排名如何決定？",
+        a7: "最終成績將以私有資料集測試結果為排名依據，公佈私有版排行榜（Private Leaderboard）名次。公開資料集僅供競賽期間參考使用。"
       },
       resources: {
         title: "相關資源",
@@ -493,13 +499,11 @@ const translations = {
         }
       },
       footer: {
-        copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
-        organizer1: "主辦單位：國立臺北大學 資訊管理研究所、",
-        organizer2: "國立臺北大學 金融科技暨綠色金融研究中心",
-        email: "📧 Email",
-        website: "🌐 北大官網",
-        sampleCode: "💻 範例程式碼",
-        registration: "📝 AI CUP 報名系統",
+        copyright: "© 2026 AI CUP - ESG 永續承諾驗證競賽",
+        organizer: "主辦單位：國立臺北大學 資訊管理研究所、金融科技暨綠色金融研究中心",
+        email: "聯絡信箱",
+        sampleCode: "範例程式碼",
+        registration: "AI CUP 報名系統",
       },
     },
   },
@@ -512,10 +516,8 @@ const translations = {
         dataset: "Dataset",
         evaluation: "Evaluation",
         timeline: "Timeline",
-        team: "Team",
-        examples: "Annotation Examples",
-        contact: "Contact",
         faq: "FAQ",
+        team: "Team",
         resources: "Resources",
       },
       hero: {
@@ -628,7 +630,6 @@ const translations = {
           metricLabel: "Evaluation Metric",
           metric: "Macro-F1 (four-category time inference capability)",
         },
-        chartTitle: "Task Weighting Distribution",
         chartTooltip: {
           task1: { 
               meta: "Task 1 (20%)", 
@@ -709,8 +710,7 @@ const translations = {
       },
       evaluation: {
         title: "Evaluation Methods",
-        intro: "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks",
-        chartTitle: "Task Weighting Distribution",
+        intro: "Adopt a multi-task comprehensive scoring mechanism to fully assess model performance across four subtasks.",
         chartTooltip: {
           task1: {
             meta: "Task 1 (20%)",
@@ -823,10 +823,7 @@ const translations = {
         },
       },
       team: {
-        title: "Organizing Team",
-        intro:
-          "Co-hosted by top academic institutions from Taiwan and Japan with industry experts",
-        piTitle: "Principal Investigator",
+        title: "Organizing Team",        piTitle: "Principal Investigator",
         pi: {
           name: "Prof. Min-Yuh Day",
           role: "Principal Investigator",
@@ -850,7 +847,7 @@ const translations = {
         },
         raTitle: "Research Assistants",
         ra1: {
-          name: "Hsin-Ting LU",
+          name: "Hsin-Ting Lu",
           role: "Researcher",
           link: "Website",
         },
@@ -878,7 +875,7 @@ const translations = {
         coOrgTitle: "Co-organizers",
         org1: {
           name: "National Taipei University",
-          dept: "Graduate Institute of Information Management<br>Fintech and Green Finance Research Center",
+          dept: "Graduate Institute of Information Management, The Fintech and Green Finance Research Center",
         },
         org2: {
           name: "University of Taipei",
@@ -998,12 +995,21 @@ const translations = {
       },
       faq: {
         title: "FAQ",
-        q1: "What is VeriPromise ESG?",
-        a1: "VeriPromise ESG is an AI competition focused on verifying corporate sustainability commitments using NLP technology.",
-        q2: "Who can participate?",
-        a2: "The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.",
-        q3: "What is the dataset?",
-        a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports."
+        intro: "Frequently asked questions about the competition.",
+        q1: "Who can participate?",
+        a1: "The competition is divided into Student Division and General Public Division. Each team can have 1-4 members.",
+        q2: "How many times can I submit per day?",
+        a2: "Teams can submit up to 3 times per day (public + private datasets combined).",
+        q3: "Can I use external datasets or pre-trained models?",
+        a3: "Yes, you may use self-constructed datasets, publicly available external data, or pre-trained models (including large language models). However, you must clearly cite these sources in your technical report.",
+        q4: "Can I modify my team after registration?",
+        a4: "No. After the registration deadline, team member lists and team size cannot be modified. Teams cannot merge or split during the competition period.",
+        q5: "What files do I need to submit?",
+        a5: "You need to submit: (1) Written report (Word & PDF), (2) Implementation code (GitHub/Google Drive link), and (3) Test set prediction results (.csv format).",
+        q6: "Can I manually annotate the test dataset?",
+        a6: "No. Manual annotation or modification of the test dataset is strictly prohibited. All predictions must be automatically generated by programs to ensure fairness.",
+        q7: "How is the final ranking determined?",
+        a7: "The final ranking is based on the Private Leaderboard results. The public dataset is for reference during the competition only."
       },
       resources: {
         title: "Related Resources",
@@ -1033,14 +1039,12 @@ const translations = {
       },
       footer: {
         copyright:
-          "© 2025-2026 AI CUP - ESG Promise Verification Competition",
-        organizer1:
-          "Organizer: Graduate Institute of Information Management, NTPU",
-        organizer2: "The Fintech and Green Finance Center (FGFC), NTPU",
-        email: "📧 Email",
-        website: "🌐 NTPU Website",
-        sampleCode: "💻 Sample Code",
-        registration: "📝 AI CUP Registration",
+          "© 2026 AI CUP - ESG Promise Verification Competition",
+        organizer:
+          "Organizer: Graduate Institute of Information Management & The Fintech and Green Finance Center (FGFC), NTPU",
+        email: "Email",
+        sampleCode: "Sample Code",
+        registration: "AI CUP Registration System",
       },
     },
   },
@@ -1739,3 +1743,20 @@ document.addEventListener('click', (e) => {
 
 // 頁面載入時載入協辦單位資料
 window.addEventListener('load', loadCoOrganizers);
+
+/* ===================================
+   FAQ Toggle Functionality
+   =================================== */
+function toggleFaq(element) {
+    const faqItem = element.closest('.faq-item');
+    faqItem.classList.toggle('active');
+}
+
+// ESC 鍵關閉所有展開的 FAQ
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.faq-item.active').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+});
