@@ -170,7 +170,7 @@ const translations = {
           stepName: "專家審核",
           item1: "領域專家最終審核",
           item2: "品質控制與修正",
-          item3: "數據集發布",
+          item3: "數據集發佈",
         },
       },
       evaluation: {
@@ -238,7 +238,7 @@ const translations = {
       timeline: {
         title: "競賽時程",
         item1: {
-          date: "2026.03.01 - 2026.05.01",
+          date: "2026.03.01 - 05.01",
           title: "開放報名 & 第一部分訓練集下載",
           desc: "開放隊伍報名，同時釋出第一部分訓練數據集",
         },
@@ -248,39 +248,39 @@ const translations = {
           desc: "舉辦競賽說明與技術培訓課程",
         },
         item3: {
-          date: "2026.05.01 - 2026.06.01",
+          date: "2026.05.01 - 06.01",
           title: "第二部分訓練集下載",
           desc: "釋出第二部分訓練數據集",
         },
         item4: {
-          date: "2026.06.01 - 2026.06.15",
+          date: "2026.06.01 - 06.15",
           title: "驗證集下載",
           desc: "提供驗證數據集供參賽者調整模型",
         },
         item5: {
-          date: "2026.06.18 - 2026.06.20",
-          title: "競賽測試集下載與提測上傳",
+          date: "2026.06.18 - 06.20",
+          title: "競賽測試集下載與預測結果上傳",
           desc: "開放測試集下載，提交截止時間：6/20 23:59:59（每日限 3 次）",
         },
         item6: {
           date: "2026.06.23",
-          title: "結果公布",
-          desc: "公布初步競賽結果",
+          title: "結果公佈",
+          desc: "公佈初步競賽結果",
         },
         item7: {
-          date: "2026.06.23 - 2026.06.30",
+          date: "2026.06.23 - 06.30",
           title: "上傳報告和程式碼",
           desc: "得獎候選隊伍上傳技術報告與實作程式碼",
         },
         item8: {
-          date: "2026.06.30 - 2026.07.14",
+          date: "2026.06.30 - 07.14",
           title: "成績評估",
           desc: "評審團隊審核報告與程式碼，進行最終評估",
         },
         item9: {
           date: "2026.07.24",
-          title: "公布最後名次",
-          desc: "公布正式得獎名單",
+          title: "公佈最後名次",
+          desc: "公佈正式得獎名單",
         },
         item10: {
           date: "2027.03",
@@ -772,52 +772,52 @@ const translations = {
       timeline: {
         title: "Competition Schedule",
         item1: {
-          date: "March 1 - May 1, 2026",
+          date: "2026.03.01 - 05.01",
           title: "Registration Open & First Training Set Release",
           desc: "Team registration opens; first part of training dataset released",
         },
         item2: {
-          date: "March 2026",
-          title: "Regional Tour Training Programs",
+          date: "2026.03",
+          title: "Regional Hands-on Workshops",
           desc: "Competition briefing and technical training sessions",
         },
         item3: {
-          date: "May 1 - June 1, 2026",
+          date: "2026.05.01 - 06.01",
           title: "Second Training Set Release",
           desc: "Second part of training dataset released",
         },
         item4: {
-          date: "June 1 - June 15, 2026",
+          date: "2026.06.01 - 06.15",
           title: "Validation Set Release",
           desc: "Validation dataset provided for participants to adjust models",
         },
         item5: {
-          date: "June 18 - June 20, 2026",
+          date: "2026.06.18 - 06.20",
           title: "Test Set Release & Submission Upload",
           desc: "Test set available; submission deadline: 6/20 23:59:59 (3 submissions per day)",
         },
         item6: {
-          date: "June 23, 2026",
+          date: "2026.06.23",
           title: "Results Announcement",
           desc: "Preliminary competition results announced",
         },
         item7: {
-          date: "June 23 - June 30, 2026",
+          date: "2026.06.23 - 06.30",
           title: "Report & Code Submission",
           desc: "Award candidate teams submit technical reports and implementation code",
         },
         item8: {
-          date: "June 30 - July 14, 2026",
+          date: "2026.06.30 - 07.14",
           title: "Final Evaluation",
           desc: "Jury reviews reports and code, conducts final assessment",
         },
         item9: {
-          date: "July 24, 2026",
+          date: "2026.07.24",
           title: "Final Rankings Announcement",
           desc: "Official award winners announced",
         },
         item10: {
-          date: "March 2027",
+          date: "2027.03",
           title: "Award Ceremony (Date TBA)",
           desc: "Award ceremony and technical sharing session",
         },
