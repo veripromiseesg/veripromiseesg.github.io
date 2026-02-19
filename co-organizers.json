@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "name_ch": "Google 學生開發者社群 STUST",
+    "name_en": "GDG on Campus STUST",
+    "logo": "img/co-organizer/Google 學生開發者社群 STUST.png",
+    "intro": "",
+    "link": "https://gdsc-stust.web.app"
+  },
+  {
+    "id": 4,
+    "name_ch": "",
+    "name_en": "Google Developer Group on Campus TMU",
+    "logo": "img/co-organizer/Google Developer Group on Campus TMU.png",
+    "intro": "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
+    "link": "https://www.instagram.com/tmu_gdgoncampus/"
+  },
+  {
+    "id": 8,
+    "name_ch": "中原大學 開源軟體開發社",
+    "name_en": "",
+    "logo": "img/co-organizer/中原大學 開源軟體開發社.png",
+    "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持 的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    "link": "https://www.instagram.com/gdg.on.campus_cycu"
+  }
+]

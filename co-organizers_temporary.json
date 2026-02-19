@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name_ch": "Google 學生開發者社群 - 臺北大學",
+    "name_en": "Google Developer Groups (GDG) on Campus NTPU",
+    "logo": "img/co-organizer/GDG on Campus NTPU.png",
+    "intro": [
+        "我們是 Google 支持的學生開發者社群，也是你踏入科技業的敲門磚～",
+        "本社致力於推廣開源技術、AI 等跨領域創新應用，將創意化為實際成果。",
+        "無論是專案開發、跨校合作活動，還是業師講座、實作工作坊、企業參訪，都精彩可期！"
+    ],
+    "link": "https://www.instagram.com/gdg.ntpu/"
+  },
+  {
+    "id": 2,
+    "name_ch": "逢甲大學 FCU GDGoC",
+    "name_en": "",
+    "logo": "",
+    "intro": "",
+    "link": ""
+  },
+  {
+    "id": 3,
+    "name_ch": "國立成功大學 谷歌軟體開發社",
+    "name_en": "Google Developer Groups On Campus NCKU",
+    "logo": "img/co-organizer/國立成功大學 谷歌軟體開發社.png",
+    "intro": [
+        "我們是成大的軟體開發者社群，致力於推動校園軟體開發。",
+        "我們努力使軟體開發跳脫傳統校園框架，透過 Matching 想法人與開發者，讓更多靈感能實現，帶給校園軟體開發更多價值。"
+    ],
+    "link": "https://www.facebook.com/nckugdgoncampus"
+  },
+  {
+    "id": 4,
+    "name_ch": "Google 學生開發者社群 STUST",
+    "name_en": "GDG on Campus STUST",
+    "logo": "img/co-organizer/Google 學生開發者社群 STUST.png",
+    "intro": "",
+    "link": "https://gdsc-stust.web.app"
+  },
+  {
+    "id": 5,
+    "name_ch": "GDG On Campus University of Taipei",
+    "name_en": "GDG On Campus University of Taipei",
+    "logo": "img/co-organizer/GDG On Campus University of Taipei.png",
+    "intro": [
+        "GDG On Campus University of Taipei 是一個擁抱多元、促進跨領域成長的學生組織。",
+        "我們聚焦於創新創業、教育數位轉型與 AI 賦能，透過理論與實務兼顧的工作坊、專案導向的學習體驗、適合初學者與進階者的雙軌並行學習模式以及與各產業專業人士的深度連結，致力於打造資源豐富的學習環境，縮短學術與產業之間的距離。"
+    ],
+    "link": "https://gdg.community.dev/gdg-on-campus-university-of-taipei-taipei-taiwan/"
+  },
+  {
+    "id": 6,
+    "name_ch": "",
+    "name_en": "Google Developer Group on Campus TMU",
+    "logo": "img/co-organizer/Google Developer Group on Campus TMU.png",
+    "intro": "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
+    "link": "https://www.instagram.com/tmu_gdgoncampus/"
+  },
+  {
+    "id": 7,
+    "name_ch": "彰化師範大學 NCUE GDGoC",
+    "name_en": "",
+    "logo": "",
+    "intro": "",
+    "link": ""
+  },
+  {
+    "id": 8,
+    "name_ch": "中原大學 開源軟體開發社",
+    "name_en": "",
+    "logo": "img/co-organizer/中原大學 開源軟體開發社.png",
+    "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    "link": "https://www.instagram.com/gdg.on.campus_cycu"
+  },
+  {
+    "id": 9,
+    "name_ch": "中興大學資訊科學研習社",
+    "name_en": "GDG on Campus NCHU",
+    "logo": "img/co-organizer/中興大學資訊科學研習社.png",
+    "intro": [
+        "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。",
+        "我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。",
+        "我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。"
+    ],
+    "link": ""
+  },
+  {
+    "id": 10,
+    "name_ch": "中山大學 NSYSU GDGoC",
+    "name_en": "",
+    "logo": "",
+    "intro": "",
+    "link": ""
+  },
+  {
+    "id": 11,
+    "name_ch": "Google Developer Group On Campus NCU",
+    "name_en": "Google Developer Group On Campus NCU",
+    "logo": "img/co-organizer/Google Developer Group On Campus NCU.png",
+    "intro": "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
+    "link": "https://www.instagram.com/gdscncu/"
+  },
+  {
+    "id": 12,
+    "name_ch": "臺科大 Google 學生開發者社群",
+    "name_en": "GDG on Campus NTUST",
+    "logo": "img/co-organizer/臺科大 Google 學生開發者社群.png",
+    "intro": [
+        "想學程式卻不知從何入手？我們是一群熱愛技術與分享的學生，透過與各校社團及企業的聯手合作，從日常生活常見的主題切入，致力於打造一個跨領域的友善學習環境。",
+        "加入我們，一起成長為開發者，為開源社群貢獻一份心力吧！"
+    ],
+    "link": "https://gdg-ntust.org/"
+  },
+  {
+    "id": 13,
+    "name_ch": "國立臺北科技大學程式設計研究社",
+    "name_en": "National Taipei University of Technology (NTUT) Programming Club / NPC",
+    "logo": "img/co-organizer/國立臺北科技大學程式設計研究社.png",
+    "intro": [
+        "北科程式設計研究社致力於推動校內程式教育與資訊素養培養，提供系統化學習資源與實作機會，協助學生建立扎實的邏輯思考與問題解決能力。",
+        "社團重視互助合作與友善交流氛圍，透過課程、競賽與專題分享，促進對程式設計有興趣之學生彼此交流與成長，強化實務能力與跨領域應用視野。"
+    ],
+    "link": ""
+  },
+  {
+    "id": 14,
+    "name_ch": "大同大學科學開源服務社",
+    "name_en": "TTUSSC",
+    "logo": "img/co-organizer/大同大學科學開源服務社.png",
+    "intro": [
+        "本社是一個結合開源、技術型社課與營隊服務活動的社團。",
+        "我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。"
+    ],
+    "link": "https://ttussc.org/"
+  }
+]
