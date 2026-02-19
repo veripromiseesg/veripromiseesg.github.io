@@ -1595,7 +1595,7 @@ function getChartData() {
         taskInfo = translations['en'].translation.evaluation.chartTooltip;
     }
 
-    // 【關鍵】：從 chartTooltip 中提取各子任務的 "name" 作為圖表標籤
+    // 從 chartTooltip 中提取各子任務的 "name" 作為圖表標籤
     const labels = [
         taskInfo.task1.name, 
         taskInfo.task2.name, 
