@@ -21,11 +21,14 @@
   },
   {
     "id": 3,
-    "name_ch": "成功大學 NCKU GDGoC",
-    "name_en": "",
-    "logo": "",
-    "intro": "",
-    "link": ""
+    "name_ch": "國立成功大學 谷歌軟體開發社",
+    "name_en": "Google Developer Groups On Campus NCKU",
+    "logo": "img/co-organizer/國立成功大學 谷歌軟體開發社.png",
+    "intro": [
+        "我們是成大的軟體開發者社群，致力於推動校園軟體開發。",
+        "我們努力使軟體開發跳脫傳統校園框架，透過 Matching 想法人與開發者，讓更多靈感能實現，帶給校園軟體開發更多價值。"
+    ],
+    "link": "https://www.facebook.com/nckugdgoncampus"
   },
   {
     "id": 4,
@@ -67,7 +70,7 @@
     "name_ch": "中原大學 開源軟體開發社",
     "name_en": "",
     "logo": "img/co-organizer/中原大學 開源軟體開發社.png",
-    "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持 的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
     "link": "https://www.instagram.com/gdg.on.campus_cycu"
   },
   {
@@ -96,7 +99,7 @@
     "name_en": "Google Developer Group On Campus NCU",
     "logo": "img/co-organizer/Google Developer Group On Campus NCU.png",
     "intro": "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
-    "link": "https://www.instagram.com/gdscncu//"
+    "link": "https://www.instagram.com/gdscncu/"
   },
   {
     "id": 12,
