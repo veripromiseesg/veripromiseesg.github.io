@@ -1585,15 +1585,30 @@ body[data-lang="zh"] .task-card-simple h3 {
     overflow: hidden;
 }
 
+#timeline .container {
+    max-width: 100% !important; /* 覆蓋原本的寬度限制 */
+    width: 100% !important;
+    padding: 0 !important;      /* 移除左右內距 */
+    margin: 0 !important;       /* 移除左右外距 */
+}
+
+/* 區塊大標 */
+#timeline h2.section-title {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
 /* 1. 地圖容器設定 */
 .timeline-map-box {
     position: relative;
-    width: 100%;
-    margin: 0 auto;
-    /* 這裡可以限制最大寬度，確保在大螢幕上不會拉太長 */
-    max-width: 1300px; 
-    /* 保持圖片比例 */
-    aspect-ratio: 16 / 9; 
+    width: 115%;
+    margin-left: 0 !important;
+    margin-right: auto;
+    margin-bottom: -26rem;
+    max-width: 1600px;      /* 最大寬度 */
+    aspect-ratio: 16 / 9;   /* 保持圖片比例 */
+    transform: translateX(-35px) translateY(-25px);
 }
 
 /* 背景圖片 (馬路圖) */
@@ -1607,41 +1622,41 @@ body[data-lang="zh"] .task-card-simple h3 {
 /* 2. 共用定位點設定 */
 .timeline-point {
     position: absolute;
-    transform: translate(-50%, -50%); /* 讓定位點位於元素的正中心 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px; /* 限制文字區塊寬度，避免太寬 */
-    text-align: center;
+    width: 0; 
+    height: 0;
     z-index: 5;
 }
 
-/* 3. 圖釘 (Pin) 樣式 */
+/* 3. 圓點樣式 */
 .t-pin {
     width: 16px;
     height: 16px;
-    background-color: #764ba2; /* 紫色圖釘 */
-    border: 3px solid #fff;
+    background-color: #764ba2; /* 紫色填滿 */
+    border: 3px solid #fff;    /* 白色邊框 */
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    margin: 10px 0; /* 讓圖釘跟文字有點距離 */
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
     z-index: 10;
 }
 
 /* 4. 文字樣式設定 */
 
-/* 日期 (統一深灰色粗體) */
+.t-date, .t-title, .t-desc {
+    position: absolute;
+    white-space: nowrap; /* 防止文字自動換行，除非用 br */
+    text-align: center;
+    transform: translateX(-50%); /* 預設水平置中於圓點 */
+}
+
+/* 日期 */
 .t-date {
-    color: #333333; /* 深灰色 */
+    color: #686868; /* 深灰色 */
     font-weight: 700; /* 粗體 */
     font-size: 1.1rem;
-    font-family: 'Roboto Mono', monospace; /* 如果想要像程式碼一樣整齊，可選用等寬字體 */
-    margin-bottom: 4px;
-    background: rgba(255,255,255,0.8); /* 稍微加點白底，防背景干擾 */
-    padding: 2px 8px;
-    border-radius: 4px;
-    display: inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 /* 標題 */
@@ -1650,33 +1665,31 @@ body[data-lang="zh"] .task-card-simple h3 {
     color: #667eea;
     font-size: 1.05rem;
     line-height: 1.3;
+    white-space: normal;  /* 允許文字換行 */
+    width: 400px;         /* 設定寬度限制 */
 }
 
 /* 說明文字 (只在特定項目顯示) */
 .t-desc {
     font-size: 0.85rem;
     color: #666;
-    margin-top: 5px;
-    background: #fff;
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 3px solid #764ba2;
-    text-align: left;
+    text-align: left; /* 說明文字通常靠左較好讀 */
+    width: 200px;     /* 限制寬度讓它換行 */
+    white-space: normal; /* 允許換行 */
+    line-height: 1.6;
 }
-
 
 /* ===================================
    排版邏輯 (Top vs Bottom Rows)
    =================================== */
 
-/* 上排 (Top Row): 文字都在 Pin 上方 */
+/* 上排 (Top Row) */
 .top-row {
-    flex-direction: column; /* 正常順序：文字 -> Pin */
+    flex-direction: column; /* 文字 -> 圓點 */
     justify-content: flex-end;
 }
 .top-row .t-pin {
-    order: 2; /* Pin 放下面 */
+    order: 2; /* 圓點放下面 */
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -1685,7 +1698,7 @@ body[data-lang="zh"] .task-card-simple h3 {
     padding-bottom: 5px;
 }
 
-/* 下排 (Bottom Row): 日期在 Pin 上，標題在 Pin 下 */
+/* 下排 (Bottom Row) */
 .bottom-row {
     flex-direction: column;
 }
@@ -1693,103 +1706,93 @@ body[data-lang="zh"] .task-card-simple h3 {
     order: 1; /* 日期最上面 */
 }
 .bottom-row .t-pin {
-    order: 2; /* Pin 中間 */
+    order: 2; /* 圓點中間 */
 }
 .bottom-row .content-group-bottom {
     order: 3; /* 標題與說明最下面 (馬路下方) */
     padding-top: 5px;
 }
 
-
 /* ===================================
-   個別座標微調 (請依照您的圖片調整 top/left)
+   個別座標微調 (Fine-tuning Area)
+   提示：
+   1. 圓點（越大越往下、右）
+   2. .t-date, .t-title 的 top/bottom 控制文字相對於圖釘的距離
    =================================== */
 
-/* --- 第一項 (Registration Starts) --- */
-.point-1 {
-    top: 30%;  /* 垂直位置 (依據馬路位置調整) */
-    left: 10%; /* 水平位置 */
-}
+/* --- 上排 (Top Row)：日期、標題在圓點上方 ---*/
 
-/* --- 第二項 (Sample Data) --- */
-.point-2 {
-    top: 30%;
-    left: 30%;
-}
+/* ------ 第一項: Registration Starts ------ */
+.point-1 { top: 7%; left: 24.35%; } /* 圓點位置 */
+.point-1 .t-date  { bottom: 110px; }  /* 日期位置 (在圖釘上方 25px) */
+.point-1 .t-title { bottom: 80px; }   /* 標題位置 (在圖釘上方 50px) */
 
-/* --- 第三項 (Training Data) --- */
-.point-3 {
-    top: 30%;
-    left: 50%;
-}
+/* ------ 第二項: Regional Workshops ------ */
+.point-2 { top: 17%; left: 37.65%; }
+.point-2 .t-date  { bottom: 130px; }
+.point-2 .t-title { bottom: 80px; }
 
-/* --- 第四項 (Registration Ends) --- */
-.point-4 {
-    top: 30%;
-    left: 70%;
-}
+/* ------ 第三項: Training Set Pt.2 ------ */
+.point-3 { top: 16.4%; left: 51.2%; }
+.point-3 .t-date  { bottom: 110px; }
+.point-3 .t-title { bottom: 80px; }
 
-/* --- 第五項 (Test Data) --- */
-.point-5 {
-    top: 30%;
-    left: 90%;
-}
+/* ------ 第四項: Validation Set ------ */
+.point-4 { top: 23.4%; left: 65%; }
+.point-4 .t-date  { bottom: 110px; }
+.point-4 .t-title { bottom: 80px; }
 
+/* ------ 第五項: Test Data ------ */
+.point-5 { top: 23.6%; left: 77.74%; }
+.point-5 .t-date  { bottom: 130px; }
+.point-5 .t-title { bottom: 80px; }
 
-/* --- 第六項 (Public Test Starts) --- */
-.point-6 {
-    top: 65%; /* 下排通常比較低 */
-    left: 90%;
-}
+/* --- 下排 (Bottom Row)：日期、標題分別在圓點上、下 (馬路下) ---*/
 
-/* --- 第七項 (Public Test Ends) --- */
-.point-7 {
-    top: 65%;
-    left: 70%;
-}
+/* ------ 第六項: Public Test Starts (有說明) ------ */
+.point-6 { top: 43.4%; left: 75.47%; }
+.point-6 .t-date  { bottom: 80px; transform: translateX(-54%);} /* 日期在上 */
+.point-6 .t-title { top: 34px; }    /* 標題在下 */
+.point-6 .t-desc  { top: 65px; }    /* 說明在標題更下面 */
 
-/* --- 第八項 (Private Test Starts) --- */
-.point-8 {
-    top: 65%;
-    left: 50%;
-}
+/* ------ 第七項: Public Test Ends ------ */
+.point-7 { top: 40.3%; left: 61.6%; }
+.point-7 .t-date  { bottom: 80px; transform: translateX(-50.5%);}
+.point-7 .t-title { top: 34px; }
 
-/* --- 第九項 (Private Test Ends) --- */
-.point-9 {
-    top: 65%;
-    left: 30%;
-}
+/* ------ 第八項: Private Test Starts (有說明) ------ */
+.point-8 { top: 36.6%; left: 49.15%; }
+.point-8 .t-date  { bottom: 80px; transform: translateX(-50.5%);}
+.point-8 .t-title { top: 37px; }
+.point-8 .t-desc  { top: 65px; }
 
-/* --- 第十項 (Award Ceremony) --- */
-.point-10 {
-    top: 65%;
-    left: 10%;
-}
+/* ------ 第九項: Private Test Ends ------ */
+.point-9 { top: 34.3%; left: 35.9%; }
+.point-9 .t-date  { bottom: 80px; transform: translateX(-54%);}
+.point-9 .t-title { top: 40px; }
+
+/* ------ 第十項: Award Ceremony ------ */
+.point-10 { top: 25.8%; left: 21.45%; }
+.point-10 .t-date  { bottom: 80px; transform: translateX(-48%);}
+.point-10 .t-title { top: 35px; }
 
 
 /* ===================================
    手機版響應式 (RWD)
    =================================== */
-/* 手機畫面太小，地圖會看不清楚，建議轉回垂直排列或卷軸 */
 @media (max-width: 900px) {
     .timeline-map-box {
-        /* 讓地圖可以左右滑動，保持原比例 */
         width: 100%;
         overflow-x: auto;
-        aspect-ratio: auto;
-        height: 500px; /* 給定一個高度 */
+        height: 500px;
     }
-    
     .timeline-bg-img {
-        width: 1200px; /* 強制圖片寬度，觸發捲動 */
+        width: 1200px; /* 手機版強制圖片寬度，讓它可捲動 */
         max-width: none;
         height: 100%;
         object-fit: cover;
     }
-    
-    /* 這裡需要配合圖片寬度 1200px 去重新定位，
-       或者您希望手機版直接變成列表清單？
-       目前設定為「可滑動的地圖」。TK */
+    /* 手機版可能需要微調座標，這裡暫時繼承上面的 % 設定 */
 }
 
 /* ===================================
@@ -2105,7 +2108,7 @@ body[data-lang="zh"] .task-card-simple h3 {
 }
 
 /* ===================================
-   Co-organizers Section (協辦單位)
+   Co-organizers Section
    =================================== */
 
 .co-organizers-container {

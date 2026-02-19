@@ -778,7 +778,7 @@ const translations = {
         },
         item2: {
           date: "2026.03",
-          title: "Regional Hands-on Workshops",
+          title: "Regional Hands-on<br>Workshops",
           desc: "Competition briefing and technical training sessions",
         },
         item3: {
@@ -793,7 +793,7 @@ const translations = {
         },
         item5: {
           date: "2026.06.18 - 06.20",
-          title: "Test Set Release & Submission Upload",
+          title: "Test Set Release &<br>Submission Upload",
           desc: "Test set available; submission deadline: 6/20 23:59:59 (3 submissions per day)",
         },
         item6: {
@@ -803,7 +803,7 @@ const translations = {
         },
         item7: {
           date: "2026.06.23 - 06.30",
-          title: "Report & Code Submission",
+          title: "Report &<br>Code Submission",
           desc: "Award candidate teams submit technical reports and implementation code",
         },
         item8: {
@@ -813,17 +813,18 @@ const translations = {
         },
         item9: {
           date: "2026.07.24",
-          title: "Final Rankings Announcement",
+          title: "Final Rankings<br>Announcement",
           desc: "Official award winners announced",
         },
         item10: {
           date: "2027.03",
-          title: "Award Ceremony (Date TBA)",
+          title: "Award Ceremony<br>(Date TBA)",
           desc: "Award ceremony and technical sharing session",
         },
       },
       team: {
-        title: "Organizing Team",        piTitle: "Principal Investigator",
+        title: "Organizing Team",
+        piTitle: "Principal Investigator",
         pi: {
           name: "Prof. Min-Yuh Day",
           role: "Principal Investigator",
