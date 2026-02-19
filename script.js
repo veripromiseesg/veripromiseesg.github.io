@@ -1647,33 +1647,40 @@ let coOrganizersData = [];
 async function loadCoOrganizers() {
     try {
         const response = await fetch('co-organizers.json');
-        coOrganizersData = await response.json();
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        
+        coOrganizersData = data.sort((a, b) => a.id - b.id);
         renderCoOrganizers();
     } catch (error) {
         console.error('Error loading co-organizers:', error);
     }
 }
 
-// 渲染協辦單位 logo
+// 渲染協辦單位 logo (加入雙語 Tooltip)
 function renderCoOrganizers() {
     const slider = document.getElementById('coOrgSlider');
     if (!slider) return;
 
-    // 創建 logo HTML（處理 .ai 檔案路徑問題，改為 .png）
     const logosHTML = coOrganizersData.map(org => {
-        // 將 .ai 改為 .png（因為瀏覽器無法直接顯示 .ai 檔案）
+        if (!org.logo || org.logo.trim() === '') return '';
         const logoPath = org.logo.replace('.ai', '.png');
+        
         return `
-            <img src="${logoPath}" 
-                 alt="${org.name_ch || org.name_en}" 
-                 class="co-org-logo"
-                 onclick="openCoOrgModal(${org.id})"
-                 onerror="console.error('Failed to load:', '${logoPath}')">
+            <div class="co-org-logo-wrapper" onclick="openCoOrgModal(${org.id})">
+                <img src="${logoPath}" 
+                     alt="${org.name_ch || org.name_en}" 
+                     class="co-org-logo"
+                     onerror="this.parentElement.style.display='none'">
+                <div class="co-org-tooltip">
+                    <span class="lang-zh">認識他們</span>
+                    <span class="lang-en">View Details</span>
+                </div>
+            </div>
         `;
     }).join('');
 
-    // 複製 3 次以實現無縫循環
-    slider.innerHTML = logosHTML + logosHTML + logosHTML;
+    slider.innerHTML = logosHTML + logosHTML + logosHTML + logosHTML;
 }
 
 // 開啟協辦單位 modal
@@ -1688,25 +1695,15 @@ function openCoOrgModal(id) {
     const modalIntro = document.getElementById('modalIntro');
     const modalLinkContainer = document.getElementById('modalLinkContainer');
 
-    // 設置 logo（轉為 .png）
     modalLogo.src = org.logo.replace('.ai', '.png');
 
-    // 設置名稱（永遠顯示中英文）
-    if (org.name_ch) {
-        modalNameCh.textContent = org.name_ch;
-        modalNameCh.style.display = 'block';
-    } else {
-        modalNameCh.style.display = 'none';
-    }
+    // 5(2). 永遠顯示中英文 (如果沒有中文則留白)
+    modalNameCh.textContent = org.name_ch || '';
+    modalNameCh.style.display = org.name_ch ? 'block' : 'none';
 
-    if (org.name_en) {
-        modalNameEn.textContent = org.name_en;
-        modalNameEn.style.display = 'block';
-    } else {
-        modalNameEn.style.display = 'none';
-    }
+    modalNameEn.textContent = org.name_en || '';
+    modalNameEn.style.display = org.name_en ? 'block' : 'none';
 
-    // 設置簡介
     if (Array.isArray(org.intro)) {
         modalIntro.innerHTML = org.intro.map(p => `<p>${p}</p>`).join('');
     } else if (org.intro) {
@@ -1715,14 +1712,13 @@ function openCoOrgModal(id) {
         modalIntro.innerHTML = '';
     }
 
-    // 設置連結
+    // 5(3). 刪除 Visit Website 的 link emoji
     if (org.link) {
-        modalLinkContainer.innerHTML = `<a href="${org.link}" target="_blank">🔗 Visit Website</a>`;
+        modalLinkContainer.innerHTML = `<a href="${org.link}" target="_blank">Visit Website</a>`;
     } else {
         modalLinkContainer.innerHTML = '';
     }
 
-    // 顯示 modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -1730,11 +1726,16 @@ function openCoOrgModal(id) {
 // 關閉協辦單位 modal
 function closeCoOrgModal() {
     const modal = document.getElementById('coOrgModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+    if(modal) {
+        modal.classList.remove('active');
+        // 只有當沒有其他 Task Modal 開啟時，才恢復捲動
+        if(!document.querySelector('.modal-overlay.active')) {
+            document.body.style.overflow = '';
+        }
+    }
 }
 
-// 點擊背景關閉 modal
+// 點擊背景關閉協辦單位 modal
 document.addEventListener('click', (e) => {
     const modal = document.getElementById('coOrgModal');
     if (e.target === modal) {
@@ -1742,7 +1743,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// 頁面載入時載入協辦單位資料
 window.addEventListener('load', loadCoOrganizers);
 
 /* ===================================
@@ -1753,9 +1753,18 @@ function toggleFaq(element) {
     faqItem.classList.toggle('active');
 }
 
-// ESC 鍵關閉所有展開的 FAQ
+/* ===================================
+   全域 ESC 鍵關閉整合 (Tasks, CoOrg, FAQ)
+   =================================== */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+        // 1. 關閉任務詳細彈窗
+        if (typeof closeAllModals === "function") closeAllModals();
+        
+        // 2. 關閉協辦單位彈窗
+        closeCoOrgModal();
+        
+        // 3. 收起所有展開的 FAQ
         document.querySelectorAll('.faq-item.active').forEach(item => {
             item.classList.remove('active');
         });

@@ -2143,54 +2143,93 @@ body[data-lang="zh"] .task-card-simple h3 {
    =================================== */
 
 .co-organizers-container {
-  margin: 3rem 0;
-  overflow: hidden;
+  margin: 1rem 0 3rem 0;
+  overflow: hidden;        
   position: relative;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
+  /* 左右邊緣淡出遮罩 */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 .co-organizers-slider {
   display: flex;
-  gap: 4rem;
-  animation: slideLogos 40s linear infinite;
-  width: max-content;
+  gap: 4rem;               
+  width: max-content;      
   align-items: center;
-}
-
-.co-organizers-slider:hover {
-  animation-play-state: paused;
+  animation: slideLogos 20s linear infinite;  /* 跑馬燈速度 */
+  padding-bottom: 30px;       /* 預留底部空間給 Hover 對話框 */
 }
 
 @keyframes slideLogos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-25% - 1rem)); }
 }
 
-.co-org-logo {
-  height: 100px;
-  width: auto;
-  max-width: 200px;
+/* 4. Logo 外層容器 (用來掛載對話框) */
+.co-org-logo-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
   flex-shrink: 0;
-  display: block;
 }
 
-.co-org-logo:hover {
+/* Logo 圖片 */
+.co-org-logo {
+  height: 75px;            
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease, transform 0.1s ease; 
+}
+
+/* Hover 時變灰階 */
+.co-org-logo-wrapper:hover .co-org-logo {
   filter: grayscale(100%);
-  transform: scale(1.1);
 }
 
-.co-org-logo:active {
+/* Active 按壓感 (往下壓並稍微縮小) */
+.co-org-logo-wrapper:active .co-org-logo {
   transform: scale(0.95);
 }
 
-/* 協辦單位 Modal */
+/* 4. Hover 圓角對話框 (Tooltip) */
+.co-org-tooltip {
+  position: absolute;
+  bottom: -35px; /* 位於 Logo 下方 */
+  background-color: #555555;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  pointer-events: none; /* 避免干擾點擊 */
+  z-index: 10;
+}
+
+/* Hover 時顯示對話框 */
+.co-org-logo-wrapper:hover .co-org-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 切換對話框語言 */
+body[data-lang="zh"] .lang-en { display: none; }
+body[data-lang="en"] .lang-zh { display: none; }
+
+/* --- Co-organizers Modal --- */
+
 .co-org-modal {
   display: none;
   position: fixed;
@@ -2228,14 +2267,8 @@ body[data-lang="zh"] .task-card-simple h3 {
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .co-org-modal-close {
@@ -2261,9 +2294,11 @@ body[data-lang="zh"] .task-card-simple h3 {
   color: #333;
 }
 
+/* Modal Logo */
 .co-org-modal-logo {
-  width: 120px;
-  height: auto;
+  width: 220px;       /* 寬度 */
+  max-height: 140px;  /* 最高高度 */
+  object-fit: contain;/* 保持比例 */
   margin: 0 auto 1.5rem;
   display: block;
 }
@@ -2279,11 +2314,12 @@ body[data-lang="zh"] .task-card-simple h3 {
   margin: 0.5rem 0;
 }
 
+/* 英文名稱 */
 .co-org-modal-names h4 {
   color: #764ba2;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0.5rem 0;
+  font-size: 1rem;    /* 縮小字級 */
+  font-weight: 400;   /* 減輕粗細度 */
+  margin: 0.2rem 0 1rem;
 }
 
 .co-org-modal-intro {
@@ -2314,17 +2350,6 @@ body[data-lang="zh"] .task-card-simple h3 {
 .co-org-modal-link a:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-.lead-badge {
-  display: inline-block;
-  background: #667eea;
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-left: 0.5rem;
 }
 
 /* ===================================

@@ -92,11 +92,11 @@
   },
   {
     "id": 11,
-    "name_ch": "中央大學 NCU GDGoC",
-    "name_en": "",
-    "logo": "",
-    "intro": "",
-    "link": ""
+    "name_ch": "Google Developer Group On Campus NCU",
+    "name_en": "Google Developer Group On Campus NCU",
+    "logo": "img/co-organizer/Google Developer Group On Campus NCU.png",
+    "intro": "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
+    "link": "https://www.instagram.com/gdscncu//"
   },
   {
     "id": 12,
