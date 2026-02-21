@@ -3,6 +3,120 @@
    =================================== */
 
 // ===================================
+// Co-Organizers Data & Modal Logic
+// ===================================
+
+const CO_ORGANIZERS = [
+  {
+    id: 2,
+    name_ch: "Google 學生開發者社群 STUST",
+    name_en: "GDG on Campus STUST",
+    logo: "img/co-organizer/Google 學生開發者社群 STUST.png",
+    intro: "",
+    link: "https://gdsc-stust.web.app"
+  },
+  {
+    id: 4,
+    name_ch: "Google Developer Group on Campus TMU",
+    name_en: "Google Developer Group on Campus TMU",
+    logo: "img/co-organizer/Google Developer Group on Campus TMU.png",
+    intro: "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
+    link: "https://www.instagram.com/tmu_gdgoncampus/"
+  },
+  {
+    id: 8,
+    name_ch: "中原大學 開源軟體開發社",
+    name_en: "CYCU Open Source Software Club × GDG on Campus CYCU",
+    logo: "img/co-organizer/中原大學 開源軟體開發社.png",
+    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    link: "https://www.instagram.com/gdg.on.campus_cycu"
+  }
+];
+
+function renderCoOrganizers() {
+  const grid = document.getElementById("coOrgGrid");
+  if (!grid) return;
+  const isZh = i18next.language === "zh";
+  grid.innerHTML = CO_ORGANIZERS.map(org => {
+    const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
+    return `
+      <div class="co-org-card" role="button" tabindex="0" aria-label="${displayName}"
+        onclick="openCoOrgModal(${org.id})"
+        onkeydown="if(event.key==='Enter'||event.key===' ')openCoOrgModal(${org.id})">
+        <div class="co-org-logo-wrap">
+          <img src="${org.logo}" alt="${displayName}" loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="co-org-logo-fallback" style="display:none"><span>${displayName.charAt(0)}</span></div>
+        </div>
+        <div class="co-org-tooltip">${displayName}</div>
+      </div>`;
+  }).join("");
+}
+
+function openCoOrgModal(id) {
+  const org = CO_ORGANIZERS.find(o => o.id === id);
+  if (!org) return;
+  const isZh = i18next.language === "zh";
+  const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
+  document.getElementById("modalLogo").src = org.logo;
+  document.getElementById("modalLogo").alt = displayName;
+  document.getElementById("modalName").textContent = displayName;
+  const introEl = document.getElementById("modalIntro");
+  introEl.textContent = org.intro || "";
+  introEl.style.display = org.intro ? "block" : "none";
+  document.getElementById("modalLink").href = org.link;
+  const linkEl = document.getElementById("modalLink");
+  linkEl.href = org.link;
+  
+  // 偵錯用：確保連結有成功換成 https://gdsc-stust.web.app 等網址
+  console.log("Current Link:", linkEl.href); 
+
+  const overlay = document.getElementById("coOrgModalOverlay");
+  overlay.classList.add("is-open");
+  overlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  document.getElementById("coOrgModalClose").focus();
+}
+
+function closeCoOrgModal(event) {
+  // 取得背景元素
+  const overlay = document.getElementById("coOrgModalOverlay");
+  
+  // 嚴格判定：只有當點擊的目標 (event.target) 確實是背景本身時才執行關閉
+  // 這樣點擊內部的 modal 內容或按鈕時，就不會誤觸關閉邏輯
+  if (event && event.target === overlay) {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+}
+
+// Escape 鍵關閉 modal
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const overlay = document.getElementById("coOrgModalOverlay");
+    if (overlay && overlay.classList.contains("is-open")) {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+});
+
+// 關閉按鈕監聽
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.getElementById("coOrgModalClose");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      const overlay = document.getElementById("coOrgModalOverlay");
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    });
+  }
+});
+
+// ===================================
 // i18next 翻譯系統配置
 // ===================================
 
@@ -18,10 +132,14 @@ const translations = {
         evaluation: "評估方式",
         timeline: "時程表",
         team: "團隊",
+        coOrganizers: "協辦單位",
         examples: "標註範例",
         contact: "聯絡我們",
         faq: "常見問題",
         resources: "相關資源",
+        competition: "競賽資訊",
+        people: "人員",
+        info: "相關資源",
       },
       hero: {
         subtitle_top: "VeriPromiseESG 2026",
@@ -414,6 +532,11 @@ const translations = {
           dept: "圖書館情報媒體科學系",
         },
       },
+      coOrg: {
+        title: "協辦單位",
+        intro: "感謝以下學生開發者社群的支持與協辦",
+        visitPage: "前往頁面",
+      },
       examples: {
         title: "標註範例說明",
         intro: "以下提供 E、S、G 三類文本的標註範例，協助參賽者理解標註規則與判斷標準",
@@ -567,10 +690,14 @@ const translations = {
         evaluation: "Evaluation",
         timeline: "Timeline",
         team: "Team",
+        coOrganizers: "Co-Organizers",
         examples: "Annotation Examples",
         contact: "Contact",
         faq: "FAQ",
         resources: "Resources",
+        competition: "Competition",
+        people: "People",
+        info: "Info",
       },
       hero: {
         subtitle_top: "VeriPromiseESG 2026",
@@ -977,6 +1104,11 @@ const translations = {
           dept: "Faculty of Library, Information and Media Science",
         },
       },
+      coOrg: {
+        title: "Co-Organizers",
+        intro: "We gratefully acknowledge the support of the following student developer communities",
+        visitPage: "Visit Page",
+      },
       examples: {
         title: "Annotation Examples",
         intro: "Sample annotations for E, S, G categories to help participants understand labeling rules and criteria",
@@ -1139,6 +1271,7 @@ i18next.init(
   },
   function (err, t) {
     updateContent();
+    renderCoOrganizers();
   }
 );
 
@@ -1168,6 +1301,7 @@ function updateContent() {
 function changeLanguage(lang) {
   i18next.changeLanguage(lang, (err, t) => {
     updateContent();
+    renderCoOrganizers();
     // Update button states
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.remove("active");
@@ -1180,16 +1314,32 @@ function changeLanguage(lang) {
 // 平滑滾動
 // ===================================
 
+// ===================================
+// 平滑滾動 - 修正版
+// ===================================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+
+    // 關鍵修正：確保 href 只有一個 "#" 或是空的 "#" 時不執行後續邏輯
+    // 並且確保它不是一個完整的 URL
+    if (href === "#" || !href.startsWith("#")) return;
+
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-      document.getElementById("navLinks").classList.remove("active");
+    
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        // 如果手機選單開啟中，則關閉它
+        const navLinks = document.getElementById("navLinks");
+        if (navLinks) navLinks.classList.remove("active");
+      }
+    } catch (err) {
+      console.error("平滑滾動選擇器錯誤:", err);
     }
   });
 });

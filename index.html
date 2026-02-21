@@ -152,20 +152,39 @@
         </div>
         <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#tasks" data-i18n="nav.tasks">Tasks</a></li>
-          <li><a href="#dataset" data-i18n="nav.dataset">Dataset</a></li>
-          <li>
-            <a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a>
-          </li>
-          <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
-          <li><a href="#team" data-i18n="nav.team">Team</a></li>
-          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-          <li><a href="#examples" data-i18n="nav.examples">Examples</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
-        </ul>
+  <li><a href="#home" data-i18n="nav.home">Home</a></li>
+
+  <li class="nav-dropdown">
+    <a href="#about" class="nav-dropdown-toggle" data-i18n="nav.competition">Competition ▾</a>
+    <ul class="nav-dropdown-menu">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#tasks" data-i18n="nav.tasks">Tasks</a></li>
+      <li><a href="#dataset" data-i18n="nav.dataset">Dataset</a></li>
+      <li><a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
+
+  <li class="nav-dropdown">
+    <a href="#team" class="nav-dropdown-toggle" data-i18n="nav.people">People ▾</a>
+    <ul class="nav-dropdown-menu">
+      <li><a href="#team" data-i18n="nav.team">Team</a></li>
+      <li><a href="#co-organizers" data-i18n="nav.coOrganizers">Co-Organizers</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-dropdown">
+    <a href="#faq" class="nav-dropdown-toggle" data-i18n="nav.info">Info ▾</a>
+    <ul class="nav-dropdown-menu">
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="#examples" data-i18n="nav.examples">Examples</a></li>
+      <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+</ul>
         <div class="lang-switch">
           <button class="lang-btn" id="btn-zh" onclick="changeLanguage('zh')">
             中文
@@ -851,7 +870,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/myday_photo.jpg" alt="Prof. Min-Yuh Day" />
+              <img src="img/myday_photo.jpg" alt="Prof. Min-Yuh Day" loading="lazy" />
             </div>
             <h4 data-i18n="team.pi.name">Prof. Min-Yuh Day</h4>
             <div class="role" data-i18n="team.pi.role">
@@ -880,7 +899,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/Dr. Chung-Chi Chen.png" alt="Dr. Chung-Chi Chen" />
+              <img src="img/Dr. Chung-Chi Chen.png" alt="Dr. Chung-Chi Chen" loading="lazy" />
             </div>
             <h4 data-i18n="team.copi1.name">Dr. Chung-Chi Chen</h4>
             <div class="role" data-i18n="team.copi1.role">
@@ -904,7 +923,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/Yohei Seki.png" alt="Prof. Yohei Seki" />
+              <img src="img/Yohei Seki.png" alt="Prof. Yohei Seki" loading="lazy" />
             </div>
             <h4 data-i18n="team.copi2.name">Prof. Yohei Seki</h4>
             <div class="role" data-i18n="team.copi2.role">
@@ -932,7 +951,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/bob_photo.png" alt="Hsin-Ting LU" />
+              <img src="img/bob_photo.png" alt="Hsin-Ting LU" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra1.name">Hsin-Ting LU</h4>
             <div class="role" data-i18n="team.ra1.role">Researcher</div>
@@ -946,7 +965,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/andy_photo.png" alt="Wen-Ze Chen" />
+              <img src="img/andy_photo.png" alt="Wen-Ze Chen" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra2.name">Wen-Ze Chen</h4>
             <div class="role" data-i18n="team.ra2.role">Researcher</div>
@@ -960,7 +979,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/Wesley_Photo.png" alt="Wei-Chun Huang" />
+              <img src="img/Wesley_Photo.png" alt="Wei-Chun Huang" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra3.name">Wei-Chun Huang</h4>
             <div class="role" data-i18n="team.ra3.role">Researcher</div>
@@ -974,7 +993,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/Yuhan_new.png" alt="Yu-Han Huang" />
+              <img src="img/Yuhan_new.png" alt="Yu-Han Huang" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra4.name">Yu-Han Huang</h4>
             <div class="role" data-i18n="team.ra4.role">Researcher</div>
@@ -988,7 +1007,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img src="img/jeremy_photo.png" alt="Jun-Yu Wu" />
+              <img src="img/jeremy_photo.png" alt="Jun-Yu Wu" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra5.name">Jun-Yu Wu</h4>
             <div class="role" data-i18n="team.ra5.role">Researcher</div>
@@ -1033,6 +1052,54 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+         CO-ORGANIZERS SECTION  (新增)
+         ============================================================ -->
+    <section id="co-organizers">
+      <div class="container">
+        <h2 data-i18n="coOrg.title">協辦單位</h2>
+        <p class="section-intro" data-i18n="coOrg.intro">
+          感謝以下學生開發者社群的支持與協辦
+        </p>
+
+        <!-- Logo grid — rendered by renderCoOrganizers() in script.js -->
+        <div class="co-org-grid" id="coOrgGrid"></div>
+      </div>
+    </section>
+
+    <!-- CO-ORGANIZER MODAL -->
+    <div
+      class="co-org-modal-overlay"
+      id="coOrgModalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalName"
+      aria-hidden="true"
+    >
+      <div class="co-org-modal" id="coOrgModal" onclick="event.stopPropagation()">
+        <button
+          class="co-org-modal-close"
+          id="coOrgModalClose"
+          aria-label="Close"
+        >✕</button>
+        <div class="co-org-modal-logo-wrap">
+          <img id="modalLogo" src="" alt="" />
+        </div>
+        <h3 id="modalName" class="co-org-modal-name"></h3>
+        <p id="modalIntro" class="co-org-modal-intro"></p>
+        <a
+          id="modalLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="co-org-modal-btn"
+        >
+          <span data-i18n="coOrg.visitPage">前往頁面</span> →
+        </a>
+      </div>
+    </div>
+    <!-- /CO-ORGANIZERS -->
 
     <section id="faq">
         <div class="container">
