@@ -133,5 +133,13 @@
         "我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。"
     ],
     "link": "https://ttussc.org/"
+  },
+  {
+    "id": 15,
+    "name_ch": "SITCON 學生計算機年會",
+    "name_en": "Students’ Information Technology Conference",
+    "logo": "img/co-organizer/SITCON 學生計算機年會.png",
+    "intro": "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
+    "link": "http://sitcon.org"
   }
 ]
