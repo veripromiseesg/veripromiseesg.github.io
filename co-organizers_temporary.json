@@ -59,11 +59,11 @@
   },
   {
     "id": 7,
-    "name_ch": "彰化師範大學 NCUE GDGoC",
+    "name_ch": "Google Developer Group on Campus NCUE",
     "name_en": "",
-    "logo": "",
-    "intro": "",
-    "link": ""
+    "logo": "img/co-organizer/Google Developer Group on Campus NCUE.png",
+    "intro": "Google Developer Group on Campus NCUE 為彰師大規模最大的資訊開發社群。結合業界資源與 10 餘項系統開發實績，我們致力於優化校園行政流程，並透過專業講座與知識分享，以技術力全面推動校園數位轉型。",
+    "link": "https://gdg.ncuesa.org.tw"
   },
   {
     "id": 8,
