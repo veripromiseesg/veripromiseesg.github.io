@@ -51,8 +51,8 @@
   },
   {
     "id": 6,
-    "name_ch": "",
-    "name_en": "Google Developer Group on Campus TMU",
+    "name_ch": "Google Developer Group on Campus TMU",
+    "name_en": "",
     "logo": "img/co-organizer/Google Developer Group on Campus TMU.png",
     "intro": "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
     "link": "https://www.instagram.com/tmu_gdgoncampus/"
@@ -68,7 +68,7 @@
   {
     "id": 8,
     "name_ch": "中原大學 開源軟體開發社",
-    "name_en": "",
+    "name_en": "Google Developer Groups on Campus CYCU",
     "logo": "img/co-organizer/中原大學 開源軟體開發社.png",
     "intro": "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
     "link": "https://www.instagram.com/gdg.on.campus_cycu"
@@ -87,10 +87,14 @@
   },
   {
     "id": 10,
-    "name_ch": "中山大學 NSYSU GDGoC",
-    "name_en": "",
-    "logo": "",
-    "intro": "",
+    "name_ch": "中山大學 GDG",
+    "name_en": "GDG on Campus: NSYSU｜Google Developer Student Club",
+    "logo": "img/co-organizer/中山大學 GDG.png",
+    "intro": [
+        "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。",
+        "在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！",
+        "GDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！"
+    ],
     "link": ""
   },
   {
@@ -141,5 +145,13 @@
     "logo": "img/co-organizer/SITCON 學生計算機年會.png",
     "intro": "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
     "link": "http://sitcon.org"
+  },
+  {
+    "id": 16,
+    "name_ch": "高科大 NKUST GDGoC",
+    "name_en": "",
+    "logo": "",
+    "intro": "",
+    "link": ""
   }
 ]
