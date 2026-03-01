@@ -138,7 +138,7 @@ const translations = {
         faq: "常見問題",
         resources: "相關資源",
         competition: "競賽資訊",
-        people: "人員",
+        people: "Team",
         info: "相關資源",
       },
       hero: {
@@ -412,54 +412,49 @@ const translations = {
       timeline: {
         title: "競賽時程",
         item1: {
-          date: "2026.03.01 - 2026.05.01",
-          title: "開放報名 & 第一部分訓練集下載",
-          desc: "開放隊伍報名，同時釋出第一部分訓練數據集",
+          date: "2026.03.04 ~ 2026.04.28",
+          title: "開放報名",
+          desc: "同時開放訓練集下載",
         },
         item2: {
           date: "2026.03",
-          title: "三區巡迴課程",
-          desc: "舉辦競賽說明與技術培訓課程",
+          title: "巡迴實作課程",
+          desc: "具體細節將另行公告於<a href='https://veripromiseesg.github.io/' target='_blank' style='color:#667eea;'>競賽官方網站</a><br>• 北區：臺北市立大學<br>• 中區：靜宜大學<br>• 南區：高雄科技大學",
         },
         item3: {
-          date: "2026.05.01 - 2026.06.01",
-          title: "第二部分訓練集下載",
-          desc: "釋出第二部分訓練數據集",
+          date: "2026.06.03 ~ 2026.06.10",
+          title: "驗證集下載",
+          desc: "",
         },
         item4: {
-          date: "2026.06.01 - 2026.06.15",
-          title: "驗證集下載",
-          desc: "提供驗證數據集供參賽者調整模型",
+          date: "2026.06.10 ~ 2026.06.17",
+          title: "競賽測試集下載與預測結果上傳",
+          desc: "• 競賽測試集將於 6 月 10 日（三）上午 11:00 開放下載<br>• 6 月 10 日（三）上午 11:00 至 6 月 17 日（三）晚上 23:59:59 期間，可上傳競賽測試集預測結果，逾時不候<br>• 公開版排行榜（Public Leaderboard）將實時更新各組最高評分",
         },
         item5: {
-          date: "2026.06.18 - 2026.06.20",
-          title: "競賽測試集下載與提測上傳",
-          desc: "開放測試集下載，提交截止時間：6/20 23:59:59（每日限 3 次）",
+          date: "2026.06.23",
+          title: "初步結果公佈",
+          desc: "公佈私有版排行榜（Private Leaderboard）成績",
         },
         item6: {
-          date: "2026.06.23",
-          title: "結果公布",
-          desc: "公布初步競賽結果",
+          date: "2026.06.24 ~ 2026.06.30",
+          title: "其餘作品繳交",
+          desc: "各隊伍提交預測模型的說明文件、自製之訓練資料集與程式碼",
         },
         item7: {
-          date: "2026.06.23 - 2026.06.30",
-          title: "上傳報告和程式碼",
-          desc: "得獎候選隊伍上傳技術報告與實作程式碼",
+          date: "2026.07.01 ~ 2026.07.14",
+          title: "成績評估",
+          desc: "",
         },
         item8: {
-          date: "2026.06.30 - 2026.07.14",
-          title: "成績評估",
-          desc: "評審團隊審核報告與程式碼，進行最終評估",
+          date: "2026.07.23",
+          title: "公佈最終名次",
+          desc: "",
         },
         item9: {
-          date: "2026.07.24",
-          title: "公布最後名次",
-          desc: "公布正式得獎名單",
-        },
-        item10: {
-          date: "2027.03",
-          title: "頒獎典禮（日期另行公告）",
-          desc: "舉辦頒獎典禮與技術分享會",
+          date: "2027.03（日期待定）",
+          title: "頒獎典禮",
+          desc: "各得獎隊伍須派代表/代理人參加頒獎典禮，以領取實體獎狀（典禮細節另行通知）；電子獎狀則將於典禮結束一個月內寄發",
         },
       },
       team: {
@@ -534,7 +529,7 @@ const translations = {
       },
       coOrg: {
         title: "協辦單位",
-        intro: "感謝以下學生開發者社群的支持與協辦",
+        intro: "感謝以下單位 / 組織的支持與協辦",
         visitPage: "前往頁面",
       },
       examples: {
@@ -631,7 +626,7 @@ const translations = {
           "• 請於 AI CUP 報名系統 (https://go.aicup.tw/) 完成報名登錄",
         note2: "• 參賽隊伍 1-5 人，報名後不可更換成員",
         note3:
-          "• 測試集提交期間：2026/6/18 11:00 - 2026/6/20 23:59:59（每日限 3 次）",
+          "• 測試集提交期間：2026/6/10 11:00 - 2026/6/17 23:59:59（每日限 3 次）",
         note4: "• 需繳交技術報告、實作程式碼與執行環境說明",
         note5: "• 前 15 名全學生隊伍可獲教育部獎狀",
         note6: "• 可使用外部資料與預訓練模型，但須在報告中詳細說明",
@@ -696,7 +691,7 @@ const translations = {
         faq: "FAQ",
         resources: "Resources",
         competition: "Competition",
-        people: "People",
+        people: "Team",
         info: "Info",
       },
       hero: {
@@ -981,54 +976,49 @@ const translations = {
       timeline: {
         title: "Competition Schedule",
         item1: {
-          date: "March 1 - May 1, 2026",
-          title: "Registration Open & First Training Set Release",
-          desc: "Team registration opens; first part of training dataset released",
+          date: "2026.03.04 ~ 2026.04.28",
+          title: "Registration Opens",
+          desc: "Training set available for download.",
         },
         item2: {
           date: "March 2026",
-          title: "Regional Tour Training Programs",
-          desc: "Competition briefing and technical training sessions",
+          title: "Hands-on Workshops",
+          desc: "The exact details will be announced on <a href='https://veripromiseesg.github.io/' target='_blank' style='color:#667eea;'>the official competition website</a>.<br>• Northern Region: University of Taipei (UTaipei)<br>• Central Region: Providence University (PU)<br>• Southern Region: National Kaohsiung University of Science and Technology (NKUST)",
         },
         item3: {
-          date: "May 1 - June 1, 2026",
-          title: "Second Training Set Release",
-          desc: "Second part of training dataset released",
+          date: "2026.06.03 ~ 2026.06.10",
+          title: "Validation Set Release",
+          desc: "Download available.",
         },
         item4: {
-          date: "June 1 - June 15, 2026",
-          title: "Validation Set Release",
-          desc: "Validation dataset provided for participants to adjust models",
+          date: "2026.06.10 ~ 2026.06.17",
+          title: "Test Set Release & Prediction Submission",
+          desc: "• Test set available for download at 11:00 AM on June 10.<br>• Predictions may be uploaded from June 10 (11:00 AM) to June 17 (23:59:59). Late submissions will not be accepted.<br>• The Public Leaderboard will update in real time.",
         },
         item5: {
-          date: "June 18 - June 20, 2026",
-          title: "Test Set Release & Submission Upload",
-          desc: "Test set available; submission deadline: 6/20 23:59:59 (3 submissions per day)",
+          date: "2026.06.23",
+          title: "Preliminary Results Announcement",
+          desc: "Private Leaderboard results announced.",
         },
         item6: {
-          date: "June 23, 2026",
-          title: "Results Announcement",
-          desc: "Preliminary competition results announced",
+          date: "2026.06.24 ~ 2026.06.30",
+          title: "Additional Deliverables Submission",
+          desc: "Submission of model documentation, self-constructed training data, and source code.",
         },
         item7: {
-          date: "June 23 - June 30, 2026",
-          title: "Report & Code Submission",
-          desc: "Award candidate teams submit technical reports and implementation code",
+          date: "2026.07.01 ~ 2026.07.14",
+          title: "Evaluation Period",
+          desc: "",
         },
         item8: {
-          date: "June 30 - July 14, 2026",
-          title: "Final Evaluation",
-          desc: "Jury reviews reports and code, conducts final assessment",
+          date: "2026.07.23",
+          title: "Final Ranking Announcement",
+          desc: "",
         },
         item9: {
-          date: "July 24, 2026",
-          title: "Final Rankings Announcement",
-          desc: "Official award winners announced",
-        },
-        item10: {
-          date: "March 2027",
-          title: "Award Ceremony (Date TBA)",
-          desc: "Award ceremony and technical sharing session",
+          date: "2027.03 (To be determined)",
+          title: "Award Ceremony",
+          desc: "• Award-winning teams must send a representative to receive the physical certificate.<br>• Electronic certificates will be issued within one month after the ceremony.",
         },
       },
       team: {
@@ -1106,7 +1096,7 @@ const translations = {
       },
       coOrg: {
         title: "Co-Organizers",
-        intro: "We gratefully acknowledge the support of the following student developer communities",
+        intro: "We gratefully acknowledge the support of the following organizations",
         visitPage: "Visit Page",
       },
       examples: {
@@ -1204,7 +1194,7 @@ const translations = {
         note2:
           "• Teams consist of 1-5 members; no changes after registration",
         note3:
-          "• Test set submission period: 6/18/2026 11:00 - 6/20/2026 23:59:59 (3 submissions per day)",
+          "• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59 (3 submissions per day)",
         note4:
           "• Submit technical report, implementation code, and environment documentation",
         note5:
