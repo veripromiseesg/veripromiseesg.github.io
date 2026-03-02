@@ -12,23 +12,12 @@
     "link": "https://www.instagram.com/gdg.ntpu/"
   },
   {
-    "id": 2,
+    "id": 4,
     "name_ch": "Google 學生開發者社群 STUST",
     "name_en": "GDG on Campus STUST",
     "logo": "img/co-organizer/Google 學生開發者社群 STUST.png",
     "intro": "",
     "link": "https://gdsc-stust.web.app"
-  },
-  {
-    "id": 3,
-    "name_ch": "國立成功大學 谷歌軟體開發社",
-    "name_en": "Google Developer Groups On Campus NCKU",
-    "logo": "img/co-organizer/國立成功大學 谷歌軟體開發社.png",
-    "intro": [
-        "我們是成大的軟體開發者社群，致力於推動校園軟體開發。",
-        "我們努力使軟體開發跳脫傳統校園框架，透過 Matching 想法人與開發者，讓更多靈感能實現，帶給校園軟體開發更多價值。"
-    ],
-    "link": "https://www.facebook.com/nckugdgoncampus"
   },
   {
     "id": 4,
@@ -57,6 +46,37 @@
         "我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。"
     ],
     "link": ""
+  },
+  {
+    "id": 10,
+    "name_ch": "中山大學 GDG",
+    "name_en": "GDG on Campus: NSYSU｜Google Developer Student Club",
+    "logo": "img/co-organizer/中山大學 GDG.png",
+    "intro": [
+        "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。",
+        "在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！",
+        "GDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！"
+    ],
+    "link": ""
+  },
+  {
+    "id": 11,
+    "name_ch": "Google Developer Group On Campus NCU",
+    "name_en": "Google Developer Group On Campus NCU",
+    "logo": "img/co-organizer/Google Developer Group On Campus NCU.png",
+    "intro": "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
+    "link": "https://www.instagram.com/gdscncu/"
+  },
+  {
+    "id": 12,
+    "name_ch": "臺科大 Google 學生開發者社群",
+    "name_en": "GDG on Campus NTUST",
+    "logo": "img/co-organizer/臺科大 Google 學生開發者社群.png",
+    "intro": [
+        "想學程式卻不知從何入手？我們是一群熱愛技術與分享的學生，透過與各校社團及企業的聯手合作，從日常生活常見的主題切入，致力於打造一個跨領域的友善學習環境。",
+        "加入我們，一起成長為開發者，為開源社群貢獻一份心力吧！"
+    ],
+    "link": "https://gdg-ntust.org/"
   },
   {
     "id": 13,
