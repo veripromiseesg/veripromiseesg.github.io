@@ -1372,7 +1372,7 @@ const translations = {
 
 i18next.init(
   {
-    lng: "en",
+    lng: "zh",
     fallbackLng: "en",
     resources: translations,
   },
