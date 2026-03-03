@@ -87,6 +87,22 @@ const CO_ORGANIZERS = [
     logoStyle: "width: 500%; height: 500%; object-fit: contain;",
     intro: "本社是一個結合開源、技術型社課與營隊服務活動的社團。\n我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。",
     link: "https://ttussc.org/"
+  },
+  {
+    id: 7,
+    name_ch: "Google Developer Group on Campus NCUE",
+    name_en: "Google Developer Group on Campus NCUE",
+    logo: "img/co-organizer/Google Developer Group on Campus NCUE.png",
+    intro: "Google Developer Group on Campus NCUE 為彰師大規模最大的資訊開發社群。結合業界資源與 10 餘項系統開發實績，我們致力於優化校園行政流程，並透過專業講座與知識分享，以技術力全面推動校園數位轉型。",
+    link: "https://gdg.ncuesa.org.tw"
+  },
+  {
+    id: 15,
+    name_ch: "SITCON 學生計算機年會",
+    name_en: "Students' Information Technology Conference",
+    logo: "img/co-organizer/SITCON 學生計算機年會.png",
+    intro: "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
+    link: "http://sitcon.org"
   }
 ];
 
@@ -1297,17 +1313,17 @@ const translations = {
   intro: "AI CUP 2026 VeriPromise ESG regional hands-on workshops. Welcome students from all regions to join!",
   onlineLink: "Join Online",
   north: {
-    title: "🏫 North｜University of Taipei",
+    title: "North｜University of Taipei",
     details: "Date: Mar 6 (Fri) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
     yt: "▶ Recording: Coming Soon",
   },
   central: {
-    title: "🏫 Central｜Providence University",
+    title: "Central｜Providence University",
     details: "Date: Mar 20 (Fri) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
     yt: "▶ Recording: Coming Soon",
   },
   south: {
-    title: "🏫 South｜NKUST",
+    title: "South｜NKUST",
     details: "Date: Mar 27 (Fri) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
     yt: "▶ Recording: Coming Soon",
   },
