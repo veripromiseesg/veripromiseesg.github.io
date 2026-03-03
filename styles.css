@@ -920,6 +920,7 @@ footer a:hover {
   line-height: 1.7;
   margin-bottom: 1.5rem;
   text-align: left;
+  white-space: pre-wrap;
 }
 
 .co-org-modal-btn {
@@ -1003,4 +1004,19 @@ footer a:hover {
   .nav-dropdown.open .nav-dropdown-menu {
     display: block;
   }
+}
+/* ===================================
+   Workshops Section
+   =================================== */
+#workshops .card p {
+  white-space: pre-wrap;
+}
+
+#workshops .card a {
+  color: #667eea;
+  font-weight: 500;
+}
+#workshops .card h3 {
+  font-size: 1rem;
+  white-space: nowrap;
 }

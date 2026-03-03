@@ -199,6 +199,7 @@ const translations = {
         competition: "競賽資訊",
         people: "Team",
         info: "相關資源",
+        workshops: "巡迴課程",
       },
       hero: {
         subtitle_top: "VeriPromiseESG 2026",
@@ -699,6 +700,26 @@ const translations = {
         q3: "競賽提供什麼數據集？",
         a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
       },
+      workshops: {
+  title: "校園巡迴課程",
+  intro: "AI CUP 2026 ESG 永續承諾驗證競賽校園巡迴課程，歡迎各地學生報名參加",
+  onlineLink: "線上參與連結",
+  north: {
+    title: "🏫 北區｜臺北市立大學",
+    details: "日期：3/6（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
+    yt: "▶ 課程錄影：敬請期待",
+  },
+  central: {
+    title: "🏫 中區｜靜宜大學",
+    details: "日期：3/20（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
+    yt: "▶ 課程錄影：敬請期待",
+  },
+  south: {
+    title: "🏫 南區｜國立高雄科技大學",
+    details: "日期：3/27（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
+    yt: "▶ 課程錄影：敬請期待",
+  },
+},
       resources: {
         title: "相關資源",
         intro: "重要競賽與研究論文連結",
@@ -752,6 +773,7 @@ const translations = {
         competition: "Competition",
         people: "Team",
         info: "Info",
+        workshops: "Workshops",
       },
       hero: {
         subtitle_top: "VeriPromiseESG 2026",
@@ -1270,6 +1292,26 @@ const translations = {
         q3: "What is the dataset?",
         a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports."
       },
+      workshops: {
+  title: "Campus Workshop Tour",
+  intro: "AI CUP 2026 VeriPromise ESG campus workshop tour. Welcome students from all regions to join!",
+  onlineLink: "Join Online",
+  north: {
+    title: "🏫 North｜University of Taipei",
+    details: "Date: Mar 6 (Fri) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
+    yt: "▶ Recording: Coming Soon",
+  },
+  central: {
+    title: "🏫 Central｜Providence University",
+    details: "Date: Mar 20 (Fri) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
+    yt: "▶ Recording: Coming Soon",
+  },
+  south: {
+    title: "🏫 South｜NKUST",
+    details: "Date: Mar 27 (Fri) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
+    yt: "▶ Recording: Coming Soon",
+  },
+},
       resources: {
         title: "Related Resources",
         intro: "Important links to related competitions and research papers",
