@@ -8,7 +8,17 @@
 
 const CO_ORGANIZERS = [
   {
+    id: 15,
+    region: "featured",
+    name_ch: "SITCON 學生計算機年會",
+    name_en: "Students' Information Technology Conference",
+    logo: "img/co-organizer/SITCON 學生計算機年會.png",
+    intro: "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
+    link: "http://sitcon.org"
+  },
+  {
     id: 1,
+    region: "north",
     name_ch: "Google 學生開發者社群 - 臺北大學",
     name_en: "Google Developer Groups (GDG) on Campus NTPU",
     logo: "img/co-organizer/GDG on Campus NTPU.png",
@@ -16,15 +26,8 @@ const CO_ORGANIZERS = [
     link: "https://www.instagram.com/gdg.ntpu/"
   },
   {
-    id: 2,
-    name_ch: "Google 學生開發者社群 STUST",
-    name_en: "GDG on Campus STUST",
-    logo: "img/co-organizer/Google 學生開發者社群 STUST.png",
-    intro: "",
-    link: "https://gdsc-stust.web.app"
-  },
-  {
     id: 4,
+    region: "north",
     name_ch: "Google Developer Group on Campus TMU",
     name_en: "Google Developer Group on Campus TMU",
     logo: "img/co-organizer/Google Developer Group on Campus TMU.png",
@@ -32,39 +35,8 @@ const CO_ORGANIZERS = [
     link: "https://www.instagram.com/tmu_gdgoncampus/"
   },
   {
-    id: 8,
-    name_ch: "中原大學 開源軟體開發社",
-    name_en: "Google Developer Groups on Campus CYCU",
-    logo: "img/co-organizer/中原大學 開源軟體開發社.png",
-    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
-    link: "https://www.instagram.com/gdg.on.campus_cycu"
-  },
-  {
-    id: 9,
-    name_ch: "中興大學資訊科學研習社",
-    name_en: "GDG on Campus NCHU",
-    logo: "img/co-organizer/中興大學資訊科學研習社.png",
-    intro: "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。\n我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。\n我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。",
-    link: ""
-  },
-  {
-    id: 10,
-    name_ch: "中山大學 GDG",
-    name_en: "GDG on Campus: NSYSU｜Google Developer Student Club",
-    logo: "img/co-organizer/中山大學 GDG.png",
-    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
-    link: ""
-  },
-  {
-    id: 11,
-    name_ch: "Google Developer Group On Campus NCU",
-    name_en: "Google Developer Group On Campus NCU",
-    logo: "img/co-organizer/Google Developer Group On Campus NCU.png",
-    intro: "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
-    link: "https://www.instagram.com/gdscncu/"
-  },
-  {
     id: 12,
+    region: "north",
     name_ch: "臺科大 Google 學生開發者社群",
     name_en: "GDG on Campus NTUST",
     logo: "img/co-organizer/臺科大 Google 學生開發者社群.png",
@@ -73,6 +45,7 @@ const CO_ORGANIZERS = [
   },
   {
     id: 13,
+    region: "north",
     name_ch: "國立臺北科技大學程式設計研究社",
     name_en: "National Taipei University of Technology (NTUT) Programming Club / NPC",
     logo: "img/co-organizer/國立臺北科技大學程式設計研究社.png",
@@ -81,6 +54,7 @@ const CO_ORGANIZERS = [
   },
   {
     id: 14,
+    region: "north",
     name_ch: "大同大學科學開源服務社",
     name_en: "TTUSSC",
     logo: "img/co-organizer/大同大學科學開源服務社.png",
@@ -89,7 +63,35 @@ const CO_ORGANIZERS = [
     link: "https://ttussc.org/"
   },
   {
+    id: 11,
+    region: "north",
+    name_ch: "Google Developer Group On Campus NCU",
+    name_en: "Google Developer Group On Campus NCU",
+    logo: "img/co-organizer/Google Developer Group On Campus NCU.png",
+    intro: "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
+    link: "https://www.instagram.com/gdscncu/"
+  },
+  {
+    id: 8,
+    region: "north",
+    name_ch: "中原大學 開源軟體開發社",
+    name_en: "Google Developer Groups on Campus CYCU",
+    logo: "img/co-organizer/中原大學 開源軟體開發社.png",
+    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    link: "https://www.instagram.com/gdg.on.campus_cycu"
+  },
+  {
+    id: 9,
+    region: "central",
+    name_ch: "中興大學資訊科學研習社",
+    name_en: "GDG on Campus NCHU",
+    logo: "img/co-organizer/中興大學資訊科學研習社.png",
+    intro: "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。\n我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。\n我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。",
+    link: ""
+  },
+  {
     id: 7,
+    region: "central",
     name_ch: "Google Developer Group on Campus NCUE",
     name_en: "Google Developer Group on Campus NCUE",
     logo: "img/co-organizer/Google Developer Group on Campus NCUE.png",
@@ -97,34 +99,65 @@ const CO_ORGANIZERS = [
     link: "https://gdg.ncuesa.org.tw"
   },
   {
-    id: 15,
-    name_ch: "SITCON 學生計算機年會",
-    name_en: "Students' Information Technology Conference",
-    logo: "img/co-organizer/SITCON 學生計算機年會.png",
-    intro: "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
-    link: "http://sitcon.org"
-  }
+    id: 2,
+    region: "south",
+    name_ch: "Google 學生開發者社群 STUST",
+    name_en: "GDG on Campus STUST",
+    logo: "img/co-organizer/Google 學生開發者社群 STUST.png",
+    intro: "",
+    link: "https://gdsc-stust.web.app"
+  },
+  {
+    id: 10,
+    region: "south",
+    name_ch: "中山大學 GDG",
+    name_en: "GDG on Campus: NSYSU｜Google Developer Student Club",
+    logo: "img/co-organizer/中山大學 GDG.png",
+    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
+    link: ""
+  },
 ];
 
 function renderCoOrganizers() {
   const grid = document.getElementById("coOrgGrid");
   if (!grid) return;
   const isZh = i18next.language === "zh";
-  grid.innerHTML = CO_ORGANIZERS.map(org => {
+
+  const regionLabels = {
+    featured: { zh: "", en: "" },
+    north:    { zh: "北區", en: "Northern Region" },
+    central:  { zh: "中區", en: "Central Region" },
+    south:    { zh: "南區", en: "Southern Region" },
+  };
+
+  let html = "";
+  let currentRegion = null;
+
+  CO_ORGANIZERS.forEach(org => {
     const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
-    return `
+
+    // 插入標籤（featured 不插，換 region 才插）
+    if (org.region !== "featured" && org.region !== currentRegion) {
+      currentRegion = org.region;
+      const label = isZh ? regionLabels[org.region].zh : regionLabels[org.region].en;
+      html += `<div class="co-org-region-label">${label}</div>`;
+    }
+    const isFeatured = org.region === "featured";
+    html += `
       <div class="co-org-card" role="button" tabindex="0" aria-label="${displayName}"
         onclick="openCoOrgModal(${org.id})"
         onkeydown="if(event.key==='Enter'||event.key===' ')openCoOrgModal(${org.id})">
         <div class="co-org-logo-wrap">
           <img src="${org.logo}" alt="${displayName}" loading="lazy"
-  style="${org.logoStyle || ''}"
-  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            style="${org.logoStyle || ''}"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="co-org-logo-fallback" style="display:none"><span>${displayName.charAt(0)}</span></div>
         </div>
         <div class="co-org-tooltip">${displayName}</div>
       </div>`;
-  }).join("");
+  });
+
+  grid.innerHTML = html;
 }
 
 function openCoOrgModal(id) {
@@ -272,7 +305,7 @@ const translations = {
           example2: "我們重視環境保護的重要性",
         },
         task2: {
-          title: "🔗 子任務二：支持證據連結",
+          title: "子任務二：支持證據連結",
           goalLabel: "任務目標：",
           goal: "判斷已識別的承諾語句是否附有具體執行計畫或支持佐證",
           outputLabel: "輸出類別",
@@ -721,18 +754,18 @@ const translations = {
   intro: "AI CUP 2026 ESG 永續承諾驗證競賽校園巡迴課程，歡迎各地學生報名參加",
   onlineLink: "線上參與連結",
   north: {
-    title: "🏫 北區｜臺北市立大學",
-    details: "日期：3/6（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
+    title: "北區｜臺北市立大學",
+    details: "日期：2026 年 3 月 6 日（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
     yt: "▶ 課程錄影：敬請期待",
   },
   central: {
-    title: "🏫 中區｜靜宜大學",
-    details: "日期：3/20（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
+    title: "中區｜靜宜大學",
+    details: "日期：2026 年 3 月 20 日（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
     yt: "▶ 課程錄影：敬請期待",
   },
   south: {
-    title: "🏫 南區｜國立高雄科技大學",
-    details: "日期：3/27（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
+    title: "南區｜國立高雄科技大學",
+    details: "日期：2026 年 3 月 27 日（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
     yt: "▶ 課程錄影：敬請期待",
   },
 },
@@ -764,9 +797,10 @@ const translations = {
       },
       footer: {
         copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
-        organizer: "主辦單位：國立臺北大學資訊管理研究所",
-        lab: "智慧金融創新科技實驗室 (IFIT Lab), NTPU",
         backToTop: "返回頂部",
+        supervising: "競賽指導單位：教育部 資訊及科技教育司",
+  organizing: "競賽運籌單位：教育部 人工智慧競賽與標註資料蒐集計畫",
+  topic: "議題提供單位（主辦單位）：國立臺北大學 資訊管理研究所、金融科技暨綠色金融研究中心",
       },
     },
   },
@@ -848,7 +882,7 @@ const translations = {
             '"We value the importance of environmental protection"',
         },
         task2: {
-          title: "🔗 Subtask 2: Evidence Identification",
+          title: "Subtask 2: Evidence Identification",
           goalLabel: "Objective:",
           goal: "Determine whether identified promise statements are accompanied by specific action plans or supporting evidence",
           outputLabel: "Output Categories",
@@ -868,7 +902,7 @@ const translations = {
           result: "Evidence Supported",
         },
         task3: {
-          title: "💡 Subtask 3: Clarity Classification",
+          title: "Subtask 3: Clarity Classification",
           goalLabel: "Objective:",
           goal: "Assess whether promise statements are semantically clear without ambiguous language, identifying potential 'greenwashing' risks",
           outputLabel: "Output Categories",
@@ -886,7 +920,7 @@ const translations = {
             "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility",
         },
         task4: {
-          title: "⏰ Subtask 4: Timeline Classification",
+          title: "Subtask 4: Timeline Classification",
           goalLabel: "Objective:",
           goal: "Infer the expected completion time of commitments based on statements to establish tracking mechanisms",
           outputLabel: "Output Categories",
@@ -1314,17 +1348,17 @@ const translations = {
   onlineLink: "Join Online",
   north: {
     title: "North｜University of Taipei",
-    details: "Date: Mar 6 (Fri) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
+    details: "Date: March 6, 2026 (Friday) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
     yt: "▶ Recording: Coming Soon",
   },
   central: {
     title: "Central｜Providence University",
-    details: "Date: Mar 20 (Fri) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
+    details: "Date: March 20, 2026 (Friday) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
     yt: "▶ Recording: Coming Soon",
   },
   south: {
-    title: "South｜NKUST",
-    details: "Date: Mar 27 (Fri) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
+    title: "South｜National Kaohsiung University<br>of Science and Technology",
+    details: "Date: March 27, 2026 (Friday) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
     yt: "▶ Recording: Coming Soon",
   },
 },
@@ -1357,10 +1391,10 @@ const translations = {
       footer: {
         copyright:
           "© 2025-2026 AI CUP - ESG Promise Verification Competition",
-        organizer:
-          "Organizer: National Taipei University Graduate Institute of Information Management",
-        lab: "Intelligent Financial Innovation Technology Lab (IFIT Lab), NTPU",
         backToTop: "Back to Top",
+        supervising: "Supervising Organization: Department of Information and Technology Education, Ministry of Education",
+  organizing: "Organizing Committee: Ministry of Education Artificial Intelligence Competition and Annotation Data Collection Project Office",
+  topic: "Topic Provider (Host Organization): Graduate Institute of Information Management and The Fintech and Green Finance Center (FGFC), NTPU",
       },
     },
   },
