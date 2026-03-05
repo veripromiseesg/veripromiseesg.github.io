@@ -1047,3 +1047,9 @@ footer a:hover {
 .hero-platform-links { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .hero-platform-btn { padding: 0.6rem 1.5rem; border: 2px solid rgba(255,255,255,0.8); border-radius: 25px; color: #fff; text-decoration: none; font-weight: 500; transition: all 0.3s; }
 .hero-platform-btn:hover { background: rgba(255,255,255,0.2); }
+.hero-date {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: -1rem auto 1.5rem;
+  letter-spacing: 0.05em;
+}

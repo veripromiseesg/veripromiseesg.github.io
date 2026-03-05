@@ -266,7 +266,9 @@ const translations = {
           "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
         cta: "了解更多",
         aicupLink: "AI CUP 官網",
-aideaLink: "AIdea 競賽頁面",
+aideaLink: "AIdea 報名系統",
+registerLink: "AI Cup 報名系統",
+date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
         title: "競賽簡介",
@@ -534,7 +536,7 @@ aideaLink: "AIdea 競賽頁面",
         item1: {
           date: "2026.03.05 ~ 2026.04.28",
           title: "開放報名",
-          desc: "同時開放訓練集下載",
+          desc: "同時開放<a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4ktrain1000v1.json' target='_blank' style='color:#667eea;'>訓練集下載</a>",
         },
         item2: {
           date: "2026.03",
@@ -835,7 +837,9 @@ aideaLink: "AIdea 競賽頁面",
           "Leverage AI technology to verify corporate sustainability commitments and enhance ESG report transparency and credibility",
         cta: "Learn More",
         aicupLink: "AI CUP Official Website",
-aideaLink: "AIdea Competition Page",
+aideaLink: "AIdea Registration System",
+registerLink: "AI Cup Registration",
+date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
         title: "Competition Overview",
@@ -1114,7 +1118,7 @@ aideaLink: "AIdea Competition Page",
         item1: {
           date: "2026.03.05 ~ 2026.04.28",
           title: "Registration Opens",
-          desc: "Training set available for download.",
+          desc: "Training set available for <a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4ktrain1000v1.json' target='_blank' style='color:#667eea;'>download</a>.",
         },
         item2: {
           date: "March 2026",
@@ -1420,11 +1424,11 @@ function updateContent() {
     const translation = i18next.t(key);
     if (translation && translation !== key) {
       // Handle HTML content (for <br> tags)
-      if (translation.includes("<br>")) {
-        element.innerHTML = translation;
-      } else {
-        element.textContent = translation;
-      }
+      if (translation.includes("<br>") || translation.includes("<a")) {
+  element.innerHTML = translation;
+} else {
+  element.textContent = translation;
+}
     }
   });
 }
