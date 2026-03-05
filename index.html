@@ -186,12 +186,13 @@
 
   <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
 </ul>
+        <!-- [FIX] 預設語言為中文，btn-zh 加 active -->
         <div class="lang-switch">
-          <button class="lang-btn" id="btn-zh" onclick="changeLanguage('zh')">
+          <button class="lang-btn active" id="btn-zh" onclick="changeLanguage('zh')">
             中文
           </button>
           <button
-            class="lang-btn active"
+            class="lang-btn"
             id="btn-en"
             onclick="changeLanguage('en')"
           >
@@ -212,6 +213,11 @@
           and enhance ESG report transparency and credibility
         </p>
         <a href="#about" class="cta-button" data-i18n="hero.cta">Learn More</a>
+        <!-- [NEW] 官網快速連結 -->
+        <div class="hero-platform-links">
+          <a href="https://www.aicup.tw/" target="_blank" rel="noopener noreferrer" class="hero-platform-btn" data-i18n="hero.aicupLink">AI CUP 官網</a>
+          <a href="https://www.aidea-web.tw/topic/ec993d30-204c-421a-acd4-ed12d719be78" target="_blank" rel="noopener noreferrer" class="hero-platform-btn" data-i18n="hero.aideaLink">AIdea 競賽頁面</a>
+        </div>
       </div>
     </section>
 
@@ -815,13 +821,7 @@
               Submission of model documentation, self-constructed training data, and source code.
             </p>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-date" data-i18n="timeline.item7.date">
-              2026.07.01 ~ 2026.07.14
-            </div>
-            <strong data-i18n="timeline.item7.title">Evaluation Period</strong>
-            <p data-i18n="timeline.item7.desc"></p>
-          </div>
+          <!-- [REMOVED] timeline.item7 成績評估 -->
           <div class="timeline-item">
             <div class="timeline-date" data-i18n="timeline.item8.date">
               2026.07.23
@@ -1065,7 +1065,7 @@
     </section>
 
     <!-- ============================================================
-         CO-ORGANIZERS SECTION  (新增)
+         CO-ORGANIZERS SECTION
          ============================================================ -->
     <section id="co-organizers">
       <div class="container">
@@ -1074,7 +1074,6 @@
           感謝以下單位 / 組織的支持與協辦
         </p>
 
-        <!-- Logo grid — rendered by renderCoOrganizers() in script.js -->
         <div class="co-org-grid" id="coOrgGrid"></div>
       </div>
     </section>

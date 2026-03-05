@@ -99,16 +99,18 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.75rem;   /* 原本 0.85rem，縮小一點 */
   transition: all 0.3s;
 }
 
-.lang-btn:hover {
+.lang-btn.active {
   background: white;
   color: #667eea;
+  font-size: 1rem;      /* active 的明顯大 */
+  font-weight: 700;
 }
 
-.lang-btn.active {
+.lang-btn:hover {
   background: white;
   color: #667eea;
 }
@@ -1042,3 +1044,6 @@ footer a:hover {
   max-width: 260px;
   margin: 0 auto;
 }
+.hero-platform-links { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-platform-btn { padding: 0.6rem 1.5rem; border: 2px solid rgba(255,255,255,0.8); border-radius: 25px; color: #fff; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+.hero-platform-btn:hover { background: rgba(255,255,255,0.2); }

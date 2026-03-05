@@ -124,7 +124,7 @@ function renderCoOrganizers() {
   const isZh = i18next.language === "zh";
 
   const regionLabels = {
-    featured: { zh: "", en: "" },
+    featured: { zh: "其他", en: "Other" },
     north:    { zh: "北區", en: "Northern Region" },
     central:  { zh: "中區", en: "Central Region" },
     south:    { zh: "南區", en: "Southern Region" },
@@ -137,7 +137,7 @@ function renderCoOrganizers() {
     const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
 
     // 插入標籤（featured 不插，換 region 才插）
-    if (org.region !== "featured" && org.region !== currentRegion) {
+    if (org.region !== currentRegion) {
       currentRegion = org.region;
       const label = isZh ? regionLabels[org.region].zh : regionLabels[org.region].en;
       html += `<div class="co-org-region-label">${label}</div>`;
@@ -256,6 +256,8 @@ const translations = {
         subtitle:
           "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
         cta: "了解更多",
+        aicupLink: "AI CUP 官網",
+aideaLink: "AIdea 競賽頁面",
       },
       about: {
         title: "競賽簡介",
@@ -550,11 +552,6 @@ const translations = {
           title: "其餘作品繳交",
           desc: "各隊伍提交預測模型的說明文件、自製之訓練資料集與程式碼",
         },
-        item7: {
-          date: "2026.07.01 ~ 2026.07.14",
-          title: "成績評估",
-          desc: "",
-        },
         item8: {
           date: "2026.07.23",
           title: "公佈最終名次",
@@ -831,6 +828,8 @@ const translations = {
         subtitle:
           "Leverage AI technology to verify corporate sustainability commitments and enhance ESG report transparency and credibility",
         cta: "Learn More",
+        aicupLink: "AI CUP Official Website",
+aideaLink: "AIdea Competition Page",
       },
       about: {
         title: "Competition Overview",
@@ -1135,11 +1134,6 @@ const translations = {
           date: "2026.06.24 ~ 2026.06.30",
           title: "Additional Deliverables Submission",
           desc: "Submission of model documentation, self-constructed training data, and source code.",
-        },
-        item7: {
-          date: "2026.07.01 ~ 2026.07.14",
-          title: "Evaluation Period",
-          desc: "",
         },
         item8: {
           date: "2026.07.23",
