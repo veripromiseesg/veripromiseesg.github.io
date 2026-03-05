@@ -539,12 +539,12 @@ aideaLink: "AIdea 競賽頁面",
         item2: {
           date: "2026.03",
           title: "巡迴實作課程",
-          desc: "具體細節將另行公告於<a href='https://veripromiseesg.github.io/' target='_blank' style='color:#667eea;'>競賽官方網站</a><br>• 北區：臺北市立大學<br>• 中區：靜宜大學<br>• 南區：高雄科技大學",
+          desc: "• 北區：臺北市立大學<br>• 中區：靜宜大學<br>• 南區：高雄科技大學",
         },
         item3: {
           date: "2026.06.03 ~ 2026.06.10",
           title: "驗證集下載",
-          desc: "",
+          desc: "開放下載",
         },
         item4: {
           date: "2026.06.10 ~ 2026.06.17",
@@ -569,7 +569,7 @@ aideaLink: "AIdea 競賽頁面",
         item9: {
           date: "2027.03（日期待定）",
           title: "頒獎典禮",
-          desc: "各得獎隊伍須派代表/代理人參加頒獎典禮，以領取實體獎狀（典禮細節另行通知）；電子獎狀則將於典禮結束一個月內寄發",
+          desc: "各得獎隊伍須派代表/代理人參加頒獎典禮，以領取實體獎狀（典禮細節另行通知）",
         },
       },
       team: {
@@ -742,9 +742,6 @@ aideaLink: "AIdea 競賽頁面",
         note2: "• 參賽隊伍 1-5 人，報名後不可更換成員",
         note3:
           "• 測試集提交期間：2026/6/10 11:00 - 2026/6/17 23:59:59（每日限 3 次）",
-        note4: "• 需繳交技術報告、實作程式碼與執行環境說明",
-        note5: "• 前 15 名全學生隊伍可獲教育部獎狀",
-        note6: "• 可使用外部資料與預訓練模型，但須在報告中詳細說明",
       },
       faq: {
         title: "常見問題",
@@ -1122,7 +1119,7 @@ aideaLink: "AIdea Competition Page",
         item2: {
           date: "March 2026",
           title: "Hands-on Workshops",
-          desc: "The exact details will be announced on <a href='https://veripromiseesg.github.io/' target='_blank' style='color:#667eea;'>the official competition website</a>.<br>• Northern Region: University of Taipei (UTaipei)<br>• Central Region: Providence University (PU)<br>• Southern Region: National Kaohsiung University of Science and Technology (NKUST)",
+          desc: "• Northern Region: University of Taipei (UTaipei)<br>• Central Region: Providence University (PU)<br>• Southern Region: National Kaohsiung University of Science and Technology (NKUST)",
         },
         item3: {
           date: "2026.06.03 ~ 2026.06.10",
@@ -1152,7 +1149,7 @@ aideaLink: "AIdea Competition Page",
         item9: {
           date: "2027.03 (To be determined)",
           title: "Award Ceremony",
-          desc: "• Award-winning teams must send a representative to receive the physical certificate.<br>• Electronic certificates will be issued within one month after the ceremony.",
+          desc: "• Award-winning teams must send a representative to receive the physical certificate.",
         },
       },
       team: {
@@ -1329,12 +1326,6 @@ aideaLink: "AIdea Competition Page",
           "• Teams consist of 1-5 members; no changes after registration",
         note3:
           "• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59 (3 submissions per day)",
-        note4:
-          "• Submit technical report, implementation code, and environment documentation",
-        note5:
-          "• Top 15 all-student teams receive Ministry of Education certificates",
-        note6:
-          "• External data and pre-trained models allowed; detailed disclosure required in report",
       },
       faq: {
         title: "FAQ",
