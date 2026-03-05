@@ -81,6 +81,15 @@ const CO_ORGANIZERS = [
     link: "https://www.instagram.com/gdg.on.campus_cycu"
   },
   {
+    id: 16,
+    region: "north",
+    name_ch: "臺北市立大學 UT GDGoC",
+    name_en: "GDG On Campus University of Taipei",
+    logo: "img/co-organizer/GDG On Campus University of Taipei.png",
+    intro: "GDG On Campus University of Taipei 是一個擁抱多元、促進跨領域成長的學生組織。\n我們聚焦於創新創業、教育數位轉型與 AI 賦能，透過理論與實務兼顧的工作坊、專案導向的學習體驗、適合初學者與進階者的雙軌並行學習模式以及與各產業專業人士的深度連結，致力於打造資源豐富的學習環境，縮短學術與產業之間的距離。",
+    link: "https://gdg.community.dev/gdg-on-campus-university-of-taipei-taipei-taiwan/",
+  },
+  {
     id: 9,
     region: "central",
     name_ch: "中興大學資訊科學研習社",
