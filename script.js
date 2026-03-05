@@ -734,6 +734,10 @@ date: "2026.03.05 ~ 2026.07.23",
         code: {
           title: "Sample Code",
         },
+        slides: {
+  title: "宣傳投影片",
+  link: "Google Drive",
+},
         platform: {
           title: "競賽平台",
           link: "AI CUP 報名系統",
@@ -1319,6 +1323,10 @@ date: "2026.03.05 ~ 2026.07.23",
         code: {
           title: "Sample Code",
         },
+        slides: {
+  title: "Promotional Slides",
+  link: "Google Drive",
+},
         platform: {
           title: "Competition Platform",
           link: "AI CUP Registration System",
