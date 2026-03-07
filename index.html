@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
@@ -55,7 +55,9 @@
               "@type": "VirtualLocation",
               "url": "https://veripromiseesg.github.io/"
             },
-            "image": ["https://veripromiseesg.github.io/img/ntpu-logo.png"],
+            "image": [
+              "https://veripromiseesg.github.io/img/ntpu-logo.png"
+            ],
             "organizer": [
               {
                 "@type": "Organization",
@@ -150,69 +152,54 @@
         </div>
         <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+  <li><a href="#home" data-i18n="nav.home">Home</a></li>
 
-          <li class="nav-dropdown">
-            <a
-              href="#about"
-              class="nav-dropdown-toggle"
-              data-i18n="nav.competition"
-              >Competition ▾</a
-            >
-            <ul class="nav-dropdown-menu">
-              <li><a href="#about" data-i18n="nav.about">About</a></li>
-              <li><a href="#tasks" data-i18n="nav.tasks">Tasks</a></li>
-              <li><a href="#dataset" data-i18n="nav.dataset">Dataset</a></li>
-              <li>
-                <a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a>
-              </li>
-            </ul>
-          </li>
+  <li class="nav-dropdown">
+    <a href="#about" class="nav-dropdown-toggle" data-i18n="nav.competition">Competition ▾</a>
+    <ul class="nav-dropdown-menu">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#tasks" data-i18n="nav.tasks">Tasks</a></li>
+      <li><a href="#dataset" data-i18n="nav.dataset">Dataset</a></li>
+      <li><a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a></li>
+    </ul>
+  </li>
 
-          <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
+  <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
 
-          <li class="nav-dropdown">
-            <a href="#team" class="nav-dropdown-toggle" data-i18n="nav.people"
-              >Team ▾</a
-            >
-            <ul class="nav-dropdown-menu">
-              <li><a href="#team" data-i18n="nav.team">Team</a></li>
-              <li>
-                <a href="#co-organizers" data-i18n="nav.coOrganizers"
-                  >Co-Organizers</a
-                >
-              </li>
-            </ul>
-          </li>
+  <li class="nav-dropdown">
+    <a href="#team" class="nav-dropdown-toggle" data-i18n="nav.people">Team ▾</a>
+    <ul class="nav-dropdown-menu">
+      <li><a href="#team" data-i18n="nav.team">Team</a></li>
+      <li><a href="#co-organizers" data-i18n="nav.coOrganizers">Co-Organizers</a></li>
+    </ul>
+  </li>
 
-          <li class="nav-dropdown">
-            <a href="#faq" class="nav-dropdown-toggle" data-i18n="nav.info"
-              >Info ▾</a
-            >
-            <ul class="nav-dropdown-menu">
-              <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-              <li><a href="#examples" data-i18n="nav.examples">Examples</a></li>
-              <li>
-                <a href="#resources" data-i18n="nav.resources">Resources</a>
-              </li>
-              <li>
-                <a href="#workshops" data-i18n="nav.workshops">Workshops</a>
-              </li>
-            </ul>
-          </li>
+  <li class="nav-dropdown">
+    <a href="#faq" class="nav-dropdown-toggle" data-i18n="nav.info">Info ▾</a>
+    <ul class="nav-dropdown-menu">
+  <li>
+    <a href="#workshops" data-i18n="nav.workshops">Workshops</a>
+  </li>
+  <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+  <li><a href="#examples" data-i18n="nav.examples">Examples</a></li>
+  <li>
+    <a href="#resources" data-i18n="nav.resources">Resources</a>
+  </li>
+</ul>
+  </li>
 
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
+  <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+</ul>
         <!-- [FIX] 預設語言為中文，btn-zh 加 active -->
         <div class="lang-switch">
-          <button
-            class="lang-btn active"
-            id="btn-zh"
-            onclick="changeLanguage('zh')"
-          >
+          <button class="lang-btn active" id="btn-zh" onclick="changeLanguage('zh')">
             中文
           </button>
-          <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">
+          <button
+            class="lang-btn"
+            id="btn-en"
+            onclick="changeLanguage('en')"
+          >
             EN
           </button>
         </div>
@@ -233,30 +220,9 @@
         <a href="#about" class="cta-button" data-i18n="hero.cta">Learn More</a>
         <!-- [NEW] 官網快速連結 -->
         <div class="hero-platform-links">
-          <a
-            href="https://www.aicup.tw/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-platform-btn"
-            data-i18n="hero.aicupLink"
-            >AI CUP 官網</a
-          >
-          <a
-            href="https://go.aicup.tw/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-platform-btn"
-            data-i18n="hero.registerLink"
-            >AI Cup 報名系統</a
-          >
-          <a
-            href="https://www.aidea-web.tw/aicup_veripromiseesg"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-platform-btn"
-            data-i18n="hero.aideaLink"
-            >AIdea 競賽平台</a
-          >
+          <a href="https://www.aicup.tw/" target="_blank" rel="noopener noreferrer" class="hero-platform-btn" data-i18n="hero.aicupLink">AI CUP 官網</a>
+          <a href="https://go.aicup.tw/" target="_blank" rel="noopener noreferrer" class="hero-platform-btn" data-i18n="hero.registerLink">AI Cup 報名系統</a>
+          <a href="https://www.aidea-web.tw/aicup_veripromiseesg" target="_blank" rel="noopener noreferrer" class="hero-platform-btn" data-i18n="hero.aideaLink">AIdea 競賽平台</a>
         </div>
       </div>
     </section>
@@ -274,17 +240,13 @@
 
         <div class="highlight-box">
           <strong data-i18n="about.goalLabel">Full Name:</strong>
-          <span data-i18n="about.goalContent"
-            >VeriPromise ESG 2026 - ESG Promise Verification Competition</span
-          ><br /><br />
+          <span data-i18n="about.goalContent">VeriPromise ESG 2026 - ESG Promise Verification Competition</span><br /><br />
           <strong data-i18n="about.objectiveLabel">Objective:</strong>
-          <span data-i18n="about.objectiveContent"
-            >Develop an AI system capable of automatically identifying,
+          <span data-i18n="about.objectiveContent">Develop an AI system capable of automatically identifying,
             analyzing, and verifying corporate sustainability commitments
             through four core tasks (promise recognition, evidence support,
             clarity assessment, and timeline prediction) to comprehensively
-            evaluate the authenticity and credibility of ESG reports.</span
-          >
+            evaluate the authenticity and credibility of ESG reports.</span>
         </div>
 
         <div class="stats">
@@ -359,25 +321,19 @@
             </h3>
             <p>
               <strong data-i18n="tasks.task1.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task1.goal"
-                >Determine whether a given sentence expresses a clear corporate
-                commitment to future actions</span
-              >
+              <span data-i18n="tasks.task1.goal">Determine whether a given sentence expresses a clear corporate
+                commitment to future actions</span>
             </p>
 
             <h4 data-i18n="tasks.task1.outputLabel">Output Categories</h4>
             <ul>
               <li>
                 <strong data-i18n="tasks.task1.output1Label">Yes:</strong>
-                <span data-i18n="tasks.task1.output1"
-                  >Statements containing explicit commitments</span
-                >
+                <span data-i18n="tasks.task1.output1">Statements containing explicit commitments</span>
               </li>
               <li>
                 <strong data-i18n="tasks.task1.output2Label">No:</strong>
-                <span data-i18n="tasks.task1.output2"
-                  >General statements without commitments</span
-                >
+                <span data-i18n="tasks.task1.output2">General statements without commitments</span>
               </li>
             </ul>
 
@@ -389,15 +345,9 @@
             <h4 data-i18n="tasks.task1.exampleLabel">Examples</h4>
             <div class="highlight-box">
               <strong data-i18n="tasks.task1.example1Label">✅ Promise:</strong>
-              <span data-i18n="tasks.task1.example1"
-                >"We commit to achieving carbon neutrality by 2030"</span
-              ><br />
-              <strong data-i18n="tasks.task1.example2Label"
-                >❌ Non-Promise:</strong
-              >
-              <span data-i18n="tasks.task1.example2"
-                >"We value the importance of environmental protection"</span
-              >
+              <span data-i18n="tasks.task1.example1">"We commit to achieving carbon neutrality by 2030"</span><br />
+              <strong data-i18n="tasks.task1.example2Label">❌ Non-Promise:</strong>
+              <span data-i18n="tasks.task1.example2">"We value the importance of environmental protection"</span>
             </div>
           </div>
 
@@ -407,25 +357,19 @@
             </h3>
             <p>
               <strong data-i18n="tasks.task2.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task2.goal"
-                >Determine whether identified promise statements are accompanied
-                by specific action plans or supporting evidence</span
-              >
+              <span data-i18n="tasks.task2.goal">Determine whether identified promise statements are accompanied
+                by specific action plans or supporting evidence</span>
             </p>
 
             <h4 data-i18n="tasks.task2.outputLabel">Output Categories</h4>
             <ul>
               <li>
                 <strong data-i18n="tasks.task2.output1Label">Yes:</strong>
-                <span data-i18n="tasks.task2.output1"
-                  >Promise has concrete evidence support</span
-                >
+                <span data-i18n="tasks.task2.output1">Promise has concrete evidence support</span>
               </li>
               <li>
                 <strong data-i18n="tasks.task2.output2Label">No:</strong>
-                <span data-i18n="tasks.task2.output2"
-                  >Promise lacks specific evidence</span
-                >
+                <span data-i18n="tasks.task2.output2">Promise lacks specific evidence</span>
               </li>
             </ul>
 
@@ -437,18 +381,12 @@
             <h4 data-i18n="tasks.task2.exampleLabel">Example</h4>
             <div class="highlight-box">
               <strong data-i18n="tasks.task2.promiseLabel">Promise:</strong>
-              <span data-i18n="tasks.task2.promise"
-                >"Promote low-carbon value chain transformation, continuously
+              <span data-i18n="tasks.task2.promise">"Promote low-carbon value chain transformation, continuously
                 strengthen supplier energy-saving, carbon reduction, water
-                conservation, and waste reduction guidance"</span
-              ><br />
+                conservation, and waste reduction guidance"</span><br />
               <strong data-i18n="tasks.task2.evidenceLabel">Evidence:</strong>
-              <span data-i18n="tasks.task2.evidence"
-                >"Require setting medium and long-term reduction targets and
-                proposing specific actions" → </span
-              ><strong class="text-primary" data-i18n="tasks.task2.result"
-                >Evidence Supported</strong
-              >
+              <span data-i18n="tasks.task2.evidence">"Require setting medium and long-term reduction targets and
+                proposing specific actions" → </span><strong class="text-primary" data-i18n="tasks.task2.result">Evidence Supported</strong>
             </div>
           </div>
 
@@ -458,34 +396,24 @@
             </h3>
             <p>
               <strong data-i18n="tasks.task3.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task3.goal"
-                >Assess whether promise statements are semantically clear
+              <span data-i18n="tasks.task3.goal">Assess whether promise statements are semantically clear
                 without ambiguous language, identifying potential 'greenwashing'
-                risks</span
-              >
+                risks</span>
             </p>
 
             <h4 data-i18n="tasks.task3.outputLabel">Output Categories</h4>
             <ul>
               <li>
                 <strong data-i18n="tasks.task3.output1Label">Clear:</strong>
-                <span data-i18n="tasks.task3.output1"
-                  >Semantically explicit and verifiable</span
-                >
+                <span data-i18n="tasks.task3.output1">Semantically explicit and verifiable</span>
               </li>
               <li>
                 <strong data-i18n="tasks.task3.output2Label">Not Clear:</strong>
-                <span data-i18n="tasks.task3.output2"
-                  >Semantically ambiguous and difficult to quantify</span
-                >
+                <span data-i18n="tasks.task3.output2">Semantically ambiguous and difficult to quantify</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task3.output3Label"
-                  >Misleading:</strong
-                >
-                <span data-i18n="tasks.task3.output3"
-                  >Potentially misleading statements</span
-                >
+                <strong data-i18n="tasks.task3.output3Label">Misleading:</strong>
+                <span data-i18n="tasks.task3.output3">Potentially misleading statements</span>
               </li>
             </ul>
 
@@ -507,37 +435,27 @@
             </h3>
             <p>
               <strong data-i18n="tasks.task4.goalLabel">Objective:</strong>
-              <span data-i18n="tasks.task4.goal"
-                >Infer the expected completion time of commitments based on
-                statements to establish tracking mechanisms</span
-              >
+              <span data-i18n="tasks.task4.goal">Infer the expected completion time of commitments based on
+                statements to establish tracking mechanisms</span>
             </p>
 
             <h4 data-i18n="tasks.task4.outputLabel">Output Categories</h4>
             <ul>
               <li>
                 <strong data-i18n="tasks.task4.output1Label">Already:</strong>
-                <span data-i18n="tasks.task4.output1"
-                  >Commitment already fulfilled (verifiable in current
-                  period)</span
-                >
+                <span data-i18n="tasks.task4.output1">Commitment already fulfilled (verifiable in current
+                  period)</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output2Label"
-                  >Within 2 years:</strong
-                >
+                <strong data-i18n="tasks.task4.output2Label">Within 2 years:</strong>
                 <span data-i18n="tasks.task4.output2">Short-term target</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output3Label"
-                  >Between 2 and 5 years:</strong
-                >
+                <strong data-i18n="tasks.task4.output3Label">Between 2 and 5 years:</strong>
                 <span data-i18n="tasks.task4.output3">Medium-term target</span>
               </li>
               <li>
-                <strong data-i18n="tasks.task4.output4Label"
-                  >More than 5 years:</strong
-                >
+                <strong data-i18n="tasks.task4.output4Label">More than 5 years:</strong>
                 <span data-i18n="tasks.task4.output4">Long-term target</span>
               </li>
             </ul>
@@ -550,46 +468,34 @@
         </div>
 
         <h3 class="relevance-title" data-i18n="tasks.relevanceTitle">
-          Task Relevance and Practical Value
+           Task Relevance and Practical Value
         </h3>
         <div class="cards cards-2col">
           <div class="card">
             <h3 data-i18n="tasks.job1.title">ESG Data Analyst</h3>
             <p>
-              <strong data-i18n="tasks.job1.skillLabel"
-                >Corresponding Skills:</strong
-              >
+              <strong data-i18n="tasks.job1.skillLabel">Corresponding Skills:</strong>
               <span data-i18n="tasks.job1.skill">Subtask 1</span><br />
-              <span data-i18n="tasks.job1.desc"
-                >Key information extraction, text classification, sustainability
-                report writing</span
-              >
+              <span data-i18n="tasks.job1.desc">Key information extraction, text classification, sustainability
+                report writing</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="tasks.job2.title">Sustainable Investment Analyst</h3>
             <p>
-              <strong data-i18n="tasks.job2.skillLabel"
-                >Corresponding Skills:</strong
-              >
+              <strong data-i18n="tasks.job2.skillLabel">Corresponding Skills:</strong>
               <span data-i18n="tasks.job2.skill">Subtask 2</span><br />
-              <span data-i18n="tasks.job2.desc"
-                >Semantic association judgment, logical reasoning, due
-                diligence</span
-              >
+              <span data-i18n="tasks.job2.desc">Semantic association judgment, logical reasoning, due
+                diligence</span>
             </p>
           </div>
           <div class="card">
             <h3 data-i18n="tasks.job3.title">Financial Regulatory Examiner</h3>
             <p>
-              <strong data-i18n="tasks.job3.skillLabel"
-                >Corresponding Skills:</strong
-              >
+              <strong data-i18n="tasks.job3.skillLabel">Corresponding Skills:</strong>
               <span data-i18n="tasks.job3.skill">Subtask 3</span><br />
-              <span data-i18n="tasks.job3.desc"
-                >Greenwashing risk identification, semantic quality assessment,
-                compliance audit</span
-              >
+              <span data-i18n="tasks.job3.desc">Greenwashing risk identification, semantic quality assessment,
+                compliance audit</span>
             </p>
           </div>
           <div class="card">
@@ -597,14 +503,10 @@
               Corporate Sustainability Specialist
             </h3>
             <p>
-              <strong data-i18n="tasks.job4.skillLabel"
-                >Corresponding Skills:</strong
-              >
+              <strong data-i18n="tasks.job4.skillLabel">Corresponding Skills:</strong>
               <span data-i18n="tasks.job4.skill">Subtask 4</span><br />
-              <span data-i18n="tasks.job4.desc"
-                >Time information extraction, goal management and tracking,
-                project planning</span
-              >
+              <span data-i18n="tasks.job4.desc">Time information extraction, goal management and tracking,
+                project planning</span>
             </p>
           </div>
         </div>
@@ -653,35 +555,21 @@
         <h3 data-i18n="dataset.scaleTitle">📈 Dataset Scale</h3>
         <div class="highlight-box">
           <strong data-i18n="dataset.nameLabel">Dataset Name:</strong>
-          <span data-i18n="dataset.name"
-            >VeriPromiseESG4K (World's First Traditional Chinese Sustainability
-            Commitment Verification Dataset)</span
-          ><br />
+          <span data-i18n="dataset.name">VeriPromiseESG4K (World's First Traditional Chinese Sustainability
+            Commitment Verification Dataset)</span><br />
           <strong data-i18n="dataset.sizeLabel">Total Data Volume:</strong>
-          <span data-i18n="dataset.size"
-            >4,000 high-quality annotated data points</span
-          ><br />
+          <span data-i18n="dataset.size">4,000 high-quality annotated data points</span><br />
           <strong data-i18n="dataset.sourceLabel">Data Source:</strong>
-          <span data-i18n="dataset.source"
-            >Taiwan 50 Index (0050) constituent stocks, covering top 50 listed
-            companies</span
-          ><br />
+          <span data-i18n="dataset.source">Taiwan 50 Index (0050) constituent stocks, covering top 50 listed
+            companies</span><br />
           <strong data-i18n="dataset.industryLabel">Industry Coverage:</strong>
-          <span data-i18n="dataset.industry"
-            >Spanning 15 industry sectors (technology, finance, manufacturing,
-            energy, etc.)</span
-          ><br />
-          <strong data-i18n="dataset.annotationLabel"
-            >Annotation Dimensions:</strong
-          >
-          <span data-i18n="dataset.annotation"
-            >Four subtasks (promise recognition, evidence support, clarity
-            assessment, timeline verification)</span
-          ><br />
+          <span data-i18n="dataset.industry">Spanning 15 industry sectors (technology, finance, manufacturing,
+            energy, etc.)</span><br />
+          <strong data-i18n="dataset.annotationLabel">Annotation Dimensions:</strong>
+          <span data-i18n="dataset.annotation">Four subtasks (promise recognition, evidence support, clarity
+            assessment, timeline verification)</span><br />
           <strong data-i18n="dataset.splitLabel">Data Split:</strong>
-          <span data-i18n="dataset.split"
-            >Training set + Test set (Public &amp; Private)</span
-          >
+          <span data-i18n="dataset.split">Training set + Test set (Public &amp; Private)</span>
         </div>
 
         <h3 data-i18n="dataset.processTitle">🔍 Annotation Process</h3>
@@ -751,12 +639,8 @@
             <h4 data-i18n="evaluation.task1.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task1.metric1Label"
-                  >F1-Score:</strong
-                >
-                <span data-i18n="evaluation.task1.metric1"
-                  >Harmonic mean of precision and recall</span
-                >
+                <strong data-i18n="evaluation.task1.metric1Label">F1-Score:</strong>
+                <span data-i18n="evaluation.task1.metric1">Harmonic mean of precision and recall</span>
               </li>
               <li data-i18n="evaluation.task1.desc">
                 Measures the model's ability to identify ESG promise statements
@@ -771,13 +655,9 @@
             <h4 data-i18n="evaluation.task2.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task2.metric1Label"
-                  >F1-Score:</strong
-                >
-                <span data-i18n="evaluation.task2.metric1"
-                  >Determines whether promises have sufficient supporting
-                  evidence</span
-                >
+                <strong data-i18n="evaluation.task2.metric1Label">F1-Score:</strong>
+                <span data-i18n="evaluation.task2.metric1">Determines whether promises have sufficient supporting
+                  evidence</span>
               </li>
               <li data-i18n="evaluation.task2.desc">
                 Core practical capability assessment
@@ -792,13 +672,9 @@
             <h4 data-i18n="evaluation.task3.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task3.metric1Label"
-                  >Macro-F1:</strong
-                >
-                <span data-i18n="evaluation.task3.metric1"
-                  >Three-category (clear/unclear/misleading) average
-                  performance</span
-                >
+                <strong data-i18n="evaluation.task3.metric1Label">Macro-F1:</strong>
+                <span data-i18n="evaluation.task3.metric1">Three-category (clear/unclear/misleading) average
+                  performance</span>
               </li>
               <li data-i18n="evaluation.task3.desc">
                 Most challenging task, identifying greenwashing risk capability
@@ -813,12 +689,8 @@
             <h4 data-i18n="evaluation.task4.metricLabel">Evaluation Metrics</h4>
             <ul>
               <li>
-                <strong data-i18n="evaluation.task4.metric1Label"
-                  >Macro-F1:</strong
-                >
-                <span data-i18n="evaluation.task4.metric1"
-                  >Four-category time inference capability</span
-                >
+                <strong data-i18n="evaluation.task4.metric1Label">Macro-F1:</strong>
+                <span data-i18n="evaluation.task4.metric1">Four-category time inference capability</span>
               </li>
               <li data-i18n="evaluation.task4.desc">
                 Assesses model understanding of commitment timelines
@@ -827,9 +699,7 @@
           </div>
         </div>
 
-        <h3 data-i18n="evaluation.awardsTitle">
-          🏅 Award Structure (Student Category)
-        </h3>
+        <h3 data-i18n="evaluation.awardsTitle">🏅 Award Structure (Student Category)</h3>
         <div class="cards">
           <div class="card">
             <h3 data-i18n="evaluation.award1.title">🥇 First Place</h3>
@@ -838,12 +708,8 @@
               <span data-i18n="evaluation.award1.slots">1 team</span><br />
               <strong data-i18n="evaluation.award1.prizeLabel">Prize:</strong>
               <span data-i18n="evaluation.award1.prize">NTD 80,000</span><br />
-              <strong data-i18n="evaluation.award1.certLabel"
-                >Certificate:</strong
-              >
-              <span data-i18n="evaluation.award1.cert"
-                >Paper &amp; Digital Certificate by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award1.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award1.cert">Paper &amp; Digital Certificate by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
@@ -853,12 +719,8 @@
               <span data-i18n="evaluation.award2.slots">1 team</span><br />
               <strong data-i18n="evaluation.award2.prizeLabel">Prize:</strong>
               <span data-i18n="evaluation.award2.prize">NTD 50,000</span><br />
-              <strong data-i18n="evaluation.award2.certLabel"
-                >Certificate:</strong
-              >
-              <span data-i18n="evaluation.award2.cert"
-                >Paper &amp; Digital Certificate by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award2.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award2.cert">Paper &amp; Digital Certificate by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
@@ -868,12 +730,8 @@
               <span data-i18n="evaluation.award3.slots">1 team</span><br />
               <strong data-i18n="evaluation.award3.prizeLabel">Prize:</strong>
               <span data-i18n="evaluation.award3.prize">NTD 30,000</span><br />
-              <strong data-i18n="evaluation.award3.certLabel"
-                >Certificate:</strong
-              >
-              <span data-i18n="evaluation.award3.cert"
-                >Paper &amp; Digital Certificate by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award3.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award3.cert">Paper &amp; Digital Certificate by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
@@ -883,12 +741,8 @@
               <span data-i18n="evaluation.award4.slots">2 teams</span><br />
               <strong data-i18n="evaluation.award4.prizeLabel">Prize:</strong>
               <span data-i18n="evaluation.award4.prize">NTD 10,000</span><br />
-              <strong data-i18n="evaluation.award4.certLabel"
-                >Certificate:</strong
-              >
-              <span data-i18n="evaluation.award4.cert"
-                >Paper &amp; Digital Certificate by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award4.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award4.cert">Paper &amp; Digital Certificate by Ministry of Education</span>
             </p>
           </div>
           <div class="card">
@@ -898,37 +752,23 @@
               <span data-i18n="evaluation.award5.slots">10 teams</span><br />
               <strong data-i18n="evaluation.award5.prizeLabel">Prize:</strong>
               <span data-i18n="evaluation.award5.prize">NTD 7,000</span><br />
-              <strong data-i18n="evaluation.award5.certLabel"
-                >Certificate:</strong
-              >
-              <span data-i18n="evaluation.award5.cert"
-                >Paper &amp; Digital Certificate by Ministry of Education</span
-              >
+              <strong data-i18n="evaluation.award5.certLabel">Certificate:</strong>
+              <span data-i18n="evaluation.award5.cert">Paper &amp; Digital Certificate by Ministry of Education</span>
             </p>
           </div>
         </div>
 
         <div class="highlight-box highlight-box--mt2">
           <strong data-i18n="evaluation.noteLabel">※ Note:</strong>
-          <span data-i18n="evaluation.note"
-            >Industry professionals category receives digital certificates only
-            (no prize money)</span
-          >
+          <span data-i18n="evaluation.note">Industry professionals category receives digital certificates only (no prize money)</span>
         </div>
 
         <div class="highlight-box highlight-box--mt1">
-          <strong data-i18n="evaluation.rulesLabel">📌 Ranking Rules:</strong
-          ><br />
-          <span data-i18n="evaluation.rule1"
-            >• Final ranking based on Private Dataset test results</span
-          ><br />
-          <span data-i18n="evaluation.rule2"
-            >• Public Dataset for reference during competition only</span
-          ><br />
-          <span data-i18n="evaluation.rule3"
-            >• Top 25% teams exceeding Baseline receive Program Office digital
-            certificates</span
-          >
+          <strong data-i18n="evaluation.rulesLabel">📌 Ranking Rules:</strong><br />
+          <span data-i18n="evaluation.rule1">• Final ranking based on Private Dataset test results</span><br />
+          <span data-i18n="evaluation.rule2">• Public Dataset for reference during competition only</span><br />
+          <span data-i18n="evaluation.rule3">• Top 25% teams exceeding Baseline receive Program Office digital
+            certificates</span>
         </div>
       </div>
     </section>
@@ -957,27 +797,23 @@
             <div class="timeline-date" data-i18n="timeline.item3.date">
               2026.06.03 ~ 2026.06.10
             </div>
-            <strong data-i18n="timeline.item3.title"
-              >Validation Set Release</strong
-            >
-            <p data-i18n="timeline.item3.desc">Download available.</p>
+            <strong data-i18n="timeline.item3.title">Validation Set Release</strong>
+            <p data-i18n="timeline.item3.desc">
+              Download available.
+            </p>
           </div>
           <div class="timeline-item">
             <div class="timeline-date" data-i18n="timeline.item4.date">
               2026.06.10 ~ 2026.06.17
             </div>
-            <strong data-i18n="timeline.item4.title"
-              >Test Set Release &amp; Prediction Submission</strong
-            >
+            <strong data-i18n="timeline.item4.title">Test Set Release &amp; Prediction Submission</strong>
             <p data-i18n="timeline.item4.desc"></p>
           </div>
           <div class="timeline-item">
             <div class="timeline-date" data-i18n="timeline.item5.date">
               2026.06.23
             </div>
-            <strong data-i18n="timeline.item5.title"
-              >Preliminary Results Announcement</strong
-            >
+            <strong data-i18n="timeline.item5.title">Preliminary Results Announcement</strong>
             <p data-i18n="timeline.item5.desc">
               Private Leaderboard results announced.
             </p>
@@ -986,21 +822,16 @@
             <div class="timeline-date" data-i18n="timeline.item6.date">
               2026.06.24 ~ 2026.06.30
             </div>
-            <strong data-i18n="timeline.item6.title"
-              >Additional Deliverables Submission</strong
-            >
+            <strong data-i18n="timeline.item6.title">Additional Deliverables Submission</strong>
             <p data-i18n="timeline.item6.desc">
-              Submission of model documentation, self-constructed training data,
-              and source code.
+              Submission of model documentation, self-constructed training data, and source code.
             </p>
           </div>
           <div class="timeline-item">
             <div class="timeline-date" data-i18n="timeline.item8.date">
               2026.07.23
             </div>
-            <strong data-i18n="timeline.item8.title"
-              >Final Ranking Announcement</strong
-            >
+            <strong data-i18n="timeline.item8.title">Final Ranking Announcement</strong>
             <p data-i18n="timeline.item8.desc"></p>
           </div>
           <div class="timeline-item">
@@ -1009,64 +840,6 @@
             </div>
             <strong data-i18n="timeline.item9.title">Award Ceremony</strong>
             <p data-i18n="timeline.item9.desc"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="workshops">
-      <div class="container">
-        <h2 data-i18n="workshops.title">校園巡迴課程</h2>
-        <p class="section-intro" data-i18n="workshops.intro">...</p>
-        <div class="cards">
-          <div class="card">
-            <h3 data-i18n="workshops.north.title">北區</h3>
-            <p
-              data-i18n="workshops.north.details"
-              style="white-space: pre-line"
-            ></p>
-            <p>
-              <a
-                href="https://meet.google.com/paj-zhhj-mya"
-                target="_blank"
-                data-i18n="workshops.onlineLink"
-                >線上連結</a
-              >
-            </p>
-            <p data-i18n="workshops.north.yt">YouTube: Coming Soon</p>
-          </div>
-
-          <div class="card">
-            <h3 data-i18n="workshops.central.title">中區</h3>
-            <p
-              data-i18n="workshops.central.details"
-              style="white-space: pre-line"
-            ></p>
-            <p>
-              <a
-                href="https://meet.google.com/paj-zhhj-mya"
-                target="_blank"
-                data-i18n="workshops.onlineLink"
-                >線上連結</a
-              >
-            </p>
-            <p data-i18n="workshops.central.yt">YouTube: Coming Soon</p>
-          </div>
-
-          <div class="card">
-            <h3 data-i18n="workshops.south.title">南區</h3>
-            <p
-              data-i18n="workshops.south.details"
-              style="white-space: pre-line"
-            ></p>
-            <p>
-              <a
-                href="https://meet.google.com/paj-zhhj-mya"
-                target="_blank"
-                data-i18n="workshops.onlineLink"
-                >線上連結</a
-              >
-            </p>
-            <p data-i18n="workshops.south.yt">YouTube: Coming Soon</p>
           </div>
         </div>
       </div>
@@ -1083,11 +856,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
-              <img
-                src="img/myday_photo.jpg"
-                alt="Prof. Min-Yuh Day"
-                loading="lazy"
-              />
+              <img src="img/myday_photo.jpg" alt="Prof. Min-Yuh Day" loading="lazy" />
             </div>
             <h4 data-i18n="team.pi.name">Prof. Min-Yuh Day</h4>
             <div class="role" data-i18n="team.pi.role">
@@ -1112,15 +881,11 @@
           </div>
         </div>
 
-        <h3 data-i18n="team.copiTitle">Co-Principal Investigators</h3>
+        <h3 data-i18n="team.copiTitle"> Co-Principal Investigators</h3>
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
-              <img
-                src="img/Dr. Chung-Chi Chen.png"
-                alt="Dr. Chung-Chi Chen"
-                loading="lazy"
-              />
+              <img src="img/Dr. Chung-Chi Chen.png" alt="Dr. Chung-Chi Chen" loading="lazy" />
             </div>
             <h4 data-i18n="team.copi1.name">Dr. Chung-Chi Chen</h4>
             <div class="role" data-i18n="team.copi1.role">
@@ -1144,11 +909,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img
-                src="img/Yohei Seki.png"
-                alt="Prof. Yohei Seki"
-                loading="lazy"
-              />
+              <img src="img/Yohei Seki.png" alt="Prof. Yohei Seki" loading="lazy" />
             </div>
             <h4 data-i18n="team.copi2.name">Prof. Yohei Seki</h4>
             <div class="role" data-i18n="team.copi2.role">
@@ -1172,7 +933,7 @@
           </div>
         </div>
 
-        <h3 data-i18n="team.raTitle">Research Assistants</h3>
+        <h3 data-i18n="team.raTitle"> Research Assistants</h3>
         <div class="team-grid">
           <div class="team-member">
             <div class="team-photo">
@@ -1185,8 +946,7 @@
               target="_blank"
               class="github-link"
               data-i18n="team.ra1.link"
-            >
-              Website</a
+              > Website</a
             >
           </div>
           <div class="team-member">
@@ -1205,11 +965,7 @@
           </div>
           <div class="team-member">
             <div class="team-photo">
-              <img
-                src="img/Wesley_Photo.png"
-                alt="Wei-Chun Huang"
-                loading="lazy"
-              />
+              <img src="img/Wesley_Photo.png" alt="Wei-Chun Huang" loading="lazy" />
             </div>
             <h4 data-i18n="team.ra3.name">Wei-Chun Huang</h4>
             <div class="role" data-i18n="team.ra3.role">Researcher</div>
@@ -1306,18 +1062,12 @@
       aria-labelledby="modalName"
       aria-hidden="true"
     >
-      <div
-        class="co-org-modal"
-        id="coOrgModal"
-        onclick="event.stopPropagation()"
-      >
+      <div class="co-org-modal" id="coOrgModal" onclick="event.stopPropagation()">
         <button
           class="co-org-modal-close"
           id="coOrgModalClose"
           aria-label="Close"
-        >
-          ✕
-        </button>
+        >✕</button>
         <div class="co-org-modal-logo-wrap">
           <img id="modalLogo" src="" alt="" />
         </div>
@@ -1335,34 +1085,54 @@
       </div>
     </div>
     <!-- /CO-ORGANIZERS -->
+<section id="workshops">
+  <div class="container">
+    <h2 data-i18n="workshops.title">校園巡迴課程</h2>
+    <p class="section-intro" data-i18n="workshops.intro">...</p>
+    <div class="cards">
 
-    <section id="faq">
-      <div class="container">
-        <h2 data-i18n="faq.title">FAQ</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <h3 data-i18n="faq.q1">What is VeriPromise ESG?</h3>
-            <p data-i18n="faq.a1">
-              VeriPromise ESG is an AI competition focused on verifying
-              corporate sustainability commitments using NLP technology.
-            </p>
-          </div>
-          <div class="faq-item">
-            <h3 data-i18n="faq.q2">Who can participate?</h3>
-            <p data-i18n="faq.a2">
-              The competition is open to students, researchers, and industry
-              professionals. Teams can consist of 1-5 members.
-            </p>
-          </div>
-          <div class="faq-item">
-            <h3 data-i18n="faq.q3">What is the dataset?</h3>
-            <p data-i18n="faq.a3">
-              The VeriPromiseESG4K dataset contains 4,000 annotated data points
-              from Taiwan 50 Index constituent stocks' ESG reports.
-            </p>
-          </div>
-        </div>
+      <div class="card">
+        <h3 data-i18n="workshops.north.title">北區</h3>
+        <p data-i18n="workshops.north.details" style="white-space:pre-line;"></p>
+        <p><a href="https://meet.google.com/paj-zhhj-mya" target="_blank" data-i18n="workshops.onlineLink">線上連結</a></p>
+        <p data-i18n="workshops.north.yt">YouTube: Coming Soon</p>
       </div>
+
+      <div class="card">
+        <h3 data-i18n="workshops.central.title">中區</h3>
+        <p data-i18n="workshops.central.details"style="white-space:pre-line;"></p>
+        <p><a href="https://meet.google.com/paj-zhhj-mya" target="_blank" data-i18n="workshops.onlineLink">線上連結</a></p>
+        <p data-i18n="workshops.central.yt">YouTube: Coming Soon</p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="workshops.south.title">南區</h3>
+        <p data-i18n="workshops.south.details"style="white-space:pre-line;"></p>
+        <p><a href="https://meet.google.com/paj-zhhj-mya" target="_blank" data-i18n="workshops.onlineLink">線上連結</a></p>
+        <p data-i18n="workshops.south.yt">YouTube: Coming Soon</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section id="faq">
+        <div class="container">
+            <h2 data-i18n="faq.title">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q1">What is VeriPromise ESG?</h3>
+                    <p data-i18n="faq.a1">VeriPromise ESG is an AI competition focused on verifying corporate sustainability commitments using NLP technology.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q2">Who can participate?</h3>
+                    <p data-i18n="faq.a2">The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q3">What is the dataset?</h3>
+                    <p data-i18n="faq.a3">The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="examples">
@@ -1377,752 +1147,387 @@
             <!-- E 類範例 1 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-e">E</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.e1.type"
-                  >有承諾 - 有證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.e1.type">有承諾 - 有證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.e1.content">
                   承諾遵循國際人權公約與基本勞動人權原則，落實性別平等、結社自由，並致力於消弭歧視與強迫勞動。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.clear"
-                  >清晰 (Clear)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.clear">清晰 (Clear)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.already"
-                  >已執行 (already)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.already">已執行 (already)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.e1.note"
-                  >有制度性承諾與明確人權框架。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.e1.note">有制度性承諾與明確人權框架。</span>
               </div>
             </div>
 
             <!-- E 類範例 2 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-e">E</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.e2.type"
-                  >有承諾 - 有證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.e2.type">有承諾 - 有證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.e2.content">
-                  除非資金明確用於綠能轉型計畫，不再新增投資燃煤比重超過 50%
-                  的電廠；同時針對燃料煤相關產業制定嚴格准入與撤資標準，積極引導資金流向低碳與可再生能源領域。
+                  除非資金明確用於綠能轉型計畫，不再新增投資燃煤比重超過 50% 的電廠；同時針對燃料煤相關產業制定嚴格准入與撤資標準，積極引導資金流向低碳與可再生能源領域。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.notClear"
-                  >不清晰 (Not Clear)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.notClear">不清晰 (Not Clear)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.already"
-                  >已執行 (already)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.already">已執行 (already)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.e2.note"
-                  >行動方向明確，但量化成效與第三方驗證描述不足。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.e2.note">行動方向明確，但量化成效與第三方驗證描述不足。</span>
               </div>
             </div>
 
             <!-- E 類範例 3 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-e">E</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.e3.type"
-                  >有承諾 - 無證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.e3.type">有承諾 - 無證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.e3.content">
-                  落實環境永續、實踐永續承諾是本公司的企業使命，將以 2050
-                  年淨零排放為首要目標，致力實現多項環境永續承諾。
+                  落實環境永續、實踐永續承諾是本公司的企業使命，將以 2050 年淨零排放為首要目標，致力實現多項環境永續承諾。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-no" data-i18n="examples.no"
-                  >否 (No)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.moreThan5"
-                  >5 年以上 (more_than_5_years)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.moreThan5">5 年以上 (more_than_5_years)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.e3.note"
-                  >屬於願景型承諾，未提供具體行動或成果。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.e3.note">屬於願景型承諾，未提供具體行動或成果。</span>
               </div>
             </div>
 
             <!-- E 類範例 4 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-e">E</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.e4.type"
-                  >無承諾</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.e4.type">無承諾</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.e4.content">
                   應用人工智慧強化良率監控，輔助辦識模型有效性達 98%。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-no" data-i18n="examples.no"
-                  >否 (No)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.e4.note"
-                  >僅敘述產品效果，未有行動承諾。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.e4.note">僅敘述產品效果，未有行動承諾。</span>
               </div>
             </div>
 
             <!-- S 類範例 1 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-s">S</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.s1.type"
-                  >有承諾 - 有證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.s1.type">有承諾 - 有證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.s1.content">
                   我們將持續推動零職災文化，完善承攬商納管與教育訓練機制，並加強現場稽核頻率，以降低高風險作業事故率。為此，我們正調整標準作業流程並提高稽核覆蓋率。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.notClear"
-                  >不清晰 (Not Clear)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.notClear">不清晰 (Not Clear)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.between2and5"
-                  >2-5年 (between_2_and_5_years)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.between2and5">2-5年 (between_2_and_5_years)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.s1.note"
-                  >明確表達企業將持續推動零職災文化，屬於清楚的行動承諾；相關行動未提供量化指標、明確頻率或制度細節，證據支撐力道有限。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.s1.note">明確表達企業將持續推動零職災文化，屬於清楚的行動承諾；相關行動未提供量化指標、明確頻率或制度細節，證據支撐力道有限。</span>
               </div>
             </div>
 
             <!-- S 類範例 2 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-s">S</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.s2.type"
-                  >有承諾 - 無證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.s2.type">有承諾 - 無證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.s2.content">
-                  制定企業內部衝突礦產管理聲明，承諾遵守 RBA
-                  不使用衝突礦產政策。
+                  制定企業內部衝突礦產管理聲明，承諾遵守 RBA 不使用衝突礦產政策。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-no" data-i18n="examples.no"
-                  >否 (No)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.already"
-                  >已執行 (already)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.already">已執行 (already)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.s2.note"
-                  >有制度性承諾與明確人權框架。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.s2.note">有制度性承諾與明確人權框架。</span>
               </div>
             </div>
 
             <!-- S 類範例 3 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-s">S</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.s3.type"
-                  >無承諾</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.s3.type">無承諾</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.s3.content">
                   推出金來寶小額終身壽險，提供高齡者基本保險保障與終身壽險服務。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-no" data-i18n="examples.no"
-                  >否 (No)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.s3.note"
-                  >僅是產品描述，未包含未來承諾語句。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.s3.note">僅是產品描述，未包含未來承諾語句。</span>
               </div>
             </div>
 
             <!-- G 類範例 1 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-g">G</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.g1.type"
-                  >有承諾 - 有證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.g1.type">有承諾 - 有證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.g1.content">
                   我們將設立由三位獨立董事組成的永續委員會，每季檢視重大風險議題與對應計畫，並在年度股東會前完成報告揭露與外部查驗。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.clear"
-                  >清晰 (Clear)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.clear">清晰 (Clear)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.between2and5"
-                  >2-5年 (between_2_and_5_years)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.between2and5">2-5年 (between_2_and_5_years)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.g1.note"
-                  >明確表達企業將設立永續委員會，並規劃其運作方式，屬於具體且可執行的治理承諾；清楚說明組織架構、執行頻率及查驗機制。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.g1.note">明確表達企業將設立永續委員會，並規劃其運作方式，屬於具體且可執行的治理承諾；清楚說明組織架構、執行頻率及查驗機制。</span>
               </div>
             </div>
 
             <!-- G 類範例 2 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-g">G</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.g2.type"
-                  >有承諾 - 有證據</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.g2.type">有承諾 - 有證據</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.g2.content">
                   未來改選董事時將提高女性董事席次，以增進董事會性別多元化。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value status-yes" data-i18n="examples.yes"
-                  >是 (Yes)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value status-yes" data-i18n="examples.yes">是 (Yes)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.notClear"
-                  >不清晰 (Not Clear)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.notClear">不清晰 (Not Clear)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.within2"
-                  >2年內 (within_2_years)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.within2">2年內 (within_2_years)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.g2.note"
-                  >有明確方向，但缺乏具體目標與追蹤機制。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.g2.note">有明確方向，但缺乏具體目標與追蹤機制。</span>
               </div>
             </div>
 
             <!-- G 類範例 3 -->
             <div class="example-item">
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.categoryLabel"
-                  >ESG 類別</span
-                >
+                <span class="example-label" data-i18n="examples.categoryLabel">ESG 類別</span>
                 <span class="esg-badge esg-g">G</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.typeLabel"
-                  >類型</span
-                >
-                <span class="example-value" data-i18n="examples.g3.type"
-                  >無承諾</span
-                >
+                <span class="example-label" data-i18n="examples.typeLabel">類型</span>
+                <span class="example-value" data-i18n="examples.g3.type">無承諾</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.contentLabel"
-                  >段落內容</span
-                >
+                <span class="example-label" data-i18n="examples.contentLabel">段落內容</span>
                 <div class="example-data" data-i18n="examples.g3.content">
-                  2024 年研發人員數達 446 人，完成研發專案 17 件，智慧財產權累計
-                  202 件。
+                  2024 年研發人員數達 446 人，完成研發專案 17 件，智慧財產權累計 202 件。
                 </div>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.promiseLabel"
-                  >承諾狀態</span
-                >
-                <span class="example-value status-no" data-i18n="examples.no"
-                  >否 (No)</span
-                >
+                <span class="example-label" data-i18n="examples.promiseLabel">承諾狀態</span>
+                <span class="example-value status-no" data-i18n="examples.no">否 (No)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.evidenceLabel"
-                  >證據狀態</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.evidenceLabel">證據狀態</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.qualityLabel"
-                  >證據品質</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.qualityLabel">證據品質</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.timelineLabel"
-                  >驗證時間軸</span
-                >
-                <span class="example-value" data-i18n="examples.na"
-                  >不適用 (N/A)</span
-                >
+                <span class="example-label" data-i18n="examples.timelineLabel">驗證時間軸</span>
+                <span class="example-value" data-i18n="examples.na">不適用 (N/A)</span>
               </div>
               <div class="example-field">
-                <span class="example-label" data-i18n="examples.noteLabel"
-                  >註解</span
-                >
-                <span class="example-value" data-i18n="examples.g3.note"
-                  >營運成果描述，非治理承諾。</span
-                >
+                <span class="example-label" data-i18n="examples.noteLabel">註解</span>
+                <span class="example-value" data-i18n="examples.g3.note">營運成果描述，非治理承諾。</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2 data-i18n="contact.title">Contact Us</h2>
-        <p class="section-intro" data-i18n="contact.intro">
-          Feel free to reach out with any questions
-        </p>
-
-        <div class="cards cards-2col">
-          <div class="card">
-            <h3 data-i18n="contact.email.title">Email</h3>
-            <p>
-              <a href="mailto:yyteng@mail.ntpu.edu.tw"
-                >yyteng@mail.ntpu.edu.tw</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.website.title">Official Website</h3>
-            <p>
-              <a
-                href="https://www.ntpu.edu.tw"
-                target="_blank"
-                data-i18n="contact.website.link"
-                >National Taipei University</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.code.title">Sample Code</h3>
-            <p>
-              <a
-                href="https://colab.research.google.com/drive/16Z7xKWnNVcQyFvD6xjVWHWUfS-4y5RT6?usp=sharing"
-                target="_blank"
-                >Google Drive</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.slides.title">宣傳投影片</h3>
-            <p>
-              <a
-                href="https://drive.google.com/drive/folders/1_YleF9RubvdLHDBZz6kyVLhx-3Qqs1tP?usp=sharing"
-                target="_blank"
-                data-i18n="contact.slides.link"
-                >Google Drive</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.platform.title">Competition Platform</h3>
-            <p>
-              <a
-                href="https://go.aicup.tw/"
-                target="_blank"
-                data-i18n="contact.platform.link"
-                >AI CUP Registration System</a
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="highlight-box highlight-box--mt3">
-          <strong data-i18n="contact.importantLabel">
-            Important Reminders:</strong
-          ><br />
-          <span data-i18n="contact.note1"
-            >• Register via AI CUP Registration System
-            (https://go.aicup.tw/)</span
-          ><br />
-          <span data-i18n="contact.note2"
-            >• Teams consist of 1-5 members; no changes after registration </span
-          ><br />
-          <span data-i18n="contact.note3"
-            >• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59
-            (3 submissions per day)</span
-          >
-        </div>
-      </div>
-    </section>
-
-    <section id="resources">
+<section id="resources">
       <div class="container">
         <h2 data-i18n="resources.title">Related Resources</h2>
         <p class="section-intro" data-i18n="resources.intro">
@@ -2144,9 +1549,7 @@
             </p>
           </div>
           <div class="card">
-            <h3 data-i18n="resources.item2.title">
-              Multi-Lingual ESG Issue Identification
-            </h3>
+            <h3 data-i18n="resources.item2.title">Multi-Lingual ESG Issue Identification</h3>
             <p data-i18n="resources.item2.desc">
               FNP@IJCAI-2023 paper on ESG issue identification
             </p>
@@ -2159,9 +1562,7 @@
             </p>
           </div>
           <div class="card">
-            <h3 data-i18n="resources.item3.title">
-              Multi-Lingual ESG Impact Type Identification
-            </h3>
+            <h3 data-i18n="resources.item3.title">Multi-Lingual ESG Impact Type Identification</h3>
             <p data-i18n="resources.item3.desc">
               FNP@IJCAI-2023 paper on ESG impact type classification
             </p>
@@ -2174,9 +1575,7 @@
             </p>
           </div>
           <div class="card">
-            <h3 data-i18n="resources.item4.title">
-              Multi-Lingual ESG Impact Duration Inference
-            </h3>
+            <h3 data-i18n="resources.item4.title">Multi-Lingual ESG Impact Duration Inference</h3>
             <p data-i18n="resources.item4.desc">
               FNP@EMNLP-2024 paper on ESG impact duration prediction
             </p>
@@ -2202,10 +1601,7 @@
             </p>
           </div>
           <div class="card">
-            <h3 data-i18n="resources.item_mlpromise.title">
-              ML-Promise: A Multilingual Dataset for Corporate Promise
-              Verification
-            </h3>
+            <h3 data-i18n="resources.item_mlpromise.title">ML-Promise: A Multilingual Dataset for Corporate Promise Verification</h3>
             <p data-i18n="resources.item_mlpromise.desc">
               EMNLP 2025 paper on multilingual promise verification dataset
             </p>
@@ -2220,6 +1616,75 @@
         </div>
       </div>
     </section>
+    <section id="contact">
+      <div class="container">
+        <h2 data-i18n="contact.title">Contact Us</h2>
+        <p class="section-intro" data-i18n="contact.intro">
+          Feel free to reach out with any questions
+        </p>
+
+        <div class="cards cards-2col">
+          <div class="card">
+            <h3 data-i18n="contact.email.title">Email</h3>
+            <p>
+              <a href="mailto:yyteng@mail.ntpu.edu.tw">yyteng@mail.ntpu.edu.tw</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="contact.website.title">Official Website</h3>
+            <p>
+              <a
+                href="https://www.ntpu.edu.tw"
+                target="_blank"
+                data-i18n="contact.website.link"
+                >National Taipei University</a
+              >
+            </p>
+          </div>
+          <div class="card">
+  <h3 data-i18n="contact.code.title">Sample Code</h3>
+  <p>
+    <a href="https://drive.google.com/file/d/15CjcVUXgo7_VH2kTrYyJQivs1ZffgfwY/view?usp=drive_link" target="_blank">Google Drive</a>
+  </p>
+</div>
+<div class="card">
+  <h3 data-i18n="contact.slides.title">宣傳投影片</h3>
+  <p>
+    <a href="https://drive.google.com/drive/folders/1_YleF9RubvdLHDBZz6kyVLhx-3Qqs1tP?usp=sharing" target="_blank" data-i18n="contact.slides.link">Google Drive</a>
+  </p>
+</div>
+          <div class="card">
+            <h3 data-i18n="contact.platform.title">Competition Platform</h3>
+            <p>
+              <a
+                href="https://go.aicup.tw/"
+                target="_blank"
+                data-i18n="contact.platform.link"
+                >AI CUP Registration System</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="highlight-box highlight-box--mt3">
+          <strong data-i18n="contact.importantLabel"
+            > Important Reminders:</strong
+          ><br />
+          <span data-i18n="contact.note1"
+            >• Register via AI CUP Registration System
+            (https://go.aicup.tw/)</span
+          ><br />
+          <span data-i18n="contact.note2"
+            >• Teams consist of 1-5 members; no changes after registration </span
+          ><br />
+          <span data-i18n="contact.note3"
+            >• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59
+            (3 submissions per day)</span
+          >
+        </div>
+      </div>
+    </section>
+
 
     <footer>
       <div class="container">
@@ -2227,37 +1692,25 @@
           &copy; 2025-2026 AI CUP - ESG Promise Verification Competition
         </p>
         <div class="footer-orgs">
-          <div class="footer-org-row">
-            <div class="footer-org-logo-wrap">
-              <img
-                src="img/moe-logo.jpg"
-                alt="教育部 Logo"
-                onerror="this.style.display = 'none'"
-              />
-            </div>
-            <div class="footer-org-text" data-i18n="footer.supervising"></div>
-          </div>
-          <div class="footer-org-row">
-            <div class="footer-org-logo-wrap">
-              <img
-                src="img/aicup-logo.jpg"
-                alt="AI CUP Logo"
-                onerror="this.style.display = 'none'"
-              />
-            </div>
-            <div class="footer-org-text" data-i18n="footer.organizing"></div>
-          </div>
-          <div class="footer-org-row">
-            <div class="footer-org-logo-wrap">
-              <img
-                src="img/ntpu-logo.png"
-                alt="NTPU Logo"
-                onerror="this.style.display = 'none'"
-              />
-            </div>
-            <div class="footer-org-text" data-i18n="footer.topic"></div>
-          </div>
-        </div>
+  <div class="footer-org-row">
+    <div class="footer-org-logo-wrap">
+      <img src="img/moe-logo.jpg" alt="教育部 Logo" onerror="this.style.display='none'" />
+    </div>
+    <div class="footer-org-text" data-i18n="footer.supervising"></div>
+  </div>
+  <div class="footer-org-row">
+    <div class="footer-org-logo-wrap">
+      <img src="img/aicup-logo.jpg" alt="AI CUP Logo" onerror="this.style.display='none'" />
+    </div>
+    <div class="footer-org-text" data-i18n="footer.organizing"></div>
+  </div>
+  <div class="footer-org-row">
+    <div class="footer-org-logo-wrap">
+      <img src="img/ntpu-logo.png" alt="NTPU Logo" onerror="this.style.display='none'" />
+    </div>
+    <div class="footer-org-text" data-i18n="footer.topic"></div>
+  </div>
+</div>
         <p>
           <a href="#home" data-i18n="footer.backToTop">Back to Top</a>
         </p>
