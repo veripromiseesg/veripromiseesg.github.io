@@ -8,6 +8,33 @@
 
 const CO_ORGANIZERS = [
   {
+    id: 20,
+    region: "workshop",
+    name_ch: "臺北市立大學",
+    name_en: "University of Taipei",
+    logo: "img/co-organizer/臺北市立大學.png",
+    intro: "臺北市立大學於2013年由臺北市立教育大學與臺北市立體育學院合併成立，為臺灣歷史最悠久之高等教育機構。本校結合師資培育典範、菁英運動員培訓基地及都市研究智庫等三大特色，致力於學術研究產能提升、卓越教學成效確保、國際學術交流深化以及產學合作模式創新。校務發展以教學卓越與國際化為核心指標，旨在建構具備全球競爭力之都會大學，並落實社會責任，培育具備專業素養與國際視野之現代公民。",
+    link: "https://www.utaipei.edu.tw"
+  },
+  {
+    id: 21,
+    region: "workshop",
+    name_ch: "靜宜大學",
+    name_en: "Providence University",
+    logo: "img/co-organizer/靜宜大學.jpg",
+    intro: "靜宜大學秉承天主教利他精神與進德修業校訓，致力於推動全人教育並培育具備利他思維之社會公民。校務發展計畫結合聯合國永續發展目標，透過涵育良善美德、尊重多元文化、追求專業學識與探索生活知能等四大素養，發展生命省思及科技運用等七項核心能力。本校推動以院為核心之發展特色與全英文專業課程模組，旨在強化學生國際競爭力與專業就業能力，轉型為具備社會責任、教學卓越與特色研究之國際化大學。",
+    link: "https://www.pu.edu.tw"
+  },
+  {
+    id: 22,
+    region: "workshop",
+    name_ch: "國立高雄科技大學",
+    name_en: "National Kaohsiung University of Science and Technology",
+    logo: "img/co-organizer/國立高雄科技大學.png",
+    intro: "國立高雄科技大學於2018年由國立高雄應用科技大學、國立高雄第一科技大學及國立高雄海洋科技大學合併成立，為臺灣規模最大之技術型大學。該校設有建工、燕巢、第一、楠梓及旗津等五大校區，學術領域涵蓋工學、電資、管理、財金、外語、人文社會、水圈及海事等多元範疇。憑藉優越之地理位置與完整之校區機能，本校致力於提供優質學習環境，並透過學術資源整合與跨領域協作，深耕專業人才培育與產業實務研發。",
+    link: "https://www.nkust.edu.tw"
+  },
+  {
     id: 15,
     region: "featured",
     name_ch: "SITCON 學生計算機年會",
@@ -133,6 +160,7 @@ function renderCoOrganizers() {
   const isZh = i18next.language === "zh";
 
   const regionLabels = {
+    workshop: { zh: "巡迴課程合作學校", en: "Workshop Partner Universities" },
     featured: { zh: "其他", en: "Other" },
     north:    { zh: "北區", en: "Northern Region" },
     central:  { zh: "中區", en: "Central Region" },
