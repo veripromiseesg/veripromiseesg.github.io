@@ -793,7 +793,7 @@ date: "2026.03.05 ~ 2026.07.23",
   north: {
     title: "北區｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>臺北市立大學</a>",
     details: "日期：2026 年 3 月 6 日（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
-    yt: "▶ 課程錄影：敬請期待",
+    yt: "▶ 課程錄影：<a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>點此觀看</a>",
   },
   central: {
     title: "中區｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>靜宜大學</a>",
