@@ -1383,7 +1383,7 @@ date: "2026.03.05 ~ 2026.07.23",
   north: {
     title: "North｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>University of Taipei</a>",
     details: "Date: March 6, 2026 (Friday) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
-    yt: "▶ Recording: Coming Soon",
+    yt: "▶ Workshop Recording: <a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>Watch Here</a>",
   },
   central: {
     title: "Central｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>Providence University</a>",
