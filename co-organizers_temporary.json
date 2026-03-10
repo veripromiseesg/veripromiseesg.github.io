@@ -148,10 +148,13 @@
   },
   {
     "id": 16,
-    "name_ch": "高科大 NKUST GDGoC",
+    "name_ch": "GDG on Campus NKUST",
     "name_en": "",
     "logo": "",
-    "intro": "",
-    "link": ""
+    "intro": [
+        "GDG on Campus NKUST 致力於在高科大五大校區（建工、燕巢、第一、楠梓、旗津）推廣 Google 資源。",
+        "我們透過不定期舉辦的技術工作坊與活動，建立一個跨校區的學習社群，協助同學們掌握最新的開發工具與技術趨勢，共同成長並連結全球開發者網路。"
+    ],
+    "link": "https://gdg.community.dev/gdg-on-campus-national-kaohsiung-university-of-science-and-technology-kaohsiung-taiwan/"
   }
 ]
