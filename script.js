@@ -362,6 +362,7 @@ const translations = {
           "本競賽包含四個核心子任務，從承諾識別、證據評估、清晰度分析到時機預測，完整涵蓋 ESG 報告驗證流程",
         codeZh: "中文版檔案",
         codeEn: "英文版檔案",
+        codeLabel: "範例程式碼可參考",
         task1: {
           title: " 子任務一：承諾語句識別",
           goalLabel: "任務目標：",
@@ -957,6 +958,7 @@ const translations = {
           "This competition comprises four core subtasks, covering the complete ESG report verification process from promise recognition to evidence assessment, clarity analysis, and timeline prediction",
         codeZh: "Chinese Version",
         codeEn: "English Version",
+        codeLabel: "Sample code available: ",
         task1: {
           title: "Subtask 1: Commitment Classification",
           goalLabel: "Objective:",
