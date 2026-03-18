@@ -295,7 +295,7 @@ const translations = {
         cta: "了解更多",
         aicupLink: "AI CUP 官網",
 aideaLink: "AIdea 競賽平臺",
-registerLink: "AI Cup 報名系統",
+registerLink: "AI CUP 報名系統",
 date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
@@ -868,7 +868,7 @@ date: "2026.03.05 ~ 2026.07.23",
         cta: "Learn More",
         aicupLink: "AI CUP Official Website",
 aideaLink: "AIdea Competition Platform",
-registerLink: "AI Cup Registration",
+registerLink: "AI CUP Registration",
 date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
