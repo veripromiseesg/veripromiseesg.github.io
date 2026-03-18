@@ -166,10 +166,9 @@
               <li>
                 <a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a>
               </li>
+              <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
             </ul>
           </li>
-
-          <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
 
           <li class="nav-dropdown">
             <a href="#team" class="nav-dropdown-toggle" data-i18n="nav.people"
@@ -200,8 +199,6 @@
               </li>
             </ul>
           </li>
-
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <!-- [FIX] 預設語言為中文，btn-zh 加 active -->
         <div class="lang-switch">
@@ -256,6 +253,14 @@
             class="hero-platform-btn"
             data-i18n="hero.aideaLink"
             >AIdea 競賽平台</a
+          >
+          <a
+            href="https://drive.google.com/drive/folders/1hVJaI_MVpDmbfEuCuNMckqbozZRjnJ-z?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-platform-btn"
+            data-i18n="hero.brochureLink"
+            >競賽雙語簡章</a
           >
         </div>
       </div>
@@ -351,7 +356,22 @@
           ESG report verification process from promise recognition to evidence
           assessment, clarity analysis, and timeline prediction
         </p>
-
+        <p class="section-intro" style="margin-top: -1rem">
+          （ 範例程式碼可參考
+          <a
+            href="https://colab.research.google.com/drive/16Z7xKWnNVcQyFvD6xjVWHWUfS-4y5RT6?usp=drive_link"
+            target="_blank"
+            data-i18n="tasks.codeZh"
+            >中文版檔案</a
+          >、
+          <a
+            href="https://colab.research.google.com/drive/1m2z6kMgbvuQdB3px95h_xJTLPiNJvl5w?usp=drive_link"
+            target="_blank"
+            data-i18n="tasks.codeEn"
+            >英文版檔案</a
+          >
+          ）
+        </p>
         <div class="task-container">
           <div class="task-card">
             <h3 data-i18n="tasks.task1.title">
@@ -685,7 +705,17 @@
         </div>
 
         <h3 data-i18n="dataset.processTitle">🔍 Annotation Process</h3>
-        <div class="task-container">
+        <div
+          class="task-container"
+          style="
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 1.5rem !important;
+            width: 100% !important;
+            padding: 0 !important;
+            max-width: none !important;
+          "
+        >
           <div class="task-card">
             <h3 data-i18n="dataset.phase1.title">
               Phase 1: Initial Annotation
@@ -731,7 +761,6 @@
         </div>
       </div>
     </section>
-
     <section id="evaluation">
       <div class="container">
         <h2 data-i18n="evaluation.title">Evaluation Methods</h2>
@@ -743,7 +772,13 @@
         <h3 data-i18n="evaluation.metricsTitle">
           📊 Evaluation Metrics for Each Subtask
         </h3>
-        <div class="task-container">
+        <div
+          class="task-container"
+          style="
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+          "
+        >
           <div class="task-card">
             <h3 data-i18n="evaluation.task1.title">
               Subtask 1: Commitment Classification
@@ -1247,6 +1282,7 @@
       aria-modal="true"
       aria-labelledby="modalName"
       aria-hidden="true"
+      onclick="closeCoOrgModal(event)"
     >
       <div
         class="co-org-modal"
@@ -1310,7 +1346,11 @@
               data-i18n="workshops.north.details"
               style="white-space: pre-line"
             ></p>
-            <p style="text-indent:0"><a href="https://meet.google.com/paj-zhhj-mya" target="_blank">https://meet.google.com/paj-zhhj-mya</a></p>
+            <p style="text-indent: 0; margin-left: 0; padding-left: 0">
+              <a href="https://meet.google.com/paj-zhhj-mya" target="_blank"
+                >https://meet.google.com/paj-zhhj-mya</a
+              >
+            </p>
             <p data-i18n="workshops.north.yt">YouTube: Coming Soon</p>
           </div>
 
@@ -1320,7 +1360,11 @@
               data-i18n="workshops.central.details"
               style="white-space: pre-line"
             ></p>
-            <p style="text-indent:0"><a href="https://meet.google.com/paj-zhhj-mya" target="_blank">https://meet.google.com/paj-zhhj-mya</a></p>
+            <p style="text-indent: 0; margin-left: 0; padding-left: 0">
+              <a href="https://meet.google.com/paj-zhhj-mya" target="_blank"
+                >https://meet.google.com/paj-zhhj-mya</a
+              >
+            </p>
             <p data-i18n="workshops.central.yt">YouTube: Coming Soon</p>
           </div>
 
@@ -1330,7 +1374,11 @@
               data-i18n="workshops.south.details"
               style="white-space: pre-line"
             ></p>
-            <p style="text-indent:0"><a href="https://meet.google.com/paj-zhhj-mya" target="_blank">https://meet.google.com/paj-zhhj-mya</a></p>
+            <p style="text-indent: 0; margin-left: 0; padding-left: 0">
+              <a href="https://meet.google.com/paj-zhhj-mya" target="_blank"
+                >https://meet.google.com/paj-zhhj-mya</a
+              >
+            </p>
             <p data-i18n="workshops.south.yt">YouTube: Coming Soon</p>
           </div>
         </div>
@@ -2139,81 +2187,6 @@
         </div>
       </div>
     </section>
-    <section id="contact">
-      <div class="container">
-        <h2 data-i18n="contact.title">Contact Us</h2>
-        <p class="section-intro" data-i18n="contact.intro">
-          Feel free to reach out with any questions
-        </p>
-
-        <div class="cards cards-2col">
-          <div class="card">
-            <h3 data-i18n="contact.email.title">Email</h3>
-            <p>
-              <a href="mailto:yyteng@mail.ntpu.edu.tw"
-                >yyteng@mail.ntpu.edu.tw</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.website.title">Official Website</h3>
-            <p>
-              <a
-                href="https://www.ntpu.edu.tw"
-                target="_blank"
-                data-i18n="contact.website.link"
-                >National Taipei University</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.code.title">Sample Code</h3>
-            <p style="font-size: 1.1rem">
-              <a
-                href="https://colab.research.google.com/drive/1BfDqyO9n6-SokXTtE9ZLddUhfbY-3sZ7?usp=sharing"
-                target="_blank"
-                >中文版</a
-              >
-            </p>
-            <p style="font-size: 1.1rem">
-              <a
-                href="https://colab.research.google.com/drive/1m2z6kMgbvuQdB3px95h_xJTLPiNJvl5w?usp=sharing"
-                target="_blank"
-                >English</a
-              >
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="contact.platform.title">Competition Platform</h3>
-            <p>
-              <a
-                href="https://go.aicup.tw/"
-                target="_blank"
-                data-i18n="contact.platform.link"
-                >AI CUP Registration System</a
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="highlight-box highlight-box--mt3">
-          <strong data-i18n="contact.importantLabel">
-            Important Reminders:</strong
-          ><br />
-          <span data-i18n="contact.note1"
-            >• Register via AI CUP Registration System
-            (https://go.aicup.tw/)</span
-          ><br />
-          <span data-i18n="contact.note2"
-            >• Teams consist of 1-5 members; no changes after registration </span
-          ><br />
-          <span data-i18n="contact.note3"
-            >• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59
-            (3 submissions per day)</span
-          >
-        </div>
-      </div>
-    </section>
 
     <footer>
       <div class="container">
@@ -2252,6 +2225,14 @@
             <div class="footer-org-text" data-i18n="footer.topic"></div>
           </div>
         </div>
+        <p>
+          <span data-i18n="footer.contactNote"
+            >如有任何問題，歡迎隨時與我們聯繫：</span
+          >
+          <a href="mailto:yyteng@mail.ntpu.edu.tw" style="color: #a0aec0"
+            >yyteng@mail.ntpu.edu.tw</a
+          >
+        </p>
         <p>
           <a href="#home" data-i18n="footer.backToTop">Back to Top</a>
         </p>

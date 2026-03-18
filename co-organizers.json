@@ -126,5 +126,16 @@
     "logo": "img/co-organizer/SITCON 學生計算機年會.png",
     "intro": "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
     "link": "http://sitcon.org"
+  },
+  {
+    "id": 16,
+    "name_ch": "GDG on Campus NKUST",
+    "name_en": "",
+    "logo": "",
+    "intro": [
+        "GDG on Campus NKUST 致力於在高科大五大校區（建工、燕巢、第一、楠梓、旗津）推廣 Google 資源。",
+        "我們透過不定期舉辦的技術工作坊與活動，建立一個跨校區的學習社群，協助同學們掌握最新的開發工具與技術趨勢，共同成長並連結全球開發者網路。"
+    ],
+    "link": "https://gdg.community.dev/gdg-on-campus-national-kaohsiung-university-of-science-and-technology-kaohsiung-taiwan/"
   }
 ]
