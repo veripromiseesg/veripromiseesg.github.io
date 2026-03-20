@@ -169,7 +169,7 @@ const CO_ORGANIZERS = [
     link: "",
   },
   {
-    id: 16,
+    id: 88,
     region: "south",
     name_ch: "GDG on Campus NKUST",
     name_en: "GDG on Campus NKUST",
