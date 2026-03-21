@@ -13,8 +13,9 @@ const CO_ORGANIZERS = [
     name_ch: "臺北市立大學",
     name_en: "University of Taipei",
     logo: "img/co-organizer/臺北市立大學.png",
-    intro: "臺北市立大學於2013年由臺北市立教育大學與臺北市立體育學院合併成立，為臺灣歷史最悠久之高等教育機構。本校結合師資培育典範、菁英運動員培訓基地及都市研究智庫等三大特色，致力於學術研究產能提升、卓越教學成效確保、國際學術交流深化以及產學合作模式創新。校務發展以教學卓越與國際化為核心指標，旨在建構具備全球競爭力之都會大學，並落實社會責任，培育具備專業素養與國際視野之現代公民。",
-    link: "https://www.utaipei.edu.tw"
+    intro:
+      "臺北市立大學於2013年由臺北市立教育大學與臺北市立體育學院合併成立，為臺灣歷史最悠久之高等教育機構。本校結合師資培育典範、菁英運動員培訓基地及都市研究智庫等三大特色，致力於學術研究產能提升、卓越教學成效確保、國際學術交流深化以及產學合作模式創新。校務發展以教學卓越與國際化為核心指標，旨在建構具備全球競爭力之都會大學，並落實社會責任，培育具備專業素養與國際視野之現代公民。",
+    link: "https://www.utaipei.edu.tw",
   },
   {
     id: 21,
@@ -22,8 +23,9 @@ const CO_ORGANIZERS = [
     name_ch: "靜宜大學",
     name_en: "Providence University",
     logo: "img/co-organizer/靜宜大學.jpg",
-    intro: "靜宜大學秉承天主教利他精神與進德修業校訓，致力於推動全人教育並培育具備利他思維之社會公民。校務發展計畫結合聯合國永續發展目標，透過涵育良善美德、尊重多元文化、追求專業學識與探索生活知能等四大素養，發展生命省思及科技運用等七項核心能力。本校推動以院為核心之發展特色與全英文專業課程模組，旨在強化學生國際競爭力與專業就業能力，轉型為具備社會責任、教學卓越與特色研究之國際化大學。",
-    link: "https://www.pu.edu.tw"
+    intro:
+      "靜宜大學秉承天主教利他精神與進德修業校訓，致力於推動全人教育並培育具備利他思維之社會公民。校務發展計畫結合聯合國永續發展目標，透過涵育良善美德、尊重多元文化、追求專業學識與探索生活知能等四大素養，發展生命省思及科技運用等七項核心能力。本校推動以院為核心之發展特色與全英文專業課程模組，旨在強化學生國際競爭力與專業就業能力，轉型為具備社會責任、教學卓越與特色研究之國際化大學。",
+    link: "https://www.pu.edu.tw",
   },
   {
     id: 22,
@@ -31,8 +33,9 @@ const CO_ORGANIZERS = [
     name_ch: "國立高雄科技大學",
     name_en: "National Kaohsiung University of Science and Technology",
     logo: "img/co-organizer/國立高雄科技大學.png",
-    intro: "國立高雄科技大學於2018年由國立高雄應用科技大學、國立高雄第一科技大學及國立高雄海洋科技大學合併成立，為臺灣規模最大之技術型大學。該校設有建工、燕巢、第一、楠梓及旗津等五大校區，學術領域涵蓋工學、電資、管理、財金、外語、人文社會、水圈及海事等多元範疇。憑藉優越之地理位置與完整之校區機能，本校致力於提供優質學習環境，並透過學術資源整合與跨領域協作，深耕專業人才培育與產業實務研發。",
-    link: "https://www.nkust.edu.tw"
+    intro:
+      "國立高雄科技大學於2018年由國立高雄應用科技大學、國立高雄第一科技大學及國立高雄海洋科技大學合併成立，為臺灣規模最大之技術型大學。該校設有建工、燕巢、第一、楠梓及旗津等五大校區，學術領域涵蓋工學、電資、管理、財金、外語、人文社會、水圈及海事等多元範疇。憑藉優越之地理位置與完整之校區機能，本校致力於提供優質學習環境，並透過學術資源整合與跨領域協作，深耕專業人才培育與產業實務研發。",
+    link: "https://www.nkust.edu.tw",
   },
   {
     id: 15,
@@ -40,8 +43,9 @@ const CO_ORGANIZERS = [
     name_ch: "SITCON 學生計算機年會",
     name_en: "Students' Information Technology Conference",
     logo: "img/co-organizer/SITCON 學生計算機年會.png",
-    intro: "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
-    link: "http://sitcon.org"
+    intro:
+      "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。",
+    link: "http://sitcon.org",
   },
   {
     id: 1,
@@ -49,8 +53,9 @@ const CO_ORGANIZERS = [
     name_ch: "Google 學生開發者社群 - 臺北大學",
     name_en: "Google Developer Groups (GDG) on Campus NTPU",
     logo: "img/co-organizer/GDG on Campus NTPU.png",
-    intro: "我們是 Google 支持的學生開發者社群，也是你踏入科技業的敲門磚～\n本社致力於推廣開源技術、AI 等跨領域創新應用，將創意化為實際成果。\n無論是專案開發、跨校合作活動，還是業師講座、實作工作坊、企業參訪，都精彩可期！",
-    link: "https://www.instagram.com/gdg.ntpu/"
+    intro:
+      "我們是 Google 支持的學生開發者社群，也是你踏入科技業的敲門磚～\n本社致力於推廣開源技術、AI 等跨領域創新應用，將創意化為實際成果。\n無論是專案開發、跨校合作活動，還是業師講座、實作工作坊、企業參訪，都精彩可期！",
+    link: "https://www.instagram.com/gdg.ntpu/",
   },
   {
     id: 4,
@@ -58,8 +63,9 @@ const CO_ORGANIZERS = [
     name_ch: "Google Developer Group on Campus TMU",
     name_en: "Google Developer Group on Campus TMU",
     logo: "img/co-organizer/Google Developer Group on Campus TMU.png",
-    intro: "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
-    link: "https://www.instagram.com/tmu_gdgoncampus/"
+    intro:
+      "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。",
+    link: "https://www.instagram.com/tmu_gdgoncampus/",
   },
   {
     id: 12,
@@ -67,17 +73,20 @@ const CO_ORGANIZERS = [
     name_ch: "臺科大 Google 學生開發者社群",
     name_en: "GDG on Campus NTUST",
     logo: "img/co-organizer/臺科大 Google 學生開發者社群.png",
-    intro: "想學程式卻不知從何入手？我們是一群熱愛技術與分享的學生，透過與各校社團及企業的聯手合作，從日常生活常見的主題切入，致力於打造一個跨領域的友善學習環境。\n加入我們，一起成長為開發者，為開源社群貢獻一份心力吧！",
-    link: "https://gdg-ntust.org/"
+    intro:
+      "想學程式卻不知從何入手？我們是一群熱愛技術與分享的學生，透過與各校社團及企業的聯手合作，從日常生活常見的主題切入，致力於打造一個跨領域的友善學習環境。\n加入我們，一起成長為開發者，為開源社群貢獻一份心力吧！",
+    link: "https://gdg-ntust.org/",
   },
   {
     id: 13,
     region: "north",
     name_ch: "國立臺北科技大學程式設計研究社",
-    name_en: "National Taipei University of Technology (NTUT) Programming Club / NPC",
+    name_en:
+      "National Taipei University of Technology (NTUT) Programming Club / NPC",
     logo: "img/co-organizer/國立臺北科技大學程式設計研究社.png",
-    intro: "北科程式設計研究社致力於推動校內程式教育與資訊素養培養，提供系統化學習資源與實作機會，協助學生建立扎實的邏輯思考與問題解決能力。\n社團重視互助合作與友善交流氛圍，透過課程、競賽與專題分享，促進對程式設計有興趣之學生彼此交流與成長，強化實務能力與跨領域應用視野。",
-    link: ""
+    intro:
+      "北科程式設計研究社致力於推動校內程式教育與資訊素養培養，提供系統化學習資源與實作機會，協助學生建立扎實的邏輯思考與問題解決能力。\n社團重視互助合作與友善交流氛圍，透過課程、競賽與專題分享，促進對程式設計有興趣之學生彼此交流與成長，強化實務能力與跨領域應用視野。",
+    link: "",
   },
   {
     id: 14,
@@ -86,8 +95,9 @@ const CO_ORGANIZERS = [
     name_en: "TTUSSC",
     logo: "img/co-organizer/大同大學科學開源服務社.png",
     logoStyle: "width: 500%; height: 500%; object-fit: contain;",
-    intro: "本社是一個結合開源、技術型社課與營隊服務活動的社團。\n我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。",
-    link: "https://ttussc.org/"
+    intro:
+      "本社是一個結合開源、技術型社課與營隊服務活動的社團。\n我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。",
+    link: "https://ttussc.org/",
   },
   {
     id: 11,
@@ -95,8 +105,9 @@ const CO_ORGANIZERS = [
     name_ch: "Google Developer Group On Campus NCU",
     name_en: "Google Developer Group On Campus NCU",
     logo: "img/co-organizer/Google Developer Group On Campus NCU.png",
-    intro: "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
-    link: "https://www.instagram.com/gdscncu/"
+    intro:
+      "GDG On Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。",
+    link: "https://www.instagram.com/gdscncu/",
   },
   {
     id: 8,
@@ -104,7 +115,7 @@ const CO_ORGANIZERS = [
     name_ch: "中原大學 開源軟體開發社",
     name_en: "Google Developer Groups on Campus CYCU",
     logo: "img/co-organizer/中原大學 開源軟體開發社.png",
-    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平臺，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
     link: "https://www.instagram.com/gdg.on.campus_cycu"
   },
   {
@@ -113,7 +124,8 @@ const CO_ORGANIZERS = [
     name_ch: "臺北市立大學 UT GDGoC",
     name_en: "GDG On Campus University of Taipei",
     logo: "img/co-organizer/GDG On Campus University of Taipei.png",
-    intro: "GDG On Campus University of Taipei 是一個擁抱多元、促進跨領域成長的學生組織。\n我們聚焦於創新創業、教育數位轉型與 AI 賦能，透過理論與實務兼顧的工作坊、專案導向的學習體驗、適合初學者與進階者的雙軌並行學習模式以及與各產業專業人士的深度連結，致力於打造資源豐富的學習環境，縮短學術與產業之間的距離。",
+    intro:
+      "GDG On Campus University of Taipei 是一個擁抱多元、促進跨領域成長的學生組織。\n我們聚焦於創新創業、教育數位轉型與 AI 賦能，透過理論與實務兼顧的工作坊、專案導向的學習體驗、適合初學者與進階者的雙軌並行學習模式以及與各產業專業人士的深度連結，致力於打造資源豐富的學習環境，縮短學術與產業之間的距離。",
     link: "https://gdg.community.dev/gdg-on-campus-university-of-taipei-taipei-taiwan/",
   },
   {
@@ -122,8 +134,9 @@ const CO_ORGANIZERS = [
     name_ch: "中興大學資訊科學研習社",
     name_en: "GDG on Campus NCHU",
     logo: "img/co-organizer/中興大學資訊科學研習社.png",
-    intro: "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。\n我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。\n我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。",
-    link: ""
+    intro:
+      "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。\n我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。\n我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。",
+    link: "",
   },
   {
     id: 7,
@@ -131,8 +144,9 @@ const CO_ORGANIZERS = [
     name_ch: "Google Developer Group on Campus NCUE",
     name_en: "Google Developer Group on Campus NCUE",
     logo: "img/co-organizer/Google Developer Group on Campus NCUE.png",
-    intro: "Google Developer Group on Campus NCUE 為彰師大規模最大的資訊開發社群。結合業界資源與 10 餘項系統開發實績，我們致力於優化校園行政流程，並透過專業講座與知識分享，以技術力全面推動校園數位轉型。",
-    link: "https://gdg.ncuesa.org.tw"
+    intro:
+      "Google Developer Group on Campus NCUE 為彰師大規模最大的資訊開發社群。結合業界資源與 10 餘項系統開發實績，我們致力於優化校園行政流程，並透過專業講座與知識分享，以技術力全面推動校園數位轉型。",
+    link: "https://gdg.ncuesa.org.tw",
   },
   {
     id: 2,
@@ -141,7 +155,7 @@ const CO_ORGANIZERS = [
     name_en: "GDG on Campus STUST",
     logo: "img/co-organizer/Google 學生開發者社群 STUST.png",
     intro: "",
-    link: "https://gdsc-stust.web.app"
+    link: "https://gdsc-stust.web.app",
   },
   {
     id: 10,
@@ -149,7 +163,7 @@ const CO_ORGANIZERS = [
     name_ch: "中山大學 GDG",
     name_en: "GDG on Campus: NSYSU｜Google Developer Student Club",
     logo: "img/co-organizer/中山大學 GDG.png",
-    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平臺。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞臺。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
+    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
     link: ""
   },
 ];
@@ -162,21 +176,25 @@ function renderCoOrganizers() {
   const regionLabels = {
     workshop: { zh: "巡迴課程合作學校", en: "Workshop Partner Universities" },
     featured: { zh: "其他", en: "Other" },
-    north:    { zh: "北區", en: "Northern Region" },
-    central:  { zh: "中區", en: "Central Region" },
-    south:    { zh: "南區", en: "Southern Region" },
+    north: { zh: "北區", en: "Northern Region" },
+    central: { zh: "中區", en: "Central Region" },
+    south: { zh: "南區", en: "Southern Region" },
   };
 
   let html = "";
   let currentRegion = null;
 
-  CO_ORGANIZERS.forEach(org => {
-    const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
+  CO_ORGANIZERS.forEach((org) => {
+    const displayName = isZh
+      ? org.name_ch || org.name_en
+      : org.name_en || org.name_ch;
 
     // 插入標籤（featured 不插，換 region 才插）
     if (org.region !== currentRegion) {
       currentRegion = org.region;
-      const label = isZh ? regionLabels[org.region].zh : regionLabels[org.region].en;
+      const label = isZh
+        ? regionLabels[org.region].zh
+        : regionLabels[org.region].en;
       html += `<div class="co-org-region-label">${label}</div>`;
     }
     const isFeatured = org.region === "featured";
@@ -186,7 +204,7 @@ function renderCoOrganizers() {
         onkeydown="if(event.key==='Enter'||event.key===' ')openCoOrgModal(${org.id})">
         <div class="co-org-logo-wrap">
           <img src="${org.logo}" alt="${displayName}" loading="lazy"
-            style="${org.logoStyle || ''}"
+            style="${org.logoStyle || ""}"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="co-org-logo-fallback" style="display:none"><span>${displayName.charAt(0)}</span></div>
         </div>
@@ -198,10 +216,12 @@ function renderCoOrganizers() {
 }
 
 function openCoOrgModal(id) {
-  const org = CO_ORGANIZERS.find(o => o.id === id);
+  const org = CO_ORGANIZERS.find((o) => o.id === id);
   if (!org) return;
   const isZh = i18next.language === "zh";
-  const displayName = isZh ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
+  const displayName = isZh
+    ? org.name_ch || org.name_en
+    : org.name_en || org.name_ch;
   document.getElementById("modalLogo").src = org.logo;
   document.getElementById("modalLogo").alt = displayName;
   document.getElementById("modalLogo").style.cssText = org.logoStyle || "";
@@ -212,9 +232,9 @@ function openCoOrgModal(id) {
   document.getElementById("modalLink").href = org.link;
   const linkEl = document.getElementById("modalLink");
   linkEl.href = org.link;
-  
+
   // 偵錯用：確保連結有成功換成 https://gdsc-stust.web.app 等網址
-  console.log("Current Link:", linkEl.href); 
+  console.log("Current Link:", linkEl.href);
 
   const overlay = document.getElementById("coOrgModalOverlay");
   overlay.classList.add("is-open");
@@ -226,7 +246,7 @@ function openCoOrgModal(id) {
 function closeCoOrgModal(event) {
   // 取得背景元素
   const overlay = document.getElementById("coOrgModalOverlay");
-  
+
   // 嚴格判定：只有當點擊的目標 (event.target) 確實是背景本身時才執行關閉
   // 這樣點擊內部的 modal 內容或按鈕時，就不會誤觸關閉邏輯
   if (event && event.target === overlay) {
@@ -281,21 +301,20 @@ const translations = {
         examples: "標註範例",
         contact: "聯絡我們",
         faq: "常見問題",
-        resources: "相關資源",
+        resources: "學術成果",
         competition: "競賽資訊",
-        people: "團隊", 
+        people: "團隊",
         info: "相關資源",
         workshops: "巡迴課程",
       },
       hero: {
         subtitle_top: "VeriPromiseESG 2026",
         title: " ESG 永續承諾驗證競賽",
-        subtitle:
-          "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
+        subtitle: "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
         cta: "了解更多",
         aicupLink: "AI CUP 官網",
-aideaLink: "AIdea 競賽平臺",
-registerLink: "AI CUP 報名系統",
+aideaLink: "AIdea 競賽平台",
+registerLink: "AI Cup 報名系統",
 date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
@@ -328,6 +347,9 @@ date: "2026.03.05 ~ 2026.07.23",
         title: "競賽任務",
         intro:
           "本競賽包含四個核心子任務，從承諾識別、證據評估、清晰度分析到時機預測，完整涵蓋 ESG 報告驗證流程",
+        codeZh: "中文版檔案",
+        codeEn: "英文版檔案",
+        codeLabel: "範例程式碼可參考",
         task1: {
           title: " 子任務一：承諾語句識別",
           goalLabel: "任務目標：",
@@ -449,8 +471,7 @@ date: "2026.03.05 ~ 2026.07.23",
         industryLabel: "產業涵蓋：",
         industry: "橫跨 15 個產業領域（科技、金融、製造、能源等）",
         annotationLabel: "標註維度：",
-        annotation:
-          "四個子任務（承諾識別、證據支持、清晰度評估、驗證時機）",
+        annotation: "四個子任務（承諾識別、證據支持、清晰度評估、驗證時機）",
         splitLabel: "數據分割：",
         split: "訓練集 + 測試集（Public & Private）",
         processTitle: "標註流程",
@@ -475,8 +496,7 @@ date: "2026.03.05 ~ 2026.07.23",
       },
       evaluation: {
         title: "評估方式",
-        intro:
-          "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
+        intro: "採用多任務綜合評分機制，全面衡量模型在四個子任務上的表現",
         metricsTitle: "各子任務評估指標",
         task1: {
           title: "子任務一：承諾識別",
@@ -657,19 +677,19 @@ date: "2026.03.05 ~ 2026.07.23",
         orgTitle: "合作機構",
         org1: {
           name: "國立臺北大學",
-          dept: "資訊管理研究所<br>金融科技暨綠色金融研究中心",
+          dept: "<a href='https://www.mis.ntpu.edu.tw/' target='_blank' style='color:inherit;'>資訊管理研究所</a><br><a href='https://www.aacsb.ntpu.edu.tw/fintech/' target='_blank' style='color:inherit;'>金融科技暨綠色金融研究中心</a>",
         },
         org2: {
           name: "臺北市立大學",
-          dept: "資訊科學系",
+          dept: "<a href='https://cs.utaipei.edu.tw/' target='_blank' style='color:inherit;'>資訊科學系</a>",
         },
         org3: {
           name: "日本產業技術綜合研究所",
-          dept: "人工智慧研究中心",
+          dept: "<a href='https://www.aist.go.jp/index_en.html' target='_blank' style='color:inherit;'>人工智慧研究中心</a>",
         },
         org4: {
           name: "日本筑波大學",
-          dept: "圖書館情報媒體科學系",
+          dept: "<a href='https://www.tsukuba.ac.jp/en/' target='_blank' style='color:inherit;'>圖書館情報媒體科學系</a>",
         },
       },
       coOrg: {
@@ -679,7 +699,8 @@ date: "2026.03.05 ~ 2026.07.23",
       },
       examples: {
         title: "標註範例說明",
-        intro: "以下提供 E、S、G 三類文本的標註範例，協助參賽者理解標註規則與判斷標準",
+        intro:
+          "以下提供 E、S、G 三類文本的標註範例，協助參賽者理解標註規則與判斷標準",
         categoryLabel: "ESG 類別",
         typeLabel: "類型",
         contentLabel: "段落內容",
@@ -700,54 +721,62 @@ date: "2026.03.05 ~ 2026.07.23",
         moreThan5: "5年以上 (more_than_5_years)",
         e1: {
           type: "有承諾 - 有證據",
-          content: "承諾遵循國際人權公約與基本勞動人權原則，落實性別平等、結社自由，並致力於消弭歧視與強迫勞動。",
-          note: "有制度性承諾與明確人權框架。"
+          content:
+            "承諾遵循國際人權公約與基本勞動人權原則，落實性別平等、結社自由，並致力於消弭歧視與強迫勞動。",
+          note: "有制度性承諾與明確人權框架。",
         },
         e2: {
           type: "有承諾 - 有證據",
-          content: "除非資金明確用於綠能轉型計畫，不再新增投資燃煤比重超過 50% 的電廠；同時針對燃料煤相關產業制定嚴格准入與撤資標準，積極引導資金流向低碳與可再生能源領域。",
-          note: "行動方向明確，但量化成效與第三方驗證描述不足。"
+          content:
+            "除非資金明確用於綠能轉型計畫，不再新增投資燃煤比重超過 50% 的電廠；同時針對燃料煤相關產業制定嚴格准入與撤資標準，積極引導資金流向低碳與可再生能源領域。",
+          note: "行動方向明確，但量化成效與第三方驗證描述不足。",
         },
         e3: {
           type: "有承諾 - 無證據",
-          content: "落實環境永續、實踐永續承諾是本公司的企業使命，將以 2050 年淨零排放為首要目標，致力實現多項環境永續承諾。",
-          note: "屬於願景型承諾，未提供具體行動或成果。"
+          content:
+            "落實環境永續、實踐永續承諾是本公司的企業使命，將以 2050 年淨零排放為首要目標，致力實現多項環境永續承諾。",
+          note: "屬於願景型承諾，未提供具體行動或成果。",
         },
         e4: {
           type: "無承諾",
           content: "應用人工智慧強化良率監控，輔助辦識模型有效性達 98%。",
-          note: "僅敘述產品效果，未有行動承諾。"
+          note: "僅敘述產品效果，未有行動承諾。",
         },
         s1: {
           type: "有承諾 - 有證據",
-          content: "我們將持續推動零職災文化，完善承攬商納管與教育訓練機制，並加強現場稽核頻率，以降低高風險作業事故率。為此，我們正調整標準作業流程並提高稽核覆蓋率。",
-          note: "明確表達企業將持續推動零職災文化，屬於清楚的行動承諾；相關行動未提供量化指標、明確頻率或制度細節，證據支撐力道有限。"
+          content:
+            "我們將持續推動零職災文化，完善承攬商納管與教育訓練機制，並加強現場稽核頻率，以降低高風險作業事故率。為此，我們正調整標準作業流程並提高稽核覆蓋率。",
+          note: "明確表達企業將持續推動零職災文化，屬於清楚的行動承諾；相關行動未提供量化指標、明確頻率或制度細節，證據支撐力道有限。",
         },
         s2: {
           type: "有承諾 - 無證據",
-          content: "制定企業內部衝突礦產管理聲明，承諾遵守 RBA 不使用衝突礦產政策。",
-          note: "有制度性承諾與明確人權框架。"
+          content:
+            "制定企業內部衝突礦產管理聲明，承諾遵守 RBA 不使用衝突礦產政策。",
+          note: "有制度性承諾與明確人權框架。",
         },
         s3: {
           type: "無承諾",
-          content: "推出金來寶小額終身壽險，提供高齡者基本保險保障與終身壽險服務。",
-          note: "僅是產品描述，未包含未來承諾語句。"
+          content:
+            "推出金來寶小額終身壽險，提供高齡者基本保險保障與終身壽險服務。",
+          note: "僅是產品描述，未包含未來承諾語句。",
         },
         g1: {
           type: "有承諾 - 有證據",
-          content: "我們將設立由三位獨立董事組成的永續委員會，每季檢視重大風險議題與對應計畫，並在年度股東會前完成報告揭露與外部查驗。",
-          note: "明確表達企業將設立永續委員會，並規劃其運作方式，屬於具體且可執行的治理承諾；清楚說明組織架構、執行頻率及查驗機制。"
+          content:
+            "我們將設立由三位獨立董事組成的永續委員會，每季檢視重大風險議題與對應計畫，並在年度股東會前完成報告揭露與外部查驗。",
+          note: "明確表達企業將設立永續委員會，並規劃其運作方式，屬於具體且可執行的治理承諾；清楚說明組織架構、執行頻率及查驗機制。",
         },
         g2: {
           type: "有承諾 - 有證據",
           content: "未來改選董事時將提高女性董事席次，以增進董事會性別多元化。",
-          note: "有明確方向，但缺乏具體目標與追蹤機制。"
+          note: "有明確方向，但缺乏具體目標與追蹤機制。",
         },
         g3: {
           type: "無承諾",
-          content: "2024 年研發人員數達 446 人，完成研發專案 17 件，智慧財產權累計 202 件。",
-          note: "營運成果描述，非治理承諾。"
-        }
+          content:
+            "2024 年研發人員數達 446 人，完成研發專案 17 件，智慧財產權累計 202 件。",
+          note: "營運成果描述，非治理承諾。",
+        },
       },
       contact: {
         title: "聯絡我們",
@@ -763,16 +792,19 @@ date: "2026.03.05 ~ 2026.07.23",
           title: "Sample Code",
         },
         slides: {
-  title: "宣傳投影片",
-  link: "Google Drive",
-},
+          title: "宣傳投影片",
+          link: "Google Drive",
+        },
         platform: {
           title: "競賽平臺",
           link: "AI CUP 報名系統",
         },
         importantLabel: "重要提醒：",
-        note1:"• 參賽隊伍 1-5 人，報名後不可更換成員",
-        note2:"• 測試集提交期間：2026/6/10 11:00 - 2026/6/17 23:59:59（每日限 3 次）",
+        note1:
+          "• 請於 AI CUP 報名系統 (https://go.aicup.tw/) 完成報名登錄",
+        note2: "• 參賽隊伍 1-5 人，報名後不可更換成員",
+        note3:
+          "• 測試集提交期間：2026/6/10 11:00 - 2026/6/17 23:59:59（每日限 3 次）",
       },
       faq: {
         title: "常見問題",
@@ -781,61 +813,70 @@ date: "2026.03.05 ~ 2026.07.23",
         q2: "誰可以參加？",
         a2: "競賽對所有學生、學術研究人員以及產業界人士開放。每隊成員可為 1 到 5 人。",
         q3: "競賽提供什麼數據集？",
-        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自臺灣 50 指數成分股企業的真實 ESG 報告標註數據。"
+        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
       },
       workshops: {
-  title: "校園巡迴課程",
-  intro: "AI CUP 2026 ESG 永續承諾驗證競賽校園巡迴課程，歡迎各地學生報名參加",
-  onlineLink: "線上參與連結",
-  register: "立即報名校園巡迴工作坊",
-  north: {
-    title: "北區｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>臺北市立大學</a>",
-    details: "日期：2026 年 3 月 6 日（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
-    yt: "▶ 課程錄影：<a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/6_oHFTOznY8</a>",
-  },
-  central: {
-    title: "中區｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>靜宜大學</a>",
-    details: "日期：2026 年 3 月 20 日（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
-    yt: "▶ 課程錄影：敬請期待",
-  },
-  south: {
-    title: "南區｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>國立高雄科技大學</a>",
-    details: "日期：2026 年 3 月 27 日（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
-    yt: "▶ 課程錄影：敬請期待",
-  },
-},
+        title: "校園巡迴課程",
+        intro:
+          "AI CUP 2026 ESG 永續承諾驗證競賽校園巡迴課程，歡迎各地學生報名參加",
+        onlineLink: "線上參與連結",
+        register: "立即報名校園巡迴工作坊",
+        north: {
+          title:
+            "北區｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>臺北市立大學</a>",
+          details:
+            "日期：2026 年 3 月 6 日（五）12:00–14:00\n地點：博愛校區 公誠樓 G315 教室\n場地上限：44 人\n開放全校學生報名",
+          yt: "▶ 課程錄影：<a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/6_oHFTOznY8</a>",
+        },
+        central: {
+          title:
+            "中區｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>靜宜大學</a>",
+          details:
+            "日期：2026 年 3 月 20 日（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
+          yt: "▶ 課程錄影：敬請期待",
+        },
+        south: {
+          title:
+            "南區｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>國立高雄科技大學</a>",
+          details:
+            "日期：2026 年 3 月 27 日（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
+          yt: "▶ 課程錄影：敬請期待",
+        },
+      },
       resources: {
-        title: "相關資源",
+        title: "學術成果",
         intro: "重要競賽與研究論文連結",
         item_mlpromise: {
           title: "ML-Promise: 多語言企業承諾驗證數據集",
-          desc: "EMNLP 2025 關於多語言承諾驗證的最新論文"
+          desc: "EMNLP 2025 關於多語言承諾驗證的最新論文",
         },
         item1: {
-          desc: "SemEval 2025 承諾驗證共享任務"
+          desc: "SemEval 2025 承諾驗證共享任務",
         },
         item2: {
           title: "多語言 ESG 議題識別",
-          desc: "FNP@IJCAI-2023 ESG 議題識別論文"
+          desc: "FNP@IJCAI-2023 ESG 議題識別論文",
         },
         item3: {
           title: "多語言 ESG 影響類型識別",
-          desc: "FNP@IJCAI-2023 ESG 影響類型分類論文"
+          desc: "FNP@IJCAI-2023 ESG 影響類型分類論文",
         },
         item4: {
           title: "多語言 ESG 影響期限推論",
-          desc: "FNP@EMNLP-2024 ESG 影響期限預測論文"
+          desc: "FNP@EMNLP-2024 ESG 影響期限預測論文",
         },
         item5: {
-          desc: "NTCIR-19 法規合規任務"
-        }
+          desc: "NTCIR-19 法規合規任務",
+        },
       },
       footer: {
         copyright: "© 2025-2026 AI CUP - ESG 永續承諾驗證競賽",
         backToTop: "返回頂部",
         supervising: "競賽指導單位：教育部 資訊及科技教育司",
-  organizing: "競賽運籌單位：教育部 人工智慧競賽與標註資料蒐集計畫",
-  topic: "議題提供單位（主辦單位）：國立臺北大學 資訊管理研究所、金融科技暨綠色金融研究中心",
+        organizing: "競賽運籌單位：教育部 人工智慧競賽與標註資料蒐集計畫",
+        topic:
+          "議題提供單位（主辦單位）：國立臺北大學 資訊管理研究所、金融科技暨綠色金融研究中心",
+        contactNote: "如有任何問題，歡迎隨時與我們聯繫：",
       },
     },
   },
@@ -854,7 +895,7 @@ date: "2026.03.05 ~ 2026.07.23",
         examples: "Annotation Examples",
         contact: "Contact",
         faq: "FAQ",
-        resources: "Resources",
+        resources: "Academic Outputs",
         competition: "Competition",
         people: "Team",
         info: "Info",
@@ -868,7 +909,7 @@ date: "2026.03.05 ~ 2026.07.23",
         cta: "Learn More",
         aicupLink: "AI CUP Official Website",
 aideaLink: "AIdea Competition Platform",
-registerLink: "AI CUP Registration",
+registerLink: "AI Cup Registration",
 date: "2026.03.05 ~ 2026.07.23",
       },
       about: {
@@ -902,6 +943,9 @@ date: "2026.03.05 ~ 2026.07.23",
         title: "Competition Tasks",
         intro:
           "This competition comprises four core subtasks, covering the complete ESG report verification process from promise recognition to evidence assessment, clarity analysis, and timeline prediction",
+        codeZh: "Chinese Version",
+        codeEn: "English Version",
+        codeLabel: "Sample code available: ",
         task1: {
           title: "Subtask 1: Commitment Classification",
           goalLabel: "Objective:",
@@ -917,8 +961,7 @@ date: "2026.03.05 ~ 2026.07.23",
           example1Label: "Promise:",
           example1: '"We commit to achieving carbon neutrality by 2030"',
           example2Label: "Non-Promise:",
-          example2:
-            '"We value the importance of environmental protection"',
+          example2: '"We value the importance of environmental protection"',
         },
         task2: {
           title: "Subtask 2: Evidence Identification",
@@ -952,8 +995,7 @@ date: "2026.03.05 ~ 2026.07.23",
           output3Label: "Misleading:",
           output3: "Potentially misleading statements",
           metricLabel: "Evaluation Metric",
-          metric:
-            "Macro-F1 (average performance across three categories)",
+          metric: "Macro-F1 (average performance across three categories)",
           valueLabel: "Practical Value",
           value:
             "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility",
@@ -1203,7 +1245,8 @@ date: "2026.03.05 ~ 2026.07.23",
         copi1: {
           name: "Dr. Chung-Chi Chen",
           role: "Co-Principal Investigator",
-          affiliation: "Researcher, Artificial Intelligence Research Center,<br>National Institute of Advanced Industrial Science and Technology (AIST), Japan",
+          affiliation:
+            "Researcher, Artificial Intelligence Research Center,<br>National Institute of Advanced Industrial Science and Technology (AIST), Japan",
           desc: "Founder of ACL SIG-FinTech, specialized in financial opinion mining and natural language processing.",
           link: "Website",
         },
@@ -1244,29 +1287,31 @@ date: "2026.03.05 ~ 2026.07.23",
         orgTitle: "Partner Institutions",
         org1: {
           name: "National Taipei University",
-          dept: "Graduate Institute of Information Management<br>Fintech and Green Finance Research Center",
+          dept: "<a href='https://www.mis.ntpu.edu.tw/' target='_blank' style='color:inherit;'>Graduate Institute of Information Management</a><br><a href='https://www.aacsb.ntpu.edu.tw/fintech/' target='_blank' style='color:inherit;'>Fintech and Green Finance Research Center</a>",
         },
         org2: {
           name: "University of Taipei",
-          dept: "Department of Computer Science",
+          dept: "<a href='https://cs.utaipei.edu.tw/' target='_blank' style='color:inherit;'>Department of Computer Science</a>",
         },
         org3: {
           name: "National Institute of Advanced Industrial Science and Technology (AIST)",
-          dept: "Artificial Intelligence Research Center",
+          dept: "<a href='https://www.aist.go.jp/index_en.html' target='_blank' style='color:inherit;'>Artificial Intelligence Research Center</a>",
         },
         org4: {
           name: "University of Tsukuba",
-          dept: "Faculty of Library, Information and Media Science",
+          dept: "<a href='https://www.tsukuba.ac.jp/en/' target='_blank' style='color:inherit;'>Faculty of Library, Information and Media Science</a>",
         },
       },
       coOrg: {
         title: "Co-Organizers",
-        intro: "We gratefully acknowledge the support of the following organizations",
+        intro:
+          "We gratefully acknowledge the support of the following organizations",
         visitPage: "Visit Page",
       },
       examples: {
         title: "Annotation Examples",
-        intro: "Sample annotations for E, S, G categories to help participants understand labeling rules and criteria",
+        intro:
+          "Sample annotations for E, S, G categories to help participants understand labeling rules and criteria",
         categoryLabel: "ESG Category",
         typeLabel: "Type",
         contentLabel: "Content",
@@ -1287,54 +1332,64 @@ date: "2026.03.05 ~ 2026.07.23",
         moreThan5: "More than 5 years",
         e1: {
           type: "With Promise - With Evidence",
-          content: "Committed to following international human rights conventions and basic labor rights principles, implementing gender equality, freedom of association, and working to eliminate discrimination and forced labor.",
-          note: "Has institutional commitment and clear human rights framework."
+          content:
+            "Committed to following international human rights conventions and basic labor rights principles, implementing gender equality, freedom of association, and working to eliminate discrimination and forced labor.",
+          note: "Has institutional commitment and clear human rights framework.",
         },
         e2: {
           type: "With Promise - With Evidence",
-          content: "Unless funds are explicitly used for green energy transition projects, no new investment in coal-fired power plants with over 50% coal proportion; simultaneously establish strict entry and divestment standards for coal-related industries, actively guiding funds towards low-carbon and renewable energy sectors.",
-          note: "Clear direction of action, but insufficient description of quantified achievements and third-party verification."
+          content:
+            "Unless funds are explicitly used for green energy transition projects, no new investment in coal-fired power plants with over 50% coal proportion; simultaneously establish strict entry and divestment standards for coal-related industries, actively guiding funds towards low-carbon and renewable energy sectors.",
+          note: "Clear direction of action, but insufficient description of quantified achievements and third-party verification.",
         },
         e3: {
           type: "With Promise - Without Evidence",
-          content: "Implementing environmental sustainability and fulfilling sustainability commitments is our corporate mission, with net-zero emissions by 2050 as the primary goal, committed to achieving multiple environmental sustainability commitments.",
-          note: "Vision-type commitment without specific actions or results."
+          content:
+            "Implementing environmental sustainability and fulfilling sustainability commitments is our corporate mission, with net-zero emissions by 2050 as the primary goal, committed to achieving multiple environmental sustainability commitments.",
+          note: "Vision-type commitment without specific actions or results.",
         },
         e4: {
           type: "No Promise",
-          content: "Applying artificial intelligence to enhance yield monitoring, with model recognition effectiveness reaching 98%.",
-          note: "Only describes product effectiveness, no action commitment."
+          content:
+            "Applying artificial intelligence to enhance yield monitoring, with model recognition effectiveness reaching 98%.",
+          note: "Only describes product effectiveness, no action commitment.",
         },
         s1: {
           type: "With Promise - With Evidence",
-          content: "We will continue to promote zero-accident culture, improve contractor management and training mechanisms, and increase on-site audit frequency to reduce high-risk operation accident rates. To this end, we are adjusting standard operating procedures and increasing audit coverage.",
-          note: "Clearly expresses the company's commitment to continue promoting zero-accident culture, a clear action commitment; related actions lack quantitative indicators, clear frequency, or institutional details, with limited evidence support."
+          content:
+            "We will continue to promote zero-accident culture, improve contractor management and training mechanisms, and increase on-site audit frequency to reduce high-risk operation accident rates. To this end, we are adjusting standard operating procedures and increasing audit coverage.",
+          note: "Clearly expresses the company's commitment to continue promoting zero-accident culture, a clear action commitment; related actions lack quantitative indicators, clear frequency, or institutional details, with limited evidence support.",
         },
         s2: {
           type: "With Promise - Without Evidence",
-          content: "Establish internal conflict mineral management statement, committing to comply with RBA policy of not using conflict minerals.",
-          note: "Has institutional commitment and clear human rights framework."
+          content:
+            "Establish internal conflict mineral management statement, committing to comply with RBA policy of not using conflict minerals.",
+          note: "Has institutional commitment and clear human rights framework.",
         },
         s3: {
           type: "No Promise",
-          content: "Launched small-amount whole life insurance, providing basic insurance protection and whole life insurance services for the elderly.",
-          note: "Only product description, no future commitment statement."
+          content:
+            "Launched small-amount whole life insurance, providing basic insurance protection and whole life insurance services for the elderly.",
+          note: "Only product description, no future commitment statement.",
         },
         g1: {
           type: "With Promise - With Evidence",
-          content: "We will establish a sustainability committee composed of three independent directors, review major risk issues and corresponding plans quarterly, and complete report disclosure and external verification before the annual shareholders meeting.",
-          note: "Clearly expresses the company's intention to establish a sustainability committee and plans its operation, a specific and executable governance commitment; clearly explains organizational structure, execution frequency, and verification mechanisms."
+          content:
+            "We will establish a sustainability committee composed of three independent directors, review major risk issues and corresponding plans quarterly, and complete report disclosure and external verification before the annual shareholders meeting.",
+          note: "Clearly expresses the company's intention to establish a sustainability committee and plans its operation, a specific and executable governance commitment; clearly explains organizational structure, execution frequency, and verification mechanisms.",
         },
         g2: {
           type: "With Promise - With Evidence",
-          content: "Will increase female director seats during future director re-elections to enhance board gender diversity.",
-          note: "Has clear direction but lacks specific targets and tracking mechanisms."
+          content:
+            "Will increase female director seats during future director re-elections to enhance board gender diversity.",
+          note: "Has clear direction but lacks specific targets and tracking mechanisms.",
         },
         g3: {
           type: "No Promise",
-          content: "In 2024, R&D personnel reached 446, completed 17 R&D projects, and accumulated 202 intellectual property rights.",
-          note: "Operational results description, not governance commitment."
-        }
+          content:
+            "In 2024, R&D personnel reached 446, completed 17 R&D projects, and accumulated 202 intellectual property rights.",
+          note: "Operational results description, not governance commitment.",
+        },
       },
       contact: {
         title: "Contact Us",
@@ -1350,9 +1405,9 @@ date: "2026.03.05 ~ 2026.07.23",
           title: "Sample Code",
         },
         slides: {
-  title: "Promotional Slides",
-  link: "Google Drive",
-},
+          title: "Promotional Slides",
+          link: "Google Drive",
+        },
         platform: {
           title: "Competition Platform",
           link: "AI CUP Registration System",
@@ -1360,8 +1415,7 @@ date: "2026.03.05 ~ 2026.07.23",
         importantLabel: "Important Reminders:",
         note1:
           "• Register via AI CUP Registration System (https://go.aicup.tw/)",
-        note2:
-          "• Teams consist of 1-5 members; no changes after registration",
+        note2: "• Teams consist of 1-5 members; no changes after registration",
         note3:
           "• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59 (3 submissions per day)",
       },
@@ -1372,62 +1426,73 @@ date: "2026.03.05 ~ 2026.07.23",
         q2: "Who can participate?",
         a2: "The competition is open to students, researchers, and industry professionals. Teams can consist of 1-5 members.",
         q3: "What is the dataset?",
-        a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports."
+        a3: "The VeriPromiseESG4K dataset contains 4,000 annotated data points from Taiwan 50 Index constituent stocks' ESG reports.",
       },
       workshops: {
-  title: "Regional Hands-on Workshops",
-  intro: "AI CUP 2026 VeriPromise ESG regional hands-on workshops. Welcome students from all regions to join!",
-  onlineLink: "Join Online",
-  register: "Register for Campus Workshop Tour",
-  north: {
-    title: "North｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>University of Taipei</a>",
-    details: "Date: March 6, 2026 (Friday) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
-    yt: "▶ Workshop Recording: <a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/6_oHFTOznY8</a>",
-  },
-  central: {
-    title: "Central｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>Providence University</a>",
-    details: "Date: March 20, 2026 (Friday) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
-    yt: "▶ Recording: Coming Soon",
-  },
-  south: {
-    title: "South｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>National Kaohsiung University<br>of Science and Technology</a>",
-    details: "Date: March 27, 2026 (Friday) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
-    yt: "▶ Recording: Coming Soon",
-  },
-},
+        title: "Regional Hands-on Workshops",
+        intro:
+          "AI CUP 2026 VeriPromise ESG regional hands-on workshops. Welcome students from all regions to join!",
+        onlineLink: "Join Online",
+        register: "Register for Campus Workshop Tour",
+        north: {
+          title:
+            "North｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>University of Taipei</a>",
+          details:
+            "Date: March 6, 2026 (Friday) 12:00–14:00\nVenue: Gongcheng Building G315\nCapacity: 44\nOpen to all students",
+          yt: "▶ Workshop Recording: <a href='https://youtu.be/6_oHFTOznY8' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/6_oHFTOznY8</a>",
+        },
+        central: {
+          title:
+            "Central｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>Providence University</a>",
+          details:
+            "Date: March 20, 2026 (Friday) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
+          yt: "▶ Recording: Coming Soon",
+        },
+        south: {
+          title:
+            "South｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>National Kaohsiung University<br>of Science and Technology</a>",
+          details:
+            "Date: March 27, 2026 (Friday) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
+          yt: "▶ Recording: Coming Soon",
+        },
+      },
       resources: {
-        title: "Related Resources",
+        title: "Academic Outputs",
         intro: "Important links to related competitions and research papers",
         item_mlpromise: {
-          title: "ML-Promise: A Multilingual Dataset for Corporate Promise Verification",
-          desc: "EMNLP 2025 paper on multilingual promise verification dataset"
+          title:
+            "ML-Promise: A Multilingual Dataset for Corporate Promise Verification",
+          desc: "EMNLP 2025 paper on multilingual promise verification dataset",
         },
         item1: {
-          desc: "SemEval 2025 shared task on promise verification"
+          desc: "SemEval 2025 shared task on promise verification",
         },
         item2: {
           title: "Multi-Lingual ESG Issue Identification",
-          desc: "FNP@IJCAI-2023 paper on ESG issue identification"
+          desc: "FNP@IJCAI-2023 paper on ESG issue identification",
         },
         item3: {
           title: "Multi-Lingual ESG Impact Type Identification",
-          desc: "FNP@IJCAI-2023 paper on ESG impact type classification"
+          desc: "FNP@IJCAI-2023 paper on ESG impact type classification",
         },
         item4: {
           title: "Multi-Lingual ESG Impact Duration Inference",
-          desc: "FNP@EMNLP-2024 paper on ESG impact duration prediction"
+          desc: "FNP@EMNLP-2024 paper on ESG impact duration prediction",
         },
         item5: {
-          desc: "NTCIR-19 Regulatory Compliance task"
-        }
+          desc: "NTCIR-19 Regulatory Compliance task",
+        },
       },
       footer: {
-        copyright:
-          "© 2025-2026 AI CUP - ESG Promise Verification Competition",
+        copyright: "© 2025-2026 AI CUP - ESG Promise Verification Competition",
         backToTop: "Back to Top",
-        supervising: "Supervising Organization: Department of Information and Technology Education, Ministry of Education",
-  organizing: "Organizing Committee: Ministry of Education Artificial Intelligence Competition and Annotation Data Collection Project Office",
-  topic: "Topic Provider (Host Organization): Graduate Institute of Information Management and The Fintech and Green Finance Center (FGFC), NTPU",
+        supervising:
+          "Supervising Organization: Department of Information and Technology Education, Ministry of Education",
+        organizing:
+          "Organizing Committee: Ministry of Education Artificial Intelligence Competition and Annotation Data Collection Project Office",
+        topic:
+          "Topic Provider (Host Organization): Graduate Institute of Information Management and The Fintech and Green Finance Center (FGFC), NTPU",
+        contactNote: "For any questions, feel free to contact us: ",
       },
     },
   },
@@ -1446,7 +1511,7 @@ i18next.init(
   function (err, t) {
     updateContent();
     renderCoOrganizers();
-  }
+  },
 );
 
 // ===================================
@@ -1460,10 +1525,10 @@ function updateContent() {
     if (translation && translation !== key) {
       // Handle HTML content (for <br> tags)
       if (translation.includes("<br>") || translation.includes("<a")) {
-  element.innerHTML = translation;
-} else {
-  element.textContent = translation;
-}
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
     }
   });
 }
@@ -1500,7 +1565,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (href === "#" || !href.startsWith("#")) return;
 
     e.preventDefault();
-    
+
     try {
       const target = document.querySelector(href);
       if (target) {
@@ -1569,7 +1634,9 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document
-  .querySelectorAll(".card, .task-card, .timeline-item, .team-member, .faq-item")
+  .querySelectorAll(
+    ".card, .task-card, .timeline-item, .team-member, .faq-item",
+  )
   .forEach((el) => {
     observer.observe(el);
   });
