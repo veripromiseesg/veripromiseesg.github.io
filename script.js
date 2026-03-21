@@ -115,8 +115,9 @@ const CO_ORGANIZERS = [
     name_ch: "中原大學 開源軟體開發社",
     name_en: "Google Developer Groups on Campus CYCU",
     logo: "img/co-organizer/中原大學 開源軟體開發社.png",
-    intro: "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
-    link: "https://www.instagram.com/gdg.on.campus_cycu"
+    intro:
+      "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平臺，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。",
+    link: "https://www.instagram.com/gdg.on.campus_cycu",
   },
   {
     id: 16,
@@ -163,7 +164,7 @@ const CO_ORGANIZERS = [
     name_ch: "中山大學 GDG",
     name_en: "GDG on Campus: NSYSU｜Google Developer Student Club",
     logo: "img/co-organizer/中山大學 GDG.png",
-    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
+    intro: "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平臺。\n在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！\nGDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞臺。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！",
     link: ""
   },
 ];
@@ -313,7 +314,7 @@ const translations = {
         subtitle: "運用 AI 技術驗證企業永續承諾，推動 ESG 報告透明化與可信度",
         cta: "了解更多",
         aicupLink: "AI CUP 官網",
-aideaLink: "AIdea 競賽平台",
+aideaLink: "AIdea 競賽平臺",
 registerLink: "AI Cup 報名系統",
 date: "2026.03.05 ~ 2026.07.23",
       },
@@ -813,7 +814,7 @@ date: "2026.03.05 ~ 2026.07.23",
         q2: "誰可以參加？",
         a2: "競賽對所有學生、學術研究人員以及產業界人士開放。每隊成員可為 1 到 5 人。",
         q3: "競賽提供什麼數據集？",
-        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自台灣 50 指數成分股企業的真實 ESG 報告標註數據。"
+        a3: "VeriPromiseESG4K 數據集，包含 4,000 筆來自臺灣 50 指數成分股企業的真實 ESG 報告標註數據。"
       },
       workshops: {
         title: "校園巡迴課程",
