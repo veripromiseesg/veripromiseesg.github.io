@@ -58,7 +58,7 @@ const translations = {
       tasks: {
         title: "競賽任務",
         intro:
-          "參賽者需要開發能夠自動識別、分析和驗證企業永續承諾的 AI 系統，透過以下四大核心任務完整評估 ESG 報告的真實性與可信度。",
+          "參賽者須開發能自動識別、分析和驗證企業永續承諾的 AI 系統，透過以下四大核心任務完整評估 ESG 報告的真實性與可信度。",
         task1: {
           title: " 承諾語句識別",
           goalLabel: "任務目標：",
@@ -1163,27 +1163,26 @@ const translations = {
 // i18next 初始化
 // ===================================
 
+// ===================================
+// i18next 初始化
+// ===================================
+
 i18next.init(
   {
-    lng: "en",
+    lng: "zh",           // 預設語言設為中文
     fallbackLng: "en",
     resources: translations,
   },
   function (err, t) {
     updateContent();
+    
+    // 初始化時根據預設語言設定 body 屬性與導覽列樣式
+    document.body.setAttribute('data-lang', 'zh');                // 確保初始就有 lang 屬性
+    document.getElementById('navLinks').classList.add('zh-mode'); // 確保導覽列初始套用中文樣式
+    
+    initEvaluationChart();  
   }
 );
-
-// 初始化後，立刻設定 body 的 data-lang 屬性
-if (i18next.language) {
-    let currentLang = i18next.language.startsWith('zh') ? 'zh' : 'en';
-    document.body.setAttribute('data-lang', currentLang);
-    
-    // 原本的 navLinks 邏輯保留
-    if (currentLang === 'zh') {
-        document.getElementById('navLinks').classList.add('zh-mode');
-    }
-}
 
 // ===================================
 // 更新頁面內容
