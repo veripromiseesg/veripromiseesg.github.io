@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name_ch": "教育部 資訊及科技教育司",
+    "name_en": "Department of Information and Technology Education, Ministry of Education",
+    "logo": "img/organizer/教育部 資訊及科技教育司.png",
+    "intro_ch": [
+      "資訊及科技教育司「結合資訊、科技與人文，引領學校邁向永續發展新世紀」之願景，規劃「前瞻人才培育」、「精緻數位學習」、「科研倫理素養」、「數位公義關懷」、「校園環境永續」五大目標，建構以「人」為中心的學習環境，培育具關懷社會與環境之現代公民，強化國家永續發展。"
+    ],
+    "intro_en": [
+      "Guided by the vision of integrating information, technology, and the humanities to lead schools toward sustainable development, the Department of Information and Technology Education of the Ministry of Education promotes five key goals: forward-looking talent cultivation, refined digital learning, research ethics literacy, digital equity and care, and sustainable campus environments.",
+      "Through these initiatives, the department aims to build a human-centered learning environment, cultivate socially and environmentally responsible citizens, and strengthen national sustainable development."
+    ],
+    "link": ""
+  },
+  {
+    "id": 2,
+    "name_ch": "教育部 人工智慧競賽與標註資料蒐集計畫",
+    "name_en": "Ministry of Education Artificial Intelligence Competition and Annotation Data Collection Project Office",
+    "logo": "img/organizer/教育部 人工智慧競賽與標註資料蒐集計畫.png",
+    "intro_ch": [
+      "本計畫為教育部所發起的人工智慧技術及應用人才培育計畫中的其中一項子計畫，透過訂定競賽議題，以「標註暨競賽」為重心，預計每年舉辦 2-3 項 AI 競賽，讓學生透過更貼近生活實際狀況的資料，訓練將理論運用在明確問題上的能力，並導入人工智慧技術與觀念至教育體系，希望能真正落實跨領域人才培育。"
+    ],
+    "intro_en": [
+      "This project is part of the Ministry of Education’s initiative to cultivate talent in artificial intelligence technologies and applications.",
+      "By organizing AI competitions centered on data annotation, the project hosts 2–3 competitions annually, enabling students to apply theoretical knowledge to real-world problems using practical datasets. It also promotes the integration of AI concepts into the education system, fostering interdisciplinary talent development."
+    ],
+    "link": ""
+  },
+  {
+    "id": 3,
+    "name_ch": "國立臺北大學 資訊管理研究所",
+    "name_en": "Graduate Institute of Information Management, National Taipei University (NTPU)",
+    "logo": "img/organizer/國立臺北大學 資訊管理研究所.png",
+    "intro_ch": [
+      "國立臺北大學資訊管理研究所致力於培育資訊管理與數位創新領域的專業菁英。課程設計以資訊科技為核心主軸，引領學生深入掌握人工智慧、大數據分析、雲端運算、混合實境、金融科技與區塊鏈等前瞻技術，並同步落實資訊安全管理合規及數位永續等關鍵議題。",
+      "透過跨領域的實務應用，教學範疇進一步延伸至數位行銷、數位轉型、消費者行為洞察以及運動與休閒管理，確保學生能將專業技術轉化為具體的產業價值。",
+      "本所強調學術研究與實務應用的雙軌並重，透過緊密的產學合作與跨領域整合，賦予學生紮實的實戰經驗。加入本所的學子，將能在此環境下成長為具備應變挑戰能力的專業人才，在資訊管理、智慧服務與新興科技應用領域中，發揮卓越的影響力。"
+    ],
+    "intro_en": [
+      "The Graduate Institute of Information Management, NTPU, cultivates professionals in information management and digital innovation. Its curriculum covers artificial intelligence, big data analytics, cloud computing, mixed reality, fintech, and blockchain, while emphasizing information security and digital sustainability.",
+      "Through interdisciplinary applications and industry collaboration, students gain practical experience and develop the skills to excel in emerging technology fields."
+    ],
+    "link": "https://www.mis.ntpu.edu.tw/"
+  },
+  {
+    "id": 4,
+    "name_ch": "國立臺北大學 金融科技暨綠色金融研究中心",
+    "name_en": "Fintech and Green Finance Center (FGFC), National Taipei University (NTPU)",
+    "logo": "img/organizer/國立臺北大學 金融科技暨綠色金融研究中心.png",
+    "intro_ch": [
+      "本中心致力整合校內外資源，深入研究金融科技與綠色金融（ESG）領域，透過學術、課程與產學組的合作，專注於綠色金融理論、碳權管理、人工智慧與大數據在金融創新中的應用，旨在成為臺灣綠色金融與 FinTech 的領先研究與教學重鎮。"
+    ],
+    "intro_en": [
+      "The Fintech and Green Finance Center (FGFC), NTPU, integrates resources to advance research in financial technology and green finance (ESG). The Center focuses on green finance theory, carbon credit management, and the application of AI and big data in financial innovation.",
+      "Its mission is to become a leading hub for research and education in green finance and FinTech in Taiwan."
+    ],
+    "link": "https://www.aacsb.ntpu.edu.tw/fintech/"
+  }
+]
