@@ -25,6 +25,8 @@ const translations = {
         block2: "ESG 永續承諾驗證競賽",
         block3: "",
         description: "運用 AI 技術驗證企業永續承諾，<br>推動 ESG 報告透明化與可信度",
+        linkAicup: "AI CUP（教育部人工智慧競賽與標註資料蒐集計畫）官方網站",
+        linkGuidelines: "最新雙語競賽簡章",
       },
       about: {
         title: "競賽簡介",
@@ -234,6 +236,46 @@ const translations = {
         rule1: "最終排名以 Private Dataset 測試結果為準",
         rule2: "Public Dataset 僅供競賽期間參考使用",
         rule3: "前 25% 且超過 Baseline 的隊伍可獲得計畫辦公室電子獎狀",
+        studentNote: "（註：本競賽所有參賽隊伍（含學生及社會人士）統一依最終成績進行排名，惟僅學生組參賽者可領取排名獎金，社會人士組得獎名次之獎金，將依排名遞補至下一名符合學生組資格之隊伍。）",
+      },
+      workshops: {
+        title: "三區巡迴課程",
+        intro: "為了讓各位能更順利地參與競賽，主辦單位將前往北、中、南三區大專院校，辦理巡迴課程！<br>在這些課程中，不僅會進行詳細的競賽內容介紹、帶領參加者實作範例程式碼（部分場次亦提供精美餐點），更將加開線上場次，即便沒辦法線下參與也不用擔心",
+        regLink: "📍 巡迴課程報名表單",
+        table: {
+          school: "學校",
+          time: "時間",
+          location: "地點",
+          deadline: "報名截止",
+          capacity: "名額上限",
+          note: "其他"
+        },
+        row1: {
+          school: "北市大",
+          time: "3/6 (五)<br>12:00-14:00",
+          location: "公誠樓 G315 /<br>Google Meet",
+          deadline: "3/5（四）12:00",
+          capacity: "44 人",
+          note: "提供超商禮物卡<br>（暫定）"
+        },
+        row2: {
+          school: "靜宜",
+          time: "3/20 (五)<br>12:00-14:00",
+          location: "任垣樓 120 講堂 /<br>Google Meet",
+          deadline: "3/18（三）12:00",
+          capacity: "200 人",
+          note: "提供午餐<br>須自備筆電"
+        },
+        row3: {
+          school: "高科大",
+          time1: "3/27 (五)<br>14:30-16:20",
+          location1: "雙科館 B1 小劇場 /<br>Google Meet",
+          time2: "3/27 (五)<br>19:30-21:00",
+          location2: "雙科館 1F 慧芳講堂 /<br>Google Meet",
+          deadline: "3/26（四）23:59",
+          capacity: "實體場僅修課同學<br>可報名",
+          note: "以專題演講<br>形式進行"
+        }
       },
       timeline: {
         title: "競賽時程",
@@ -525,6 +567,8 @@ const translations = {
         block2: "ESG Promise Verification",
         block3: "Competition",
         description: "Leverage AI technology to verify corporate sustainability commitments<br>and enhance ESG report transparency and credibility",
+        linkAicup: "AI CUP Official Website",
+        linkGuidelines: "Latest Bilingual Competition Guidelines",
       },
       about: {
         title: "Competition Overview",
@@ -768,6 +812,46 @@ const translations = {
         rule1: "Final ranking is based on Private Dataset test results.",
         rule2: "Public Dataset is for reference during the competition only.",
         rule3: "Top 25% teams exceeding Baseline receive Program Office digital certificates.",
+        studentNote: "(Note: All participating teams (including students and members of the public) will be ranked uniformly based on their final scores. Only student participants are eligible to receive cash prizes. Prize money for winning teams in the public category will be awarded to the next eligible student team in the rankings.)",
+      },
+      workshops: {
+        title: "Regional Hands-on Workshops",
+        intro: "To help everyone participate more smoothly, the organizers will host a series of regional hands-on workshops across universities in Northern, Central, and Southern Taiwan!<br>In these sessions, we will not only provide a detailed overview of the competition and guide participants through the sample code (some sessions also provide meals), but we will also offer online streaming. Don't worry if you can't attend in person!",
+        regLink: "📍 Workshop Registration Form",
+        table: {
+          school: "School",
+          time: "Time",
+          location: "Location",
+          deadline: "Registration Deadline",
+          capacity: "Capacity",
+          note: "Note"
+        },
+        row1: {
+          school: "UTaipei",
+          time: "3/6 (Fri)<br>12:00-14:00",
+          location: "Gongcheng Hall G315 /<br>Google Meet",
+          deadline: "3/5 (Thu) 12:00",
+          capacity: "44",
+          note: "Convenience store gift cards provided<br>(Tentative)"
+        },
+        row2: {
+          school: "Providence Univ.",
+          time: "3/20 (Fri)<br>12:00-14:00",
+          location: "Renyuan Hall 120 /<br>Google Meet",
+          deadline: "3/18 (Wed) 12:00",
+          capacity: "200",
+          note: "Lunch provided<br>BYOD (Bring your own device)"
+        },
+        row3: {
+          school: "NKUST",
+          time1: "3/27 (Fri)<br>14:30-16:20",
+          location1: "Shuang-Ke Hall B1 Mini Theater /<br>Google Meet",
+          time2: "3/27 (Fri)<br>19:30-21:00",
+          location2: "Shuang-Ke Hall 1F Huifang Lecture Hall /<br>Google Meet",
+          deadline: "3/26 (Thu) 23:59",
+          capacity: "In-person only for<br>enrolled students",
+          note: "Seminar format"
+        }
       },
       timeline: {
         title: "Competition Schedule",
