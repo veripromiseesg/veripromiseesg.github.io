@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name_ch": "臺北市立大學 資訊科學系",
+    "name_en": "University of Taipei - Department of Computer Science",
+    "logo": "img/partner-institution/臺北市立大學 資訊科學系.png",
+    "intro_ch": [
+      "由於資訊科技的日新月異，資訊人才的需求日益增多，故正式成立迄今已 46 年的臺北市立大學，在 2007 年 8 月 1 日正式成立本系。",
+      "本系師資陣容堅強，教師教學優良，研究領域包含影像處理、人工智慧與大數據分析、數位學習、資訊安全、電腦遊戲、雲端運算、電腦圖學與動畫、電腦網路與物聯網、演算法與計算理論等，充分結合了業界實務技術與學界理論研究，並給予學生良好的導師輔導制度。"
+    ],
+    "intro_en": [
+      "In response to the rapid advancement of information technology and the growing demand for IT professionals, the Department of Computer Science at the University of Taipei was officially established on August 1, 2007.",
+      "The department features a strong faculty and outstanding teaching quality. Its research areas include image processing, artificial intelligence and big data analytics, digital learning, information security, computer games, cloud computing, computer graphics and animation, computer networks and the Internet of Things, as well as algorithms and computational theory. By integrating academic research with industry practice, the department provides students with a solid learning environment and comprehensive mentoring support."
+    ],
+    "link": "https://cs.utaipei.edu.tw/"
+  },
+  {
+    "id": 2,
+    "name_ch": "日本產業技術綜合研究所 人工智慧研究中心",
+    "name_en": "National Institute of Advanced Industrial Science and Technology (AIST)",
+    "logo": "img/partner-institution/日本產業技術綜合研究所 人工智慧研究中心.png",
+    "intro_ch": [
+      "日本產業技術綜合研究所（AIST）為日本規模最大的公立研究機構之一，致力於推動對產業與社會具實質價值之技術發展，並扮演創新技術研發與產業應用之間的重要橋樑。",
+      "本所透過多個研究部門與中心整合核心技術，涵蓋廣泛研究領域，發揮跨領域整體研發能量。目前約有 2,300 名研究人員分布於全國各地據點，依據國家創新政策與全球發展趨勢推動前瞻研究。"
+    ],
+    "intro_en": [
+      "The National Institute of Advanced Industrial Science and Technology (AIST) is one of Japan’s largest public research organizations, dedicated to advancing technologies that benefit industry and society. It plays a key role in bridging the gap between innovative research and real-world applications.",
+      "AIST integrates its strengths through a structured organization of research departments and centers, covering a wide range of core technological fields."
+    ],
+    "link": "https://www.aist.go.jp/index_en.html"
+  },
+  {
+    "id": 3,
+    "name_ch": "日本筑波大學 圖書館情報媒體科學系",
+    "name_en": "University of Tsukuba - Faculty of Library, Information and Media Science",
+    "logo": "img/partner-institution/日本筑波大學 圖書館情報媒體科學系.png",
+    "intro_ch": [
+      "筑波大學擁有超過 150 年歷史，長年名列日本頂尖大學之列，並於 2020 年獲指定為國立大學法人，展現其持續改革與國際化發展之成果。",
+      "本校提供多元且完整的學術領域，致力於打造高品質的教學與研究環境、提供完善的學生支持服務，協助國際學生順利銜接並發展專業能力，並全面照顧學生與教職員之需求。"
+    ],
+    "intro_en": [
+      "The University of Tsukuba, with a history of over 150 years, is consistently ranked among the top universities in Japan and was designated as a National University Corporation in 2020, reflecting its commitment to continuous reform and internationalization.",
+      "The university offers a comprehensive range of academic disciplines and is dedicated to providing a high-quality teaching and research environment. It also delivers extensive student support services, helping international students adapt and develop their professional capabilities while ensuring the well-being of both students and faculty members."
+    ],
+    "link": "https://www.tsukuba.ac.jp/en/"
+  }
+]
