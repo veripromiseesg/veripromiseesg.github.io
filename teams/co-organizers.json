@@ -1,0 +1,253 @@
+[
+  {
+    "id": 1,
+    "name_ch": "臺北市立大學",
+    "name_en": "University of Taipei (UT)",
+    "logo": "img/co-organizer/臺北市立大學.png",
+    "intro_ch": [
+      "臺北市立大學於 2013 年由臺北市立教育大學與臺北市立體育學院合併成立，為臺灣歷史最悠久之高等教育機構。",
+      "本校結合師資培育典範、菁英運動員培訓基地及都市研究智庫等三大特色，致力於學術研究產能提升、卓越教學成效確保、國際學術交流深化以及產學合作模式創新。校務發展以教學卓越與國際化為核心指標，旨在建構具備全球競爭力之都會大學，並落實社會責任，培育具備專業素養與國際視野之現代公民。"
+    ],
+    "intro_en": [
+      "The University of Taipei was established in 2013 through the merger of Taipei Municipal University of Education and Taipei Physical Education College, making it one of Taiwan’s long-established higher education institutions.",
+      "The university combines three major features: a model for teacher training, a training base for elite athletes, and an urban research think tank. It is committed to enhancing academic research productivity, ensuring excellent teaching outcomes, deepening international academic exchanges, and innovating industry-academia cooperation models. The development of the university focuses on teaching excellence and internationalization as core indicators, aiming to build a globally competitive metropolitan university and fulfill social responsibility by cultivating modern citizens with professional literacy and international vision."
+    ],
+    "link": "https://www.utaipei.edu.tw/"
+  },
+  {
+    "id": 2,
+    "name_ch": "靜宜大學",
+    "name_en": "Providence University (PU)",
+    "logo": "img/co-organizer/靜宜大學.png",
+    "intro_ch": [
+      "靜宜大學秉承天主教利他精神與進德修業校訓，致力於推動全人教育並培育具備利他思維之社會公民。校務發展計畫結合聯合國永續發展目標，透過涵育良善美德、尊重多元文化、追求專業學識與探索生活知能等四大素養，發展生命省思及科技運用等七項核心能力。",
+      "本校推動以院為核心之發展特色與全英文專業課程模組，旨在強化學生國際競爭力與專業就業能力，轉型為具備社會責任、教學卓越與特色研究之國際化大學。"
+    ],
+    "intro_en": [
+      "Providence University upholds the Catholic spirit of altruism and its motto of moral cultivation and academic excellence. It is committed to holistic education and nurturing socially responsible citizens.",
+      "Its development plan aligns with the United Nations Sustainable Development Goals (SDGs), cultivating seven core competencies through four key literacies: moral character, cultural diversity, professional knowledge, and life skills."
+    ],
+    "link": "https://www.pu.edu.tw/"
+  },
+  {
+    "id": 3,
+    "name_ch": "國立高雄科技大學",
+    "name_en": "National Kaohsiung University of Science and Technology (NKUST)",
+    "logo": "img/co-organizer/國立高雄科技大學.png",
+    "intro_ch": [
+      "國立高雄科技大學於 2018 年由國立高雄應用科技大學、國立高雄第一科技大學及國立高雄海洋科技大學合併成立，為臺灣規模最大之技術型大學。",
+      "該校設有建工、燕巢、第一、楠梓及旗津等五大校區，學術領域涵蓋工學、電資、管理、財金、外語、人文社會、水圈及海事等多元範疇。憑藉優越之地理位置與完整之校區機能，本校致力於提供優質學習環境，並透過學術資源整合與跨領域協作，深耕專業人才培育與產業實務研發。"
+    ],
+    "intro_en": [
+      "National Kaohsiung University of Science and Technology was established in 2018 through the merger of National Kaohsiung University of Applied Sciences, National Kaohsiung First University of Science and Technology, and National Kaohsiung Marine University, making it the largest technology university in Taiwan.",
+      "The university has five campuses: Jian Gong, Yan Chao, Di Yi, Nan Zi, and Qi Jin. Its academic fields cover engineering, electrical engineering and computer science, management, finance, foreign languages, humanities and social sciences, aquaculture, and maritime affairs. With its superior geographical location and complete campus functions, the university is committed to providing a high-quality learning environment and promoting academic resource integration and interdisciplinary collaboration to deepen professional talent cultivation and industry-oriented research."
+    ],
+    "link": "https://www.nkust.edu.tw/"
+  },
+  {
+    "id": 4,
+    "name_ch": "SITCON 學生計算機年會",
+    "name_en": "Students’ Information Technology Conference",
+    "logo": "img/co-organizer/SITCON 學生計算機年會.png",
+    "intro_ch": [
+      "SITCON 以學生為本、由學生自發舉辦，我們不只是學生「學以致用，教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裡齊聚一堂，彼此激盪、傳承、啟發，讓更多人可以一起學習資訊的美妙之處。"
+    ],
+    "intro_en": [
+      "SITCON is a student-centered conference organized by students. It serves as a platform for “learning by doing and teaching one another.”",
+      "We aim to bring together students interested in information technology to exchange ideas, inspire each other, and pass on knowledge—allowing more people to experience the beauty of computing together."
+    ],
+    "link": "http://sitcon.org"
+  },
+  {
+    "id": 5,
+    "name_ch": "Google 學生開發者社群 - 臺北大學",
+    "name_en": "Google Developer Groups (GDG) on Campus NTPU",
+    "logo": "img/co-organizer/GDG on Campus NTPU.png",
+    "intro_ch": [
+      "我們是 Google 支持的學生開發者社群，也是你踏入科技業的敲門磚～",
+      "本社致力於推廣開源技術、AI 等跨領域創新應用，將創意化為實際成果。",
+      "無論是專案開發、跨校合作活動，還是業師講座、實作工作坊、企業參訪，都精彩可期！"
+    ],
+    "intro_en": [
+      "We are a student developer community supported by Google and a gateway to the tech industry.",
+      "We are committed to promoting open-source technologies and cross-disciplinary innovation, turning ideas into real-world projects.",
+      "From project development and inter-university collaborations to industry talks, hands-on workshops, and company visits, we offer diverse learning experiences."
+    ],
+    "link": "https://www.instagram.com/gdg.ntpu/"
+  },
+  {
+    "id": 8,
+    "name_ch": "Google 學生開發者社群 STUST",
+    "name_en": "GDG on Campus STUST",
+    "logo": "img/co-organizer/Google 學生開發者社群 STUST.png",
+    "intro_ch": [
+      
+    ],
+    "intro_en": [
+      
+    ],
+    "link": "https://gdsc-stust.web.app"
+  },
+  {
+    "id": 9,
+    "name_ch": "GDG on Campus University of Taipei",
+    "name_en": "GDG on Campus University of Taipei",
+    "logo": "img/co-organizer/GDG on Campus University of Taipei.png",
+    "intro_ch": [
+      "GDG on Campus University of Taipei 是一個擁抱多元、促進跨領域成長的學生組織。",
+      "我們聚焦於創新創業、教育數位轉型與 AI 賦能，透過理論與實務兼顧的工作坊、專案導向的學習體驗、適合初學者與進階者的雙軌並行學習模式以及與各產業專業人士的深度連結，致力於打造資源豐富的學習環境，縮短學術與產業之間的距離。"
+    ],
+    "intro_en": [
+      "GDG on Campus University of Taipei is a student organization that embraces diversity and promotes interdisciplinary growth.",
+      "We focus on innovation and entrepreneurship, digital transformation in education, and AI empowerment. Through hands-on workshops, project-based learning, beginner-to-advanced learning tracks, and connections with industry professionals, we aim to build a resource-rich environment that bridges academia and industry."
+    ],
+    "link": "https://gdg.community.dev/gdg-on-campus-university-of-taipei-taipei-taiwan/"
+  },
+  {
+    "id": 10,
+    "name_ch": "Google Developer Groups on Campus TMU",
+    "name_en": "",
+    "logo": "img/co-organizer/Google Developer Groups on Campus TMU.png",
+    "intro_ch": [
+      "本社創辦於 110 年，鑑於本校在科技教育相對缺乏，我們期望透過 Google 開發者社群計劃，匯聚對資訊科技領域有興趣的師生，並致力於將科技結合醫療專業打造跨領域創新的智慧醫療應用。"
+    ],
+    "intro_en": [
+      "Founded in 2021, our community aims to bring together students and faculty interested in technology. We focus on integrating technology with medical expertise to develop innovative smart healthcare applications."
+    ],
+    "link": "https://www.instagram.com/tmu_gdgoncampus/"
+  },
+  {
+    "id": 11,
+    "name_ch": "Google Developer Groups on Campus NCUE",
+    "name_en": "",
+    "logo": "img/co-organizer/Google Developer Groups on Campus NCUE.png",
+    "intro_ch": [
+      "Google Developer Groups on Campus NCUE 為彰師大規模最大的資訊開發社群。結合業界資源與 10 餘項系統開發實績，我們致力於優化校園行政流程，並透過專業講座與知識分享，以技術力全面推動校園數位轉型。"
+    ],
+    "intro_en": [
+      "Google Developer Groups on Campus NCUE is the largest information technology development community at National Changhua University of Education. By integrating industry resources and over 10 system development achievements, we are committed to optimizing campus administrative processes and promoting digital transformation through professional lectures and knowledge sharing."
+    ],
+    "link": "https://gdg.ncuesa.org.tw"
+  },
+  {
+    "id": 12,
+    "name_ch": "中原大學 開源軟體開發社",
+    "name_en": "Google Developer Groups on Campus CYCU",
+    "logo": "img/co-organizer/中原大學 開源軟體開發社.png",
+    "intro_ch": [
+      "中原大學 開源軟體開發社 × GDG on Campus CYCU 是一個由 Google 官方支持的學生開發者社群，致力於推廣資訊技術、軟體開發與 AI 等前沿領域，提供社課、工作坊、實作專案與技術交流平台，讓中原學生從零開始學習程式、AI、資安等技能，並與志同道合的夥伴一起成長與合作。"
+    ],
+    "intro_en": [
+      "CYCU Open Source Software Development Club × GDG on Campus CYCU is a student developer community supported by Google, committed to promoting information technology, software development, and AI. We provide club classes, workshops, hands-on projects, and technical exchange platforms, enabling CYCU students to learn programming, AI, cybersecurity, and collaborate with like-minded peers."
+    ],
+    "link": "https://www.instagram.com/gdg.on.campus_cycu"
+  },
+  {
+    "id": 13,
+    "name_ch": "中興大學資訊科學研習社",
+    "name_en": "GDG on Campus NCHU",
+    "logo": "img/co-organizer/中興大學資訊科學研習社.png",
+    "intro_ch": [
+      "中興大學資訊社（GDG on Campus NCHU）為中興大學最具代表性的技術社群，其中 GDG 分會更獲得 Google 官方認證。",
+      "我們致力於打造一個開放的技術學習環境，透過工作坊、技術講座與專案實作，帶領學生探索 AI、雲端運算與 Web 技術。",
+      "我們強調技術的實務應用與跨領域交流，期許能激發學生的創造力，運用科技解決現實問題。"
+    ],
+    "intro_en": [
+      "NCHU GDG is the most representative technology community at National Chung Hsing University, with its GDG chapter receiving official recognition from Google.",
+      "We are committed to creating an open technical learning environment, guiding students to explore AI, cloud computing, and web technologies through workshops, technical lectures, and project-based learning.",
+      "We emphasize practical application and cross-disciplinary exchange, aiming to inspire students' creativity and use technology to solve real-world problems."
+    ],
+    "link": ""
+  },
+  {
+    "id": 14,
+    "name_ch": "中山大學 GDG",
+    "name_en": "GDG on Campus: NSYSU｜Google Developer Student Club",
+    "logo": "img/co-organizer/中山大學 GDG.png",
+    "intro_ch": [
+      "由 Google 官方支持、在中山大學推動的學生開發者社群，我們致力於打造一個自由、開放、充滿創意的技術交流平台。",
+      "在這裡，你不只能接觸到 Google 最新的開發技術、參與各式各樣的實作工作坊與專案開發，還有機會獲得由 Google 提供的官方證書，為你的履歷增添亮點！",
+      "GDG 鼓勵創新思維與跨領域合作，無論你是程式新手還是開發老手，都能在這裡找到屬於自己的舞台。我們目前與「程式研習社」共同推動課程與活動，歡迎你一起加入，探索更多技術的可能！"
+    ],
+    "intro_en": [
+      "Supported by Google and established at National Sun Yat-sen University, this student developer community is dedicated to creating a free, open, and creative technical exchange platform.",
+      "Here, you can not only get access to Google's latest development technologies but also participate in various hands-on workshops and project development. You'll have the opportunity to earn official certificates from Google, adding a valuable highlight to your resume!",
+      "GDG encourages innovative thinking and cross-disciplinary collaboration. Whether you're a programming beginner or an experienced developer, you can find your own stage here. We currently collaborate with the Programming Club to promote courses and events. Welcome to join us and explore more possibilities in technology!"
+    ],
+    "link": ""
+  },
+  {
+    "id": 15,
+    "name_ch": "Google Developer Groups on Campus NCU",
+    "name_en": "Google Developer Groups on Campus NCU",
+    "logo": "img/co-organizer/Google Developer Groups on Campus NCU.png",
+    "intro_ch": [
+      "GDG on Campus NCU 作為 Google 在學術型大學推動的開發者社群之一，致力於鼓勵學生學習，了解開源文化，並以推廣 Google 技術及參與各種賽事為目標，開展相關活動，是學生們學習和分享技術的理想社群。"
+    ],
+    "intro_en": [
+      "GDG on Campus NCU is one of Google’s developer communities established within academic universities. It is dedicated to encouraging students to learn, embrace open-source culture, and engage with Google technologies. Through organizing various activities and participating in competitions, the community aims to promote technical growth and collaboration, making it an ideal place for students to learn and share their knowledge."
+    ],
+    "link": "https://www.instagram.com/gdscncu/"
+  },
+  {
+    "id": 16,
+    "name_ch": "臺科大 Google 學生開發者社群",
+    "name_en": "GDG on Campus NTUST",
+    "logo": "img/co-organizer/臺科大 Google 學生開發者社群.png",
+    "intro_ch": [
+      "想學程式卻不知從何入手？我們是一群熱愛技術與分享的學生，透過與各校社團及企業的聯手合作，從日常生活常見的主題切入，致力於打造一個跨領域的友善學習環境。",
+      "加入我們，一起成長為開發者，為開源社群貢獻一份心力吧！"
+    ],
+    "intro_en": [
+      "Want to learn programming but don’t know where to start?",
+      "We are a group of students passionate about technology and sharing. Through collaborations with student clubs and industry partners, we build a friendly, interdisciplinary learning environment based on real-world topics.",
+      "Join us and grow as developers while contributing to the open-source community."
+    ],
+    "link": "https://gdg-ntust.org/"
+  },
+  {
+    "id": 17,
+    "name_ch": "國立臺北科技大學程式設計研究社",
+    "name_en": "National Taipei University of Technology (NTUT) Programming Club / NPC",
+    "logo": "img/co-organizer/國立臺北科技大學程式設計研究社.png",
+    "intro_ch": [
+      "北科程式設計研究社致力於推動校內程式教育與資訊素養培養，提供系統化學習資源與實作機會，協助學生建立扎實的邏輯思考與問題解決能力。",
+      "社團重視互助合作與友善交流氛圍，透過課程、競賽與專題分享，促進對程式設計有興趣之學生彼此交流與成長，強化實務能力與跨領域應用視野。"
+    ],
+    "intro_en": [
+      "The NTUT Programming Club is dedicated to promoting programming education and cultivating information literacy within the university. We provide systematic learning resources and practical opportunities to help students build solid logical thinking and problem-solving skills.",
+      "The club values mutual assistance and a friendly exchange atmosphere. Through courses, competitions, and project sharing, we promote communication and growth among students interested in programming, strengthening practical skills and expanding cross-disciplinary perspectives."
+    ],
+    "link": ""
+  },
+  {
+    "id": 18,
+    "name_ch": "大同大學科學開源服務社",
+    "name_en": "TTUSSC",
+    "logo": "img/co-organizer/大同大學科學開源服務社.png",
+    "intro_ch": [
+      "本社是一個結合開源、技術型社課與營隊服務活動的社團。",
+      "我們致力於推廣開源文化，積極實踐開放教育理念，透過舉辦營隊將教育資源傳遞給更多資源不足的群體。"
+    ],
+    "intro_en": [
+      "Our club combines open-source practices, technical workshops, and service-oriented activities.",
+      "We are committed to promoting open-source culture and actively practicing open education by organizing camps that deliver educational resources to under-resourced communities."
+    ],
+    "link": "https://ttussc.org/"
+  },
+  {
+    "id": 19,
+    "name_ch": "GDG on Campus NKUST",
+    "name_en": "",
+    "logo": "",
+    "intro_ch": [
+      "GDG on Campus NKUST 致力於在高科大五大校區（建工、燕巢、第一、楠梓、旗津）推廣 Google 資源。",
+      "我們透過不定期舉辦的技術工作坊與活動，建立一個跨校區的學習社群，協助同學們掌握最新的開發工具與技術趨勢，共同成長並連結全球開發者網路。"
+    ],
+    "intro_en": [
+      "GDG on Campus NKUST is dedicated to promoting Google resources across the five campuses of NKUST (Jian Gong, Yan Chao, Di Yi, Nan Zi, Qi Jin).",
+      "Through regular workshops and events, we aim to build a cross-campus learning community, helping students grasp the latest development tools and technology trends, grow together, and connect with the global developer network."
+    ],
+    "link": "https://gdg.community.dev/gdg-on-campus-national-kaohsiung-university-of-science-and-technology-kaohsiung-taiwan/"
+  }
+]
