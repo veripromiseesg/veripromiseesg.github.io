@@ -16,6 +16,7 @@ const translations = {
         dataset: "數據集",
         evaluation: "評估方式",
         timeline: "競賽時程",
+        workshops: "巡迴課程",
         faq: "常見問題",
         team: "籌備團隊",
         resources: "相關資源",
@@ -25,8 +26,10 @@ const translations = {
         block2: "ESG 永續承諾驗證競賽",
         block3: "",
         description: "運用 AI 技術驗證企業永續承諾，<br>推動 ESG 報告透明化與可信度",
-        linkAicup: "AI CUP（教育部人工智慧競賽與標註資料蒐集計畫）官方網站",
-        linkGuidelines: "最新雙語競賽簡章",
+        linkAicup: "AI CUP 官方網站",
+        linkRegistration: "競賽報名網站",
+        linkPlatform: "競賽平臺",
+        linkGuidelines: "雙語競賽簡章",
       },
       about: {
         title: "競賽簡介",
@@ -66,7 +69,7 @@ const translations = {
           output2Label: "否 (No)：",
           output2: "不包含承諾的一般性陳述",
           metricLabel: "評估指標",
-          metric: "F1-Score（精確率與召回率的調和平均）",
+          metric: "Macro-F1 Score（精確率與召回率的調和平均）",
           exampleLabel: "範例",
           example1Label: "承諾：",
           example1: "我們承諾在 2030 年前達成碳中和目標",
@@ -83,7 +86,7 @@ const translations = {
           output2Label: "否 (No)：",
           output2: "承諾缺乏具體佐證",
           metricLabel: "評估指標",
-          metric: "F1-Score（語意關聯性判斷能力）",
+          metric: "Macro-F1 Score（語意關聯性判斷能力）",
           exampleLabel: "範例",
           promiseLabel: "承諾：",
           promise:
@@ -103,7 +106,7 @@ const translations = {
           output3Label: "誤導 (Misleading)：",
           output3: "可能有誤導性表述",
           metricLabel: "評估指標",
-          metric: "Macro-F1（三分類平均表現）",
+          metric: "Macro-F1 Score（三分類平均表現）",
           valueLabel: "實務價值",
           value: "協助識別企業「漂綠」行為，提升 ESG 報告可信度",
         },
@@ -121,7 +124,7 @@ const translations = {
           output4Label: "5年以上 (More than 5 years)：",
           output4: "長期目標",
           metricLabel: "評估指標",
-          metric: "Macro-F1（四分類時間推論能力）",
+          metric: "Macro-F1 Score（四分類時間推論能力）",
         },
         relevanceTitle: "任務關聯性與實務價值",
         job1: {
@@ -184,25 +187,25 @@ const translations = {
             meta: "子任務一 (20%)", 
             name: "承諾語句識別", 
             desc: "識別 ESG 承諾語句的精確度與召回率平衡。", 
-            metric: "<strong>📊 指標：F1-Score</strong><br>（即精確率與召回率的調和平均）" 
+            metric: "<strong>📊 指標：Macro-F1 Score</strong><br>（即精確率與召回率的調和平均）" 
           },
           task2: { 
             meta: "子任務二 (30%)", 
             name: "支持證據連結", 
             desc: "判斷承諾是否具備充分支持證據的能力。", 
-            metric: "<strong>📊 指標：F1-Score</strong><br>（衡量語意關聯性判斷能力）" 
+            metric: "<strong>📊 指標：Macro-F1 Score</strong><br>（衡量語意關聯性判斷能力）" 
           },
           task3: { 
             meta: "子任務三 (35%)", 
             name: "證據清晰度評估", 
             desc: "評估證據品質的三分類分析能力。", 
-            metric: "<strong>📊 指標：Macro-F1</strong><br>（三分類平均表現）" 
+            metric: "<strong>📊 指標：Macro-F1 Score</strong><br>（三分類平均表現）" 
           },
           task4: { 
             meta: "子任務四 (15%)", 
             name: "預期驗證時機推論", 
             desc: "評估承諾適當驗證時間點的四分類預測能力。", 
-            metric: "<strong>📊 指標：Macro-F1</strong><br>（四分類時間推論能力）" 
+            metric: "<strong>📊 指標：Macro-F1 Score</strong><br>（四分類時間推論能力）" 
           }
         },
         awardsTitle: "🏅 獎項設置",
@@ -241,40 +244,47 @@ const translations = {
       workshops: {
         title: "三區巡迴課程",
         intro: "為了讓各位能更順利地參與競賽，主辦單位將前往北、中、南三區大專院校，辦理巡迴課程！<br>在這些課程中，不僅會進行詳細的競賽內容介紹、帶領參加者實作範例程式碼（部分場次亦提供精美餐點），更將加開線上場次，即便沒辦法線下參與也不用擔心",
-        regLink: "📍 巡迴課程報名表單",
+        regLink: "立刻報名巡迴課程",
         table: {
           school: "學校",
           time: "時間",
           location: "地點",
           deadline: "報名截止",
           capacity: "名額上限",
-          note: "其他"
+          note: "其他",
+          links: "相關連結"
         },
         row1: {
-          school: "北市大",
+          school: "臺北市立大學",
           time: "3/6 (五)<br>12:00-14:00",
           location: "公誠樓 G315 /<br>Google Meet",
-          deadline: "3/5（四）12:00",
+          deadline: "3/5（四）12:00<br>（亦開放現場報名）",
           capacity: "44 人",
-          note: "提供超商禮物卡<br>（暫定）"
+          note: "提供超商禮物卡<br>（暫定）",
+          link1: "線上參與連結",
+          link2: "課程錄影"
         },
         row2: {
-          school: "靜宜",
+          school: "靜宜大學",
           time: "3/20 (五)<br>12:00-14:00",
           location: "任垣樓 120 講堂 /<br>Google Meet",
-          deadline: "3/18（三）12:00",
+          deadline: "3/18（三）12:00<br>（亦開放現場報名）",
           capacity: "200 人",
-          note: "提供午餐<br>須自備筆電"
+          note: "提供午餐<br>須自備筆電",
+          link1: "線上參與連結",
+          link2: "課程錄影：敬請期待"
         },
         row3: {
-          school: "高科大",
+          school: "高雄科技大學",
           time1: "3/27 (五)<br>14:30-16:20",
           location1: "雙科館 B1 小劇場 /<br>Google Meet",
           time2: "3/27 (五)<br>19:30-21:00",
           location2: "雙科館 1F 慧芳講堂 /<br>Google Meet",
           deadline: "3/26（四）23:59",
           capacity: "實體場僅修課同學<br>可報名",
-          note: "以專題演講<br>形式進行"
+          note: "以專題演講<br>形式進行",
+          link1: "線上參與連結",
+          link2: "課程錄影：敬請期待"
         }
       },
       timeline: {
@@ -331,7 +341,7 @@ const translations = {
         },
       },
       team: {
-        title: "主辦團隊",
+        title: "籌備團隊",
         piTitle: "計畫主持人",
         pi: {
           name: "戴敏育 教授 ",
@@ -379,6 +389,7 @@ const translations = {
           link: "個人網站",
         },
         orgTitle: "合作機構",
+        organizersTitle: "主辦單位",
         coOrgTitle: "協辦單位",
         org1: {
           name: "國立臺北大學",
@@ -543,8 +554,9 @@ const translations = {
       footer: {
         copyright: "© 2026 AI CUP - ESG 永續承諾驗證競賽",
         organizer: "主辦單位：國立臺北大學 資訊管理研究所、金融科技暨綠色金融研究中心",
+        contact: "如有任何問題，歡迎隨時與我們聯繫： yyteng@mail.ntpu.edu.tw",
         email: "聯絡信箱",
-        sampleCode: "範例程式碼",
+        sampleCode: "雙語範例程式碼",
         registration: "AI CUP 報名系統",
       },
     },
@@ -558,6 +570,7 @@ const translations = {
         dataset: "Dataset",
         evaluation: "Evaluation",
         timeline: "Timeline",
+        workshops: "Workshops",
         faq: "FAQ",
         team: "Team",
         resources: "Resources",
@@ -568,7 +581,9 @@ const translations = {
         block3: "Competition",
         description: "Leverage AI technology to verify corporate sustainability commitments<br>and enhance ESG report transparency and credibility",
         linkAicup: "AI CUP Official Website",
-        linkGuidelines: "Latest Bilingual Competition Guidelines",
+        linkRegistration: "Registration System",
+        linkPlatform: "Competition Platform",
+        linkGuidelines: "Competition Guidelines (Bilingual)",
       },
       about: {
         title: "Competition Overview",
@@ -612,7 +627,7 @@ const translations = {
           output2Label: "No:",
           output2: "General statements without commitments",
           metricLabel: "Evaluation Metric",
-          metric: "F1-Score (harmonic mean of precision and recall)",
+          metric: "Macro-F1 Score (harmonic mean of precision and recall)",
           exampleLabel: "Examples",
           example1Label: "Promise:",
           example1: '"We commit to achieving carbon neutrality by 2030"',
@@ -630,7 +645,7 @@ const translations = {
           output2Label: "No:",
           output2: "Promise lacks specific evidence",
           metricLabel: "Evaluation Metric",
-          metric: "F1-Score (semantic association judgment capability)",
+          metric: "Macro-F1 Score (semantic association judgment capability)",
           exampleLabel: "Example",
           promiseLabel: "Promise:",
           promise:
@@ -652,7 +667,7 @@ const translations = {
           output3: "Potentially misleading statements",
           metricLabel: "Evaluation Metric",
           metric:
-            "Macro-F1 (average performance across three categories)",
+            "Macro-F1 Score (average performance across three categories)",
           valueLabel: "Practical Value",
           value:
             "Help identify corporate 'greenwashing' behavior and enhance ESG report credibility",
@@ -672,32 +687,32 @@ const translations = {
           output4Label: "More than 5 years:",
           output4: "Long-term target",
           metricLabel: "Evaluation Metric",
-          metric: "Macro-F1 (four-category time inference capability)",
+          metric: "Macro-F1 Score (four-category time inference capability)",
         },
         chartTooltip: {
           task1: { 
               meta: "Task 1 (20%)", 
               name: "Commitment Classification", 
               desc: "Balance of precision and recall in identifying ESG promises.", 
-              metric: "📊 Metric: F1-Score" 
+              metric: "📊 Metric: Macro-F1 Score" 
           },
           task2: { 
               meta: "Task 2 (30%)", 
               name: "Evidence Identification", 
               desc: "Ability to determine if promises have sufficient supporting evidence.", 
-              metric: "📊 Metric: F1-Score" 
+              metric: "📊 Metric: Macro-F1 Score" 
           },
           task3: { 
               meta: "Task 3 (35%)", 
               name: "Clarity Classification", 
               desc: "Three-category analysis capability for assessing evidence quality.", 
-              metric: "📊 Metric: Macro-F1" 
+              metric: "📊 Metric: Macro-F1 Score" 
           },
           task4: { 
               meta: "Task 4 (15%)", 
               name: "Timeline Classification", 
               desc: "Four-category prediction capability for appropriate verification timing.", 
-              metric: "📊 Metric: Macro-F1" 
+              metric: "📊 Metric: Macro-F1 Score" 
           }
         },
         relevanceTitle: "Task Relevance and Practical Value",
@@ -760,25 +775,25 @@ const translations = {
             meta: "Task 1 (20%)",
             name: "Commitment Classification",
             desc: "Balance of precision and recall in identifying ESG promises.",
-            metric: "<strong>📊 Metric: F1-Score</strong><br>(Harmonic mean of precision and recall)"
+            metric: "<strong>📊 Metric: Macro-F1 Score</strong><br>(Harmonic mean of precision and recall)"
           },
           task2: {
             meta: "Task 2 (30%)",
             name: "Evidence Identification",
             desc: "Ability to determine if promises have sufficient supporting evidence.",
-            metric: "<strong>📊 Metric: F1-Score</strong><br>(Measuring semantic relevance judgment)"
+            metric: "<strong>📊 Metric: Macro-F1 Score</strong><br>(Measuring semantic relevance judgment)"
           },
           task3: {
             meta: "Task 3 (35%)",
             name: "Clarity Classification",
             desc: "Three-category analysis capability for assessing evidence quality.",
-            metric: "<strong>📊 Metric: Macro-F1</strong><br>(Average performance across three categories)"
+            metric: "<strong>📊 Metric: Macro-F1 Score</strong><br>(Average performance across three categories)"
           },
           task4: {
             meta: "Task 4 (15%)",
             name: "Timeline Classification",
             desc: "Four-category prediction capability for appropriate verification timing.",
-            metric: "<strong>📊 Metric: Macro-F1</strong><br>(Four-category timeline inference ability)"
+            metric: "<strong>📊 Metric: Macro-F1 Score</strong><br>(Four-category timeline inference ability)"
           }
         },
         awardsTitle: "🏅 Award Structure",
@@ -817,30 +832,35 @@ const translations = {
       workshops: {
         title: "Regional Hands-on Workshops",
         intro: "To help everyone participate more smoothly, the organizers will host a series of regional hands-on workshops across universities in Northern, Central, and Southern Taiwan!<br>In these sessions, we will not only provide a detailed overview of the competition and guide participants through the sample code (some sessions also provide meals), but we will also offer online streaming. Don't worry if you can't attend in person!",
-        regLink: "📍 Workshop Registration Form",
+        regLink: "Register for Workshops",
         table: {
           school: "School",
           time: "Time",
           location: "Location",
           deadline: "Registration Deadline",
           capacity: "Capacity",
-          note: "Note"
+          note: "Note",
+          links: "Links"
         },
         row1: {
-          school: "UTaipei",
+          school: "University of Taipei",
           time: "3/6 (Fri)<br>12:00-14:00",
           location: "Gongcheng Hall G315 /<br>Google Meet",
-          deadline: "3/5 (Thu) 12:00",
+          deadline: "3/5 (Thu) 12:00<br>(Walk-ins also welcome)",
           capacity: "44",
-          note: "Convenience store gift cards provided<br>(Tentative)"
+          note: "Convenience store gift cards provided<br>(Tentative)",
+          link1: "Online Participation Link",
+          link2: "Session Recording"
         },
         row2: {
-          school: "Providence Univ.",
+          school: "Providence University",
           time: "3/20 (Fri)<br>12:00-14:00",
           location: "Renyuan Hall 120 /<br>Google Meet",
-          deadline: "3/18 (Wed) 12:00",
+          deadline: "3/18 (Wed) 12:00<br>(Walk-ins also welcome)",
           capacity: "200",
-          note: "Lunch provided<br>BYOD (Bring your own device)"
+          note: "Lunch provided<br>BYOD (Bring your own device)",
+          link1: "Online Participation Link",
+          link2: "Recording: Coming Soon"
         },
         row3: {
           school: "NKUST",
@@ -850,7 +870,9 @@ const translations = {
           location2: "Shuang-Ke Hall 1F Huifang Lecture Hall /<br>Google Meet",
           deadline: "3/26 (Thu) 23:59",
           capacity: "In-person only for<br>enrolled students",
-          note: "Seminar format"
+          note: "Seminar format",
+          link1: "Online Participation Link",
+          link2: "Recording: Coming Soon"
         }
       },
       timeline: {
@@ -907,7 +929,7 @@ const translations = {
         },
       },
       team: {
-        title: "Organizing Team",
+        title: "Meet the Team",
         piTitle: "Principal Investigator",
         pi: {
           name: "Prof. Min-Yuh Day",
@@ -957,6 +979,7 @@ const translations = {
           link: "Website",
         },
         orgTitle: "Partner Institutions",
+        organizersTitle: "Organizers",
         coOrgTitle: "Co-organizers",
         org1: {
           name: "National Taipei University",
@@ -1127,8 +1150,9 @@ const translations = {
           "© 2026 AI CUP - ESG Promise Verification Competition",
         organizer:
           "Organizer: Graduate Institute of Information Management & The Fintech and Green Finance Center (FGFC), NTPU",
+        contact: "For any questions, feel free to contact us: yyteng@mail.ntpu.edu.tw",
         email: "Email",
-        sampleCode: "Sample Code",
+        sampleCode: "Sample Code (Bilingual)",
         registration: "AI CUP Registration System",
       },
     },
@@ -1213,6 +1237,8 @@ function changeLanguage(lang) {
     }
 
     updateChartLanguage();
+    if (typeof renderOrganizers === 'function') renderOrganizers();
+    if (typeof renderPartnerInstitutions === 'function') renderPartnerInstitutions();
   });
 }
 
@@ -1730,7 +1756,7 @@ let coOrganizersData = [];
 // 載入協辦單位資料
 async function loadCoOrganizers() {
     try {
-        const response = await fetch('co-organizers.json');
+        const response = await fetch('teams/co-organizers.json');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         
@@ -1768,8 +1794,9 @@ function renderCoOrganizers() {
 }
 
 // 開啟協辦單位 modal
-function openCoOrgModal(id) {
-    const org = coOrganizersData.find(o => o.id === id);
+function openCoOrgModal(id, dataSource) {
+    const sourceData = dataSource || coOrganizersData;
+    const org = sourceData.find(o => o.id === id);
     if (!org) return;
 
     const modal = document.getElementById('coOrgModal');
@@ -1781,22 +1808,29 @@ function openCoOrgModal(id) {
 
     modalLogo.src = org.logo.replace('.ai', '.png');
 
-    // 5(2). 永遠顯示中英文 (如果沒有中文則留白)
     modalNameCh.textContent = org.name_ch || '';
     modalNameCh.style.display = org.name_ch ? 'block' : 'none';
 
     modalNameEn.textContent = org.name_en || '';
     modalNameEn.style.display = org.name_en ? 'block' : 'none';
 
-    if (Array.isArray(org.intro)) {
-        modalIntro.innerHTML = org.intro.map(p => `<p>${p}</p>`).join('');
+    // 支援 intro_ch/intro_en 或舊的 intro
+    const lang = (typeof i18next !== 'undefined' && i18next.language && i18next.language.startsWith('zh')) ? 'zh' : 'en';
+    let introContent = [];
+    if (lang === 'zh' && org.intro_ch) {
+        introContent = Array.isArray(org.intro_ch) ? org.intro_ch : [org.intro_ch];
+    } else if (lang === 'en' && org.intro_en) {
+        introContent = Array.isArray(org.intro_en) ? org.intro_en : [org.intro_en];
     } else if (org.intro) {
-        modalIntro.innerHTML = `<p>${org.intro}</p>`;
-    } else {
-        modalIntro.innerHTML = '';
+        introContent = Array.isArray(org.intro) ? org.intro : [org.intro];
     }
+    // Fallback: if selected lang content is empty, try the other
+    if (!introContent.length || introContent.every(s => !s)) {
+        const fallback = lang === 'zh' ? org.intro_en : org.intro_ch;
+        if (fallback) introContent = Array.isArray(fallback) ? fallback : [fallback];
+    }
+    modalIntro.innerHTML = introContent.filter(Boolean).map(p => `<p>${p}</p>`).join('');
 
-    // 5(3). 刪除 Visit Website 的 link emoji
     if (org.link) {
         modalLinkContainer.innerHTML = `<a href="${org.link}" target="_blank">Visit Website</a>`;
     } else {
@@ -1828,6 +1862,142 @@ document.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', loadCoOrganizers);
+
+// Reset marquee animation when section scrolls into view (ensures id=1 is first)
+const coOrgSection = document.getElementById('team');
+if (coOrgSection) {
+    const marqObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const slider = document.getElementById('coOrgSlider');
+            if (!slider) return;
+            if (entry.isIntersecting) {
+                // Reset animation by re-cloning the element
+                slider.style.animation = 'none';
+                slider.offsetHeight; // reflow
+                slider.style.animation = '';
+            }
+        });
+    }, { threshold: 0.1 });
+    marqObserver.observe(coOrgSection);
+}
+
+/* ===================================
+   Organizers (主辦單位) Logo Grid
+   =================================== */
+
+let organizersData = [];
+
+async function loadOrganizers() {
+    try {
+        const response = await fetch('teams/organizers.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        organizersData = data.sort((a, b) => a.id - b.id);
+        renderOrganizers();
+    } catch (error) {
+        console.error('Error loading organizers:', error);
+    }
+}
+
+// Label map by id (order: 1,2,3,4)
+const organizerLabels = {
+    zh: [
+        "競賽指導單位",
+        "競賽運籌單位",
+        "議題提供單位",
+        "議題提供單位"
+    ],
+    en: [
+        "Supervising Organization",
+        "Organizing Committee",
+        "Topic Provider (Host Organization)",
+        "Topic Provider (Host Organization)"
+    ]
+};
+
+function renderOrganizers() {
+    const grid = document.getElementById('organizersLogoGrid');
+    if (!grid) return;
+
+    const lang = (typeof i18next !== 'undefined' && i18next.language && i18next.language.startsWith('zh')) ? 'zh' : 'en';
+
+    grid.innerHTML = organizersData.map((org, idx) => {
+        const logoPath = org.logo.replace('.ai', '.png');
+        const label = (organizerLabels[lang] && organizerLabels[lang][idx]) || '';
+        const nameLine = lang === 'zh' ? (org.name_ch || org.name_en) : (org.name_en || org.name_ch);
+        return `
+            <div class="organizer-logo-item">
+                <div class="organizer-logo-wrapper" onclick="openCoOrgModal(${org.id}, organizersData)">
+                    <img src="${logoPath}" alt="${org.name_ch || org.name_en}" class="organizer-logo"
+                         onerror="this.parentElement.style.display='none'">
+                </div>
+                <div class="organizer-label">
+                    <div class="organizer-label-role">${label}</div>
+                    <div class="organizer-label-name">${nameLine}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+window.addEventListener('load', loadOrganizers);
+
+/* ===================================
+   Partner Institutions Logo Grid
+   =================================== */
+
+let partnerInstitutionsData = [];
+
+async function loadPartnerInstitutions() {
+    try {
+        const response = await fetch('teams/partner-institutions.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        partnerInstitutionsData = data.sort((a, b) => a.id - b.id);
+        renderPartnerInstitutions();
+    } catch (error) {
+        console.error('Error loading partner institutions:', error);
+    }
+}
+
+// Partner institution logos for the 3 tour schools (prepended, link to co-organizers modal)
+const tourSchoolLogos = [
+    { src: 'img/partner-institution/臺北市立大學.png', coOrgId: 1, name_ch: '臺北市立大學', name_en: 'University of Taipei' },
+    { src: 'img/partner-institution/靜宜大學.png',    coOrgId: 2, name_ch: '靜宜大學', name_en: 'Providence University' },
+    { src: 'img/partner-institution/高雄科技大學.png', coOrgId: 3, name_ch: '高雄科技大學', name_en: 'NKUST' }
+];
+
+function renderPartnerInstitutions() {
+    const grid = document.getElementById('partnerLogosGrid');
+    if (!grid) return;
+
+    // Prepend 3 tour school logos (modal uses coOrganizersData)
+    const tourHTML = tourSchoolLogos.map(s => `
+        <div class="partner-logo-item">
+            <div class="partner-logo-wrapper" onclick="openCoOrgModal(${s.coOrgId}, coOrganizersData)">
+                <img src="${s.src}" alt="${s.name_ch}" class="partner-inst-logo"
+                     onerror="this.parentElement.style.display='none'">
+            </div>
+        </div>
+    `).join('');
+
+    // Existing partner-institutions.json logos
+    const partnerHTML = partnerInstitutionsData.map(org => {
+        const logoPath = org.logo.replace('.ai', '.png');
+        return `
+            <div class="partner-logo-item">
+                <div class="partner-logo-wrapper" onclick="openCoOrgModal(${org.id}, partnerInstitutionsData)">
+                    <img src="${logoPath}" alt="${org.name_ch || org.name_en}" class="partner-inst-logo"
+                         onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    grid.innerHTML = tourHTML + partnerHTML;
+}
+
+window.addEventListener('load', loadPartnerInstitutions);
 
 /* ===================================
    FAQ Toggle Functionality
