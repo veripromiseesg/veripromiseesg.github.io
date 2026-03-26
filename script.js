@@ -639,7 +639,7 @@ date: "2026.03.05 ~ 2026.07.23",
           name: "陳重吉 博士",
           role: "協同主持人",
           affiliation: "人工智慧研究中心<br>產業技術綜合研究所 (AIST) 研究員",
-          desc: "ACL SIG-FinTech 創始人，專精於金融意見挖掘與自然語言處理。",
+          desc: "ACL SIG-FinTech 創始人，專精於金融論證挖掘與自然語言處理。",
           link: "個人網站",
         },
         copi2: {
