@@ -840,6 +840,7 @@ date: "2026.03.05 ~ 2026.07.23",
             "中區｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>靜宜大學</a>",
           details:
             "日期：2026 年 3 月 20 日（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
+          slides: "📊 巡迴課程投影片：<a href='https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing' target='_blank' style='color:#3182ce; font-weight:bold;'>點此開啟</a>",
           yt: "▶ 課程錄影：敬請期待",
         },
         south: {
@@ -847,6 +848,7 @@ date: "2026.03.05 ~ 2026.07.23",
             "南區｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>國立高雄科技大學</a>",
           details:
             "日期：2026 年 3 月 27 日（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
+          slides: "📊 巡迴課程投影片：<a href='https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk' target='_blank' style='color:#3182ce; font-weight:bold;'>點此開啟</a>",
           yt: "▶ 課程錄影：敬請期待",
         },
       },
@@ -1459,6 +1461,7 @@ date: "2026.03.05 ~ 2026.07.23",
             "Central｜<a href='https://www.pu.edu.tw/' target='_blank' style='color:inherit;'>Providence University</a>",
           details:
             "Date: March 20, 2026 (Friday) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
+          slides: "📊 Workshop Slides: <a href='https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing' target='_blank' style='color:#3182ce; font-weight:bold;'>Open Slides</a>",
           yt: "▶ Recording: Coming Soon",
         },
         south: {
@@ -1466,6 +1469,7 @@ date: "2026.03.05 ~ 2026.07.23",
             "South｜<a href='https://www.nkust.edu.tw/' target='_blank' style='color:inherit;'>National Kaohsiung University<br>of Science and Technology</a>",
           details:
             "Date: March 27, 2026 (Friday) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
+          slides: "📊 Workshop Slides: <a href='https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk' target='_blank' style='color:#3182ce; font-weight:bold;'>Open Slides</a>",
           yt: "▶ Recording: Coming Soon",
         },
       },
