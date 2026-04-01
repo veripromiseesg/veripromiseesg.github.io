@@ -849,7 +849,7 @@ date: "2026.03.05 ~ 2026.07.23",
           details:
             "日期：2026 年 3 月 27 日（五）14:30–16:20 / 19:30–21:00\n地點：雙科館 B1 電機系小劇場、1F 慧芳講堂\n總參與人數：150 人\n僅開放修課同學報名",
           slides: "📊 巡迴課程投影片：<a href='https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk' target='_blank' style='color:#3182ce; font-weight:bold;'>https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk</a>",
-          yt: "▶ 課程錄影：敬請期待",
+          yt: "▶ 課程錄影（下午場）：<a href='https://youtu.be/L77kgIS-NpQ' target='_blank' style='color:#3182ce; font-weight:bold;'>https://youtu.be/L77kgIS-NpQ</a><br>▶ 課程錄影（晚場）：<a href='https://youtu.be/u6FgyKll5hE' target='_blank' style='color:#3182ce; font-weight:bold;'>https://youtu.be/u6FgyKll5hE</a>",
         },
       },
       resources: {
@@ -1470,7 +1470,7 @@ date: "2026.03.05 ~ 2026.07.23",
           details:
             "Date: March 27, 2026 (Friday) 14:30–16:20 / 19:30–21:00\nVenue: B1 Small Theater & 1F Huifang Hall\nTotal: 150 participants\nCourse students only",
           slides: "📊 Workshop Slides: <a href='https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk' target='_blank' style='color:#3182ce; font-weight:bold;'>https://docs.google.com/presentation/d/1nGkZACQxYM5JFJyrgg6sUrUI6_tdzEfpGfY1EbWQn5Y/edit?usp=drivesdk</a>",
-          yt: "▶ Recording: Coming Soon",
+          yt: "▶ Recording (Afternoon): <a href='https://youtu.be/L77kgIS-NpQ' target='_blank' style='color:#3182ce; font-weight:bold;'>https://youtu.be/L77kgIS-NpQ</a><br>▶ Recording (Evening): <a href='https://youtu.be/u6FgyKll5hE' target='_blank' style='color:#3182ce; font-weight:bold;'>https://youtu.be/u6FgyKll5hE</a>",
         },
       },
       resources: {
