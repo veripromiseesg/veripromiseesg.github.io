@@ -841,7 +841,7 @@ date: "2026.03.05 ~ 2026.07.23",
           details:
             "日期：2026 年 3 月 20 日（五）12:00–14:00\n地點：任垣樓 120 任垣講堂\n場地上限：200 人\n開放全校學生報名，請自備筆電",
           slides: "📊 巡迴課程投影片：<a href='https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing' target='_blank' style='color:#3182ce; font-weight:bold;'>https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing</a>",
-          yt: "▶ 課程錄影：<a href='https://youtu.be/QJUnyR29XmM' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/QJUnyR29XmM</a>",
+          yt: "▶ 課程錄影：<a href='https://youtu.be/XBUr2t3V3E4' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/XBUr2t3V3E4</a>",
         },
         south: {
           title:
@@ -1461,7 +1461,7 @@ date: "2026.03.05 ~ 2026.07.23",
           details:
             "Date: March 20, 2026 (Friday) 12:00–14:00\nVenue: Renyu Building, Lecture Hall 120\nCapacity: 200\nOpen to all students. Please bring your laptop.",
           slides: "📊 Workshop Slides: <a href='https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing' target='_blank' style='color:#3182ce; font-weight:bold;'>https://docs.google.com/presentation/d/1d1Agns8bGzCyIr7VRtPvmOZX7hpGYnWRbI7PRmz8TX4/edit?usp=sharing</a>",
-          yt: "▶ Recording: <a href='https://youtu.be/QJUnyR29XmM' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/QJUnyR29XmM</a>",
+          yt: "▶ Recording: <a href='https://youtu.be/XBUr2t3V3E4' target='_blank' style='color:#e53e3e; font-weight:bold;'>https://youtu.be/XBUr2t3V3E4</a>",
         },
         south: {
           title:
