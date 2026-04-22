@@ -30,9 +30,9 @@ const CO_ORGANIZERS = [
   {
     id: 22,
     region: "workshop",
-    name_ch: "國立高雄科技大學",
-    name_en: "National Kaohsiung University of Science and Technology",
-    logo: "img/co-organizer/國立高雄科技大學.png",
+    name_ch: "國立高雄科技大學永續處",
+    name_en: "Office of Sustainability, National Kaohsiung University of Science and Technology",
+    logo: "img/co-organizer/國立高雄科技大學永續處.jpg",
     intro:
       "國立高雄科技大學於2018年由國立高雄應用科技大學、國立高雄第一科技大學及國立高雄海洋科技大學合併成立，為臺灣規模最大之技術型大學。該校設有建工、燕巢、第一、楠梓及旗津等五大校區，學術領域涵蓋工學、電資、管理、財金、外語、人文社會、水圈及海事等多元範疇。憑藉優越之地理位置與完整之校區機能，本校致力於提供優質學習環境，並透過學術資源整合與跨領域協作，深耕專業人才培育與產業實務研發。",
     link: "https://sustainability.nkust.edu.tw/",
