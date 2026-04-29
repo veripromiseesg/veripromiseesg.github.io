@@ -1555,7 +1555,7 @@ function renderAnnouncement() {
   document.getElementById("announcementLabel").textContent = label;
 
   const latest = items[0];
-  document.getElementById("announcementPreview").textContent = latest ? `${latest.text}` : "";
+  document.getElementById("announcementPreview").textContent = latest ? `【${latest.date}】${latest.text}` : "";
 
   const dropdown = document.getElementById("announcementDropdown");
   dropdown.innerHTML = items.map((item) => `

@@ -1128,7 +1128,7 @@ footer a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: 146px;
+  left: 130px;
   right: 0;
   background: #2d1a5e;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1142,8 +1142,9 @@ footer a:hover {
 
 .announcement-item {
   display: flex;
-  align-items: flex-start;
-  padding: 12px 20px 12px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   gap: 12px;
 }
