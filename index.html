@@ -199,6 +199,8 @@
               </li>
             </ul>
           </li>
+
+          <li><a href="#news" data-i18n="nav.news">最新消息</a></li>
         </ul>
         <!-- [FIX] 預設語言為中文，btn-zh 加 active -->
         <div class="lang-switch">
@@ -215,15 +217,6 @@
         </div>
       </div>
     </nav>
-
-    <div class="announcement-bar">
-      <div class="announcement-header" id="announcementToggle">
-        <span class="announcement-label" id="announcementLabel">📢 最新消息</span>
-        <span class="announcement-preview" id="announcementPreview"></span>
-        <span class="announcement-arrow" id="announcementArrow">▼</span>
-      </div>
-      <div class="announcement-dropdown" id="announcementDropdown"></div>
-    </div>
 
     <section class="hero" id="home">
       <div class="container">
@@ -2219,6 +2212,23 @@
               >
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="container">
+        <h2 class="section-title" data-i18n="news.title">最新消息</h2>
+        <div class="news-table-wrapper">
+          <table class="news-table">
+            <thead>
+              <tr>
+                <th data-i18n="news.colTitle">標題</th>
+                <th data-i18n="news.colDate">日期</th>
+              </tr>
+            </thead>
+            <tbody id="newsTableBody"></tbody>
+          </table>
         </div>
       </div>
     </section>

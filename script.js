@@ -307,12 +307,15 @@ const translations = {
         people: "團隊",
         info: "相關資源",
         workshops: "巡迴課程",
+        news: "最新消息",
       },
-      announcement: {
-        label: "📢 最新消息",
+      news: {
+        title: "最新消息",
+        colTitle: "標題",
+        colDate: "日期",
         items: [
-          { date: "2026.04.29", text: "比賽報名截止日期延長至 2026.05.28，請把握機會報名！" },
-          { date: "2026.04.28", text: "Train dataset 更新版本已上傳，請至資源頁面下載最新版本" },
+          { date: "2026.04.29", title: "比賽報名截止日期延長至 2026.05.28，請把握機會報名！" },
+          { date: "2026.04.28", title: "Train dataset 更新版本已上傳，請至資源頁面下載最新版本" },
         ],
       },
       hero: {
@@ -916,12 +919,15 @@ date: "2026.03.05 ~ 2026.07.23",
         people: "Team",
         info: "Info",
         workshops: "Workshops",
+        news: "News",
       },
-      announcement: {
-        label: "📢 News",
+      news: {
+        title: "News",
+        colTitle: "Title",
+        colDate: "Date",
         items: [
-          { date: "2026.04.29", text: "Registration deadline extended to 2026.05.28. Don't miss it!" },
-          { date: "2026.04.28", text: "Train dataset updated version has been uploaded. Please download the latest version from the Resources page." },
+          { date: "2026.04.29", title: "Registration deadline extended to 2026.05.28. Don't miss it!" },
+          { date: "2026.04.28", title: "Train dataset updated version has been uploaded. Please download the latest version from the Resources page." },
         ],
       },
       hero: {
@@ -1541,7 +1547,8 @@ i18next.init(
   function (err, t) {
     updateContent();
     renderCoOrganizers();
-    renderAnnouncement();
+
+    renderNews();
   },
 );
 
@@ -1549,40 +1556,21 @@ i18next.init(
 // 更新頁面內容
 // ===================================
 
-function renderAnnouncement() {
-  const label = i18next.t("announcement.label");
-  const items = i18next.t("announcement.items", { returnObjects: true });
-  document.getElementById("announcementLabel").textContent = label;
-
-  const latest = items[0];
-  document.getElementById("announcementPreview").textContent = latest ? `【${latest.date}】${latest.text}` : "";
-
-  const dropdown = document.getElementById("announcementDropdown");
-  dropdown.innerHTML = items.map((item) => `
-    <div class="announcement-item">
-      <span class="announcement-date">${item.date}</span>
-      <span class="announcement-text">${item.text}</span>
-    </div>
+function renderNews() {
+  const items = i18next.t("news.items", { returnObjects: true });
+  const tbody = document.getElementById("newsTableBody");
+  if (!tbody) return;
+  tbody.innerHTML = items.map((item) => `
+    <tr>
+      <td class="news-td-title">${item.title}</td>
+      <td class="news-td-date">${item.date}</td>
+    </tr>
   `).join("");
+  document.querySelectorAll("[data-i18n='news.title']").forEach(el => el.textContent = i18next.t("news.title"));
+  document.querySelectorAll("[data-i18n='news.colTitle']").forEach(el => el.textContent = i18next.t("news.colTitle"));
+  document.querySelectorAll("[data-i18n='news.colDate']").forEach(el => el.textContent = i18next.t("news.colDate"));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("announcementToggle");
-  const dropdown = document.getElementById("announcementDropdown");
-  const arrow = document.getElementById("announcementArrow");
-
-  toggle.addEventListener("click", () => {
-    const isOpen = dropdown.classList.toggle("open");
-    arrow.textContent = isOpen ? "▲" : "▼";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!document.querySelector(".announcement-bar").contains(e.target)) {
-      dropdown.classList.remove("open");
-      arrow.textContent = "▼";
-    }
-  });
-});
 
 function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -1607,7 +1595,8 @@ function changeLanguage(lang) {
   i18next.changeLanguage(lang, (err, t) => {
     updateContent();
     renderCoOrganizers();
-    renderAnnouncement();
+
+    renderNews();
     // Update button states
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.remove("active");
