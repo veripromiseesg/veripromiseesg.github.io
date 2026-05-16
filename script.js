@@ -601,7 +601,7 @@ date: "2026.03.05 ~ 2026.07.23",
         item1: {
           date: "2026.03.05 ~ 2026.05.28",
           title: "開放報名",
-          desc: "同時開放<a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4ktrain1000v1.json' target='_blank' style='color:#667eea;'>訓練集下載</a>",
+          desc: "同時開放<a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4k_train_1000.json' target='_blank' style='color:#667eea;'>訓練集下載</a>",
         },
         item2: {
           date: "2026.03",
@@ -1225,7 +1225,7 @@ date: "2026.03.05 ~ 2026.07.23",
         item1: {
           date: "2026.03.05 ~ 2026.05.28",
           title: "Registration Opens",
-          desc: "Training set available for <a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4ktrain1000v1.json' target='_blank' style='color:#667eea;'>download</a>.",
+          desc: "Training set available for <a href='https://github.com/veripromiseesg/veripromiseesgdataset/blob/main/vpesg4k_train_1000.json' target='_blank' style='color:#667eea;'>download</a>.",
         },
         item2: {
           date: "March 2026",
