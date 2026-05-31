@@ -314,6 +314,7 @@ const translations = {
         colTitle: "標題",
         colDate: "日期",
         items: [
+          { date: "2026.05.31", title: "競賽報名延長至 5/30 23:59:59！如果還有朋友想報名的話歡迎互相通知哦~~" },
           { date: "2026.04.29", title: "比賽報名截止日期延長至 2026.05.28，請把握機會報名！" },
           { date: "2026.04.28", title: "Train dataset 更新版本已上傳，請至資源頁面下載最新版本" },
         ],
@@ -926,6 +927,7 @@ date: "2026.03.05 ~ 2026.07.23",
         colTitle: "Title",
         colDate: "Date",
         items: [
+          { date: "2026.05.31", title: "Registration deadline extended to 5/30 23:59:59! Feel free to spread the word to friends who want to join~~" },
           { date: "2026.04.29", title: "Registration deadline extended to 2026.05.28. Don't miss it!" },
           { date: "2026.04.28", title: "Train dataset updated version has been uploaded. Please download the latest version from the Resources page." },
         ],
