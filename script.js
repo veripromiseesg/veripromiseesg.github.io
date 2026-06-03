@@ -314,6 +314,7 @@ const translations = {
         colTitle: "標題",
         colDate: "日期",
         items: [
+          { date: "2026.06.03", title: "<strong>【AI CUP】2026ESG競賽【公告】邀請優秀學生團隊參加 2026 NTCIR-19 研討會</strong><br><br>各位參賽者好：<br><br>為鼓勵優秀團隊持續深化研究成果並參與國際交流，主辦單位預計自本競賽最終成績前 30 名隊伍中，遴選優秀學生團隊，參與 2026 NTCIR-19 研討會發表論文，並提供部分差旅費補助。<br><br>研討會相關資訊請參閱：<a href='https://research.nii.ac.jp/ntcir/ntcir-19/' target='_blank' style='color:#667eea;'>https://research.nii.ac.jp/ntcir/ntcir-19/</a><br><br>後續遴選方式與相關時程，將另行公告。" },
           { date: "2026.05.31", title: "競賽報名延長至 5/30 23:59:59！如果還有朋友想報名的話歡迎互相通知哦~~" },
           { date: "2026.04.29", title: "比賽報名截止日期延長至 2026.05.28，請把握機會報名！" },
           { date: "2026.04.28", title: "Train dataset 更新版本已上傳，請至資源頁面下載最新版本" },
@@ -927,6 +928,7 @@ date: "2026.03.05 ~ 2026.07.23",
         colTitle: "Title",
         colDate: "Date",
         items: [
+          { date: "2026.06.03", title: "<strong>[AI CUP] 2026 ESG Competition [Announcement] Invitation for Outstanding Student Teams to Participate in 2026 NTCIR-19</strong><br><br>Dear Participants,<br><br>To encourage outstanding teams to deepen their research and engage in international exchange, the organizers plan to select excellent student teams from the top 30 finalists to present papers at the 2026 NTCIR-19 workshop, with partial travel expense subsidies provided.<br><br>For workshop details, please visit: <a href='https://research.nii.ac.jp/ntcir/ntcir-19/' target='_blank' style='color:#667eea;'>https://research.nii.ac.jp/ntcir/ntcir-19/</a><br><br>Further selection criteria and schedule will be announced separately." },
           { date: "2026.05.31", title: "Registration deadline extended to 5/30 23:59:59! Feel free to spread the word to friends who want to join~~" },
           { date: "2026.04.29", title: "Registration deadline extended to 2026.05.28. Don't miss it!" },
           { date: "2026.04.28", title: "Train dataset updated version has been uploaded. Please download the latest version from the Resources page." },
