@@ -617,9 +617,9 @@ date: "2026.03.05 ~ 2026.07.23",
           desc: "開放下載",
         },
         item4: {
-          date: "2026.06.10 ~ 2026.06.17",
+          date: "2026.06.11 ~ 2026.06.17",
           title: "競賽測試集下載與預測結果上傳",
-          desc: "• 競賽測試集將於 6 月 10 日（三）上午 11:00 開放下載<br>• 6 月 10 日（三）上午 11:00 至 6 月 17 日（三）晚上 23:59:59 期間，可上傳競賽測試集預測結果，逾時不候<br>• 公開版排行榜（Public Leaderboard）將實時更新各組最高評分",
+          desc: "• 競賽測試集將於 6 月 11 日（四）開放下載<br>• 6 月 11 日至 6 月 17 日（三）晚上 23:59:59 期間，可上傳競賽測試集預測結果，逾時不候<br>• 公開版排行榜（Public Leaderboard）將實時更新各組最高評分",
         },
         item5: {
           date: "2026.06.23",
@@ -824,7 +824,7 @@ date: "2026.03.05 ~ 2026.07.23",
           "• 請於 AI CUP 報名系統 (https://go.aicup.tw/) 完成報名登錄",
         note2: "• 參賽隊伍 1-5 人，報名後不可更換成員",
         note3:
-          "• 測試集提交期間：2026/6/10 11:00 - 2026/6/17 23:59:59（每日限 3 次）",
+          "• 測試集提交期間：2026/6/11 - 2026/6/17 23:59:59（每日限 3 次）",
       },
       faq: {
         title: "常見問題",
@@ -1244,9 +1244,9 @@ date: "2026.03.05 ~ 2026.07.23",
           desc: "Download available.",
         },
         item4: {
-          date: "2026.06.10 ~ 2026.06.17",
+          date: "2026.06.11 ~ 2026.06.17",
           title: "Test Set Release & Prediction Submission",
-          desc: "• Test set available for download at 11:00 AM on June 10.<br>• Predictions may be uploaded from June 10 (11:00 AM) to June 17 (23:59:59). Late submissions will not be accepted.<br>• The Public Leaderboard will update in real time.",
+          desc: "• Test set available for download on June 11.<br>• Predictions may be uploaded from June 11 to June 17 (23:59:59). Late submissions will not be accepted.<br>• The Public Leaderboard will update in real time.",
         },
         item5: {
           date: "2026.06.23",
@@ -1457,7 +1457,7 @@ date: "2026.03.05 ~ 2026.07.23",
           "• Register via AI CUP Registration System (https://go.aicup.tw/)",
         note2: "• Teams consist of 1-5 members; no changes after registration",
         note3:
-          "• Test set submission period: 6/10/2026 11:00 - 6/17/2026 23:59:59 (3 submissions per day)",
+          "• Test set submission period: 6/11/2026 - 6/17/2026 23:59:59 (3 submissions per day)",
       },
       faq: {
         title: "FAQ",
