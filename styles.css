@@ -238,6 +238,30 @@ section {
   background: white;
 }
 
+#leaderboard {
+  background: #f0f0fa;
+  padding: 4rem 0;
+}
+
+#leaderboard h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.leaderboard-table th {
+  text-align: center;
+}
+
+.leaderboard-table td {
+  text-align: center;
+  padding: 10px 16px;
+  color: #333;
+}
+
+.leaderboard-table tbody tr:nth-child(1) td { background: #fff8e1; font-weight: 700; }
+.leaderboard-table tbody tr:nth-child(2) td { background: #f5f5f5; font-weight: 700; }
+.leaderboard-table tbody tr:nth-child(3) td { background: #fff3e0; font-weight: 700; }
+
 #news {
   background: #f9f9fb;
   padding: 4rem 0;
