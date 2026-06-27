@@ -2282,6 +2282,16 @@
       </div>
     </section>
 
+    <!-- NEWS MODAL -->
+    <div class="news-modal-overlay" id="newsModalOverlay" aria-hidden="true" onclick="closeNewsModal(event)">
+      <div class="news-modal" id="newsModal" onclick="event.stopPropagation()">
+        <button class="news-modal-close" onclick="closeNewsModal()" aria-label="關閉">✕</button>
+        <p class="news-modal-date" id="newsModalDate"></p>
+        <div class="news-modal-body" id="newsModalBody"></div>
+      </div>
+    </div>
+    <!-- /NEWS MODAL -->
+
     <footer>
       <div class="container">
         <p data-i18n="footer.copyright">

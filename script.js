@@ -1591,20 +1591,54 @@ i18next.init(
 // 更新頁面內容
 // ===================================
 
+function _newsStripHtml(html) {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || "";
+}
+
 function renderNews() {
   const items = i18next.t("news.items", { returnObjects: true });
   const tbody = document.getElementById("newsTableBody");
   if (!tbody) return;
-  tbody.innerHTML = items.map((item) => `
-    <tr>
-      <td class="news-td-title">${item.title}</td>
+  tbody.innerHTML = items.map((item, idx) => {
+    const preview = _newsStripHtml(item.title);
+    return `
+    <tr class="news-row" onclick="openNewsModal(${idx})" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openNewsModal(${idx})">
+      <td class="news-td-title">
+        <span class="news-preview">${preview}</span>
+        <span class="news-expand-icon">›</span>
+      </td>
       <td class="news-td-date">${item.date}</td>
-    </tr>
-  `).join("");
+    </tr>`;
+  }).join("");
   document.querySelectorAll("[data-i18n='news.title']").forEach(el => el.textContent = i18next.t("news.title"));
   document.querySelectorAll("[data-i18n='news.colTitle']").forEach(el => el.textContent = i18next.t("news.colTitle"));
   document.querySelectorAll("[data-i18n='news.colDate']").forEach(el => el.textContent = i18next.t("news.colDate"));
 }
+
+function openNewsModal(idx) {
+  const items = i18next.t("news.items", { returnObjects: true });
+  const item = items[idx];
+  document.getElementById("newsModalDate").textContent = item.date;
+  document.getElementById("newsModalBody").innerHTML = item.title;
+  const overlay = document.getElementById("newsModalOverlay");
+  overlay.classList.add("is-open");
+  overlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeNewsModal(e) {
+  if (e && e.target !== document.getElementById("newsModalOverlay") && !e.target.classList.contains("news-modal-close")) return;
+  const overlay = document.getElementById("newsModalOverlay");
+  overlay.classList.remove("is-open");
+  overlay.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeNewsModal({ target: document.getElementById("newsModalOverlay") });
+});
 
 
 function updateContent() {
