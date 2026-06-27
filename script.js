@@ -1607,7 +1607,6 @@ function renderNews() {
     <tr class="news-row" onclick="openNewsModal(${idx})" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openNewsModal(${idx})">
       <td class="news-td-title">
         <span class="news-preview">${preview}</span>
-        <span class="news-expand-icon">›</span>
       </td>
       <td class="news-td-date">${item.date}</td>
     </tr>`;
