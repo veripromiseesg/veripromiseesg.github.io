@@ -854,6 +854,7 @@ date: "2026.03.05 ~ 2026.07.23",
           "AI CUP 2026 ESG 永續承諾驗證競賽校園巡迴課程，歡迎各地學生報名參加",
         onlineLink: "線上參與連結",
         register: "立即報名校園巡迴工作坊",
+        photoComingSoon: "📸 工作坊活動照片即將上傳",
         north: {
           title:
             "北區｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>臺北市立大學</a>",
@@ -1500,6 +1501,7 @@ date: "2026.03.05 ~ 2026.07.23",
           "AI CUP 2026 VeriPromise ESG regional hands-on workshops. Welcome students from all regions to join!",
         onlineLink: "Join Online",
         register: "Register for Campus Workshop Tour",
+        photoComingSoon: "📸 Workshop photos coming soon",
         north: {
           title:
             "North｜<a href='https://www.utaipei.edu.tw/' target='_blank' style='color:inherit;'>University of Taipei</a>",
@@ -1728,3 +1730,44 @@ document
   .forEach((el) => {
     observer.observe(el);
   });
+
+// ===================================
+// Workshop Photo Carousel
+// ===================================
+
+let _workshopIdx = 0;
+
+function workshopCarouselMove(dir) {
+  const track = document.getElementById("workshopTrack");
+  if (!track) return;
+  const slides = track.querySelectorAll(".carousel-slide");
+  if (slides.length <= 1) return;
+  _workshopIdx = (_workshopIdx + dir + slides.length) % slides.length;
+  track.style.transform = `translateX(-${_workshopIdx * 100}%)`;
+  _workshopUpdateDots(slides.length);
+}
+
+function _workshopUpdateDots(total) {
+  const dotsEl = document.getElementById("workshopDots");
+  if (!dotsEl) return;
+  dotsEl.querySelectorAll(".carousel-dot").forEach((d, i) => {
+    d.classList.toggle("active", i === _workshopIdx);
+  });
+}
+
+function _workshopInitDots() {
+  const track = document.getElementById("workshopTrack");
+  const dotsEl = document.getElementById("workshopDots");
+  if (!track || !dotsEl) return;
+  const slides = track.querySelectorAll(".carousel-slide");
+  dotsEl.innerHTML = "";
+  slides.forEach((_, i) => {
+    const btn = document.createElement("button");
+    btn.className = "carousel-dot" + (i === 0 ? " active" : "");
+    btn.setAttribute("aria-label", `第 ${i + 1} 張`);
+    btn.onclick = () => { _workshopIdx = i; track.style.transform = `translateX(-${i * 100}%)`; _workshopUpdateDots(slides.length); };
+    dotsEl.appendChild(btn);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", _workshopInitDots);
