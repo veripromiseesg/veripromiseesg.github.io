@@ -1746,6 +1746,8 @@ function workshopCarouselMove(dir) {
   _workshopIdx = (_workshopIdx + dir + slides.length) % slides.length;
   track.style.transform = `translateX(-${_workshopIdx * 100}%)`;
   _workshopUpdateDots(slides.length);
+  _workshopPausePlay();
+  _workshopAutoPlay();
 }
 
 function _workshopUpdateDots(total) {
@@ -1771,4 +1773,24 @@ function _workshopInitDots() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", _workshopInitDots);
+let _workshopTimer = null;
+
+function _workshopAutoPlay() {
+  const track = document.getElementById("workshopTrack");
+  if (!track || track.querySelectorAll(".carousel-slide").length <= 1) return;
+  _workshopTimer = setInterval(() => workshopCarouselMove(1), 4000);
+}
+
+function _workshopPausePlay() {
+  clearInterval(_workshopTimer);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  _workshopInitDots();
+  _workshopAutoPlay();
+  const carousel = document.getElementById("workshopCarousel");
+  if (carousel) {
+    carousel.addEventListener("mouseenter", _workshopPausePlay);
+    carousel.addEventListener("mouseleave", _workshopAutoPlay);
+  }
+});
