@@ -250,6 +250,38 @@ section {
 
 #awards h2 { text-align: center; margin-bottom: 1rem; }
 
+.awards-sub-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #444;
+  margin: 2rem 0 0.5rem;
+}
+
+.awards-table td { text-align: left; padding: 10px 14px; }
+.awards-table th { text-align: left; }
+
+.award-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.award-badge.gold   { background: #fff8e1; color: #b8860b; border: 1px solid #f0d060; }
+.award-badge.silver { background: #f5f5f5; color: #666;    border: 1px solid #ccc; }
+.award-badge.bronze { background: #fff3e0; color: #a0522d; border: 1px solid #e0a060; }
+.award-badge.honor  { background: #e8f4fd; color: #1a6fa8; border: 1px solid #90caf9; }
+.award-badge.merit  { background: #f3e5f5; color: #7b1fa2; border: 1px solid #ce93d8; }
+.award-badge.special{ background: #fff8e1; color: #b8860b; border: 1px solid #f0d060; }
+.award-badge.front  { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+
+.award-gold td   { background: #fffdf0; }
+.award-silver td { background: #fafafa; }
+.award-bronze td { background: #fff9f5; }
+.award-special td{ background: #fffdf0; }
+
 #acknowledgements {
   background: #f7f7ff;
   padding: 4rem 0;

@@ -315,8 +315,12 @@ const translations = {
       awards: {
         title: "得獎名單",
         intro: "恭喜所有得獎隊伍！「教育部獎狀」及「前標獎狀」將於 2027 年 3 月核發。",
+        moeTitle: "🏆 教育部獎狀",
+        officeTitle: "📋 計畫辦公室獎狀",
         col1: "獎項",
-        col2: "隊伍名稱",
+        col2: "隊伍",
+        col3: "姓名",
+        col4: "就讀校系／任職單位",
       },
       ack: {
         title: "標注團隊致謝",
@@ -957,8 +961,12 @@ date: "2026.03.05 ~ 2026.07.23",
       awards: {
         title: "Awards",
         intro: "Congratulations to all award-winning teams! The Ministry of Education certificates will be issued in March 2027.",
+        moeTitle: "🏆 Ministry of Education Certificates",
+        officeTitle: "📋 Program Office Certificates",
         col1: "Award",
-        col2: "Team Name",
+        col2: "Team",
+        col3: "Member(s)",
+        col4: "Institution / Affiliation",
       },
       ack: {
         title: "Annotation Team Acknowledgements",
