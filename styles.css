@@ -257,9 +257,10 @@ section {
   margin: 2rem 0 0.5rem;
 }
 
-.awards-table td { text-align: center; padding: 10px 14px; vertical-align: middle; }
-.awards-table th { text-align: center; }
-.awards-table th:last-child { text-align: center; width: auto; }
+.awards-table th,
+.awards-table th:last-child { text-align: center !important; width: auto !important; }
+.awards-table td,
+.awards-table td:last-child { text-align: center !important; padding: 10px 14px; vertical-align: middle; }
 
 .award-badge {
   display: inline-block;
