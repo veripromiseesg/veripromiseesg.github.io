@@ -257,8 +257,9 @@ section {
   margin: 2rem 0 0.5rem;
 }
 
-.awards-table td { text-align: left; padding: 10px 14px; }
-.awards-table th { text-align: left; }
+.awards-table td { text-align: center; padding: 10px 14px; vertical-align: middle; }
+.awards-table th { text-align: center; }
+.awards-table th:last-child { text-align: center; width: auto; }
 
 .award-badge {
   display: inline-block;
