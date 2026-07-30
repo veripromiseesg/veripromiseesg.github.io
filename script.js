@@ -309,6 +309,18 @@ const translations = {
         workshops: "巡迴課程",
         news: "最新消息",
         leaderboard: "排行榜",
+        awards: "得獎名單",
+        acknowledgements: "標注致謝",
+      },
+      awards: {
+        title: "得獎名單",
+        intro: "恭喜所有得獎隊伍！「教育部獎狀」及「前標獎狀」將於 2027 年 3 月核發。",
+        col1: "獎項",
+        col2: "隊伍名稱",
+      },
+      ack: {
+        title: "標注團隊致謝",
+        intro: "感謝以下所有標注團隊成員的辛苦付出，正是大家的貢獻，成就了 VeriPromiseESG4K 高品質標注數據集。",
       },
       leaderboard: {
         title: "私有版排行榜（Private Leaderboard）",
@@ -939,6 +951,18 @@ date: "2026.03.05 ~ 2026.07.23",
         workshops: "Workshops",
         news: "News",
         leaderboard: "Leaderboard",
+        awards: "Awards",
+        acknowledgements: "Acknowledgements",
+      },
+      awards: {
+        title: "Awards",
+        intro: "Congratulations to all award-winning teams! The Ministry of Education certificates will be issued in March 2027.",
+        col1: "Award",
+        col2: "Team Name",
+      },
+      ack: {
+        title: "Annotation Team Acknowledgements",
+        intro: "We sincerely thank all annotation team members whose dedicated contributions made the VeriPromiseESG4K dataset possible.",
       },
       leaderboard: {
         title: "Private Leaderboard",
