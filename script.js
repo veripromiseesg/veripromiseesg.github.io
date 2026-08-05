@@ -321,6 +321,37 @@ const translations = {
         col2: "隊伍",
         col3: "姓名",
         col4: "就讀校系／任職單位",
+        moeItems: [
+          { rowClass: "award-gold",   badgeClass: "gold",   badge: "🥇 金牌", team: "TEAM_10671", members: "鄭兆宏、林德恩、韓欣劭、王修佑",               institution: "國立臺灣師範大學資訊工程學系" },
+          { rowClass: "award-silver", badgeClass: "silver", badge: "🥈 銀牌", team: "TEAM_10825", members: "詹浚諺",                                       institution: "國立臺灣大學流行病學與預防醫學研究所" },
+          { rowClass: "award-bronze", badgeClass: "bronze", badge: "🥉 銅牌", team: "TEAM_9924",  members: "陳志中、陳憲彥、蘇仕翔、簡逸旻",               institution: "朝陽科技大學資訊工程學系" },
+          { rowClass: "",             badgeClass: "honor",  badge: "優等",    team: "TEAM_9944",  members: "黃瑞麟",                                       institution: "臺北市立大學資訊科學系" },
+          { rowClass: "",             badgeClass: "honor",  badge: "優等",    team: "TEAM_10478", members: "方譯增、阮柏愷",                               institution: "國立陽明交通大學電子研究所／電機工程研究所" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10832", members: "王暐翔",                                       institution: "銘傳大學人工智慧應用學系" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10289", members: "張哲維",                                       institution: "臺北市立大學資訊科學系" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10505", members: "鄭力維、方聿丞、莊惟鈞",                       institution: "國立臺灣大學生物環境系統工程學系／電機工程學研究所" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10637", members: "林珮柔、張廷藝、謝沅廷、洪梓瑄、黃佳姸",       institution: "國立成功大學人工智慧科技碩士學位學程／資訊工程學系研究所" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10365", members: "郭人瑋",                                       institution: "國立成功大學電腦與通信工程研究所" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10049", members: "王翊鑫、石亞右",                               institution: "國立臺灣師範大學資訊工程學系／國立中央大學資電學院學士班" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10070", members: "李倢熙",                                       institution: "臺北市立大學資訊科學系" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10029", members: "馮品筠、吳俊諺",                               institution: "國立成功大學交通管理科學系／資源工程學系" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10209", members: "王炫晟、段浩恩、劉宸瑋、温翔旭、洪婕琳",       institution: "國立中興大學資訊管理學系" },
+          { rowClass: "",             badgeClass: "merit",  badge: "佳作",    team: "TEAM_10219", members: "鐘禮讌",                                       institution: "國立中央大學數學系" },
+        ],
+        officeItems: [
+          { rowClass: "award-special", badgeClass: "special", badge: "總排名第三名", team: "TEAM_10376", members: "黃彥豪、吉瀚宇", institution: "文境資科 AI 工程師" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10036", members: "林長毅",                             institution: "國立成功大學工業與資訊管理學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_9939",  members: "楊育愷、張恬熏、游佳臻、余珮璇、曾禹曦", institution: "臺北市立大學資訊科學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_9908",  members: "李承恩",                             institution: "國立中正大學資訊工程學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10537", members: "韓欣澄、陳俊瑋、黃士育、陳品謙、陳聖勳", institution: "國立中央大學資訊工程學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_9910",  members: "謝柏陞",                             institution: "國立成功大學統計學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10001", members: "許筱君",                             institution: "臺北市立大學資訊科學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10057", members: "許柏洋、楊捷雯、周資淳、陳冠樺",     institution: "國立東華大學資訊管理學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10023", members: "楊正堉",                             institution: "臺北市立大學資訊科學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_9907",  members: "林炳宇、翁鈺翔",                     institution: "國立陽明交通大學電機工程學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10440", members: "陳恩全、楊宗諺",                     institution: "國立中央大學資訊工程學系" },
+          { rowClass: "", badgeClass: "front", badge: "前標", team: "TEAM_10801", members: "張君瑋",                             institution: "大同智能投資課專員" },
+        ],
       },
       ack: {
         title: "標注團隊致謝",
@@ -968,6 +999,37 @@ date: "2026.03.05 ~ 2026.07.23",
         col2: "Team",
         col3: "Member(s)",
         col4: "Institution / Affiliation",
+        moeItems: [
+          { rowClass: "award-gold",   badgeClass: "gold",   badge: "🥇 Gold Medal",        team: "TEAM_10671", members: "Chao-Hung Cheng, De-En Lin, Xin-Shao Hon, Hugo Hsiuyu Wang",          institution: "National Taiwan Normal University, Dept. of Computer Science and Information Engineering" },
+          { rowClass: "award-silver", badgeClass: "silver", badge: "🥈 Silver Medal",      team: "TEAM_10825", members: "Jun-Yan Zhan",                                                        institution: "National Taiwan University, Institute of Epidemiology and Preventive Medicine" },
+          { rowClass: "award-bronze", badgeClass: "bronze", badge: "🥉 Bronze Medal",      team: "TEAM_9924",  members: "Zhi-Zhong Chen, Xian-Yan Chen, Shih-Siang Su, Yi-Min Jian",          institution: "Chaoyang University of Technology, Dept. of Computer Science and Information Engineering" },
+          { rowClass: "",             badgeClass: "honor",  badge: "Honorable Mention",    team: "TEAM_9944",  members: "Rui-Lin Huang",                                                       institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "",             badgeClass: "honor",  badge: "Honorable Mention",    team: "TEAM_10478", members: "Yi-Zeng Fang, Bo-Kai Ruan",                                           institution: "National Yang Ming Chiao Tung University, Institute of Electronics / Institute of Electrical and Computer Engineering" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10832", members: "Wei-Xiang Wang",                                                      institution: "Ming Chuan University, Dept. of Applied Artificial Intelligence" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10289", members: "Zhe-Wei Chang",                                                       institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10505", members: "Li-Wei Cheng, Yu-Cheng Fang, Wei-Chun Chuang",                       institution: "National Taiwan University, Dept. of Bioenvironmental Systems Engineering / Graduate Institute of Electrical Engineering" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10637", members: "Pei-Rou Lin, Ting-Yi Chang, Yuan-Ting Hsieh, Tzu-Hsuan Hung, Jia-Yan Huang", institution: "National Cheng Kung University, Graduate Program of Artificial Intelligence / Dept. of Computer Science & Information Engineering" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10365", members: "Jen-Wei Kuo",                                                         institution: "National Cheng Kung University, Institute of Computer and Communication Engineering" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10049", members: "Yi-Hsin Wang, Ya-You Shih",                                          institution: "National Taiwan Normal University, Dept. of CSIE / National Central University, Interdisciplinary Program of EE & CS" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10070", members: "Chieh-Hsi Lee",                                                       institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10029", members: "Pin-Yun Feng, Chun-Yen Wu",                                          institution: "National Cheng Kung University, Dept. of Transportation and Communication Management Science / Dept. of Resources Engineering" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10209", members: "Hsuan-Cheng Wang, Hao-En Tuan, Chen-Wei Liu, Hsiang-Hsu Wen, Jie-Lin Hung", institution: "National Chung Hsing University, Dept. of Management Information Systems" },
+          { rowClass: "",             badgeClass: "merit",  badge: "Merit Award",          team: "TEAM_10219", members: "Lee-Yan Choon",                                                       institution: "National Central University, Dept. of Mathematics" },
+        ],
+        officeItems: [
+          { rowClass: "award-special", badgeClass: "special", badge: "Overall 3rd Place", team: "TEAM_10376", members: "黃彥豪、吉瀚宇",                                        institution: "Wenjing Datasci, AI Engineers" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10036", members: "Chang-Yi Lin",                                               institution: "National Cheng Kung University, Dept. of Industrial and Information Management" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_9939",  members: "Yu-Kai Yang, Tien-Hsun Chang, Chia-Chen Yu, Pei-Hsuan Yu, Yu-Hsi Tseng", institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_9908",  members: "Cheng-En Li",                                                institution: "National Chung Cheng University, Dept. of Computer Science and Information Engineering" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10537", members: "Hsin-Chen Han, Chun-Wei Chen, Shi-Yu Huang, Pin-Qian Chen, Sheng-Xun Chen", institution: "National Central University, Dept. of Computer Science & Information Engineering" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_9910",  members: "Bo-Sheng Hsieh",                                             institution: "National Cheng Kung University, Dept. of Statistics" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10001", members: "Hsiao-Chun Hsu",                                             institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10057", members: "Bo-Yang Xu, Chieh-Wen Yang, Tzu-Chun Chou, Guan-Hua Chen",  institution: "National Dong Hwa University, Dept. of Information Management" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10023", members: "Jheng-Yu Yang",                                               institution: "University of Taipei, Dept. of Computer Science" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_9907",  members: "Bin-Yu Lin, Yu-Hsiang Weng",                                 institution: "National Yang Ming Chiao Tung University, Dept. of Electrical Engineering" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10440", members: "En-Quan Chen, Zong-Yan Yang",                                institution: "National Central University, Dept. of Computer Science & Information Engineering" },
+          { rowClass: "", badgeClass: "front", badge: "Top-Tier Award", team: "TEAM_10801", members: "張君瑋",                                                     institution: "Tatung Investment Course Specialist" },
+        ],
       },
       ack: {
         title: "Annotation Team Acknowledgements",
@@ -1617,6 +1679,7 @@ i18next.init(
     renderCoOrganizers();
 
     renderNews();
+    renderAwards();
   },
 );
 
@@ -1647,6 +1710,21 @@ function renderNews() {
   document.querySelectorAll("[data-i18n='news.title']").forEach(el => el.textContent = i18next.t("news.title"));
   document.querySelectorAll("[data-i18n='news.colTitle']").forEach(el => el.textContent = i18next.t("news.colTitle"));
   document.querySelectorAll("[data-i18n='news.colDate']").forEach(el => el.textContent = i18next.t("news.colDate"));
+}
+
+function renderAwards() {
+  ["moeItems", "officeItems"].forEach((key, idx) => {
+    const items = i18next.t(`awards.${key}`, { returnObjects: true });
+    const tbody = document.getElementById(idx === 0 ? "awardsTableBodyMoe" : "awardsTableBodyOffice");
+    if (!tbody || !Array.isArray(items)) return;
+    tbody.innerHTML = items.map(item => `
+      <tr class="${item.rowClass}">
+        <td><span class="award-badge ${item.badgeClass}">${item.badge}</span></td>
+        <td>${item.team}</td>
+        <td>${item.members}</td>
+        <td>${item.institution}</td>
+      </tr>`).join("");
+  });
 }
 
 function openNewsModal(idx) {
@@ -1698,6 +1776,7 @@ function changeLanguage(lang) {
     renderCoOrganizers();
 
     renderNews();
+    renderAwards();
     // Update button states
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.remove("active");
