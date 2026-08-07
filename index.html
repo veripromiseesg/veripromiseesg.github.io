@@ -200,6 +200,9 @@
               <li>
                 <a href="#resources" data-i18n="nav.resources">Resources</a>
               </li>
+              <li>
+                <a href="#publication" data-i18n="nav.publication">論文發表</a>
+              </li>
             </ul>
           </li>
 
@@ -795,6 +798,18 @@
               </li>
               <li data-i18n="dataset.phase3.item3">Dataset release</li>
             </ul>
+          </div>
+        </div>
+
+        <h3 data-i18n="dataset.downloadTitle">📥 下載資料集</h3>
+        <div class="dataset-download-area">
+          <div class="dataset-file-card">
+            <div class="dataset-file-icon">🗂️</div>
+            <div class="dataset-file-info">
+              <p class="dataset-file-name">VeriPromiseESG4K.zip</p>
+              <p class="dataset-file-desc" data-i18n="dataset.downloadDesc">包含訓練集、驗證集及測試集 JSON 檔案</p>
+            </div>
+            <a href="#" class="btn-download" data-i18n="dataset.downloadBtn">📥 下載</a>
           </div>
         </div>
       </div>
@@ -2359,6 +2374,35 @@
                 >Read Paper →</a
               >
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publication">
+      <div class="container">
+        <h2 data-i18n="pub.title">論文發表</h2>
+        <p class="section-intro" data-i18n="pub.intro">本競賽相關研究論文</p>
+
+        <div class="pub-card">
+          <div class="pub-venue-badge">IEEE EM-RITE 2026 @ IEEE IRI 2026</div>
+          <h3 class="pub-title">VeriPromiseESG4K: A Traditional Chinese ESG Promise Verification Dataset for AI CUP 2026</h3>
+          <p class="pub-authors">Min-Yuh Day, Wei-Chen Huang, Hsin-Ting Lu, Wen-Ze Chen, Yu-Han Huang, Ching-Tai Chen, and Yohei Seki</p>
+          <p class="pub-venue-full">The 15th IEEE International Workshop on Empirical Methods for Recognizing Inference in TExt (IEEE EM-RITE 2026), in Proceedings of the 27th IEEE International Conference on Information Reuse and Integration for Data Science (IEEE IRI 2026), Seattle, WA, USA, July 31 – August 2, 2026.</p>
+          <div class="pub-actions">
+            <a href="paper/VeriPromiseESG4K.pdf" class="btn-pub-pdf" target="_blank" data-i18n="pub.pdfBtn">📄 下載 PDF</a>
+          </div>
+          <div class="pub-cite-block">
+            <h4 data-i18n="pub.citeTitle">引用格式 (BibTeX)</h4>
+            <pre class="pub-bibtex" id="bibtexBlock">@inproceedings{day2026veripromiseesg4k,
+  title     = {VeriPromiseESG4K: A Traditional Chinese ESG Promise Verification Dataset for AI CUP 2026},
+  author    = {Day, Min-Yuh and Huang, Wei-Chen and Lu, Hsin-Ting and Chen, Wen-Ze and Huang, Yu-Han and Chen, Ching-Tai and Seki, Yohei},
+  booktitle = {Proceedings of the 27th IEEE International Conference on Information Reuse and Integration for Data Science (IEEE IRI 2026)},
+  year      = {2026},
+  address   = {Seattle, WA, USA},
+  month     = {July}
+}</pre>
+            <button class="btn-copy-cite" onclick="copyCitation()" data-i18n="pub.copyBtn">📋 複製 BibTeX</button>
           </div>
         </div>
       </div>

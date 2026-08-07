@@ -311,6 +311,7 @@ const translations = {
         leaderboard: "排行榜",
         awards: "得獎名單",
         acknowledgements: "標注致謝",
+        publication: "論文發表",
       },
       awards: {
         title: "得獎名單",
@@ -575,6 +576,16 @@ date: "2026.03.05 ~ 2026.07.23",
           item2: "品質控制與修正",
           item3: "數據集發布",
         },
+        downloadTitle: "📥 下載資料集",
+        downloadDesc: "包含訓練集、驗證集及測試集 JSON 檔案",
+        downloadBtn: "📥 下載",
+      },
+      pub: {
+        title: "論文發表",
+        intro: "本競賽相關研究論文",
+        pdfBtn: "📄 下載 PDF",
+        citeTitle: "引用格式 (BibTeX)",
+        copyBtn: "📋 複製 BibTeX",
       },
       evaluation: {
         title: "評估方式",
@@ -989,6 +1000,7 @@ date: "2026.03.05 ~ 2026.07.23",
         leaderboard: "Leaderboard",
         awards: "Awards",
         acknowledgements: "Acknowledgements",
+        publication: "Publication",
       },
       awards: {
         title: "Awards",
@@ -1259,6 +1271,16 @@ date: "2026.03.05 ~ 2026.07.23",
           item2: "Quality control and corrections",
           item3: "Dataset release",
         },
+        downloadTitle: "📥 Download Dataset",
+        downloadDesc: "Contains training set, validation set, and test set JSON files",
+        downloadBtn: "📥 Download",
+      },
+      pub: {
+        title: "Publication",
+        intro: "Research paper related to this competition",
+        pdfBtn: "📄 Download PDF",
+        citeTitle: "Citation (BibTeX)",
+        copyBtn: "📋 Copy BibTeX",
       },
       evaluation: {
         title: "Evaluation Methods",
@@ -1825,6 +1847,16 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
+}
+
+function copyCitation() {
+  const text = document.getElementById("bibtexBlock").textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(".btn-copy-cite");
+    const orig = btn.textContent;
+    btn.textContent = "✅ Copied!";
+    setTimeout(() => { btn.textContent = orig; }, 2000);
+  });
 }
 
 // ===================================

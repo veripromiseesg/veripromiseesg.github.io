@@ -1483,3 +1483,110 @@ footer a:hover {
   margin: -1rem auto 1.5rem;
   letter-spacing: 0.05em;
 }
+/* ===== Dataset Download ===== */
+.dataset-download-area { margin-top: 1.5rem; }
+.dataset-file-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 680px;
+}
+.dataset-file-icon { font-size: 2.5rem; flex-shrink: 0; }
+.dataset-file-info { flex: 1; }
+.dataset-file-name { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.3rem; }
+.dataset-file-desc { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
+.btn-download {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-download:hover { filter: brightness(1.1); }
+
+/* ===== Publication ===== */
+.pub-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  margin-top: 1.5rem;
+}
+.pub-venue-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+.pub-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.45;
+}
+.pub-authors { color: var(--text-secondary); margin: 0 0 0.75rem; font-style: italic; }
+.pub-venue-full {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+}
+.pub-actions { margin-bottom: 1.5rem; }
+.btn-pub-pdf {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+.btn-pub-pdf:hover { filter: brightness(1.1); }
+.pub-cite-block h4 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.75rem; }
+.pub-bibtex {
+  background: #f4f6f8;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0 0 0.75rem;
+  font-family: 'Courier New', monospace;
+}
+@media (prefers-color-scheme: dark) {
+  .pub-bibtex { background: #1e2530; }
+}
+:root[data-theme="dark"] .pub-bibtex { background: #1e2530; }
+:root[data-theme="light"] .pub-bibtex { background: #f4f6f8; }
+.btn-copy-cite {
+  padding: 0.5rem 1.2rem;
+  border: 1.5px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.btn-copy-cite:hover { background: var(--primary); color: #fff; }
+@media (max-width: 600px) {
+  .dataset-file-card { flex-direction: column; align-items: flex-start; }
+  .pub-card { padding: 1.5rem 1.25rem; }
+}
