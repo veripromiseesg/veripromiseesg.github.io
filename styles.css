@@ -1523,7 +1523,7 @@ footer a:hover {
 }
 .pub-venue-badge {
   display: inline-block;
-  background: var(--primary);
+  background: #5b4fcf;
   color: #fff;
   border-radius: 6px;
   padding: 0.25rem 0.8rem;
