@@ -1518,6 +1518,7 @@ footer a:hover {
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 2rem 2.5rem;
+  text-align: center;
   margin-top: 1.5rem;
 }
 .pub-venue-badge {
@@ -1554,6 +1555,7 @@ footer a:hover {
   text-underline-offset: 3px;
 }
 .btn-pub-pdf:hover { color: #3d31b0; }
+.pub-cite-block { text-align: left; }
 .pub-cite-block h4 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.75rem; }
 .pub-bibtex {
   background: #f4f6f8;
