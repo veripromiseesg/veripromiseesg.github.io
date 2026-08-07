@@ -1546,25 +1546,14 @@ footer a:hover {
 }
 .pub-actions { margin-bottom: 1.5rem; }
 .btn-pub-pdf {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 2rem;
-  background: var(--primary);
-  color: #fff !important;
-  border-radius: 10px;
-  font-size: 1.05rem;
+  display: inline-block;
+  font-size: 1.1rem;
   font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
-  letter-spacing: 0.02em;
+  color: #5b4fcf;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.btn-pub-pdf:hover {
-  filter: brightness(1.08);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
-}
+.btn-pub-pdf:hover { color: #3d31b0; }
 .pub-cite-block h4 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.75rem; }
 .pub-bibtex {
   background: #f4f6f8;
