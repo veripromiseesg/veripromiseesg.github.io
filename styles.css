@@ -1488,29 +1488,26 @@ footer a:hover {
 .dataset-file-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.5rem 2rem;
   max-width: 680px;
+  margin: 0 auto;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.dataset-file-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 .dataset-file-icon { font-size: 2.5rem; flex-shrink: 0; }
-.dataset-file-info { flex: 1; }
+.dataset-file-info { flex: 0 1 auto; }
 .dataset-file-name { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.3rem; }
 .dataset-file-desc { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
-.btn-download {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-.btn-download:hover { filter: brightness(1.1); }
 
 /* ===== Publication ===== */
 .pub-card {
@@ -1587,6 +1584,6 @@ footer a:hover {
 }
 .btn-copy-cite:hover { background: var(--primary); color: #fff; }
 @media (max-width: 600px) {
-  .dataset-file-card { flex-direction: column; align-items: flex-start; }
+  .dataset-file-card { flex-direction: column; align-items: center; text-align: center; }
   .pub-card { padding: 1.5rem 1.25rem; }
 }
